@@ -23,6 +23,7 @@ user_agent = {'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,i
 # get stock list
 spot = ak.stock_zh_a_spot_em()
 spot = spot[~spot['最新价'].isnull()]
+
 try:
     all_stock_risks.empty
     all_risk_table.empty
