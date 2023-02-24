@@ -19,7 +19,7 @@ master_concepts_list = concepts_list.loc[concepts_list['分类'].isin(['知名�
 
 wc_result = pd.DataFrame()
 
-for i in range(1,51):
+for i in range(1,2):
     print('page: '+ str(i))
     sr = wc.search('概念 主营 所属指数类',page =i).fillna('')
     sr['沪深指数'] = ''
