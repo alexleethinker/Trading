@@ -4,7 +4,8 @@ import warnings
 warnings.filterwarnings('ignore')
 import requests
 import json
-
+import os
+home_path = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 user_agent = {'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
 'accept-encoding': 'gzip, deflate, br',
@@ -21,7 +22,8 @@ user_agent = {'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,i
 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36'}
 
 # get stock list
-spot = ak.stock_zh_a_spot_em()
+print("获取股票代码列表...")
+spot = ak.stock_zh_a_spot()
 spot = spot[~spot['最新价'].isnull()]
 
 try:
@@ -34,7 +36,7 @@ except:
 
 code_l = list(set(spot['代码'].tolist()).difference(all_stock_risks['code'].tolist()))
 
-
+print("获取股票Risk...")
 
 for code in code_l:
     print(code)
