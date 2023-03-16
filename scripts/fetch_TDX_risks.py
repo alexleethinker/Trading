@@ -6,6 +6,7 @@ import requests
 import json
 import os
 home_path = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+from tqdm import tqdm
 
 user_agent = {'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
 'accept-encoding': 'gzip, deflate, br',
@@ -23,23 +24,19 @@ user_agent = {'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,i
 
 # get stock list
 print("获取股票代码列表...")
-spot = ak.stock_zh_a_spot()
+spot = ak.stock_zh_a_spot_em()
 spot = spot[~spot['最新价'].isnull()]
 
-try:
-    all_stock_risks.empty
-    all_risk_table.empty
-except:
-    all_stock_risks = pd.DataFrame()
-    all_stock_risks['code'] = ''
-    all_risk_table = pd.DataFrame()
+
+all_stock_risks = pd.DataFrame()
+all_stock_risks['code'] = ''
+all_risk_table = pd.DataFrame()
 
 code_l = list(set(spot['代码'].tolist()).difference(all_stock_risks['code'].tolist()))
 
 print("获取股票Risk...")
 
-for code in code_l:
-    print(code)
+for code in tqdm(code_l):
     url = 'http://page3.tdx.com.cn:7615/site/pcwebcall_static/bxb/json/' + code + '.json'
 
     r= requests.get(url , headers = user_agent)
@@ -92,13 +89,28 @@ for code in code_l:
     else:
         print(code + ' unsuccessful')
 
-    
+
+
+def market_suffix(code):
+    if code[:1] == '6':
+        code = code + '.SH'
+    elif code[:1] in ['0','3']:
+        code = code + '.SZ'
+    elif code[:1] in ['8','4']:
+        code = code + '.BJ'
+    else:
+        pass
+    return code
+
+
 all_stock_risks = all_stock_risks.fillna('')    
 all_risk_table = all_risk_table.fillna('')    
 
 
-all_stock_risks = all_stock_risks.rename({'code': '代码', 'name': '股票简称', 'lx': '风险项', 'score':'风险评分','trigyy':'风险详情', 'num_risks':'风险项数量'}, axis=1) 
-all_stock_risks = all_stock_risks[['代码', '股票简称', '风险评分', '风险项', '风险项数量','风险详情']]
+all_stock_risks = all_stock_risks.rename({'code': '股票代码', 'name': '股票简称', 'lx': '风险项', 'score':'风险评分','trigyy':'风险详情', 'num_risks':'风险项数量'}, axis=1) 
+all_stock_risks = all_stock_risks[['股票代码', '股票简称', '风险评分', '风险项', '风险项数量','风险详情']]
+all_stock_risks['股票代码'] = all_stock_risks['股票代码'].apply(market_suffix)
+all_stock_risks['股票简称'] = all_stock_risks['股票简称'].str.replace(' ','').str.replace('Ａ','A')
 all_stock_risks.to_csv('stock_risks.csv', index = False, encoding = 'utf-8')
 
 

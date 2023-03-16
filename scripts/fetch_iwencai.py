@@ -9,8 +9,8 @@ pd.set_option('display.max_colwidth', None)
 import os
 home_path = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
-index_selected_list = ['上证50','上证150','上证180','上证380','沪深300','科创50','创业板50',\
-                       '中证500','中证1000','创业300','深证100','深证200','深证700']
+index_selected_list = ['上证50','上证150','沪深300','中证500','中证1000','科创50','创业板50','创业300']
+ignored_list = ['上证180','上证380','深证100','深证200','深证700']
 concepts_list = pd.read_csv(home_path + '/static/concepts_checklist.csv',encoding="utf-8")
 industry_concepts_list = concepts_list.loc[concepts_list['分类'].isin(['行业','产品','业务','行业+']) & concepts_list['active']==1 ]['概念名称'].values.tolist()
 events_concepts_list = concepts_list.loc[concepts_list['分类'].isin(['事件','改革','政策']) & concepts_list['active']==1]['概念名称'].values.tolist()

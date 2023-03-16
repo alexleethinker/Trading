@@ -6,5 +6,5 @@ RUN apt-get -y update && \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/* 
 
-RUN pip --no-cache-dir install --upgrade notebook pandas akshare hikyuu mootdx &&\
+RUN pip --no-cache-dir install --upgrade notebook pandas akshare hikyuu mootdx tushare &&\
     pip --no-cache-dir install git+https://github.com/alexleethinker/wencai.git
