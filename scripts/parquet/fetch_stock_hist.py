@@ -29,9 +29,12 @@ print("更新股票历史行情...")
 
 
 def fetch_hist(stock):
-    stock_daily = ak.stock_zh_a_hist(symbol=stock['symbol'], period=period, start_date=stock['list_date'], end_date=today, adjust="")
-    stock_daily.to_parquet( save_path + stock['symbol'] + '.parquet', index = False)   
-
+    with pool_sema:
+        try:
+            stock_daily = ak.stock_zh_a_hist(symbol=stock['symbol'], period=period, start_date=stock['list_date'], end_date=today, adjust="")
+            stock_daily.to_parquet( save_path + stock['symbol'] + '.parquet', index = False)   
+        except:
+            print( stock['ts_code'] + " failed")
 # for row, stock in tqdm(stock_list.iterrows(),  total=stock_list.shape[0]):
 #     stock_daily = pro.daily(ts_code=stock['ts_code'], period=period, start_date=stock['list_date'], end_date=today, adjust="")
 #     stock_daily.to_parquet( save_path + stock['symbol'] + '.parquet', index = False)
@@ -40,7 +43,7 @@ def fetch_hist(stock):
 import threading
 threads = []
 
-max_connections = 2  # 定义最大线程数
+max_connections = 10  # 定义最大线程数
 pool_sema = threading.BoundedSemaphore(max_connections) # 或使用Semaphore方法
 
 with tqdm(total=stock_list.shape[0]) as pbar:
@@ -48,10 +51,11 @@ with tqdm(total=stock_list.shape[0]) as pbar:
         t = threading.Thread(target = fetch_hist, args = (stock,))
         threads.append(t)
     #print(threads)
-    for t in threads: 
+    for t in threads:
+        pool_sema.acquire()
         t.start()
-        
+        pbar.update(1)
     # 等待所有thread完成之后再执行之后的代码    
     for t in threads: 
         t.join()
-        pbar.update(1)
+        
