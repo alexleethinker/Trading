@@ -35,6 +35,7 @@ def fetch_hist(stock):
             stock_daily.to_parquet( save_path + stock['symbol'] + '.parquet', index = False)   
         except:
             print( stock['ts_code'] + " failed")
+        pool_sema.release()
 # for row, stock in tqdm(stock_list.iterrows(),  total=stock_list.shape[0]):
 #     stock_daily = pro.daily(ts_code=stock['ts_code'], period=period, start_date=stock['list_date'], end_date=today, adjust="")
 #     stock_daily.to_parquet( save_path + stock['symbol'] + '.parquet', index = False)
@@ -43,7 +44,7 @@ def fetch_hist(stock):
 import threading
 threads = []
 
-max_connections = 10  # 定义最大线程数
+max_connections = 2  # 定义最大线程数
 pool_sema = threading.BoundedSemaphore(max_connections) # 或使用Semaphore方法
 
 with tqdm(total=stock_list.shape[0]) as pbar:
