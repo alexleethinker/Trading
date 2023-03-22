@@ -1,4 +1,4 @@
-# import akshare as ak
+import akshare as ak
 import tushare as ts
 pro = ts.pro_api('158ce95d6e799f55b8e8277aa1f6138fa71acf9c52df5ec667296fbc')
 import os
@@ -7,7 +7,6 @@ from tqdm import tqdm
 from datetime import datetime
 
 today = datetime.today().strftime('%Y%m%d')
-
 period = "daily"
 save_path = home_path + '/market_data/stock/' + period + '/'
 if not os.path.exists(save_path):
@@ -27,6 +26,32 @@ print("获取股票代码列表...")
 stock_list = pro.stock_basic(exchange='', list_status='L', fields='ts_code,symbol,name,list_date')
 
 print("更新股票历史行情...")
-for row, stock in tqdm(stock_list.iterrows(),  total=stock_list.shape[0]):
-    stock_daily = pro.daily(ts_code=stock['ts_code'], period=period, start_date=stock['list_date'], end_date=today, adjust="")
-    stock_daily.to_parquet( save_path + stock['symbol'] + '.parquet', index = False)
+
+
+def fetch_hist(stock):
+    stock_daily = ak.stock_zh_a_hist(symbol=stock['symbol'], period=period, start_date=stock['list_date'], end_date=today, adjust="")
+    stock_daily.to_parquet( save_path + stock['symbol'] + '.parquet', index = False)   
+
+# for row, stock in tqdm(stock_list.iterrows(),  total=stock_list.shape[0]):
+#     stock_daily = pro.daily(ts_code=stock['ts_code'], period=period, start_date=stock['list_date'], end_date=today, adjust="")
+#     stock_daily.to_parquet( save_path + stock['symbol'] + '.parquet', index = False)
+
+
+import threading
+threads = []
+
+max_connections = 2  # 定义最大线程数
+pool_sema = threading.BoundedSemaphore(max_connections) # 或使用Semaphore方法
+
+with tqdm(total=stock_list.shape[0]) as pbar:
+    for row, stock in stock_list.iterrows():
+        t = threading.Thread(target = fetch_hist, args = (stock,))
+        threads.append(t)
+    #print(threads)
+    for t in threads: 
+        t.start()
+        
+    # 等待所有thread完成之后再执行之后的代码    
+    for t in threads: 
+        t.join()
+        pbar.update(1)
