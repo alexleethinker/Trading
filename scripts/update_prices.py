@@ -15,7 +15,7 @@ def market_suffix(code):
 
 
 spot = ak.stock_zh_a_spot_em()
-spot = spot[~spot['最新价'].isnull()]
+# spot = spot[~spot['最新价'].isnull()]
 
 spot['股票代码'] = spot['代码'].apply(market_suffix)
 spot['股票简称'] = spot['名称'].str.replace(' ','').str.replace('Ａ','A')

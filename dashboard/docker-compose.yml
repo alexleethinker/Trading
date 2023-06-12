@@ -1,0 +1,26 @@
+version: '3' 
+services:
+
+  stock-dashboard:
+    build: 
+      context: .
+    image: stock-dashboard
+    container_name: stock-dashboard
+    hostname: stock-dashboard
+    ports:
+      - 8501:8501
+    volumes: 
+      - ./:/home
+    working_dir: /home
+    command:  streamlit run stock_dash.py  
+      # nohup python data_loader.py & ;
+      # nohup python scheduler.py &"
+    
+  data-loader:
+    image: stock-dashboard
+    container_name: data-loader
+    hostname: data-loader
+    volumes: 
+      - ./:/home
+    working_dir: /home
+    command: python scheduler.py 
