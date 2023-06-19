@@ -3,13 +3,23 @@ st.set_page_config(layout= 'wide')
 import pandas as pd
 import plotly.express as px
 
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
+
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
+
 
 data_path = './csv/stock_spot.csv'
 
 df = pd.read_csv(data_path,encoding = 'utf-8')
 
 fig = px.treemap(df, 
-                 path=['一级行业','二级行业',],  # 指定层次结构，每一个层次都应该是category型的变量
+                 path=['一级行业','二级行业','三级行业'],  # 指定层次结构，每一个层次都应该是category型的变量
                  values='流通市值', # 需要聚合的列名
                  color='涨跌幅', 
                  custom_data=['涨跌幅','流通市值'],
