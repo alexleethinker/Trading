@@ -6,7 +6,7 @@ RUN apt-get -y update && \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/* 
 
-RUN pip --no-cache-dir install --upgrade pandas streamlit altair==4.0 plotly exchange_calendars apscheduler zhconv
+RUN pip --no-cache-dir install --upgrade pandas streamlit altair==4.0 plotly exchange_calendars apscheduler zhconv lxml openpyxl
 # RUN pip --no-cache-dir install --upgrade cloudscraper cryptography==38.0.4 selenium requests-html
 
 
