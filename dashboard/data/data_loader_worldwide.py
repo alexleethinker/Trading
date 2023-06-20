@@ -93,7 +93,7 @@ def fetch_global_data():
 
 
 
-def update_spot_data_us():   
+def update_spot_data_global():   
 
     import os
     home_path = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
@@ -117,4 +117,4 @@ def update_spot_data_us():
 if __name__ == "__main__":
 
     print('Started data loader')
-    update_spot_data_us()
+    update_spot_data_global()

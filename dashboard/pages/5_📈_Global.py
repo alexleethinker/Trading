@@ -29,7 +29,7 @@ fig = px.treemap(df,
 #                  hover_data= {'涨跌幅':':.2',
 #                              '总市值':':.1f'}, # 鼠标悬浮显示数据的格式
                  color_continuous_scale=["seagreen",'lightgrey', "indianred"],
-                #  height = 900,
+                #  height = 800,
                 #  width = 1600,
                  color_continuous_midpoint=0 , # 颜色变化中间值设置为增长率=0
                 )
@@ -53,7 +53,7 @@ fig.update_traces(textposition='middle center',
 import os 
 from datetime import datetime
 import pytz
+st.text('Last updated: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone('Asia/Shanghai')).strftime('%Y-%m-%d %H:%M:%S') +  ' (Asia/Shanghai)')
 
-st.text('Last updated: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone('Asia/Shanghai')).strftime('%Y-%m-%d %H:%M:%S'))
 # Plot!
-st.plotly_chart(fig, use_container_width=True,theme='streamlit')
+st.plotly_chart(fig, use_container_width=True)
