@@ -116,7 +116,7 @@ def update_spot_data_a():
     import os
     home_path = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
     global data_path
-    data_path = home_path + '/data/'
+    data_path = home_path + '/data'
 
     try:
         spot = stock_spot_a()

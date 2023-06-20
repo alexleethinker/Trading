@@ -49,7 +49,7 @@ def update_spot_data_hk():
     import os
     home_path = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
     global data_path
-    data_path = home_path + '/data/'
+    data_path = home_path + '/data'
  
     try:
         hk_industry_df = get_industry_df()
