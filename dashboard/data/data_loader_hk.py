@@ -58,6 +58,8 @@ def update_spot_data_hk():
         df = hk_industry_df.merge(hkex_df, on = '证券代码', how = 'inner')
         df = df[~df['一级行业'].isnull()]
         df['总市值'] = (df['总市值']/100000000).round(1).fillna(0) 
+        df['最新价'] = df['ls']
+        df['证券代码'] = df['证券代码'] + '.HK'
         df = df[~df['涨跌幅'].isnull()]
         df = df[df['总市值'] > 0]
 
