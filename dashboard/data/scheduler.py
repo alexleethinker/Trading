@@ -31,9 +31,9 @@ def start_cronjob():
     scheduler.add_job(update_spot_data_at_trading_a, 'cron', day_of_week='mon-fri',hour='1-6',minute='*')
     scheduler.add_job(update_spot_data_a, 'cron', day_of_week='mon-fri',hour='7',minute='1')
 
-    scheduler.add_job(update_spot_data_hk, 'cron', day_of_week='mon-fri',hour='1-8',minute='31')
-    scheduler.add_job(update_spot_data_us, 'cron', day_of_week='mon-fri',hour='13-21',minute='1')
-    scheduler.add_job(update_spot_data_global, 'cron', day_of_week='mon-fri',hour='0-21',minute='1')
+    scheduler.add_job(update_spot_data_hk, 'cron', day_of_week='mon-fri',hour='1-8',minute='0/15')
+    scheduler.add_job(update_spot_data_us, 'cron', day_of_week='mon-fri',hour='13-22',minute='0/15')
+    scheduler.add_job(update_spot_data_global, 'cron', day_of_week='mon-fri',hour='0-21',minute='0/15')
     scheduler.start()
 
 if __name__ == "__main__":
