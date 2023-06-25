@@ -103,8 +103,9 @@ def update_spot_data_us():
     try:
         spot = stock_spot_us()
         spot.to_csv( data_path + '/spot/stock_spot_us.csv', index = False, encoding = 'utf-8')
+        print('Data updated')
     except:
-        pass
+        update_spot_data_us()
 
 
 if __name__ == "__main__":
