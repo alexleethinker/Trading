@@ -106,8 +106,9 @@ def update_spot_data_global():
 
         a_df = df[( ((df['is_primary'] == True) & (df['type'] == 'stock')) | \
             ((df['is_primary'] == True) & (df['type'] == 'dr') & (df['market'].isin(['netherlands','america']))) | \
-            ((df['name'].isin(['PHIA','DSM'])) & (df['market'].isin(['netherlands']))) ) & \
-            (~df['exchange'].isin(['OTC']))]
+            ((df['name'].isin(['PHIA','DSM'])) & (df['market'].isin(['netherlands']))) | \
+            ((df['name'].isin(['STLAM'])) & (df['market'].isin(['italy'])))    ) & \
+            (~df['exchange'].isin(['OTC']))   &   (~df['name'].isin(['BRKB'])) ]
         a_df.to_csv( data_path + '/spot/stock_spot_global_primary.csv', index = False, encoding = 'utf-8')
 
     except:
