@@ -106,7 +106,7 @@ def stock_spot_a():
     temp_df['换手率'] = pd.to_numeric(temp_df['换手率'], errors="coerce")
     temp_df = temp_df[['证券代码','证券名称','流通市值','总市值','最新价', '涨跌幅']]
 
-    stock_custom_industry = pd.read_excel(open(data_path +'/static/a_stocks.xlsx', 'rb'),sheet_name='a_stocks').drop(['股票简称'], axis=1)
+    stock_custom_industry = pd.read_excel(open(data_path +'/static/a_stocks.xlsx', 'rb'),sheet_name='a_stocks_info').drop(['股票简称'], axis=1)
     df = temp_df.merge(stock_custom_industry,how='left',on=['证券代码'])
     df = df[~df['一级行业'].isnull()]
     df = df[~df['涨跌幅'].isnull()]
@@ -121,8 +121,9 @@ def update_spot_data_a():
     try:
         spot = stock_spot_a()
         spot.to_csv( data_path + '/spot/stock_spot_china_a.csv', index = False, encoding = 'utf-8')
-    except:
-        pass
+        print('Data updated')
+    except Exception as e:
+        print(e)
 
 
 
