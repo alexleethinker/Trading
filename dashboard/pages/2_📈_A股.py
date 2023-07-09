@@ -24,7 +24,7 @@ import pytz
 st.text('Last updated: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone('Asia/Shanghai')).strftime('%Y-%m-%d %H:%M:%S'))
 
 fig = px.treemap(df, 
-                 path=[px.Constant("全部"),'一级行业','二级行业','三级行业','证券名称',],  # 指定层次结构，每一个层次都应该是category型的变量
+                 path=[px.Constant("A股"),'一级行业','二级行业','三级行业','证券名称',],  # 指定层次结构，每一个层次都应该是category型的变量
                  values='流通市值', # 需要聚合的列名
                  color='涨跌幅', 
                  custom_data=['涨跌幅','流通市值','所属同花顺行业','投资逻辑','最新价','证券代码','主营产品'],
