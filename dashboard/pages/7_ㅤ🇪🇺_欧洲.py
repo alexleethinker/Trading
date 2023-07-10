@@ -30,6 +30,8 @@ df = df.merge(trans_df, on = 'industry').merge(market_df, on = 'market')
 
 def plot_plate(plate = '欧洲'):
     dfi = df[df['plate'] == plate]
+    dfi = dfi[dfi['market'] != 'uk']
+
     figi = px.treemap(dfi, 
                     path=['plate','一级行业','二级行业','name'],  # 指定层次结构，每一个层次都应该是category型的变量
     #                  path=['plate','','sector','industry',],
