@@ -39,6 +39,7 @@ fig = px.treemap(df,
 fig.update_layout({
 'plot_bgcolor': 'rgba(0, 0, 0, 0)',
 'paper_bgcolor': 'rgba(0, 0, 0, 0)',
+'margin': dict(autoexpand=True,l=0,r=0,t=0,b=0),
 })
 fig.update_coloraxes(showscale=False)
 fig.update_traces(marker_line_width = 0.5,marker_line_color="white")
@@ -72,6 +73,7 @@ fig2 = px.treemap(df,
 fig2.update_layout({
 'plot_bgcolor': 'rgba(0, 0, 0, 0)',
 'paper_bgcolor': 'rgba(0, 0, 0, 0)',
+'margin': dict(autoexpand=True,l=0,r=0,t=0,b=0),
 })
 fig2.update_coloraxes(showscale=False)
 fig2.update_traces(marker_line_width = 0.5,marker_line_color="white")

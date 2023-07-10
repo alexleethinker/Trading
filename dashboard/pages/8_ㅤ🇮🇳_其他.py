@@ -45,6 +45,7 @@ def plot_plate(plate = '欧洲'):
                     )
     figi.update_layout(
                     {
+                        'margin': dict(autoexpand=True,l=0,r=0,t=0,b=0),
     # 'margin' : dict(t=50, l=25, r=25, b=5),
     # 'plot_bordercolor':'white',
     # 'plot_bgcolor': 'rgba(0, 0, 0, 0)',
