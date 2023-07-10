@@ -12,7 +12,7 @@ services:
     volumes: 
       - ./:/home
     working_dir: /home
-    command:  streamlit run App.py  
+    command:  streamlit run 📈_主页.py  
       # nohup python data_loader.py & ;
       # nohup python scheduler.py &"
     

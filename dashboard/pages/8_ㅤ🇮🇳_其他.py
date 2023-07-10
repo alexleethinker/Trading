@@ -72,16 +72,16 @@ st.text('Last updated: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).a
 # st.plotly_chart(fig1, use_container_width=True)
 
 
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["欧洲", "亚太",'拉丁美洲','东盟','中东/非/东欧','南亚'])
+tab1, tab2, tab3, tab4= st.tabs(['拉丁美洲','东盟','中东/非/东欧','南亚'])
+# with tab1:
+#     st.plotly_chart(plot_plate('欧洲'), use_container_width=True, theme = 'streamlit')
+# with tab2:
+#     st.plotly_chart(plot_plate('亚太'), use_container_width=True, theme = 'streamlit')
 with tab1:
-    st.plotly_chart(plot_plate('欧洲'), use_container_width=True, theme = 'streamlit')
-with tab2:
-    st.plotly_chart(plot_plate('亚太'), use_container_width=True, theme = 'streamlit')
-with tab3:
     st.plotly_chart(plot_plate('拉丁美洲'), use_container_width=True, theme = 'streamlit')
-with tab4:
+with tab2:
     st.plotly_chart(plot_plate('东盟'), use_container_width=True, theme = 'streamlit')
-with tab5:
+with tab3:
     st.plotly_chart(plot_plate('中东/非/东欧'), use_container_width=True, theme = 'streamlit')
-with tab6:
+with tab4:
     st.plotly_chart(plot_plate('南亚'), use_container_width=True, theme = 'streamlit')
