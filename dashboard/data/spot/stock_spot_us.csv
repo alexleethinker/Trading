@@ -1202,7 +1202,7 @@ XPEL,XPEL Inc,86.64,2.29,2.71,84.34,86.7,83.23,84.35,23.93,53.16,XPEL Inc,"XPEL,
 SYNA,Synaptics Inc,88.24,2.33,2.71,85.82,88.77,85.81,85.91,34.88,19.39,Synaptics Inc,Synaptics Incorporated,United States 美国,科技,半导体,半导体产品,NASDAQ,O
 ISRG,直觉外科,340.27,8.98,2.71,333.33,341.15,333.33,331.29,1192.3,90.88,直觉外科,直觉外科公司,United States 美国,医疗保健,医疗保健设备与服务,医疗保健设备,NASDAQ,O
 ZVIA,Zevia PBC-A,4.17,0.11,2.71,4.06,4.3,4.05,4.06,2.95,-11.76,Zevia PBC-A,Zevia PBC,United States 美国,日常消费品,食品饮料,软饮料,NYSE,N
-ETWO,E2open Parent Holdings Inc-A,5.69,0.15,2.71,5.54,5.74,5.54,5.54,19.09,-2.94,E2open Parent Holdings Inc-A,"E2open Parent Holdings, Inc.",United States 美国,科技,信息技术服务,互联网服务与基础设施,NYSE,N
+ETWO,E2open Parent Holdings Inc-A,5.69,0.15,2.71,5.54,5.74,5.54,5.54,19.09,-1.98,E2open Parent Holdings Inc-A,"E2open Parent Holdings, Inc.",United States 美国,科技,信息技术服务,互联网服务与基础设施,NYSE,N
 JLL,仲量联行,160.51,4.23,2.71,155.3,160.71,155.3,156.28,76.67,15.34,仲量联行,仲量联行有限公司,United States 美国,房地产,房地产管理和开发,房地产服务,NYSE,N
 DUOL,多邻国,138.91,3.66,2.71,134.33,140.52,133.32,135.25,57.03,-114.05,多邻国,多邻国公司,United States 美国,可选消费,社会服务,教育服务,NASDAQ,O
 NVRO,Nevro Corp,24.68,0.65,2.7,24.11,24.84,23.93,24.03,8.84,384.84,Nevro Corp,Nevro Corp.,United States 美国,医疗保健,医疗保健设备与服务,医疗保健设备,NYSE,N
@@ -1585,7 +1585,7 @@ CMCM,猎豹移动,2.45,0.05,2.08,2.34,2.49,2.34,2.4,0.71,-0.96,猎豹移动,猎�
 AXNX,Axonics Inc,50.04,1.02,2.08,49.12,50.17,48.81,49.02,25.21,-54.48,Axonics Inc,"Axonics, Inc.",United States 美国,医疗保健,医疗保健设备与服务,医疗保健设备,NASDAQ,O
 INSE,Inspired Entertainment Inc,14.26,0.29,2.08,14.0,14.3,13.96,13.97,3.75,18.18,Inspired Entertainment Inc,"Inspired Entertainment, Inc.",United States 美国,金融,综合金融,投资银行业与经纪业,NASDAQ,O
 WRLD,环球验收,136.7,2.78,2.08,134.21,137.66,133.92,133.92,8.52,40.14,环球验收,环球验收有限公司,United States 美国,金融,综合金融,消费信贷,NASDAQ,O
-WDFC,WD-40 Co,193.8,3.94,2.08,189.45,196.87,189.45,189.86,26.3,44.0,WD-40 Co,WD-40 Company,United States 美国,日常消费品,日常用品,居家用品,NASDAQ,O
+WDFC,WD-40 Co,193.8,3.94,2.08,189.45,196.87,189.45,189.86,26.3,40.97,WD-40 Co,WD-40 Company,United States 美国,日常消费品,日常用品,居家用品,NASDAQ,O
 NVCR,NovoCure Ltd,41.93,0.85,2.07,41.07,42.69,40.9,41.08,44.53,-31.6,NovoCure Ltd,NovoCure Limited,Jersey 泽西群岛（英属）,医疗保健,医疗保健设备与服务,医疗保健技术,NASDAQ,O
 CRDF,Cardiff Oncology Inc,1.48,0.03,2.07,1.45,1.5,1.4,1.45,0.66,-1.7,Cardiff Oncology Inc,"Cardiff Oncology, Inc.",United States 美国,医疗保健,生物医药,生物科技,NASDAQ,O
 FELE,富兰克林电子,102.72,2.08,2.07,100.41,103.03,100.25,100.64,47.45,24.35,富兰克林电子,富兰克林电子公司,United States 美国,工业,资本品,电气部件与设备,NASDAQ,O
@@ -2404,7 +2404,7 @@ VRE,Veris Residential Inc,16.51,0.18,1.1,16.21,16.51,16.21,16.33,15.14,-24.05,Ve
 KFY,光辉国际,50.47,0.55,1.1,49.77,50.86,49.77,49.92,26.34,12.57,光辉国际,光辉国际,United States 美国,工业,商业服务,人力资源与就业服务,NYSE,N
 OTTR,奥特泰尔,78.41,0.85,1.1,77.56,79.15,77.56,77.56,32.71,11.91,奥特泰尔,奥特泰尔公司,United States 美国,公用事业,电力,电力公用事业,NASDAQ,O
 ELAN,Elanco Animal Health Inc,10.15,0.11,1.1,10.06,10.25,10.01,10.04,49.99,-192.28,Elanco Animal Health Inc,Elanco Animal Health Incorporated,United States 美国,医疗保健,生物医药,制药,NYSE,N
-BEEM,Beam Global,10.15,0.11,1.1,10.0,10.25,9.8,10.04,1.37,-6.47,Beam Global,Beam Global,United States 美国,科技,半导体,半导体设备,NASDAQ,O
+BEEM,Beam Global,10.15,0.11,1.1,10.0,10.25,9.8,10.04,1.42,-6.66,Beam Global,Beam Global,United States 美国,科技,半导体,半导体设备,NASDAQ,O
 AEZS,依特钠,2.77,0.03,1.09,2.77,2.88,2.75,2.74,0.13,-0.55,依特钠,Aeterna Zentaris Inc.,United States 美国,医疗保健,生物医药,生物科技,NASDAQ,O
 UE,Urban Edge Properties,15.77,0.17,1.09,15.53,15.78,15.52,15.6,18.54,105.55,Urban Edge Properties,Urban Edge Properties,United States 美国,房地产,房地产管理和开发,房地产经营公司,NYSE,N
 SCVL,Shoe Carnival Inc,24.13,0.26,1.09,23.77,24.25,23.77,23.87,6.6,6.62,Shoe Carnival Inc,"Shoe Carnival, Inc.",United States 美国,可选消费,零售业,服装零售,NASDAQ,O
@@ -4534,7 +4534,7 @@ OLP,One Liberty Properties Inc,20.46,-0.09,-0.44,20.5,20.74,20.33,20.55,4.36,11.
 UPWK,Upwork Inc,9.08,-0.04,-0.44,9.02,9.35,8.94,9.12,12.12,-25.26,Upwork Inc,Upwork Inc.,United States 美国,科技,信息技术服务,数据处理与外包服务,NASDAQ,O
 GLPG,Galapagos NV ADR,40.82,-0.18,-0.44,40.53,40.96,40.5,41.0,26.87,-13.98,Galapagos NV ADR,Galapagos NV,Belgium 比利时,医疗保健,生物医药,生物科技,NASDAQ,O
 HSY,好时,241.91,-1.07,-0.44,241.85,243.89,241.2,242.98,494.46,29.11,好时,好时公司,United States 美国,日常消费品,食品饮料,包装食品与肉类,NYSE,N
-IHT,InnSuites Hospitality Trust,2.25,-0.01,-0.44,2.18,2.29,2.18,2.26,0.21,35.89,InnSuites Hospitality Trust,InnSuites Hospitality Trust,United States 美国,房地产,股权房地产投资信托 (REITs),特种房地产投资信托,AMEX,A
+IHT,InnSuites Hospitality Trust,2.25,-0.01,-0.44,2.18,2.29,2.18,2.26,0.2,35.45,InnSuites Hospitality Trust,InnSuites Hospitality Trust,United States 美国,房地产,股权房地产投资信托 (REITs),特种房地产投资信托,AMEX,A
 LBRDA,Liberty Broadband Corp-A,80.86,-0.36,-0.44,81.36,83.15,80.53,81.22,119.86,1.6,Liberty Broadband Corp-A,Liberty Broadband Corporation,United States 美国,科技,媒体娱乐,有线和卫星电视,NASDAQ,O
 XEL,埃克西尔能源,62.65,-0.28,-0.44,63.05,63.44,62.36,62.93,344.8,19.44,埃克西尔能源,埃克西尔能源公司,United States 美国,公用事业,电力,电力公用事业,NASDAQ,O
 CZWI,Citizens Community Bancorp Inc,8.95,-0.04,-0.44,8.99,9.05,8.95,8.99,0.94,5.61,Citizens Community Bancorp Inc,"Citizens Community Bancorp, Inc.",United States 美国,金融,银行,互助储蓄与抵押信贷金融服务,NASDAQ,O
