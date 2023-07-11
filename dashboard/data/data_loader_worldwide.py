@@ -58,6 +58,8 @@ def get_USD_forex_table():
 
     
     USD_forex_table.loc[USD_forex_table['currency_id'].isin(['GBX']), 'forex_rate'] = USD_forex_table[USD_forex_table['currency_id'].isin(['GBX'])]['forex_rate']/100 
+    
+    USD_forex_table['currency_id'] = USD_forex_table['currency_id'].str.replace('ZAR','ZAC').str.replace('ILS','ILA')
     return USD_forex_table
 
 def fetch_global_data():

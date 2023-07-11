@@ -26,7 +26,7 @@ market_df = pd.read_excel(open(translated_industry, 'rb'),sheet_name='market_tra
 df = df.merge(trans_df, on = 'industry').merge(market_df, on = 'market')
 
 fig = px.treemap(df, 
-                 path=[px.Constant("世界(USD)"),'plate','市场','一级行业','二级行业'],  # 指定层次结构，每一个层次都应该是category型的变量
+                 path=[px.Constant("世界(USD)"),'plate','市场','大行业','一级行业','二级行业'],  # 指定层次结构，每一个层次都应该是category型的变量
 #                  path=['plate','','sector','industry',],
                  values='market_cap_USD', # 需要聚合的列名
                  color='change', 

@@ -33,7 +33,7 @@ def plot_plate(plate = '欧洲'):
     dfi = dfi[dfi['market'] != 'uk']
 
     figi = px.treemap(dfi, 
-                    path=['plate','一级行业','二级行业','name'],  # 指定层次结构，每一个层次都应该是category型的变量
+                    path=['plate','大行业','一级行业','二级行业','name'],  # 指定层次结构，每一个层次都应该是category型的变量
     #                  path=['plate','','sector','industry',],
                     values='market_cap_USD', # 需要聚合的列名
                     color='change', 
