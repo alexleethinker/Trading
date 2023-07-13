@@ -35,7 +35,7 @@ def plot_plate():
                     values='market_cap_USD', # 需要聚合的列名
                     color='change', 
                     custom_data=['change','name','market_cap_USD','close','市场'],
-                    range_color = [-3, 3], # 色彩范围最大最小值
+                    range_color = [-8, 8], # 色彩范围最大最小值
     #                  hover_data= {'涨跌幅':':.2',
     #                              '总市值':':.1f'}, # 鼠标悬浮显示数据的格式
                     color_continuous_scale=["seagreen",'lightgrey', "indianred"],

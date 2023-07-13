@@ -57,7 +57,7 @@ def plot_plate():
                     textinfo='label', 
                     textfont = dict(color='white'),
                     texttemplate= "%{label}<br>%{customdata[0]:.2f}%<br>",
-                    hovertemplate= "%{customdata[1]}<br>%{label}<br>%{customdata[5]}<br>%{customdata[3]:.3f} (%{customdata[0]:.2f})%<br>%{customdata[4]}<br>总市值=%{customdata[2]:d}亿"                  
+                    hovertemplate= "%{customdata[1]}<br>%{label}<br>%{customdata[5]}<br>%{customdata[3]:.2f} (%{customdata[0]:.2f})%<br>%{customdata[4]}<br>总市值=%{customdata[2]:d}亿"                  
     #                   hovertemplate= "%{customdata[1]}<br>%{label}<br>(%{customdata[0]:.2f}%)<br>总市值=%{customdata[2]:d}亿"
                     ) 
     return figi

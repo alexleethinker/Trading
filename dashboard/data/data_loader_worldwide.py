@@ -103,6 +103,7 @@ def correct_industry(df):
 
     us_df = pd.read_excel(open(data_path +'/static/us_stocks.xlsx', 'rb'),sheet_name='us_stocks_industry').rename(columns={"证券代码": "code"})
     us_df = us_df[us_df['二级行业'].isin(['半导体'])][['code']]
+    us_df['code'] = us_df['code'].str.replace('_','.')
     data = {'correct_industry': 'Semiconductors', 'market': 'america'}
     us_df = us_df.assign(**data)
 
@@ -149,6 +150,7 @@ def translate_name(df):
 
     us_df = pd.read_excel(open(data_path +'/static/us_stocks.xlsx', 'rb'),sheet_name='us_stocks_industry')
     us_df = us_df[["证券代码","证券名称"]]
+    us_df['证券代码'] = us_df['证券代码'].str.replace('_','.')
     us_df['market'] = 'america'   
 
     a_df = pd.read_excel(open(data_path +'/static/a_stocks.xlsx', 'rb'),sheet_name='a_stocks_info')
@@ -156,9 +158,20 @@ def translate_name(df):
     a_df["证券代码"] = a_df["证券代码"].str[:6]
     a_df['market'] = 'china'  
 
-    translate_df = pd.concat([tw_df, sg_df, hk_df, uk_df, us_df, a_df], ignore_index=True)
+
+    other_df = pd.read_excel(open(data_path +'/static/translation.xlsx', 'rb'),sheet_name='stock_names')
+    def format_korea_code(code):
+        code = '{:0>6}'.format(code)
+        return code
+    other_df.loc[other_df['market'].isin(['korea']), '证券代码'] = other_df[other_df['market'].isin(['korea'])]['证券代码'].apply(format_korea_code)   
+
+    translate_df = pd.concat([tw_df, sg_df, hk_df, uk_df, us_df, a_df, other_df], ignore_index=True)
 
     df = df.merge(translate_df, how = 'left', left_on=['name','market'], right_on= ['证券代码','market'])
+    df['description'] = df['description'].str.replace(', S.A.','').str.replace(' S.A.','').str.replace(' LTD','').str.replace(' PLC','')\
+                        .str.replace(' A/S','').str.replace(' OYJ','').str.replace(' AG NA','').str.replace(' SE NA','')\
+                        .str.replace(' O.N.','').str.replace(' O N','').str.replace(' N.V.','')
+
     df['en_description'] = df['description'] 
     df.loc[~df['证券名称'].isnull(), 'description'] = df[~df['证券名称'].isnull()]['证券名称']
     print('name translated')

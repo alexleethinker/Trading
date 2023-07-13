@@ -1,5 +1,6 @@
 code,market,correct_industry
 6857,japan,Semiconductors
+3436,japan,Semiconductors
 8035,japan,Semiconductors
 7735,japan,Semiconductors
 8155,japan,Semiconductors
@@ -30,6 +31,7 @@ OXIG,uk,Semiconductors
 SMHN,germany,Semiconductors
 AIXA,germany,Semiconductors
 WAF,germany,Semiconductors
+SOI,france,Semiconductors
 IFCN,switzerland,Semiconductors
 KIT,norway,Semiconductors
 LPK,germany,Semiconductors
