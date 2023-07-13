@@ -28,7 +28,7 @@ df = df.merge(trans_df, on = 'industry').merge(market_df, on = 'market')
 
 
 def plot_plate():
-    dfi = df[df['二级行业'].isin(['电力设备'])]
+    dfi = df[df['二级行业'].isin(['机械加工设备'])]
     figi = px.treemap(dfi, 
                     path=[px.Constant("机械加工设备"),'plate','市场','description'],  # 指定层次结构，每一个层次都应该是category型的变量
     #                  path=['plate','','sector','industry',],
