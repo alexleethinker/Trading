@@ -17,15 +17,15 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 data_path = './data/spot/stock_spot_global_primary.csv'
 translated_industry = './data/static/translation.xlsx'
-translated_name = './data/static/sg_stocks.csv'
+# translated_name = './data/static/sg_stocks.csv'
 
 df = pd.read_csv(data_path,encoding = 'utf-8')
 # trans_df = pd.read_csv(translated_industry, encoding = 'gbk')
 trans_df = pd.read_excel(open(translated_industry, 'rb'),sheet_name='industry_trans')
 market_df = pd.read_excel(open(translated_industry, 'rb'),sheet_name='market_trans')
-tw_df = pd.read_csv(translated_name).fillna('')
+# sg_df = pd.read_csv(translated_name).fillna('')
 
-df = df.merge(trans_df, on = 'industry').merge(market_df, on = 'market').merge(tw_df, how= 'left', left_on = 'name', right_on='交易代号')
+df = df.merge(trans_df, on = 'industry').merge(market_df, on = 'market')
 
 
 def plot_plate(market):

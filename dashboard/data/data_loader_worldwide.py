@@ -93,7 +93,76 @@ def fetch_global_data():
     
     return df
 
+def correct_industry(df):
+    correct_df = pd.read_csv(data_path + '/static/correct_industry.csv')
 
+    tw_df = pd.read_csv(data_path + '/static/tw_all_securaties.csv').rename(columns={"有价证券代号": "code"})
+    tw_df = tw_df[tw_df['产业别'].isin(['半导体业'])][['code']]
+    data = {'correct_industry': 'Semiconductors', 'market': 'taiwan'}
+    tw_df = tw_df.assign(**data)
+
+    us_df = pd.read_excel(open(data_path +'/static/us_stocks.xlsx', 'rb'),sheet_name='us_stocks_industry').rename(columns={"证券代码": "code"})
+    us_df = us_df[us_df['二级行业'].isin(['半导体'])][['code']]
+    data = {'correct_industry': 'Semiconductors', 'market': 'america'}
+    us_df = us_df.assign(**data)
+
+    a_df = pd.read_excel(open(data_path +'/static/a_stocks.xlsx', 'rb'),sheet_name='a_stocks_info').rename(columns={"证券代码": "code",'二级行业':'correct_industry'})
+    a_df = a_df[a_df['correct_industry'].isin(['半导体','光伏'])][['code','correct_industry']]
+    a_df["code"] = a_df["code"].str[:6]
+    a_df["correct_industry"] = a_df["correct_industry"].str.replace('半导体','Semiconductors').str.replace('光伏','Electrical Products')
+    data = {'market': 'china'}
+    a_df = a_df.assign(**data)
+
+    correct_df = pd.concat([correct_df, tw_df, us_df, a_df], ignore_index=True).drop_duplicates(subset=['code', 'market'])
+
+    df = df.merge(correct_df, how = 'left', left_on=['name','market'], right_on= ['code','market'])
+    df.loc[~df['correct_industry'].isnull(), 'industry'] = df[~df['correct_industry'].isnull()]['correct_industry']
+    # df = df.drop(columns = 'industry')
+    # df = df.rename(columns={'correct_industry':'industry'}, inplace=True)
+    # print('Data cleaned')
+    return df
+
+
+def translate_name(df):
+
+    def format_hk_code(code):
+        code = '{:0>5}'.format(code)
+        return code
+    df.loc[df['market'].isin(['hongkong']), 'name'] = df[df['market'].isin(['hongkong'])]['name'].apply(format_hk_code)
+
+    tw_df = pd.read_csv(data_path + '/static/tw_all_securaties.csv').rename(columns={"有价证券代号": "证券代码","有价证券名称": "证券名称"})
+    tw_df = tw_df[["证券代码","证券名称"]]
+    tw_df['market'] = 'taiwan'
+
+    sg_df = pd.read_csv(data_path + '/static/sg_stocks.csv').rename(columns={"交易代号": "证券代码"})
+    sg_df = sg_df[["证券代码","证券名称"]]
+    sg_df['market'] = 'singapore'
+
+    hk_df = pd.read_csv(data_path + '/spot/stock_spot_hk.csv')
+    hk_df = hk_df[["证券代码","证券名称"]]
+    hk_df["证券代码"] = hk_df["证券代码"].str[:5]
+    hk_df['market'] = 'hongkong'
+    # print(hk_df)
+    uk_df = pd.read_csv(data_path + '/static/uk_stocks.csv')
+    uk_df = uk_df[["证券代码","证券名称"]]
+    uk_df['market'] = 'uk'
+
+    us_df = pd.read_excel(open(data_path +'/static/us_stocks.xlsx', 'rb'),sheet_name='us_stocks_industry')
+    us_df = us_df[["证券代码","证券名称"]]
+    us_df['market'] = 'america'   
+
+    a_df = pd.read_excel(open(data_path +'/static/a_stocks.xlsx', 'rb'),sheet_name='a_stocks_info')
+    a_df = a_df[["证券代码","股票简称"]].rename(columns={"股票简称": "证券名称"})
+    a_df["证券代码"] = a_df["证券代码"].str[:6]
+    a_df['market'] = 'china'  
+
+    translate_df = pd.concat([tw_df, sg_df, hk_df, uk_df, us_df, a_df], ignore_index=True)
+
+    df = df.merge(translate_df, how = 'left', left_on=['name','market'], right_on= ['证券代码','market'])
+    df['en_description'] = df['description'] 
+    df.loc[~df['证券名称'].isnull(), 'description'] = df[~df['证券名称'].isnull()]['证券名称']
+    print('name translated')
+    return df
 
 def update_spot_data_global():   
 
@@ -104,6 +173,9 @@ def update_spot_data_global():
    
     try:
         df = fetch_global_data()
+        df = translate_name(df)
+        df = correct_industry(df)
+        
         df.to_csv( data_path + '/spot/stock_spot_global_all.csv', index = False, encoding = 'utf-8')
 
         a_df = df[( ((df['is_primary'] == True) & (df['type'] == 'stock')) | \
@@ -113,8 +185,8 @@ def update_spot_data_global():
             (~df['exchange'].isin(['OTC']))   &   (~df['name'].isin(['BRKB'])) ]
         a_df.to_csv( data_path + '/spot/stock_spot_global_primary.csv', index = False, encoding = 'utf-8')
 
-    except:
-        pass
+    except Exception as e:
+        print(e)
 
 
 if __name__ == "__main__":

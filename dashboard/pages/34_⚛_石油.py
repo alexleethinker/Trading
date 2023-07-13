@@ -31,7 +31,7 @@ def plot_plate():
     dfi = df[df['一级行业'].isin(['能源'])].fillna("")
     dfi = dfi[~dfi['二级行业'].isin(['煤炭'])]
     figi = px.treemap(dfi, 
-                    path=[px.Constant("能源"),'plate','市场','description'],  # 指定层次结构，每一个层次都应该是category型的变量
+                    path=[px.Constant("石油"),'plate','市场','description'],  # 指定层次结构，每一个层次都应该是category型的变量
     #                  path=['plate','','sector','industry',],
                     values='market_cap_USD', # 需要聚合的列名
                     color='change', 
