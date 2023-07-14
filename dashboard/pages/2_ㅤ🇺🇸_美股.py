@@ -17,6 +17,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 data_path = './data/spot/stock_spot_us.csv'
 
 df = pd.read_csv(data_path,encoding = 'utf-8')
+df = df[~df['证券名称'].str.contains(' Pfd')]
 
 fig = px.treemap(df, 
                  path=[px.Constant("全部"),'一级行业','二级行业','三级行业','证券名称'],  # 指定层次结构，每一个层次都应该是category型的变量
