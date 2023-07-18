@@ -81,7 +81,7 @@ def fetch_global_data():
     df = df[df['market_cap_USD'] > 0]
     
     df['Traded_USD'] = (df['Value.Traded']* df['forex_rate']/100000000).fillna(0)
-    df = df[df['Value.Traded'] > 0.01]
+    df = df[df['Value.Traded'] > 0]
     
     df['turnover_rate'] = (df['Traded_USD'] / df['market_cap_USD']).round(4)
     
@@ -129,6 +129,7 @@ def translate_name(df):
     def format_hk_code(code):
         code = '{:0>5}'.format(code)
         return code
+    
     df.loc[df['market'].isin(['hongkong']), 'name'] = df[df['market'].isin(['hongkong'])]['name'].apply(format_hk_code)
 
     tw_df = pd.read_csv(data_path + '/static/tw_all_securaties.csv').rename(columns={"有价证券代号": "证券代码","有价证券名称": "证券名称"})
@@ -159,11 +160,16 @@ def translate_name(df):
     a_df['market'] = 'china'  
 
 
-    other_df = pd.read_excel(open(data_path +'/static/translation.xlsx', 'rb'),sheet_name='stock_names')
+    other_df = pd.read_csv(data_path + '/static/stock_name_translation.csv')
+    # other_df['证券代码'] = other_df['证券代码'].str.replace(',','')
     def format_korea_code(code):
         code = '{:0>6}'.format(code)
         return code
+    def format_jp_code(code):
+        code = '{:0>4}'.format(code)
+        return code
     other_df.loc[other_df['market'].isin(['korea']), '证券代码'] = other_df[other_df['market'].isin(['korea'])]['证券代码'].apply(format_korea_code)   
+    other_df.loc[other_df['market'].isin(['japan','ksa']), '证券代码'] = other_df[other_df['market'].isin(['japan','ksa'])]['证券代码'].apply(format_jp_code)   
 
     translate_df = pd.concat([tw_df, sg_df, hk_df, uk_df, us_df, a_df, other_df], ignore_index=True)
 
@@ -193,9 +199,13 @@ def update_spot_data_global():
 
         a_df = df[( ((df['is_primary'] == True) & (df['type'] == 'stock')) | \
             ((df['is_primary'] == True) & (df['type'] == 'dr') & (df['market'].isin(['netherlands','america']))) | \
-            ((df['name'].isin(['PHIA','DSM'])) & (df['market'].isin(['netherlands']))) | \
+            ((df['name'].isin(['PHIA','DSM','ABN'])) & (df['market'].isin(['netherlands']))) | \
             ((df['name'].isin(['STLAM'])) & (df['market'].isin(['italy'])))    ) & \
             (~df['exchange'].isin(['OTC']))   &   (~df['name'].isin(['BRKB'])) ]
+        
+        a_df = a_df[a_df['market_cap_USD'] > 1]
+        a_df = a_df[a_df['Traded_USD'] > 0.0001]
+
         a_df.to_csv( data_path + '/spot/stock_spot_global_primary.csv', index = False, encoding = 'utf-8')
 
     except Exception as e:

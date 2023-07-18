@@ -35,7 +35,7 @@ def plot_plate(market):
     #                  path=['plate','','sector','industry',],
                     values='market_cap_USD', # 需要聚合的列名
                     color='change', 
-                    custom_data=['change','name','market_cap_USD','close','市场'],
+                    custom_data=['change','name','market_cap_USD','close','市场','Traded_USD'],
                     range_color = [-8, 8], # 色彩范围最大最小值
     #                  hover_data= {'涨跌幅':':.2',
     #                              '总市值':':.1f'}, # 鼠标悬浮显示数据的格式
@@ -58,7 +58,7 @@ def plot_plate(market):
                     textinfo='label', 
                     textfont = dict(color='white'),
                     texttemplate= "%{label}<br>%{customdata[0]:.2f}%<br>",
-                    hovertemplate= "%{customdata[1]}<br>%{label}<br>%{customdata[3]:.2f} (%{customdata[0]:.2f})%<br>总市值=%{customdata[2]:d}亿"                  
+                    hovertemplate= "%{customdata[1]}<br>%{label}<br>%{customdata[3]:.1f} (%{customdata[0]:.2f})%<br>总市值=%{customdata[2]:d}亿<br>成交额=%{customdata[5]:d}万"                  
     #                   hovertemplate= "%{customdata[1]}<br>%{label}<br>(%{customdata[0]:.2f}%)<br>总市值=%{customdata[2]:d}亿"
                     ) 
     return figi

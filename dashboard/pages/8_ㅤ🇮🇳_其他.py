@@ -29,12 +29,13 @@ df = df.merge(trans_df, on = 'industry').merge(market_df, on = 'market')
 
 def plot_plate(plate = '欧洲'):
     dfi = df[df['plate'] == plate]
+    dfi['Traded_USD'] = dfi['Traded_USD']* 10000
     figi = px.treemap(dfi, 
                     path=['plate','市场','大行业','一级行业','二级行业','name'],  # 指定层次结构，每一个层次都应该是category型的变量
     #                  path=['plate','','sector','industry',],
                     values='market_cap_USD', # 需要聚合的列名
                     color='change', 
-                    custom_data=['change','description','market_cap_USD','close','market'],
+                    custom_data=['change','description','market_cap_USD','close','市场','Traded_USD'],
                     range_color = [-8, 8], # 色彩范围最大最小值
     #                  hover_data= {'涨跌幅':':.2',
     #                              '总市值':':.1f'}, # 鼠标悬浮显示数据的格式
@@ -57,7 +58,7 @@ def plot_plate(plate = '欧洲'):
                     textinfo='label', 
                     textfont = dict(color='white'),
                     texttemplate= "%{label}<br>%{customdata[0]:.2f}%<br>",
-                    hovertemplate= "%{label}<br>%{customdata[1]}<br>%{customdata[3]:.3f} (%{customdata[0]:.2f})%<br>总市值=%{customdata[2]:d}亿"                  
+                    hovertemplate= "%{customdata[1]}<br>%{label}<br>%{customdata[3]:.1f} (%{customdata[0]:.2f})%<br>总市值=%{customdata[2]:d}亿<br>成交额=%{customdata[5]:d}万"                  
     #                   hovertemplate= "%{customdata[1]}<br>%{label}<br>(%{customdata[0]:.2f}%)<br>总市值=%{customdata[2]:d}亿"
                     ) 
     return figi
