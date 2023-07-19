@@ -35,8 +35,8 @@ def plot_plate():
     dfi = dfi[dfi['exchange'].isin(['EURONEXT','XETR','MIL','BME','OMXHEX','ATHEX'])]
     # dfi = dfi[dfi['market'].isin(['germany','france','netherlands','belgium'])]
     dfi = dfi[(dfi['Traded_USD'] > 10) | (dfi['change'] < 50)]
-    dfi = dfi[~dfi['name'].isin(['ARGX'])]
-    dfi = dfi[dfi['Traded_USD'] > dfi['Traded_USD'].quantile(.8) ]
+    # dfi = dfi[~dfi['name'].isin(['ARGX'])]
+    dfi = dfi[dfi['Traded_USD'] > dfi['Traded_USD'].quantile(.7) ]
 
     figi = px.treemap(dfi, 
                     path=['plate','市场','大行业','一级行业','description'],  # 指定层次结构，每一个层次都应该是category型的变量

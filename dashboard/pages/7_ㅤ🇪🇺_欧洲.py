@@ -30,7 +30,7 @@ df = df.merge(trans_df, on = 'industry').merge(market_df, on = 'market')
 
 def plot_plate(plate = '欧洲'):
     dfi = df[df['plate'] == plate]
-    dfi = dfi[dfi['market'] != 'uk']
+    # dfi = dfi[dfi['market'] != 'uk']
     dfi['Traded_USD'] = dfi['Traded_USD']* 10000
     dfi = dfi[dfi['Traded_USD'] > dfi['Traded_USD'].quantile(.8) ]
     figi = px.treemap(dfi, 

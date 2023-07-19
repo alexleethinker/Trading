@@ -26,7 +26,7 @@ def stock_spot_us():
         "涨跌幅",
         "涨跌额",
         "_",
-        "_",
+        "成交额",
         "_",
         "_",
         "_",
@@ -70,6 +70,7 @@ def stock_spot_us():
             "最高价",
             "最低价",
             "昨收价",
+            '成交额',
             "总市值",
             "市盈率",
 #             "代码",
@@ -83,6 +84,7 @@ def stock_spot_us():
     temp_df["最低价"] = pd.to_numeric(temp_df["最低价"], errors="coerce")
     temp_df["昨收价"] = pd.to_numeric(temp_df["昨收价"], errors="coerce")
     temp_df["总市值"] = pd.to_numeric(temp_df["总市值"], errors="coerce")
+    temp_df["成交额"] = pd.to_numeric(temp_df["成交额"], errors="coerce")
     temp_df["市盈率"] = pd.to_numeric(temp_df["市盈率"], errors="coerce")    
 
     stock_custom_industry = pd.read_excel(open(data_path +'/static/us_stocks.xlsx', 'rb'),sheet_name='us_stocks_industry')
@@ -91,6 +93,7 @@ def stock_spot_us():
     df = df[~df['三级行业'].isnull()]
     df = df[~df['总市值'].isnull()]
     df['总市值'] = (df['总市值']/100000000).round(2)
+    df['成交额'] = (df['成交额']/100000000).round(2)
     return df
 
 

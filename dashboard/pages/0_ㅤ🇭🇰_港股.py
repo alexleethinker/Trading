@@ -19,9 +19,10 @@ data_path = './data/spot/stock_spot_hk.csv'
 df = pd.read_csv(data_path,encoding = 'utf-8')
 df['证券代码'] = df['证券代码'].astype(str)
 df = df[df['证券代码'].str[:1] != '8']
+df = df[df['总市值'] > df['总市值'].quantile(.85) ]
 
 fig = px.treemap(df, 
-                 path=[px.Constant("全部"),'一级行业','二级行业','三级行业','证券名称'],  # 指定层次结构，每一个层次都应该是category型的变量
+                 path=[px.Constant("全部"),'一级行业','二级行业','证券名称'],  # 指定层次结构，每一个层次都应该是category型的变量
                  values='总市值', # 需要聚合的列名
                  color='涨跌幅', 
                  custom_data=['涨跌幅','证券代码','总市值','最新价'],

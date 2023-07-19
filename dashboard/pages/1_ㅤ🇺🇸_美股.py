@@ -18,12 +18,13 @@ data_path = './data/spot/stock_spot_us.csv'
 
 df = pd.read_csv(data_path,encoding = 'utf-8')
 df = df[~df['证券名称'].str.contains(' Pfd')]
+df = df[df['成交额'] > df['成交额'].quantile(.8) ]
 
 fig = px.treemap(df, 
                  path=[px.Constant("全部"),'一级行业','二级行业','三级行业','证券名称'],  # 指定层次结构，每一个层次都应该是category型的变量
                  values='总市值', # 需要聚合的列名
                  color='涨跌幅', 
-                 custom_data=['涨跌幅','证券代码','总市值','最新价'],
+                 custom_data=['涨跌幅','证券代码','总市值','最新价','成交额'],
                  range_color = [-8, 8], # 色彩范围最大最小值
                  hover_data= {'涨跌幅':':.2',
                              '总市值':':.1f'}, # 鼠标悬浮显示数据的格式
@@ -43,7 +44,7 @@ fig.update_traces(textposition='middle center',
                   textinfo='label', 
                   textfont = dict(color='white'),
                   texttemplate= "%{label}<br>%{customdata[0]:.2f}%<br>",
-                  hovertemplate= "%{customdata[1]}<br>%{label}<br>%{customdata[3]:.2f}  (%{customdata[0]:.2f}%)<br>总市值=%{customdata[2]:d}亿")
+                  hovertemplate= "%{customdata[1]}<br>%{label}<br>%{customdata[3]:.2f}  (%{customdata[0]:.2f}%)<br>总市值=%{customdata[2]:d}亿<br>成交额=%{customdata[4]:.2f}亿")
 
 
 
@@ -51,7 +52,7 @@ fig2 = px.treemap(df,
                  path=[px.Constant("全部"),'一级行业','二级行业','三级行业'],  # 指定层次结构，每一个层次都应该是category型的变量
                  values='总市值', # 需要聚合的列名
                  color='涨跌幅', 
-                 custom_data=['涨跌幅','总市值'],
+                 custom_data=['涨跌幅','总市值','成交额'],
                  range_color = [-4, 4], # 色彩范围最大最小值
                  hover_data= {'涨跌幅':':.2',
                              '总市值':':.1f'}, # 鼠标悬浮显示数据的格式

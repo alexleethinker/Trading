@@ -97,14 +97,14 @@ def stock_spot_a():
     temp_df['涨跌幅'] = pd.to_numeric(temp_df['涨跌幅'], errors="coerce")
     temp_df['涨跌额'] = pd.to_numeric(temp_df['涨跌额'], errors="coerce")
     temp_df['成交量'] = pd.to_numeric(temp_df['成交量'], errors="coerce")
-    temp_df['成交额'] = pd.to_numeric(temp_df['成交额'], errors="coerce")
+    temp_df['成交额'] = (pd.to_numeric(temp_df['成交额'], errors="coerce")/100000000).round(2).fillna('') 
     temp_df['振幅'] = pd.to_numeric(temp_df['振幅'], errors="coerce")
     temp_df['最高'] = pd.to_numeric(temp_df['最高'], errors="coerce")
     temp_df['最低'] = pd.to_numeric(temp_df['最低'], errors="coerce")
     temp_df['今开'] = pd.to_numeric(temp_df['今开'], errors="coerce")
     temp_df['量比'] = pd.to_numeric(temp_df['量比'], errors="coerce")
     temp_df['换手率'] = pd.to_numeric(temp_df['换手率'], errors="coerce")
-    temp_df = temp_df[['证券代码','证券名称','流通市值','总市值','最新价', '涨跌幅']]
+    temp_df = temp_df[['证券代码','证券名称','流通市值','总市值','最新价', '涨跌幅','成交额','换手率']]
 
     stock_custom_industry = pd.read_excel(open(data_path +'/static/a_stocks.xlsx', 'rb'),sheet_name='a_stocks_info').drop(['股票简称'], axis=1)
     df = temp_df.merge(stock_custom_industry,how='left',on=['证券代码'])

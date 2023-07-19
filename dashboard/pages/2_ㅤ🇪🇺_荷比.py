@@ -32,10 +32,11 @@ def plot_plate(plate = '欧洲'):
     dfi = df[df['plate'] == plate]
     dfi = dfi[dfi['market'].isin(['netherlands','belgium'])]
     dfi['Traded_USD'] = dfi['Traded_USD']* 10000
-    dfi = dfi[~dfi['name'].isin(['ARGX'])]
+    # dfi = dfi[~dfi['name'].isin(['ARGX'])]
+    dfi = dfi[dfi['Traded_USD'] > dfi['Traded_USD'].quantile(.6) ]
 
     figi = px.treemap(dfi, 
-                    path=['plate','市场','大行业','一级行业','二级行业','description'],  # 指定层次结构，每一个层次都应该是category型的变量
+                    path=['plate','大行业','一级行业','二级行业','description'],  # 指定层次结构，每一个层次都应该是category型的变量
     #                  path=['plate','','sector','industry',],
                     values='Traded_USD', # 需要聚合的列名
                     color='change', 
