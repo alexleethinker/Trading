@@ -30,6 +30,8 @@ df = df.merge(trans_df, on = 'industry').merge(market_df, on = 'market')
 
 def plot_plate(market):
     dfi = df[df['market'] == market].fillna('')
+    dfi['Traded_USD'] = dfi['Traded_USD']* 10000
+    dfi = dfi[dfi['Traded_USD'] > dfi['Traded_USD'].quantile(.8) ]
     figi = px.treemap(dfi, 
                     path=[px.Constant("新股"),'大行业','一级行业','二级行业','证券名称'],  # 指定层次结构，每一个层次都应该是category型的变量
     #                  path=['plate','','sector','industry',],

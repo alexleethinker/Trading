@@ -65,7 +65,7 @@ def get_USD_forex_table():
 def fetch_global_data():
     
     country = 'global'
-    columns = '["name","description","type","close","currency","change","Value.Traded","market_cap_basic","fundamental_currency_code","sector","industry","market","is_primary","exchange","country"]'
+    columns = '["name","description","logoid","type","close","currency","change","Value.Traded","market_cap_basic","fundamental_currency_code","sector","industry","market","is_primary","exchange","country"]'
     payload = '{"columns":'+ columns +',"filter":[{"left":"typespecs","operation":"has_none_of","right":["etn","etf"]}],"ignore_unknown_fields":false,"price_conversion":{"to_currency":"usd"},"range":[0,90000],"sort":{"sortBy":"market_cap_basic","sortOrder":"desc"},"markets":["america","argentina","australia","bahrain","belgium","brazil","canada","chile","china","colombia","cyprus","denmark","egypt","estonia","finland","france","germany","greece","hongkong","hungary","iceland","india","indonesia","israel","italy","japan","kenya","kuwait","latvia","lithuania","luxembourg","malaysia","mexico","morocco","netherlands","newzealand","nigeria","norway","pakistan","peru","philippines","poland","portugal","qatar","romania","russia","ksa","serbia","singapore","slovakia","rsa","korea","spain","srilanka","sweden","switzerland","taiwan","thailand","tunisia","turkey","uae","uk","venezuela","vietnam"]}'
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'}
     
@@ -180,6 +180,12 @@ def translate_name(df):
 
     df['en_description'] = df['description'] 
     df.loc[~df['证券名称'].isnull(), 'description'] = df[~df['证券名称'].isnull()]['证券名称']
+
+
+    dr_df = pd.read_csv(data_path + '/static/dr_names.csv')
+    df = df.merge(dr_df, how = 'left', on=['logoid'])
+    df.loc[~df['dr_name'].isnull() & df['证券名称'].isnull(), 'description'] = df[~df['dr_name'].isnull() & df['证券名称'].isnull()]['dr_name'] + '-X'
+
     print('name translated')
     return df
 
