@@ -1,0 +1,111 @@
+,id,code,hiqAbbr,country,city,micCode,name
+0,190,CATS,CAT,DE,Frankfurt,CATS,CATS
+1,3001,XCUR,CNX,US,New York,XCUR,Currenex
+2,191,BNP,BNP,DE,Frankfurt,BNPS,BNP OTC
+3,3000,,UIT,XX,,,Uithandelaar
+4,192,SGN,SCG,DE,Frankfurt,XSGA,Socgen OTC
+5,194,XETR,XET,DE,Frankfurt,XETR,Xetra
+6,590,XMAD,MAD,ES,Madrid,XMAD,Bolsa de Madrid
+7,470,XSGO,SSE,CL,Santiago,XSGO,Santiago Stock Exchange (SSE)
+8,195,XFRA,FRA,DE,Frankfurt,XFRA,Borse Frankfurt
+9,196,XGAT,TDG,DE,Frankfurt,XGAT,Tradegate AG
+10,592,XMEF,MEF,ES,Madrid,XMRV,Mercado Espanol de Futuros Financieros (MEFF)
+11,594,XMCE,SIB,ES,Madrid,XMCE,Continuous Market (SIBE)
+12,870,NZFX,NZX,NZ,Wellington,NZFX,New Zealand Stock Exchange (NZX)
+13,359,XCME,CME,US,Chicago,XCME,Chicago Mercantile Exchange (CME)
+14,910,XKRX,KRX,KR,Busan,XKRX,Korea Exchange (KRX)
+15,999,XWBO,WEN,AT,Vienna,XWBO,Vienna Stock Exchange (WBAG)
+16,1979,,CHV,CH,Zurich,CHIX,CHI-X Virt-x
+17,9997,,OTG,XX,,,OTC GS FX
+18,9998,,OTP,XX,,,OTC Bonds Paris (OTP)
+19,480,XBSP,BMF,BR,Sao Paulo,XBSP,BM&FBOVESPA
+20,1194,,CHX,DE,Frankfurt,CHIX,CHI-X Xetra
+21,362,XCBT,CBT,US,Chicago,XCBT,Chicago Board of Trade (CBOT)
+22,880,IDX,IDX,ID,Jakarta,IDX,Indonesia Stock Exchange (IDX)
+23,485,XBUE,MRV,AR,Buenos Aires,XBUE,Buenos Aires Stock Exchange
+24,365,XNYM,NYM,US,Chicago,XNYM,New York Mercantile Exchange (NYMEX)
+25,486,XMEX,MXX,MX,Mexico City,XMEX,Bolsa Mexicana de Valores
+26,520,XOSL,OSL,NO,Oslo,XOSL,Oslo Børs
+27,367,XNYM,CEC,US,Chicago,XCEC,Commodity Exchange (COMEX)
+28,920,XTAI,TWX,TW,Taipei,XTAI,Taiwan Stock Exchange (TWSE)
+29,801,XWAR,WSE,PL,Warsaw,XWAR,Warsaw Stock Exchange
+30,805,XNAI,NTX,KE,Nairobi,XNAI,Nairobi Stock Exchange
+31,1000,,DEG,XX,Amsterdam,,DEGIRO
+32,490,XMOS,MCX,RU,Moscow,XMOS,Moscow Interbank Currency Exchange (MICEX)
+33,495,MISX,RTS,RU,Moscow,MISX,Russian Trading System
+34,650,XASE,ASE,US,New York,XASE,NYSE MKT - Amex
+35,892,XTSE,TOR,CA,Toronto,XTSE,Toronto Stock Exchange (TSX)
+36,893,XTSX,TSV,CA,Toronto,XTSX,Toronto Venture Exchange
+37,894,CPH,CSE,CA,Toronto,XCNQ,Canadian Securities Exchange (CSE)
+38,930,XBKK,SET,TH,Bangkok,XBKK,Stock Exchange of Thailand (SET)
+39,810,XJSE,JSE,ZA,Johannesburg,XJSE,Johannesburg Stock Exchange
+40,9999,,OTA,XX,,,OTC Bonds Amsterdam (OTA)
+41,1010,OTCQ,OTC,US,New York,OTCQ,OTC Markets Group
+42,384,XDUB,IRL,IR,Dublin,XDUB,Irish Stock Exchange (ISE)
+43,1008,XSTO,NDX,SE,Stockholm,XNDX,Nasdaq Derivatives Markets
+44,1007,TOM,TOM,NL,Amsterdam,TOM,The Order Machine (TOM)
+45,1006,XLIF,LFF,XX,Amsterdam,XLIF,Euronext NYSE Liffe
+46,663,XNAS,NDQ,US,New York,XNAS,NASDAQ
+47,1005,AUTO,CBO,US,Chicago,XCBO,Chicago Board Options Exchange (CBOE)
+48,1004,ARCX,NYA,US,New York,ARCX,NYSE Arca
+49,1003,ICE,ICE,US,Atlanta,IEPA,Intercontinental-Exchange (ICE)
+50,1002,XSES,SGX,SG,Singapore,XSES,Singapore Exchange (SGX)
+51,820,XTAE,TAX,IL,Tel Aviv,XTAE,Tel Aviv Stock Exchange
+52,1001,HE,HSE,FI,Helsinki,XHEL,OMX Helsinki
+53,305,,BEO,BE,Brussels,,Euronext NYSE Liffe Brussels Options (BEO)
+54,10000,,FSM,XX,Amsterdam,,FundShare Matching
+55,10002,XGFS,KFS,NL,Amsterdam,XGFS,Global Fund Services
+56,10001,,MNF,XX,,,MNF Matching
+57,947,XSWX,SWX,CH,Zurich,XSWX,Swiss Stock Exchange (SWX)
+58,10003,,MSF,XX,,,MS Cash Funds
+59,709,,FRF,FR,Paris,,Euronext NYSE Liffe Paris Futures (FRF)
+60,676,XNYS,NSY,US,New York,XNYS,New York Stock Exchange
+61,830,XCAI,EGX,EG,Cairo,XCAI,Egyptian Exchange
+62,710,XPAR,EPA,FR,Paris,XPAR,Euronext Paris
+63,712,XMLI,MLI,FR,Paris,XMLI,Euronext Access Paris
+64,714,,FRO,FR,Paris,,Euronext NYSE Liffe Paris Options (FRO)
+65,2000,BCUR,FXX,XX,,BCUR,Currencies
+66,560,XLIS,ELI,PR,Lissabon,XLIS,Euronext Lisbon
+67,320,XBRU,EBR,BE,Brussels,XBRU,Euronext Brussels
+68,200,XAMS,EAM,NL,Amsterdam,XAMS,Euronext Amsterdam
+69,324,,BEF,BE,Brussels,,Euronext NYSE Liffe Brussels Futures (BEF)1
+70,720,XLUX,LUX,LU,Luxembourg,XLUX,Luxembourg Stock Exchange
+71,841,XSFE,SFE,AU,Sydney,XSFE,Sydney Futures Exchange (SFE)
+72,688,BATS,BTS,US,New York,BATS,BATS Exchange
+73,608,MTAA,MIL,IT,Milan,MTAA,Borsa Italiana S.p.A.
+74,5001,XTKS,TSE,JP,Tokyo,XTKS,Tokyo Stock Exchange (TSE)
+75,5002,XASX,ASX,AU,Sydney,XASX,Australian Securities Exchange (ASX)
+76,5003,XNSE,NSE,IN,Mumbai,XNSE,National Exchange Of India Limited
+77,5004,XOSE,OSE,JP,Osaka,XOSE,Osaka Stock Exchange (OSE)
+78,690,OL,OMO,NO,Oslo,XOSL,OMX Stockholm NOK EQUITIES
+79,570,XLON,LSE,UK,London,XLON,London Stock Exchange (LSE)
+80,850,XBUD,BSE,HU,Budapest,XBUD,Budapest Stock Exchange
+81,454,XHKG,HKS,HK,Hong Kong,XHKG,Hong Kong Stock Exchange
+82,212,,NLF,NL,Amsterdam,,Euronext NYSE Liffe Amsterdam Futures (NLF)
+83,213,,NLO,NL,Amsterdam,,Euronext NYSE Liffe Amsterdam Futures (NLO)
+84,455,XHKF,HFE,HK,Hong Kong,XHKF,Hong Kong Futures Exchange
+85,610,MIBO,MIB,IT,Milan,XDMI,Borsa Italiana Derivatives
+86,3333,,MSS,XX,,,MorganStanleyIndexSwap
+87,613,,LIF,GB,London,,Euronext NYSE Liffe London Futures (LFF)
+88,855,XPRA,PSE,CZ,Prague,XPRA,Prague Stock Exchange (PSE)
+89,219,ASEX,ATH,GR,Athens,ASEX,Athens Stock Exchange (ATHEX)1
+90,615,,LFO,GB,London,,Euronext NYSE Liffe London Options (LFO)
+91,616,,LFU,GB,New York,,Euronext NYSE Liffe U.S. Futures
+92,979,XVTX,VTX,CH,Zurich,XVTX,SIX Swiss Exchange (Virt-x)
+93,5010,XBCL,BEC,CL,Santiago,XBCL,La Bolsa Electronica de Chile
+94,1570,L,CHL,GB,London,CHIX,CHI-X LSE
+95,185,XEUR,ERX,DE,Frankfurt,XEUR,Eurex
+96,460,IS,ISE,TR,Istanbul,XIST,Istanbul Stock Exchange
+97,462,,TKD,TR,Izmir,,Turkish Derivatives Exchange
+98,860,ST,OMX,SE,Stockholm,XSTO,OMX Stockholm
+99,189,XEEE,EEX,DE,,XEEE,European Energy Exchange AG
+100,1200,AS,CHA,NL,Amsterdam,CHIX,CHI-X Amsterdam
+101,866,FNSE,FNS,SE,Stockholm,FNSE,First North Stockholm
+102,5005,XPHS,PHE,PH,Pasig city,XPHS,Philippine Stock Exchange
+103,900,XKLZ,MYX,MY,Kuala Lumpur,XKLS,Bursa Malaysia (MYX)
+104,5006,XSHE,SSX,CN,Shenzhen,XSHE,Shenzhen Stock Exchange
+105,1608,,CHB,IT,London,CHIX,CHI-X BIT
+106,5007,XNSA,NSA,NG,Lagos,XNSA,The Nigerian Stock Exchange
+107,5008,XHSX,HSX,VN,Ho Chi Minh,XSTC,Hochiminh Stock Exchange (HSX)
+108,5009,XCAS,CAS,MA,Casablanca,XCAS,Bourse de Casablanca (CAS)
+109,508,CO,OMK,DK,Copenhagen,XCSE,OMX Copenhagen

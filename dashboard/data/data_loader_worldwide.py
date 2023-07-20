@@ -56,10 +56,9 @@ def get_USD_forex_table():
 #     USD_forex_table = USD_forex_table.append({'currency_id':'USD','forex_rate':1}, ignore_index=True)
     USD_forex_table = pd.concat([USD_forex_table, pd.DataFrame({'currency_id':['USD'],'forex_rate':[1]})], ignore_index=True)
 
-    
-    USD_forex_table.loc[USD_forex_table['currency_id'].isin(['GBX']), 'forex_rate'] = USD_forex_table[USD_forex_table['currency_id'].isin(['GBX'])]['forex_rate']/100 
-    
     USD_forex_table['currency_id'] = USD_forex_table['currency_id'].str.replace('ZAR','ZAC').str.replace('ILS','ILA')
+    USD_forex_table.loc[USD_forex_table['currency_id'].isin(['GBX','ZAC','ILA']), 'forex_rate'] = USD_forex_table[USD_forex_table['currency_id'].isin(['GBX','ZAC','ILA'])]['forex_rate']/100 
+    
     return USD_forex_table
 
 def fetch_global_data():
