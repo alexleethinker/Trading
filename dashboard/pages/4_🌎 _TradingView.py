@@ -123,8 +123,8 @@ import os
 from datetime import datetime
 import pytz
 timezone = 'UTC'
-st.text('Last updated: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone(timezone)).strftime('%Y-%m-%d %H:%M:%S') +  ' {timezone}'.format(timezone=timezone))
-
+text = 'Last updated: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone(timezone)).strftime('%Y-%m-%d %H:%M:%S') +  ' ({timezone})'.format(timezone=timezone)
+st.markdown(text)
 # Plot!
 # st.plotly_chart(fig1, use_container_width=True)
 
@@ -132,7 +132,8 @@ st.radio(
     "",
     key="plate",
     options=['🌎 全球','🇺🇸 北美','🇪🇺 欧洲','🇯🇵 亚太','🇮🇳 南亚','🇸🇬 东盟','🇸🇦 中东/非/东欧','🇧🇷 拉丁美洲'],
-    horizontal=True
+    horizontal=True,
+    label_visibility='collapsed'
 )
 
 

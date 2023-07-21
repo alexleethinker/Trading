@@ -38,10 +38,10 @@ def start_cronjob():
     scheduler = BlockingScheduler(job_defaults=job_defaults)
 
     # scheduler.add_job(save_data, 'interval', minutes=1, id='load_data')
-    scheduler.add_job(update_spot_data_at_trading_a, 'cron', day_of_week='mon-fri',hour='1-6',minute='*')
+    scheduler.add_job(update_spot_data_at_trading_a, 'cron', day_of_week='mon-fri',hour='1-6',minute='*',second='30')
     scheduler.add_job(update_spot_data_a, 'cron', day_of_week='mon-fri',hour='7',minute='1')
 
-    scheduler.add_job(update_spot_degiro_at_trading, 'cron', day_of_week='mon-fri',hour='7-15',minute='1/5')
+    scheduler.add_job(update_spot_degiro_at_trading, 'cron', day_of_week='mon-fri',hour='7-15',minute='0/5',second='30')
     scheduler.add_job(update_spot_euronext, 'cron', day_of_week='mon-fri',hour='15',minute='36,45')
     scheduler.add_job(update_spot_xetr, 'cron', day_of_week='mon-fri',hour='15',minute='36,45')
 

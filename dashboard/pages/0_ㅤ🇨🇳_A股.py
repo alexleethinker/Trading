@@ -22,7 +22,8 @@ from datetime import datetime
 import pytz
 
 timezone = 'Asia/Shanghai'
-st.text('Last updated: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone(timezone)).strftime('%Y-%m-%d %H:%M:%S') +  ' {timezone}'.format(timezone=timezone))
+text = 'Last updated: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone(timezone)).strftime('%Y-%m-%d %H:%M:%S') +  ' ({timezone})'.format(timezone=timezone)
+st.markdown(text)  
 
 fig = px.treemap(df, 
                  path=[px.Constant("A股"),'一级行业','二级行业','三级行业','证券名称',],  # 指定层次结构，每一个层次都应该是category型的变量

@@ -2,6 +2,7 @@ import streamlit as st
 st.set_page_config(layout= 'wide')
 import pandas as pd
 import plotly.express as px
+from streamlit_autorefresh import st_autorefresh
 
 BACKGROUND_COLOR = 'black'
 COLOR = 'black'
@@ -72,7 +73,8 @@ def load_df(exchange,percentile):
         df = df[df['turnover'] > df['turnover'].quantile(percentile) ]
 
     timezone = 'Europe/Amsterdam'
-    st.text('Last updated: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone(timezone)).strftime('%Y-%m-%d %H:%M:%S') +  ' {timezone}'.format(timezone=timezone))
+    text = 'Last updated: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone(timezone)).strftime('%Y-%m-%d %H:%M:%S') +  ' ({timezone})'.format(timezone=timezone)
+    st.markdown(text)    
     return df
 
 def plot_plate(exchange):
@@ -128,7 +130,8 @@ st.radio(
     "",
     key="exchange",
     options=['™️EuroNext','™️XETRA'],
-    horizontal=True
+    horizontal=True,
+    label_visibility='collapsed'
 )
 
 
@@ -153,3 +156,6 @@ st.plotly_chart(plot_plate(st.session_state.exchange), use_container_width=True)
 #     st.plotly_chart(plot_plate('中东/非/东欧'), use_container_width=True, theme = 'streamlit')
 # with tab6:
 #     st.plotly_chart(plot_plate('南亚'), use_container_width=True, theme = 'streamlit')
+
+# update every 5 mins
+st_autorefresh(interval=1 * 60 * 1000, key="stock_refresh")

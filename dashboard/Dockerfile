@@ -1,4 +1,4 @@
-FROM python:3.9.7
+FROM python
 
 RUN apt-get -y update && \
     apt-get install --no-install-recommends -y nodejs && \
@@ -6,7 +6,7 @@ RUN apt-get -y update && \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/* 
 
-RUN pip --no-cache-dir install --upgrade pandas streamlit altair==4.0 plotly exchange_calendars apscheduler zhconv lxml openpyxl
+RUN pip --no-cache-dir install --upgrade pandas streamlit altair==4.0 plotly exchange_calendars apscheduler zhconv lxml openpyxl streamlit-autorefresh
 # RUN pip --no-cache-dir install --upgrade cloudscraper cryptography==38.0.4 selenium requests-html
 
 
