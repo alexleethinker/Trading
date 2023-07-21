@@ -80,9 +80,8 @@ import os
 from datetime import datetime
 import pytz
 
-st.text('Last updated: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone('Asia/Shanghai')).strftime('%Y-%m-%d %H:%M:%S'))
-# Plot!
-# st.plotly_chart(fig, use_container_width=True, use_container_height=True)
+timezone = 'America/New_York'
+st.text('Last updated: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone(timezone)).strftime('%Y-%m-%d %H:%M:%S') +  ' {timezone}'.format(timezone=timezone))
 
 
 

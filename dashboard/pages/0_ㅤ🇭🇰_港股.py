@@ -85,9 +85,8 @@ import os
 from datetime import datetime
 import pytz
 
-st.text('Last updated: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone('Asia/Shanghai')).strftime('%Y-%m-%d %H:%M:%S'))
-# Plot!
-
+timezone = 'Asia/Shanghai'
+st.text('Last updated: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone(timezone)).strftime('%Y-%m-%d %H:%M:%S') +  ' {timezone}'.format(timezone=timezone))
 
 tab1, tab2 = st.tabs(["板块概览", "个股详情"])
 with tab1:

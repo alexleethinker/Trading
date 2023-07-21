@@ -70,7 +70,8 @@ def plot_plate(market):
 import os 
 from datetime import datetime
 import pytz
-st.text('Last updated: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone('Asia/Shanghai')).strftime('%Y-%m-%d %H:%M:%S') +  ' (Asia/Shanghai)')
+timezone = 'UTC'
+st.text('Last updated: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone(timezone)).strftime('%Y-%m-%d %H:%M:%S') +  ' {timezone}'.format(timezone=timezone))
 
 # Plot!
 st.plotly_chart(plot_plate('singapore'), use_container_width=True)
