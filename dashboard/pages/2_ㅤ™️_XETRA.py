@@ -15,38 +15,30 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
 
-data_path = './data/spot/stock_spot_euronext.csv'
+data_path = './data/spot/stock_spot_xetr.csv'
 translated_industry = './data/static/translation.xlsx'
+xetr_master = './data/static/xetr_masterdata.csv'
 
 df = pd.read_csv(data_path,encoding = 'utf-8')
-# trans_df = pd.read_csv(translated_industry, encoding = 'gbk')
 trans_df = pd.read_excel(open(translated_industry, 'rb'),sheet_name='industry_trans')
-market_df = pd.read_excel(open(translated_industry, 'rb'),sheet_name='market_trans')
+master_df = pd.read_csv(xetr_master,encoding = 'utf-8')
+df = df.merge(trans_df, on = 'industry').merge(master_df , on = 'isin')
 
-df = df.merge(trans_df, on = 'industry').merge(market_df, on = 'market')
-df.loc[~df['证券名称'].isnull(), 'stock_name'] = df[~df['证券名称'].isnull()]['证券名称']
-df.loc[~df['dr_name'].isnull() & df['证券名称'].isnull(), 'stock_name'] = df[~df['dr_name'].isnull() & df['证券名称'].isnull()]['dr_name'] + ' SE'
-df['stock_name'] = df['stock_name'].str.replace('�','').str.replace(' SpA','').str.replace(' NV','')
-
-
+df.loc[~df['证券名称'].isnull(), 'name'] = df[~df['证券名称'].isnull()]['证券名称']
+df['turnover'] = pd.to_numeric(df['turnover'], errors="coerce")/10000
+df['marketCapitalisation'] = pd.to_numeric(df['marketCapitalisation'], errors="coerce")/100000000
 
 def plot_plate():
     
-    dfi = df[~df['change'].isnull()]
-    # dfi = dfi[dfi['plate'].isin(['欧洲'])]
-    dfi['Traded_USD'] = dfi['Traded_USD']* 10000
-    # dfi = dfi[dfi['exchange'].isin(['EURONEXT','XETR','MIL','BME','OMXHEX','ATHEX'])]
-    # dfi = dfi[dfi['market'].isin(['germany','france','netherlands','belgium'])]
-    # dfi = dfi[(dfi['Traded_USD'] > 10) | (dfi['change'] < 50)]
-    # dfi = dfi[~dfi['name'].isin(['ARGX'])]
-    dfi = dfi[dfi['Traded_USD'] > dfi['Traded_USD'].quantile(.5) ]
+    dfi = df.fillna("")
+    dfi = dfi[dfi['turnover'] > dfi['turnover'].quantile(.5) ]
 
     figi = px.treemap(dfi, 
-                    path=[px.Constant("EuroNext-USD"),'大行业','一级行业','二级行业','stock_name'],  # 指定层次结构，每一个层次都应该是category型的变量
+                    path=[px.Constant("XETR-EUR"),'大行业','一级行业','二级行业','name'],  # 指定层次结构，每一个层次都应该是category型的变量
     #                  path=['plate','','sector','industry',],
-                    values='market_cap_USD', # 需要聚合的列名
-                    color='change', 
-                    custom_data=['change','degiro_symbol','market_cap_USD','last_price','country','Traded_USD','exchange','icb_industry','exchange_degiro','category'],
+                    values='turnover', # 需要聚合的列名
+                    color='changeToPrevDay', 
+                    custom_data=['changeToPrevDay','symbol','marketCapitalisation','overview.lastPrice','xetr_industry','exchange_degiro','category','originCountry','turnover'],
                     range_color = [-8, 8], # 色彩范围最大最小值
     #                  hover_data= {'涨跌幅':':.2',
     #                              '总市值':':.1f'}, # 鼠标悬浮显示数据的格式
@@ -69,7 +61,7 @@ def plot_plate():
                     textinfo='label', 
                     textfont = dict(color='white'),
                     texttemplate= "%{label}<br>%{customdata[0]:.2f}%<br>",
-                    hovertemplate= "%{customdata[8]}-%{customdata[9]} | %{customdata[1]}<br>%{customdata[4]}<br>%{label}<br>%{customdata[3]} (%{customdata[0]:.2f}%)<br>总市值=%{customdata[2]:.1f}亿<br>成交额=%{customdata[5]:d}万<br>%{customdata[7]}"                  
+                    hovertemplate= "%{customdata[5]}-%{customdata[6]} | %{customdata[1]}<br>%{customdata[7]}<br>%{label}<br>%{customdata[3]} (%{customdata[0]:.2f}%)<br>总市值=%{customdata[2]:.1f}亿<br>成交额=%{customdata[8]:d}万<br>%{customdata[4]}"                  
     #                   hovertemplate= "%{customdata[1]}<br>%{label}<br>(%{customdata[0]:.2f}%)<br>总市值=%{customdata[2]:d}亿"
                     ) 
     return figi
