@@ -66,7 +66,7 @@ def update_spot_xetr():
         xetr_df = get_xetr_prices()
         degiro_df = pd.read_csv( data_path + '/static/xetr_degiro.csv') 
         df = degiro_df.merge(xetr_df, how = 'left', on = ['isin'])
-        df.to_csv( data_path + '/spot/stock_spot_xetr.csv', index = False, encoding = 'utf-8')
+        df.to_csv( data_path + '/spot/stock_spot_xetra.csv', index = False, encoding = 'utf-8')
         
         print('Data updated')
     except Exception as e:
