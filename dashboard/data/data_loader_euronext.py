@@ -12,7 +12,7 @@ def update_euronext_price():
         'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-US;q=0.7,ja;q=0.6,zh-TW;q=0.5,nl;q=0.4',
         'Content-Length': '2291',
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        'Cookie': 'visid_incap_2784265=Fa+2QpF1RPOGRvczqZc9doviJWQAAAAAQUIPAAAAAABjdMOtC35OE9i9CqTY6Cs2; visid_incap_2784297=IPdkiUKKRA+fEgAlrkIyCVKnXGQAAAAAQUIPAAAAAAD/LtpK/6LgeAblpwLuLmiM; visid_incap_2691598=U/NqsPS3TyqhlTHgSGGNYlanXGQAAAAAQUIPAAAAAAAB5o04iL2AMEYmxUNQzY1t; visid_incap_2790185=BQi+PIrxRGGpulC7+EtSq+prhGQAAAAAQUIPAAAAAACbCqPEY30BuR/7dsPteOrP; cookie-agreed-version=1.0.1; cookie-agreed-categories=[%22necessary%22%2C%22performance%22]; cookie-agreed=2; _ga_PMEFBR6CSF=GS1.1.1689803565.1.0.1689803571.0.0.0; _gat_UA-46900155-5=1; _gid=GA1.2.49211915.1689843268; incap_ses_766_2784297=vT2CboPeeX4rXYEr6mGhCkb2uGQAAAAA+NpC7RU0E/aohDIZ19IgGg==; _gcl_au=1.1.1158013361.1689843272; _ga_5H9XW5KEHP=GS1.1.1689843263.2.1.1689843272.0.0.0; _ga_WYRYLMR662=GS1.1.1689843263.2.1.1689843273.0.0.0; _ga=GA1.2.838838868.1689546998; _hjSessionUser_1305322=eyJpZCI6ImVhODMxMWYzLWI5ZTgtNTE4Yi04NGU3LTg0YTMzNjdjMmI0MiIsImNyZWF0ZWQiOjE2ODk4NDMyNzMxNjcsImV4aXN0aW5nIjpmYWxzZX0=; _hjFirstSeen=1; _hjIncludedInSessionSample_1305322=0; _hjSession_1305322=eyJpZCI6IjIyODFkM2QxLTI2NmUtNGYyOS04OTU1LThmYWEwNGRhN2Y2ZiIsImNyZWF0ZWQiOjE2ODk4NDMyNzMxODYsImluU2FtcGxlIjpmYWxzZX0=; _hjAbsoluteSessionInProgress=0',
+        'Cookie': 'visid_incap_2784265=Fa+2QpF1RPOGRvczqZc9doviJWQAAAAAQUIPAAAAAABjdMOtC35OE9i9CqTY6Cs2; visid_incap_2784297=IPdkiUKKRA+fEgAlrkIyCVKnXGQAAAAAQUIPAAAAAAD/LtpK/6LgeAblpwLuLmiM; visid_incap_2691598=U/NqsPS3TyqhlTHgSGGNYlanXGQAAAAAQUIPAAAAAAAB5o04iL2AMEYmxUNQzY1t; visid_incap_2790185=BQi+PIrxRGGpulC7+EtSq+prhGQAAAAAQUIPAAAAAACbCqPEY30BuR/7dsPteOrP; cookie-agreed-version=1.0.1; cookie-agreed-categories=[%22necessary%22%2C%22performance%22]; cookie-agreed=2; _ga_PMEFBR6CSF=GS1.1.1691538410.1.1.1691540208.0.0.0; _hjFirstSeen=1; _gat_gtag_UA_46900155_5=1; incap_ses_766_2784297=ybsKVIQ5RAZ2fKfg7mGhCj3c0mQAAAAAco6m3Y4DoftpCspxky1MMA==; _ga_5H9XW5KEHP=GS1.1.1691540476.3.1.1691540540.0.0.0; _ga_WYRYLMR662=GS1.1.1691538404.6.1.1691540540.0.0.0',
         'Origin': 'https://live.euronext.com',
         'Referer': 'https://live.euronext.com/en/products/equities/list',
         'Sec-Ch-Ua': '"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"',
@@ -69,9 +69,12 @@ def update_spot_euronext():
     try:
         euronext_df = update_euronext_price()
         global_df = pd.read_csv( data_path + '/spot/stock_spot_global_all.csv').drop(columns=['change','currency'])
+
+        # df = euronext_df.merge(global_df, how = 'left', left_on = ['symbol','market'], right_on = ['name','market'])
         degiro_df = pd.read_csv( data_path + '/static/euronext_degiro.csv') 
         degiro_df = degiro_df.merge(global_df, how = 'left', left_on = ['symbol','market'], right_on = ['name','market'])
         df = degiro_df.merge(euronext_df, how = 'left', on = ['euronext_code'])
+
         df.to_csv( data_path + '/spot/stock_spot_euronext.csv', index = False, encoding = 'utf-8')
         
         print('Data updated')

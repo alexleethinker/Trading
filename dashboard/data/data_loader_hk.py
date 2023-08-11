@@ -5,6 +5,10 @@ from lxml import etree
 from zhconv import convert
 
 
+# fs: m:116 t:3,m:116 t:4,m:116 t:1,m:116 t:2
+# fields: f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f12,f13,f14,f15,f16,f17,f18,f19,f20,f21,f23,f24,f25,f26,f22,f33,f11,f62,f128,f136,f115,f152
+
+
 def translate(string):
     return convert(string, 'zh-cn')
 

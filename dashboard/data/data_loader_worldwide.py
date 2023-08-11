@@ -102,6 +102,7 @@ def correct_industry(df):
 
     us_df = pd.read_excel(open(data_path +'/static/us_stocks.xlsx', 'rb'),sheet_name='us_stocks_industry').rename(columns={"证券代码": "code"})
     us_df = us_df[us_df['二级行业'].isin(['半导体'])][['code']]
+    
     us_df['code'] = us_df['code'].str.replace('_','.')
     data = {'correct_industry': 'Semiconductors', 'market': 'america'}
     us_df = us_df.assign(**data)
@@ -119,7 +120,7 @@ def correct_industry(df):
     df.loc[~df['correct_industry'].isnull(), 'industry'] = df[~df['correct_industry'].isnull()]['correct_industry']
     # df = df.drop(columns = 'industry')
     # df = df.rename(columns={'correct_industry':'industry'}, inplace=True)
-    # print('Data cleaned')
+    
     return df
 
 
