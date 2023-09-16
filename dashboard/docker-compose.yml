@@ -8,7 +8,8 @@ services:
     container_name: stock-dashboard
     hostname: stock-dashboard
     ports:
-      - 8501:8501
+      - 80:80
+      - 443:443
     volumes: 
       - ./:/home
     working_dir: /home
