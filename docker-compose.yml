@@ -1,0 +1,27 @@
+version: '3' 
+services:
+
+  stock-dashboard:
+    build: 
+      context: .
+    image: quant
+    container_name: stock-dashboard
+    hostname: stock-dashboard
+    ports:
+      - 80:80
+      - 443:443
+    volumes: 
+      - ./:/home
+    working_dir: /home
+    command:  streamlit run investin/Streamlit/📈_主页.py  
+      # nohup python data_loader.py & ;
+      # nohup python scheduler.py &"
+    
+  data-loader:
+    image: quant
+    container_name: data-loader
+    hostname: data-loader
+    volumes: 
+      - ./:/home
+    working_dir: /home
+    command: python investin/Utils/scheduler.py 
