@@ -12,8 +12,8 @@ services:
       - 443:443
     volumes: 
       - ./:/home
-    working_dir: /home
-    command:  streamlit run investin/Streamlit/📈_主页.py  
+    working_dir: /home/investin/Streamlit
+    command:  streamlit run 📈_主页.py  
       # nohup python data_loader.py & ;
       # nohup python scheduler.py &"
     
@@ -24,4 +24,4 @@ services:
     volumes: 
       - ./:/home
     working_dir: /home
-    command: python investin/Utils/scheduler.py 
+    command: python -m investin.Utils.scheduler

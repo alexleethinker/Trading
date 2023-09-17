@@ -6,7 +6,7 @@ import os
 from datetime import datetime
 import pytz
 import exchange_calendars as xcals
-from investin.Utils.config import data_dir
+from config import data_dir
 
 hide_streamlit_style = """
 <style>
@@ -21,7 +21,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 def get_treemap(data_path):
     df = pd.read_csv(data_path,encoding = 'utf-8')
-    translation = '{data_dir}static/translation.xlsx'
+    translation = '{data_dir}/static/translation.xlsx'.format(data_dir=data_dir)
     industry_trans_df = pd.read_excel(open(translation, 'rb'),sheet_name='industry_trans')
     market_trans_df = pd.read_excel(open(translation, 'rb'),sheet_name='market_trans')
     df = df.merge(industry_trans_df, on = 'industry').merge(market_trans_df, on = 'market')
@@ -71,7 +71,7 @@ def get_trading_calendars():
     afternoon = today_calendars[~today_calendars['break_start'].isnull()][['break_end','close','exchange','is_open']].rename(columns={"break_end": "open"})
     today_calendars = pd.concat([continuous, morning, afternoon], ignore_index=True)
 
-    exchanges_info = pd.read_csv('./data/static/exchanges.csv')
+    exchanges_info = pd.read_csv('{data_dir}/static/exchanges.csv'.format(data_dir=data_dir))
     today_calendars = today_calendars.merge(exchanges_info, how = 'left', left_on = 'exchange', right_on = 'ISO Code')
     today_calendars = today_calendars[today_calendars['Selected'].isin([1])]
     today_calendars = today_calendars.sort_values(['open','close']).reset_index(drop=True)
@@ -108,7 +108,7 @@ def get_trading_calendars():
 
 
 
-data_path = './data/spot/stock_spot_global_all.csv'
+data_path = '{data_dir}/spot/stock_spot_global_all.csv'.format(data_dir=data_dir)
 timezone = 'UTC'
 text = '更新时间: ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone(timezone)).strftime('%Y-%m-%d %H:%M:%S') +  ' ({timezone})'.format(timezone=timezone)
 
