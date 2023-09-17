@@ -1,3 +1,3 @@
 import os
 
-data_dir = os.getenv('DATA_DIR')
+data_dir = 'investin/data' if os.getenv('DATA_DIR') == None else os.getenv('DATA_DIR')
