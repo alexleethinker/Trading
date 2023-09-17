@@ -1,26 +1,16 @@
 import streamlit as st
-st.set_page_config(layout= 'wide')
 import pandas as pd
 import plotly.express as px
-from investin.Utils.config import data_dir
+from utils.config import page_config, update_at, data_dir
+from utils.figure import fig_render
+page_config()
 
-hide_streamlit_style = """
-<style>
-#MainMenu {visibility: hidden;}
-body {border-color: white; border-style: solid;}
-footer {visibility: hidden;}
-</style>
+timezone = 'UTC'
+data_path = '{data_dir}/spot/stock_spot_global_primary.csv'.format(data_dir=data_dir)
+translated_industry = '{data_dir}/static/translation.xlsx'.format(data_dir=data_dir)
 
-# """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-
-
-
-data_path = '{data_dir}/spot/stock_spot_global_primary.csv'
-translated_industry = '{data_dir}/static/translation.xlsx'
 
 df = pd.read_csv(data_path,encoding = 'utf-8')
-# trans_df = pd.read_csv(translated_industry, encoding = 'gbk')
 trans_df = pd.read_excel(open(translated_industry, 'rb'),sheet_name='industry_trans')
 market_df = pd.read_excel(open(translated_industry, 'rb'),sheet_name='market_trans')
 
@@ -36,16 +26,11 @@ def plot_plate(plate = '欧洲'):
     dfi = dfi[dfi['Traded_USD'] > dfi['Traded_USD'].quantile(.8) ]
     figi = px.treemap(dfi, 
                     path=['plate','exchange','大行业','一级行业','二级行业'],  # 指定层次结构，每一个层次都应该是category型的变量
-    #                  path=['plate','','sector','industry',],
                     values='market_cap_USD', # 需要聚合的列名
                     color='change', 
                     custom_data=['change','name','market_cap_USD','close','市场','Traded_USD'],
                     range_color = [-8, 8], # 色彩范围最大最小值
-    #                  hover_data= {'涨跌幅':':.2',
-    #                              '总市值':':.1f'}, # 鼠标悬浮显示数据的格式
                     color_continuous_scale=["seagreen",'lightgrey', "indianred"],
-                    #  height = 800,
-                    #  width = 1600,
                     color_continuous_midpoint=0 , # 颜色变化中间值设置为增长率=0
                     )
     figi.update_layout(

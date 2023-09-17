@@ -1,4 +1,3 @@
+import os
 
-
-
-data_dir = 'investin/data'
+data_dir = os.getenv('DATA_DIR')

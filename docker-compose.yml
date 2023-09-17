@@ -10,12 +10,13 @@ services:
     ports:
       - 80:80
       - 443:443
+    env_file:
+      - .env
     volumes: 
       - ./:/home
-    working_dir: /home/investin/Streamlit
-    command:  streamlit run 📈_主页.py  
-      # nohup python data_loader.py & ;
-      # nohup python scheduler.py &"
+    working_dir: /home
+    command:  streamlit run investin/Streamlit/📈_主页.py  
+
     
   data-loader:
     image: quant
@@ -23,5 +24,7 @@ services:
     hostname: data-loader
     volumes: 
       - ./:/home
+    env_file:
+      - .env
     working_dir: /home
     command: python -m investin.Utils.scheduler
