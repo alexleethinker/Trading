@@ -39,7 +39,7 @@ class StockSpotUS():
             "_",
             "_",
             "_",
-            "简称",
+            "证券代码",
             "编码",
             "名称",
             "最高价",
@@ -65,7 +65,6 @@ class StockSpotUS():
         temp_df.reset_index(inplace=True)
         temp_df["index"] = range(1, len(temp_df) + 1)
         temp_df.rename(columns={"index": "序号"}, inplace=True)
-        temp_df["证券代码"] = temp_df["简称"]
         temp_df = temp_df[
             [
                 "证券代码",
@@ -80,7 +79,6 @@ class StockSpotUS():
                 '成交额',
                 "总市值",
                 "市盈率",
-    #             "代码",
             ]
         ]
         temp_df["最新价"] = pd.to_numeric(temp_df["最新价"], errors="coerce")

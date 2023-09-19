@@ -20,6 +20,90 @@ class StockSpotHK():
     def __init__(self) -> None:
         pass
 
+    def fetch(self):
+        url = 'http://40.push2.eastmoney.com/api/qt/clist/get'
+        params = {
+            'pn': '1',
+            'pz': '6000',
+            'po': '1',
+            'np': '1',
+            'ut': 'bd1d9ddb04089700cf9c27f6f7426281',
+            'fltt': '2',
+            'invt': '2',
+            'fid': 'f3',
+            'fs': 'm:128 t:3,m:128 t:4,m:128 t:1,m:128 t:2',
+            'fields': 'f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f12,f13,f14,f15,f16,f17,f18,f19,f20,f21,f23,f24,f25,f26,f22,f33,f11,f62,f128,f136,f115,f152',
+            '_': '1631107510188',
+        }
+        r = requests.get(url, params=params, timeout=10)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json['data']['diff'])
+        temp_df.columns = [
+            "_",
+            "最新价",
+            "涨跌幅",
+            "涨跌额",
+            "成交量",
+            "成交额",
+            "振幅",
+            "_",
+            "_",
+            "_",
+            "_",
+            "证券代码",
+            "编码",
+            "名称",
+            "最高价",
+            "最低价",
+            "开盘价",
+            "昨收价",
+            "_",
+            "总市值",
+            "港股市值",
+            "_",
+            "_",
+            "_",
+            "_",
+            "_",
+            "_",
+            "_",
+            "_",
+            "_",
+            "_",
+            "_",
+            "_",
+            "_",
+        ]
+        temp_df.reset_index(inplace=True)
+        temp_df["index"] = range(1, len(temp_df) + 1)
+        temp_df.rename(columns={"index": "序号"}, inplace=True)
+        temp_df = temp_df[
+            [
+                "证券代码",
+                "名称",
+                "最新价",
+                "涨跌额",
+                "涨跌幅",
+                "开盘价",
+                "最高价",
+                "最低价",
+                "昨收价",
+                '成交额',
+                "总市值",
+                "港股市值",
+            ]
+        ]
+        temp_df["最新价"] = pd.to_numeric(temp_df["最新价"], errors="coerce")
+        temp_df["涨跌额"] = pd.to_numeric(temp_df["涨跌额"], errors="coerce")
+        temp_df["涨跌幅"] = pd.to_numeric(temp_df["涨跌幅"], errors="coerce")
+        temp_df["开盘价"] = pd.to_numeric(temp_df["开盘价"], errors="coerce")
+        temp_df["最高价"] = pd.to_numeric(temp_df["最高价"], errors="coerce")
+        temp_df["最低价"] = pd.to_numeric(temp_df["最低价"], errors="coerce")
+        temp_df["昨收价"] = pd.to_numeric(temp_df["昨收价"], errors="coerce")
+        temp_df["总市值"] = pd.to_numeric(temp_df["总市值"], errors="coerce")
+        temp_df["成交额"] = pd.to_numeric(temp_df["成交额"], errors="coerce")
+        temp_df["港股市值"] = pd.to_numeric(temp_df["港股市值"], errors="coerce")          
+        return temp_df
 
 class StockSpotHKEX():
     def __init__(self) -> None:
