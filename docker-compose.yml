@@ -28,3 +28,15 @@ services:
       - .env
     working_dir: /home
     command: python -m investin.Utils.scheduler
+
+
+  wencai:
+    image: quant
+    container_name: wencai-loader
+    hostname: wencai-loader
+    volumes: 
+      - ./:/home
+    env_file:
+      - .env
+    working_dir: /home
+    command: python -m investin.Utils.StaticUpdater.wencai
