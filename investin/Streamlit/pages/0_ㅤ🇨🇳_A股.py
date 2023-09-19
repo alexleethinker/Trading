@@ -5,7 +5,7 @@ from utils.config import page_config, update_at, data_dir
 from utils.figure import treemap
 page_config()
 
-title = 'A股'
+title = 'A股-RMB'
 timezone = 'Asia/Shanghai'
 data_path = '{data_dir}/spot/stock_spot_china_a.csv'.format(data_dir=data_dir)
 update_at(data_path, timezone)

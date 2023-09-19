@@ -6,7 +6,7 @@ from utils.figure import treemap
 page_config()
 
 
-title = '英股'
+title = '英股-GBP'
 timezone = 'Europe/London'
 data_path = '{data_dir}/spot/stock_spot_uk.csv'.format(data_dir=data_dir)
 
@@ -17,7 +17,7 @@ df = df[df['成交额'] > df['成交额'].quantile(.6) ]
 
 fig_block = treemap(df, 
                  path=[px.Constant(title),'一级行业','二级行业','三级行业'],
-                 values='总市值',
+                 values='成交额',
                  color='涨跌幅', 
                  range_color = 8,
                  custom_data=['涨跌幅','总市值','成交额'],
@@ -25,7 +25,7 @@ fig_block = treemap(df,
                  )
 fig = treemap(df, 
                  path=[px.Constant(title),'一级行业','二级行业','三级行业','名称'],
-                 values='总市值',
+                 values='成交额',
                  color='涨跌幅', 
                  range_color = 8,
                  custom_data=['涨跌幅','证券代码','总市值','最新价','成交额'],

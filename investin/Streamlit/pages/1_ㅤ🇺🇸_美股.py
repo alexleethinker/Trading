@@ -6,7 +6,7 @@ from utils.figure import treemap
 page_config()
 
 
-title = '美股'
+title = '美股-USD'
 timezone = 'America/New_York'
 data_path = '{data_dir}/spot/stock_spot_us.csv'.format(data_dir=data_dir)
 

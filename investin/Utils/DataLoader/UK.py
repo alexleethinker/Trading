@@ -98,8 +98,8 @@ class StockSpotUK():
         df = df[~df['涨跌幅'].isnull()]
         df = df[~df['三级行业'].isnull()]
         df = df[~df['总市值'].isnull()]
-        df['总市值'] = (df['总市值']/100000000).round(2)
-        df['成交额'] = (df['成交额']/100000000).round(2)
+        df['总市值'] = (df['总市值']/10000000000).round(2)
+        df['成交额'] = (df['成交额']/10000000000).round(2)
         return df
     
     def update(self, df):   
