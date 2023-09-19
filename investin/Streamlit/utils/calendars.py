@@ -5,6 +5,8 @@ import plotly.express as px
 from utils.config import data_dir
 
 
+exchange_dir = '{data_dir}/static/exchanges.csv'.format(data_dir=data_dir)
+
 def get_trading_calendars():
     exchanges = xcals.get_calendar_names(include_aliases=False)
     today = datetime.today().strftime('%Y-%m-%d')

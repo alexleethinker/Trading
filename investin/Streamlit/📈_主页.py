@@ -9,10 +9,6 @@ page_config()
 
 def get_treemap(data_path):
     df = pd.read_csv(data_path,encoding = 'utf-8')
-    translation = '{data_dir}/static/translation.xlsx'.format(data_dir=data_dir)
-    industry_trans_df = pd.read_excel(open(translation, 'rb'),sheet_name='industry_trans')
-    market_trans_df = pd.read_excel(open(translation, 'rb'),sheet_name='market_trans')
-    df = df.merge(industry_trans_df, on = 'industry').merge(market_trans_df, on = 'market')
 
     fig = treemap(  df, 
                     path=[px.Constant("成交额(USD)"),'plate','市场'],

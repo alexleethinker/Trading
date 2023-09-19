@@ -3,7 +3,7 @@ import pywencai
 
 query = '所属概念 公司亮点 所属同花顺行业 所属指数类'
 loop = True
-query_type = 
+query_type = 'stock'
 
 '''
 stock	股票
