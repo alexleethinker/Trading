@@ -28,11 +28,10 @@ class StockSpotHKEX():
     def get_industry_df(self):
         r = requests.get('https://static03.hket.com/data-lake/p/industry/industry-data.json', timeout=10)
         df = pd.DataFrame(json.loads(r.text))
-        print(df)
-        df['一级行业'] = df['industry'].apply(translate).str.replace('电讯','科技').str.replace('资讯科技','科技')
-        df['二级行业'] = df['business'].apply(translate)
-        df['三级行业'] = df['child-business'].apply(translate)
-        df['证券名称'] = df['name'].apply(translate)
+        df['一级行业'] = df['industry'].fillna('').apply(translate).str.replace('电讯','科技').str.replace('资讯科技','科技')
+        df['二级行业'] = df['business'].fillna('').apply(translate)
+        df['三级行业'] = df['child-business'].fillna('软件开发').apply(translate)
+        df['证券名称'] = df['name'].fillna('').apply(translate)
         df['证券代码'] = df['stock-id']
         df['总市值'] = df['market-cap']
         return df
@@ -66,8 +65,10 @@ class StockSpotHKEX():
         df.to_csv( data_dir + '/spot/stock_spot_hk.csv', index = False, encoding = 'utf-8')
 
     def run(self):
+        print('Start fetching China A stock data')
         hk_industry_df = self.get_industry_df()
         hkex_df = self.get_hkex_df()
         df = hk_industry_df.merge(hkex_df, on = '证券代码', how = 'inner')
         df = self.clean(df)
         self.update(df)
+        print('Data updated')

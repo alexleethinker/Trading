@@ -5,8 +5,9 @@ from investin.Utils.config import data_dir
 
 class StockSpotUS():
     def __init__(self):
-        pass
-
+        self.read_dir = data_dir +'/static/EM/US/us_stocks.xlsx'
+        self.write_dir = data_dir + '/spot/stock_spot_us.csv'
+        
     def fetch(self):
         url = 'http://40.push2.eastmoney.com/api/qt/clist/get'
         params = {
@@ -95,7 +96,7 @@ class StockSpotUS():
         return temp_df
     
     def clean(self, temp_df):
-        stock_custom_industry = pd.read_excel(open(data_dir +'/static/us_stocks.xlsx', 'rb'),sheet_name='us_stocks_industry')
+        stock_custom_industry = pd.read_excel(open(self.read_dir, 'rb'),sheet_name='us_stocks_industry')
         df = temp_df.merge(stock_custom_industry,how='left',on=['证券代码'])
         df = df[~df['涨跌幅'].isnull()]
         df = df[~df['三级行业'].isnull()]
@@ -105,7 +106,7 @@ class StockSpotUS():
         return df
     
     def update(self, df):   
-        df.to_csv( data_dir + '/spot/stock_spot_us.csv', index = False, encoding = 'utf-8')
+        df.to_csv( self.write_dir, index = False, encoding = 'utf-8')
 
     def run(self):
         try:

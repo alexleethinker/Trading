@@ -1,7 +1,6 @@
 import requests
 import pandas as pd
 import json
-
 from investin.Utils.config import data_dir
 
 
@@ -64,7 +63,18 @@ def check_plate(market):
 
 class StockSpotTradingView():
     def __init__(self) -> None:
-        pass
+        self.hk_dir = data_dir + '/spot/stock_spot_hk.csv'
+        self.us_dir = data_dir + '/static/EM/US/us_stocks.xlsx'
+        self.a_dir  = data_dir + '/static/EM/China/a_stocks.xlsx'
+
+        self.correct_ind = data_dir + '/static/TradingView/correct_industry.csv'
+        self.tw_dir = data_dir + '/static/TradingView/tw_all_securaties.csv'
+        self.sg_dir = data_dir + '/static/TradingView/sg_stocks.csv'
+        self.uk_dir = data_dir + '/static/TradingView/uk_stocks.csv'
+
+        self.translate_dir = data_dir + '/static/TradingView/translations/translation.xlsx'
+        self.translate_name_dir = data_dir + '/static/TradingView/translations/stock_name_translation.csv'
+        self.dr_name_dir = data_dir + '/static/TradingView/translations/dr_names.csv'
 
     def fetch_global_prices(self):
         country = 'global'
@@ -79,21 +89,20 @@ class StockSpotTradingView():
         return df
 
     def correct_industry(self, df):
-        correct_df = pd.read_csv(data_dir + '/static/correct_industry.csv')
+        correct_df = pd.read_csv(self.correct_ind)
 
-        tw_df = pd.read_csv(data_dir + '/static/tw_all_securaties.csv').rename(columns={"有价证券代号": "code"})
+        tw_df = pd.read_csv(self.tw_dir).rename(columns={"有价证券代号": "code"})
         tw_df = tw_df[tw_df['产业别'].isin(['半导体业'])][['code']]
         data = {'correct_industry': 'Semiconductors', 'market': 'taiwan'}
         tw_df = tw_df.assign(**data)
 
-        us_df = pd.read_excel(open(data_dir +'/static/us_stocks.xlsx', 'rb'),sheet_name='us_stocks_industry').rename(columns={"证券代码": "code"})
+        us_df = pd.read_excel(open(self.us_dir, 'rb'),sheet_name='us_stocks_industry').rename(columns={"证券代码": "code"})
         us_df = us_df[us_df['二级行业'].isin(['半导体'])][['code']]
-        
         us_df['code'] = us_df['code'].str.replace('_','.')
         data = {'correct_industry': 'Semiconductors', 'market': 'america'}
         us_df = us_df.assign(**data)
 
-        a_df = pd.read_excel(open(data_dir +'/static/a_stocks.xlsx', 'rb'),sheet_name='a_stocks_info').rename(columns={"证券代码": "code",'二级行业':'correct_industry'})
+        a_df = pd.read_excel(open(self.a_dir, 'rb'),sheet_name='a_stocks_info').rename(columns={"证券代码": "code",'二级行业':'correct_industry'})
         a_df = a_df[a_df['correct_industry'].isin(['半导体','光伏'])][['code','correct_industry']]
         a_df["code"] = a_df["code"].str[:6]
         a_df["correct_industry"] = a_df["correct_industry"].str.replace('半导体','Semiconductors').str.replace('光伏','Electrical Products')
@@ -122,35 +131,35 @@ class StockSpotTradingView():
         
         df.loc[df['market'].isin(['hongkong']), 'name'] = df[df['market'].isin(['hongkong'])]['name'].apply(format_hk_code)
 
-        tw_df = pd.read_csv(data_dir + '/static/tw_all_securaties.csv').rename(columns={"有价证券代号": "证券代码","有价证券名称": "证券名称"})
-        tw_df = tw_df[["证券代码","证券名称"]]
+        tw_df = pd.read_csv(self.tw_dir).rename(columns={"有价证券代号": "证券代码","有价证券名称": "名称翻译"})
+        tw_df = tw_df[["证券代码","名称翻译"]]
         tw_df['market'] = 'taiwan'
 
-        sg_df = pd.read_csv(data_dir + '/static/sg_stocks.csv').rename(columns={"交易代号": "证券代码"})
-        sg_df = sg_df[["证券代码","证券名称"]]
+        sg_df = pd.read_csv(self.sg_dir).rename(columns={"交易代号": "证券代码","证券名称": "名称翻译"})
+        sg_df = sg_df[["证券代码","名称翻译"]]
         sg_df['market'] = 'singapore'
 
-        hk_df = pd.read_csv(data_dir + '/spot/stock_spot_hk.csv')
-        hk_df = hk_df[["证券代码","证券名称"]]
+        hk_df = pd.read_csv(self.hk_dir).rename(columns={"证券名称": "名称翻译"})
+        hk_df = hk_df[["证券代码","名称翻译"]]
         hk_df["证券代码"] = hk_df["证券代码"].str[:5]
         hk_df['market'] = 'hongkong'
 
-        uk_df = pd.read_csv(data_dir + '/static/uk_stocks.csv')
-        uk_df = uk_df[["证券代码","证券名称"]]
+        uk_df = pd.read_csv(self.uk_dir).rename(columns={"证券名称": "名称翻译"})
+        uk_df = uk_df[["证券代码","名称翻译"]]
         uk_df['market'] = 'uk'
 
-        us_df = pd.read_excel(open(data_dir +'/static/us_stocks.xlsx', 'rb'),sheet_name='us_stocks_industry')
-        us_df = us_df[["证券代码","证券名称"]]
+        us_df = pd.read_excel(open(self.us_dir, 'rb'),sheet_name='us_stocks_industry').rename(columns={"证券名称": "名称翻译"})
+        us_df = us_df[["证券代码","名称翻译"]]
         us_df['证券代码'] = us_df['证券代码'].str.replace('_','.')
         us_df['market'] = 'america'   
 
-        a_df = pd.read_excel(open(data_dir +'/static/a_stocks.xlsx', 'rb'),sheet_name='a_stocks_info')
-        a_df = a_df[["证券代码","股票简称"]].rename(columns={"股票简称": "证券名称"})
+        a_df = pd.read_excel(open(self.a_dir, 'rb'),sheet_name='a_stocks_info')
+        a_df = a_df[["证券代码","股票简称"]].rename(columns={"股票简称": "名称翻译"})
         a_df["证券代码"] = a_df["证券代码"].str[:6]
         a_df['market'] = 'china'  
 
 
-        other_df = pd.read_csv(data_dir + '/static/stock_name_translation.csv')
+        other_df = pd.read_csv(self.translate_name_dir)
         other_df.loc[other_df['market'].isin(['korea']), '证券代码'] = other_df[other_df['market'].isin(['korea'])]['证券代码'].apply(format_korea_code)   
         other_df.loc[other_df['market'].isin(['japan','ksa']), '证券代码'] = other_df[other_df['market'].isin(['japan','ksa'])]['证券代码'].apply(format_jp_code)   
 
@@ -161,15 +170,22 @@ class StockSpotTradingView():
                             .str.replace(' A/S','').str.replace(' OYJ','').str.replace(' AG NA','').str.replace(' SE NA','')\
                             .str.replace(' O.N.','').str.replace(' O N','').str.replace(' N.V.','')
 
-        df['en_description'] = df['description'] 
-        df.loc[~df['证券名称'].isnull(), 'description'] = df[~df['证券名称'].isnull()]['证券名称']
+        df['english_name'] = df['description'] 
+        df.loc[~df['名称翻译'].isnull(), 'description'] = df[~df['名称翻译'].isnull()]['名称翻译']
 
-        dr_df = pd.read_csv(data_dir + '/static/dr_names.csv')
+        dr_df = pd.read_csv(self.dr_name_dir)
         df = df.merge(dr_df, how = 'left', on=['logoid'])
-        df.loc[~df['dr_name'].isnull() & df['证券名称'].isnull(), 'description'] = df[~df['dr_name'].isnull() & df['证券名称'].isnull()]['dr_name'] + '-X'
+        df.loc[~df['dr_name'].isnull() & df['名称翻译'].isnull(), 'description'] = df[~df['dr_name'].isnull() & df['名称翻译'].isnull()]['dr_name'] + '-X'
+        df = df.rename(columns={"description": "证券名称"})
         return df
 
 
+    def translate_industry(self, df):
+        # translated_industry = self.translation_dir
+        trans_df = pd.read_excel(open(self.translate_dir, 'rb'),sheet_name='industry_trans').drop(columns = 'sector')
+        market_df = pd.read_excel(open(self.translate_dir, 'rb'),sheet_name='market_trans')
+        df = df.merge(trans_df, on = 'industry').merge(market_df, on = 'market')
+        return df
 
     def clean(self, df):
         USD_forex_table = get_USD_forex_table()
@@ -187,16 +203,18 @@ class StockSpotTradingView():
         df = df[~df['market_cap_basic'].isnull()]
         return df
     
-    def update(self, df):
-        df.to_csv( data_dir + '/spot/stock_spot_global_all.csv', index = False, encoding = 'utf-8')
+    def update(self, df, mode = 'all'):
 
-    def update_primary(self, df):
-        a_df = df[( ((df['is_primary'] == True) & (df['type'] == 'stock')) | \
-            ((df['is_primary'] == True) & (df['type'] == 'dr') & (df['market'].isin(['netherlands','america']))) | \
-            ((df['name'].isin(['PHIA','DSM','ABN'])) & (df['market'].isin(['netherlands']))) | \
-            ((df['name'].isin(['STLAM'])) & (df['market'].isin(['italy'])))    ) & \
-            (~df['exchange'].isin(['OTC']))   &   (~df['name'].isin(['BRKB'])) ]
-        a_df.to_csv( data_dir + '/spot/stock_spot_global_primary.csv', index = False, encoding = 'utf-8')
+        if mode == 'all':
+            df.to_csv( data_dir + '/spot/stock_spot_global_{mode}.csv'.format(mode=mode), index = False, encoding = 'utf-8')
+
+        elif mode == 'primary':
+            primary_df = df[( ((df['is_primary'] == True) & (df['type'] == 'stock')) | \
+                ((df['is_primary'] == True) & (df['type'] == 'dr') & (df['market'].isin(['netherlands','america']))) | \
+                ((df['name'].isin(['PHIA','DSM','ABN'])) & (df['market'].isin(['netherlands']))) | \
+                ((df['name'].isin(['STLAM'])) & (df['market'].isin(['italy'])))    ) & \
+                (~df['exchange'].isin(['OTC']))   &   (~df['name'].isin(['BRKB'])) ]
+            primary_df.to_csv( data_dir + '/spot/stock_spot_global_{mode}.csv'.format(mode=mode), index = False, encoding = 'utf-8')
 
     def run(self):
 
@@ -207,12 +225,13 @@ class StockSpotTradingView():
             print('Start cleaning data')
             df = self.correct_industry(df)
             df = self.translate_name(df)
-
-            self.update(df)
-            self.update_primary(df)
+            df = self.translate_industry(df)
+            self.update(df, mode = 'all')
+            self.update(df, mode = 'primary')
             print('Data all updated')
 
         except Exception as e:
+            print(e)
             print('Error occurs during data loading, retrying')
             self.run()            
 

@@ -10,25 +10,14 @@ page_config()
 def load_df(exchange,percentile):
     global data_path
     data_path = '{data_dir}/spot/stock_spot_{exchange}.csv'.format(data_dir=data_dir, exchange = exchange.replace('™️','').lower())
-    translated_industry = '{data_dir}/static/translation.xlsx'.format(data_dir=data_dir)
     df = pd.read_csv(data_path,encoding = 'utf-8')
-    trans_df = pd.read_excel(open(translated_industry, 'rb'),sheet_name='industry_trans')
 
     if exchange == '™️EuroNext':
-        market_df = pd.read_excel(open(translated_industry, 'rb'),sheet_name='market_trans')
-        df = df.merge(trans_df, on = 'industry').merge(market_df, on = 'market')
-        df.loc[~df['证券名称'].isnull(), 'stock_name'] = df[~df['证券名称'].isnull()]['证券名称']
-        df.loc[~df['dr_name'].isnull() & df['证券名称'].isnull(), 'stock_name'] = df[~df['dr_name'].isnull() & df['证券名称'].isnull()]['dr_name'] + ' SE'
-        df['stock_name'] = df['stock_name'].str.replace('�','').str.replace(' SpA','').str.replace(' NV','')
         df = df[~df['change'].isnull()]
         df['Traded_USD'] = df['Traded_USD']* 10000
         df = df[df['Traded_USD'] > df['Traded_USD'].quantile(percentile) ]
 
     elif exchange == '™️XETRA':
-        xetr_master = '{data_dir}/static/xetra_masterdata.csv'.format(data_dir=data_dir)
-        master_df = pd.read_csv(xetr_master,encoding = 'utf-8')
-        df = df.merge(trans_df, on = 'industry').merge(master_df , on = 'isin')
-        df.loc[~df['证券名称'].isnull(), 'name'] = df[~df['证券名称'].isnull()]['证券名称']
         df['turnover'] = pd.to_numeric(df['turnover'], errors="coerce")/10000
         df['marketCapitalisation'] = pd.to_numeric(df['marketCapitalisation'], errors="coerce")/100000000
         df = df[df['turnover'] > df['turnover'].quantile(percentile) ]
@@ -41,7 +30,7 @@ def plot_plate(exchange):
     df = load_df(exchange, .5).fillna('')
     if exchange == '™️EuroNext':
         fig = treemap(df,
-                      path=[px.Constant("EuroNext-USD"),'大行业','一级行业','二级行业','stock_name'],
+                      path=[px.Constant("EuroNext-USD"),'一级行业','二级行业','三级行业','证券名称'],
                       values='Traded_USD',
                       color='change',
                       range_color= 8,
@@ -50,7 +39,7 @@ def plot_plate(exchange):
                       )
     elif exchange == '™️XETRA':                   
         fig = treemap(df,
-                      path=[px.Constant("XETRA-EUR"),'大行业','一级行业','二级行业','name'],
+                      path=[px.Constant("XETRA-EUR"),'一级行业','二级行业','三级行业','证券名称'],
                       values='turnover',
                       color='changeToPrevDay',
                       range_color= 8,

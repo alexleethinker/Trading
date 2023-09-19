@@ -1,0 +1,674 @@
+isin,name,symbol,名称翻译,industry,xetr_industry,category,currency,exchangeId,exchange_degiro,exchange_mic_code,exchange,isShortable,feedQuality,feedQualitySecondary
+DE0007164600,SAP,SAP,SAP,Packaged Software,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0008404005,Allianz,ALV,安联保险,Multi-Line Insurance,Insurance,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007236101,Siemens,SIE,西门子,Industrial Machinery,"Industrial, Diversified",C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0007100000,Mercedes-Benz Group,MBG,梅赛德斯奔驰,Motor Vehicles,Automobile Manufacturers,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006231004,Infineon Technologies,IFX,英飞凌,Semiconductors,Semiconductors,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005140008,Deutsche Bank,DBK,德意志银行,Investment Banks/Brokers,Credit Banks,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1ML7J1,Vonovia,VNA,福诺菲亚,Real Estate Development,Real Estate,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005557508,Deutsche Telekom,DTE,德国电信,Major Telecommunications,Fixed-Line Telecommunication,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000BAY0017,Bayer,BAYN,拜耳,Pharmaceuticals: Major,Pharmaceuticals,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000BASF111,BASF,BAS,巴斯夫,Chemicals: Major Diversified,"Chemicals, Specialty",A,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005785604,Fresenius,FRE,费森尤斯,Medical Specialties,Health Care,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005552004,Deutsche Post,DHL,德国邮政,Air Freight/Couriers,Logistics,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE0007664039,Volkswagen Vz,VOW3,大众 VZ,Motor Vehicles,Automobile Manufacturers,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0008430026,Muenchener Rueckversicherungs Gesellschaft in Muenchen,MUV2,慕尼黑再保险,Life/Health Insurance,Re-Insurance,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A1EWWW0,Adidas,ADS,阿迪达斯,Apparel/Footwear,Footwear,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE0005190003,Bayerische Motoren Werke,BMW,BMW,Motor Vehicles,Automobile Manufacturers,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000CBK1001,Commerzbank,CBK,德国商业银行,Regional Banks,Credit Banks,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US88160R1014,Tesla,TL0,特斯拉,Motor Vehicles,Automobile Manufacturers,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A161408,Hellofresh,HFG,HelloFresh,Internet Retail,"Retail, Internet",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000ENAG999,E.ON,EOAN,,Electric Utilities,Multi-Utilities,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000DTR0CK8,Daimler Truck Holding,DTG,戴姆勒卡车,Motor Vehicles,Heavy Machinery,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005810055,Deutsche Boerse,DB1,德意志交易所,Investment Banks/Brokers,Securities Brokers,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006599905,Merck,MRK,默克集团,Pharmaceuticals: Major,Pharmatceuticals,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007037129,RWE,RWE,,Electric Utilities,Multi-Utilities,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000ZAL1111,Zalando,ZAL,Zalando,Internet Retail,"Retail,Internet",C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1DAHH0,Brenntag,BNR,步朗德,Wholesale Distributors,Industrial Products & Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+NL0000235190,Airbus,AIR,空客,Aerospace & Defense,Aerospace,C,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE0006062144,Covestro,1COV,,Chemicals: Specialty,"Chemicals, Specialty",C,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000WCH8881,Wacker Chemie,WCH,瓦克尔化学,Chemicals: Major Diversified,"Chemicals, Specialty",C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0006048432,Henkel  Vz,HEN3,汉高公司 VZ,Household/Personal Care,Personal Products,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000ENER6Y0,Siemens Energy,ENR,西门子能源,Electrical Products,Industrial,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000KSAG888,K&S,SDF,,Chemicals: Specialty,Fertilizers,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000SHL1006,Siemens Healthineers,SHL,西门子医疗,Medical/Nursing Services,Medical Technology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007165631,Sartorius,SRT3,赛多利斯,Pharmaceuticals: Major,Biotechnology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007030009,Rheinmetall,RHM,莱茵金属,Aerospace & Defense,"Industrial, Diversified",A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE0008232125,Deutsche Lufthansa,LHA,汉莎航空,Airlines,Airlines,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000PAH0038,Porsche Automobil Holding,PAH3,保时捷控股,Motor Vehicles,Automobile Manufacturers,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000SYM9999,Symrise,SY1,德之馨,Chemicals: Specialty,"Chemicals, Specialty",A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006047004,HeidelbergCement,HEI,海德堡水泥,Construction Materials,Cement,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005200000,Beiersdorf,BEI,,Household/Personal Care,Personal Products,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2E4K43,Delivery Hero,DHER,,Specialty Stores,"Retail, Internet",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005785802,Fresenius Medical Care,FME,,Medical/Nursing Services,Health Care,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006969603,Puma,PUM,,Apparel/Footwear,Footwear,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A0D9PT0,MTU Aero Engines,MTX,,Aerospace & Defense,Heavy Machinery,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE0008402215,Hannover Rueck,HNR1,汉诺威再保险,Life/Health Insurance,Re-Insurance,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000PAG9113,Porsche Vz,P911,保时捷 VZ,Motor Vehicles,Automobile Manufacturers,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000LEG1110,LEG Immobilien,LEG,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007500001,thyssenkrupp,TKA,蒂森克虏伯,Steel,"Industrial, Diversified",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US64110L1061,Netflix,NFC,,Data Processing Services,,A,EUR,194,XET,XETR,Xetra,FALSE,D15,D15
+DE000EVNK013,Evonik Industries,EVK,,Chemicals: Major Diversified,"Chemicals, Specialty",B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+IE000S9YS762,Linde,LIN,,Chemicals: Specialty,,A,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005439004,Continental,CON,马牌轮胎,Automotive Aftermarket,Tires,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+NL0012169213,Qiagen,QIA,,Medical Specialties,Biotechnology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005664809,Evotec,EVT,,Pharmaceuticals: Major,Biotechnology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+LU1673108939,Aroundtown SA,AT1,,Real Estate Investment Trusts,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US5949181045,Microsoft Corp,MSF,微软,Packaged Software,Software,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006602006,GEA Group,G1A,,Industrial Machinery,"Industrial, Diversified",B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000TUAG505,TUI,TUI1,,Other Consumer Services,,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0DJ6J9,SMA Solar Technology,S92,,Electrical Products,Renewable Energies,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US0378331005,Apple,APC,苹果,Telecommunications Equipment,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0WMPJ6,Aixtron,AIXA,爱思强,Semiconductors,Semiconductors,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US67066G1040,NVIDIA Corp,NVD,英伟达,Semiconductors,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0008303504,TAG Immobilien,TEG,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006202005,Salzgitter,SZG,,Steel,Steel & Other Metals,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1PHFF7,Hugo Boss,BOSS,,Apparel/Footwear,Clothing & Footwear,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000KBX1006,Knorr Bremse,KBX,克诺尔集团,Auto Parts: OEM,"Industrial, Machinery",A,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005158703,Bechtle,BC8,,Information Technology Services,IT-Services,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000KGX8881,Kion Group,KGX,,Industrial Machinery,Heavy Machinery,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+NL0010273215,ASML Holding,ASME,,Semiconductors,Production Technology Equipment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005190037,Bayerische Motoren Werke,BMW3,BMW VZ,Motor Vehicles,Automobile Manufacturers,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005470306,CTS Eventim,EVD,,Movies/Entertainment,Movies & Entertainment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1J5RX9,Telefonica Deutschland Holding,O2D,,Wireless Telecommunications,Wireless Communication,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006632003,MorphoSys,MOR,,Biotechnology,Biotechnology,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE0005313704,Carl Zeiss Meditec,AFX,,Medical Specialties,Medical Technology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005470405,LANXESS,LXS,,Chemicals: Major Diversified,"Chemicals, Specialty",C,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+US0231351067,Amazon,AMZ,,Internet Retail,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000TLX1005,Talanx,TLX,Talanx,Life/Health Insurance,Re-Insurance,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005493365,Hypoport,HYQ,,Packaged Software,Diversified Financial,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2YN900,TeamViewer,1UD,,Packaged Software,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000HLAG475,Hapag Lloyd,HLAG,赫伯罗特,Marine Shipping,Logistics,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A12DM80,Scout24,G24,,Miscellaneous Commercial Services,Advertising,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006070006,Hochtief,HOT,,Engineering & Construction,Construction & Engineering,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A0LD6E6,Gerresheimer,GXI,,Containers/Packaging,Health Care,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+GB0002875804,British American Tobacco,BMT,,Tobacco,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007664005,Volkswagen,VOW,大众,Motor Vehicles,Automobile Manufacturers,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US02079K3059,Alphabet,ABEA,谷歌,Internet Software/Services,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US70450Y1038,PayPal Holdings,2PP,,Miscellaneous Commercial Services,,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US30303M1027,Meta Platforms,FB2A,,Internet Software/Services,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A0Z2ZZ5,freenet,FNTN,,Specialty Telecommunications,Wireless Communication,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007010803,Rational,RAA,,Industrial Machinery,Industrial Products & Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0D6554,Nordex,NDX1,,Electrical Products,Renewable Energies,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0006048408,Henkel,HEN,汉高公司,Household/Personal Care,Personal Products,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0006452907,Nemetschek,NEM,,Packaged Software,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+GB00BP6MXD84,Shell,R6C0,,Integrated Oil,Integrated Oil and Gas,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+NL0012044747,Shop Apotheke Europe,SAE,,Internet Retail,"Retail, Internet",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US09075V1026,BioNTech,22UA,,Biotechnology,,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000SHA0159,Schaeffler,SHA,,Auto Parts: OEM,Auto Parts & Equipment,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE0006095003,Encavis,CAP,,Alternative Power Generation,Renewable Energies,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000FTG1111,flatexDEGIRO,FTK,,Investment Banks/Brokers,Securities Brokers,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005773303,Fraport Frankfurt Airportrvices Worldwide,FRA,法兰克福机场,Other Transportation,Transportation Services,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US6541101050,Nikola Corporation,8NI,,Motor Vehicles,,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005089031,United Internet,UTDI,,Internet Software/Services,Internet,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0JL9W6,Verbio Vereinigte Bioenergie,VBK,,Chemicals: Specialty,Renewable Energies,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A3H2200,Nagarro,NA9,,Information Technology Services,IT-Services,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0006766504,Aurubis,NDA,,Other Metals/Minerals,Steel & Other Metals,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007231326,Sixt,SIX2,SIXT租车,Finance/Rental/Leasing,Transportation Services,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A2LQ884,AUTO1 Group,AG1,,Internet Software/Services,"Retail, Internet",C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005565204,Duerr,DUE,,Industrial Machinery,Industrial Machinery,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000HAG0005,Hensoldt,5UH,,Semiconductors,Semiconductors,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0TGJ55,Varta,VAR1,,Electrical Products,Advanced Industrial Equipment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0SMU87,Northern Data,NB2,,Data Processing Services,,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DK0060534915,Novo Nordisk A/S,NOVC,,Pharmaceuticals: Major,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000STRA555,Stratec,SBS,,Medical Specialties,Medical Technology,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005677108,Elmosmiconductor,ELG,Elmos Semiconductor,Semiconductors,Semiconductors,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US19260Q1076,Coinbase Global,1QZ,,Investment Banks/Brokers,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000PSM7770,Prosiebensat 1 Media,PSM,,Movies/Entertainment,Broadcasting,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US0079031078,Advanced Micro Devices,AMD,,Semiconductors,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000WAF3001,Siltronic,WAF,世创电子材料,Semiconductors,Semiconductors,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0008019001,Deutsche Pfandbriefbank,PBB,,Major Banks,Credit Banks,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005419105,Cancom,COK,,Information Technology Services,IT-Services,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A2NB601,Jenoptik,JEN,,Electronic Components,Advanced Industrial Equipment,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US01609W1027,Alibaba Group Holding Ltd,AHLA,阿里巴巴,Internet Retail,,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+GB0007980591,BP,BPE5,,Integrated Oil,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US4581401001,Intel Corp,INL,,Semiconductors,Semiconductors,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A3E5D64,FUCHS PETROLUB,FPE1,,Chemicals: Specialty,"Chemicals, Specialty",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+LU0775917882,Grand City Properties SA,GYC,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007297004,Suedzucker,SZU,,Food: Specialty/Candy,Food,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000DWS1007,DWS Group GmbH,DWS,德意志资产管理,Investment Managers,Diversified Financial,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005772206,Fielmann,FIE,,Medical Specialties,"Retail, Specialty",C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0006335003,Krones,KRN,,Industrial Machinery,Industrial Machinery,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US4781601046,Johnson & Johnson,JNJ,,Pharmaceuticals: Major,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000VTSC017,Vitesco Technologies Group,VTSC,纬湃科技,Auto Parts: OEM,Auto Parts & Equipment,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+IE00BYTBXV33,Ryanair Holdings,RY4C,,Airlines,Airlines,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A0HN5C6,Deutsche Wohnen,DWNI,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000A0E9W5,KONTRON,SANT,,Electronic Equipment/Instruments,Electronic Components & Hardware,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+FI0009000681,Nokia Oyj,NOA3,,Telecommunications Equipment,Telecommunications Equipment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007257503,Ceconomy,CEC,,Department Stores,"Retail, Specialty",C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0007461006,PVA TePla,TPE,,Semiconductors,Advanced Industrial Equipment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007235301,SGL Carbon,SGL,,Industrial Specialties,"Chemicals, Specialty",C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+GB0007188757,Rio Tinto,RIO1,,Other Metals/Minerals,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+CH0038389992,BB Biotech,BBZA,,Biotechnology,Biotechnology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005104400,Atoss Software,AOF,,Electronic Components,Software,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US79466L3024,"SALESFORCE DL-,001",FOO,,Packaged Software,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+LU1704650164,Befesa SA,BFSA,,Environmental Services,Industrial Products & Services,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007493991,Stroeer ,SAX,,Advertising/Marketing Services,Advertising,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+GB00B24CGK77,Reckitt Benckiser Group,3RB,,Household/Personal Care,,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US02079K1079,Alphabet,ABEC,,Internet Software/Services,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005800601,GFT Technologies,GFT,,Information Technology Services,IT-Services,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000NCA0001,thyssenkrupp nucera ,NCH2,,Alternative Power Generation,Renewable Energies,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005909006,Bilfinger,GBF,,Engineering & Construction,Industrial Products & Services,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000BFB0019,Metro,B4B,,Food Distributors,"Retail, Multiline",C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+FR0000120271,Total SA,TOTB,,Integrated Oil,Integrated Oil and Gas,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006219934,Jungheinrich,45080,,Industrial Machinery,Industrial Machinery,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US4592001014,International Business Machines Corp,IBM,IBM,Information Technology Services,Computer Services,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005659700,Eckert & Ziegler Strahlen und Medizintechnik,EUZ,,Medical Specialties,Medical Technology,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A0LR936,Steico,ST5,,Forest Products,Industrial Products & Services,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000UNSE018,Uniper,UN01,,Electric Utilities,Multi-Utilities,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+NL0011821202,ING Groep,INN1,,Major Banks,Banks,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A288904,CompuGroup Medical ,COP1,,Packaged Software,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000SAFH001,SAF Holland,SAFH,,Industrial Machinery,Industrial Machinery,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+LU0061462528,RTL Group SA,RRTL,,Broadcasting,Broadcasting,C,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A2GS401,Software,SOW,,Packaged Software,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007231334,Sixt,SIX3,,Finance/Rental/Leasing,Transportation Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A3E5D56,FUCHS PETROLUB,FPE0,,Chemicals: Specialty,"Chemicals, Specialty",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+GB00BH4HKS39,Vodafone Group,VODI,,Wireless Telecommunications,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007165607,Sartorius,SRT,,Pharmaceuticals: Major,Biotechnology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006916604,Pfeiffer Vacuum Technology,PFV,,Electrical Products,Advanced Industrial Equipment,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A1K0235,SUESS MicroTec,SMHN,,Semiconductors,Semiconductors,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000TRAT0N7,Traton,8TRA,Traton,Motor Vehicles,Heavy Machinery,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+LU2333210958,SUSE S.A.,SUSE,,Packaged Software,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+GB0004544929,Imperial Brands,ITB,,Tobacco,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US0846707026,Berkshire Hathaway,BRYN,,Property/Casualty Insurance,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US7475251036,Qualcomm,QCI,,Semiconductors,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US7427181091,Procter & Gamble Co,PRG,,Household/Personal Care,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+FR0000121014,LVMH Moet Hennessy Louis Vuitton,MOH,,Apparel/Footwear,Clothing and Accessories,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005313506,Energiekontor,EKT,,Electric Utilities,Renewable Energies,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US1912161007,Coca-Cola Co,CCC3,,Beverages: Non-Alcoholic,,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A0JBPG2,PNE,PNE3,,Engineering & Construction,Renewable Energies,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A3E00M1,IONOS Group,IOS,,Data Processing Services,Internet,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000PAT1AG3,Patrizia,PAT,,Financial Conglomerates,Real Estate,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0006305006,DEUTZ,DEZ,,Trucks/Construction/Farm Machinery,Industrial Machinery,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A3CNK42,ABOUT YOU Holding,YOU,,Apparel/Footwear Retail,"Retail, Internet",A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A1EWVY8,Formycon,FYB,,Pharmaceuticals: Major,Biotechnology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007667107,Vossloh,VOS,,Trucks/Construction/Farm Machinery,Industrial Products & Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+FR0000120628,AXA SA,AXA,,Multi-Line Insurance,Full Line Insurance,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US30231G1022,Exxon Mobil Corp,XONA,,Integrated Oil,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005550636,Draegerwerk,DRW3,,Medical Specialties,Medical Technology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0HHJR3,CLIQ Digital,CLIQ,,Internet Software/Services,"Retail, Internet",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US7170811035,Pfizer,PFE,,Pharmaceuticals: Major,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US91324P1021,UnitedHealth Group,UNH,,Managed Health Care,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A161N30,Grenke,GLJ,,Finance/Rental/Leasing,Diversified Financial,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006083405,Hornbach Holding ,HBH,,Home Improvement Chains,"Retail, Specialty",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1X3XX4,DIC Asset,DIC,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+GB00B1XZS820,Anglo American,NGLB,,Other Metals/Minerals,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2NB650,Mutares ,,,Investment Managers,Private Equity & Venture Capital,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000WACK012,Wacker Neuson,WAC,,Trucks/Construction/Farm Machinery,Industrial Machinery,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0LAUP1,CropEnergies,CE2,,Chemicals: Specialty,Renewable Energies,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+ES0178430E18,Telefonica SA,TNE5,,Specialty Telecommunications,Telecommunications Services,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000KC01000,Kloeckner ,KCO,,Steel,Industrial Products & Services,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US92343V1044,Verizon Communications,BAC,,Wireless Telecommunications,Telecommunications Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US2546871060,Walt Disney Co,WDP,,Movies/Entertainment,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US88579Y1010,3M Co,MMM,,Industrial Conglomerates,,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+GB00B7KR2P84,Easyjet,EJT1,,Airlines,,C,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+ES0113900J37,Banco Santander SA,BSD2,,Major Banks,Banks,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A11QW68,7C Solarparken,HRPK,,Electric Utilities,Renewable Energies,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+US17275R1023,Cisco Systems,CIS,,Information Technology Services,Telecommunications Equipment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US00206R1023,AT&T,SOBA,,Wireless Telecommunications,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2GS5D8,Dermapharm Holding,DMP,,Pharmaceuticals: Major,Pharmaceuticals,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+SE0000108656,Telefonaktiebolaget LM Ericsson,ERCB,,Telecommunications Equipment,,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1H8BV3,Norma Group,NOEJ,,Industrial Machinery,Industrial Products & Services,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005102008,Basler,BSL,,Electronic Components,Advanced Industrial Equipment,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0007314007,Heidelberger Druckmaschinen,HDD,,Information Technology Services,Industrial Machinery,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A0HL8N9,2G Energy,2GB,,Electric Utilities,Renewable Energies,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+GB0005405286,HSBC Holdings,HBC1,,Major Banks,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+NL00150001Q9,Stellantis N.V.,8TI,,Motor Vehicles,Automobiles,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000743059,OMV,OMV,,Integrated Oil,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US5801351017,Mcdonald's Corp,MDO,,Restaurants,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US92826C8394,Visa,3V64,,Miscellaneous Commercial Services,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A14KRD3,Deutsche Konsum REIT,DKG,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+GB00BN7SWP63,GSK,GS71,,Pharmaceuticals: Major,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006292030,KSB ,KSB3,,Industrial Machinery,Industrial Machinery,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000STAB1L8,Stabilus,J8Q,,Industrial Machinery,Industrial Machinery,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005545503,1&1 Drillisch,DRI,,Wireless Telecommunications,Wireless Communication,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006580806,Mensch und Maschine Software,MUM,,Information Technology Services,Software,A,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A0S8488,Hamburger Hafen und Logistik,HHFA,,Other Transportation,Transportation Services,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A3CSAE2,Mister Spex,MRX,,Internet Retail,"Retail, Internet",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+GB00B10RZP78,UNILEVER,UNVB,,Household/Personal Care,Personal Products,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005878003,DMG Mori,GIL,,Industrial Machinery,Industrial Machinery,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2YN504,Knaus Tabbert,KTA,,Recreational Products,Automobile Manufacturers,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000JST4000,JOST Werke,JST,,Auto Parts: OEM,Auto Parts & Equipment,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DK0061539921,Vestas Wind Systems A/S,VWSB,,Electrical Products,,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A0Z23Q5,Adesso,ADN1,,Miscellaneous Commercial Services,IT-Services,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A13SX22,HELLA GmbH ,HLE,海拉公司,Auto Parts: OEM,Auto Parts & Equipment,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+US5951121038,Micron Technology,MTE,,Semiconductors,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2NBX80,Instone Real Estate Group,,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A3H2333,HAMBORNER REIT,HABA,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005403901,Cewe Stiftung ,CWC,,Specialty Stores,Leisure,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US0382221051,Applied Materials,AP2,,Industrial Machinery,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005093108,Amadeus Fire,AAD,,Personnel Services,Industrial Products & Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0ETBQ4,MBB,MBB,,Financial Conglomerates,"Industrial, Diversified",C,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+IT0003132476,Eni SpA,ENI,,Oil Refining/Marketing,Integrated Oil and Gas,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+LU1598757687,ArcelorMittal SA,ARRD,,Steel,Iron and Steel,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US00486H1059,ADTRAN HOLDINGS.,QH9,,Computer Peripherals,Communications Technology,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+LU2333563281,Tonies,TNIE,,Finance/Rental/Leasing,"Leisure, Goods & Services",C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005936124,OHB,OHB,,Electronic Production Equipment,Communications Technology,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US5324571083,Eli Lilly and Co,LLY,,Pharmaceuticals: Major,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007203705,SNP Schneider Neureither & Partner,SHF,,Miscellaneous Commercial Services,IT-Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007856023,Elringklinger,ZIL2,,Industrial Machinery,Auto Parts & Equipment,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005194062,BayWa,BYW6,,Wholesale Distributors,Industrial Products & Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0008051004,Wuestenrot & Wuerttembergische,WUW,,Multi-Line Insurance,Mortgage Banks,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+IT0005239360,UniCredit SpA,CRIN,,Major Banks,Credit Banks,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005493092,Borussia Dortmund GmbH ,BVB,,Movies/Entertainment,Movies & Entertainment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+FR0000133308,Orange SA,FTE,,Wireless Telecommunications,Telecommunications Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007276503,Secunetcurity Networks,YSN,,Information Technology Services,IT-Services,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US02376R1023,American Airlines Group,A1G,,Airlines,,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+LU1250154413,Adler Group SA,ADJ,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+CA0679011084,Barrick Gold Corp,ABR,,Precious Metals,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1MMCC8,Medios,ILM1,,Medical Distributors,Pharmatceuticals,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US09857L1089,Booking Holdings,PCE1,,Other Consumer Services,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007074007,KWS SAAT ,KWS,,Miscellaneous Commercial Services,Industrial Products & Services,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006636681,va Q tec,VQT,,Engineering & Construction,Internet,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005157101,Dr Hoenle,HNL,,Electrical Products,Advanced Industrial Equipment,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US0970231058,Boeing Co,BCO,,Aerospace & Defense,Aerospace,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+GB0009895292,AstraZeneca,ZEG,,Pharmaceuticals: Major,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+FR0000120321,L'Oreal SA,LOR,,Household/Personal Care,Cosmetics,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US68389X1054,Oracle Corp,ORC,,Packaged Software,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006450000,LPKF Laser & Electronics,LPK,,Semiconductors,Advanced Industrial Equipment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+NL0015436031,CureVac,5CV,,Pharmaceuticals: Major,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005550602,Draegerwerk ,DRW8,,Medical Specialties,Medical Technology,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+IE00BTN1Y115,Medtronic,2M6,,Medical Specialties,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0007657231,Villeroy & Boch,VIB3,,Building Products,Household Appliances & Housewares,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+GB0031348658,Barclays,BCY,,Investment Banks/Brokers,,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US38141G1040,Goldman Sachs Group,GOS,,Investment Banks/Brokers,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US1667641005,Chevron Corp,CHV,,Integrated Oil,Integrated Oil and Gas,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+LU1778762911,Spotify Technology SA,639,,Internet Software/Services,,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0JQ5U3,Manz,M5Z,,Electronic Production Equipment,Advanced Industrial Equipment,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+GB0002374006,Diageo,GUI,,Beverages: Alcoholic,,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+US6541061031,Nike,NKE,,Apparel/Footwear,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US1491231015,Caterpillar,CAT1,,Trucks/Construction/Farm Machinery,Machinery: Construction and Handling,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2DAM03,Aumann,AAG,,Industrial Machinery,Industrial Machinery,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005103006,ADVA Optical Networking,ADV,,Telecommunications Equipment,Communications Technology,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A255F11,Friedrich Vorwerk Group,VH2,,Oil & Gas Pipelines,Industrial Products & Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+FR0000131104,BNP Paribas SA,BNP,,Major Banks,Banks,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US02209S1033,Altria Group,PHM7,,Tobacco,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+NL0011585146,Ferrari,2FE,,Motor Vehicles,Automobiles,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007480204,Deutsche EuroShop,DEQ,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2TSL71,SYNLAB,SYAB,,Medical/Nursing Services,Health Care,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+IT0003128367,Enel SpA,ENL,,Electric Utilities,Conventional Electricity,A,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0007568578,SFC Energy,F3C,,Electronic Production Equipment,Renewable Energies,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+ES0173516115,Repsol SA,REP,,Integrated Oil,Integrated Oil and Gas,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+CA32076V1031,First Majestic Silver Corp,FMV,,Precious Metals,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2YPDD0,VIB Vermoegen,VIH1,,Real Estate Development,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007193500,Koenig & Bauer,SKB,,Industrial Machinery,Industrial Machinery,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US7134481081,PepsiCo,PEP,,Beverages: Non-Alcoholic,Soft Drinks,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE0005220909,Nexus,NXU,,Packaged Software,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1TNUT7,Deutsche Beteiligungs,DBAN,,Financial Conglomerates,Private Equity & Venture Capital,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+BE0974293251,Anheuser Busch Inbev SA,1NBA,,Beverages: Alcoholic,Brewers,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000NWRK013,New Work,NWO,,Personnel Services,Internet,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005408116,Aareal Bank,ARL,,Finance/Rental/Leasing,Mortgage Banks,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006223407,ProCredit Holding ,PCZ,,Regional Banks,Credit Banks,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005167902,3U Holding,UUU,,Industrial Conglomerates,Industrial Products & Services,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007446007,Takkt,TTK,,Wholesale Distributors,"Retail, Catalog",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US60770K1079,Moderna,0QF,,Biotechnology,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+NL0000009538,Koninklijke Philips,PHI1,,Medical Specialties,Medical Equipment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+IT0000072618,Intesa Sanpaolo SpA,IES,,Major Banks,Banks,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A161077,Ernst Russ,HXCK,,Other Transportation,Diversified Financial,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A255G02,Enapter,BUF1,,Alternative Power Generation,Renewable Energies,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2DA588,MAX Automation,MXHN,,Industrial Machinery,"Industrial, Diversified",B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+FR0000121485,Kering SA,PPX,,Consumer Sundries,Clothing and Accessories,A,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US0605051046,Bank of America Corp,NCB,,Major Banks,,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US08862E1091,Beyond Meat,0Q3,,Food: Major Diversified,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0007274136,Sto ,STO3,,Building Products,Home Construction & Furnishings,A,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US46625H1005,JPMorgan Chase ,CMC,,Major Banks,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+LU2356314745,Novem Group S.A.,NVM,,Wholesale Distributors,Auto Parts & Equipment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005408884,Leoni,LEO,,Electrical Products,Auto Parts & Equipment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US2358511028,Danaher Corp,DAP,,Medical Specialties,,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A12UP37,NorCom Information Technology,NC5A,,Packaged Software,Internet,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US6092071058,Mondelez International,KTF,,Food: Specialty/Candy,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+NL0013654783,Prosus,1TY,,Financial Conglomerates,Consumer Digital Services,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005229504,Bijou Brigitte modische Accessoires,BIJ,,Other Consumer Specialties,"Retail, Specialty",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000LS1LUS9,Lang & Schwarz,LUS1,,Investment Banks/Brokers,,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US5007541064,Kraft Heinz Co,KHNZ,,Food: Major Diversified,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005232805,Bertrandt,BDT,,Engineering & Construction,Auto Parts & Equipment,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US4370761029,Home Depot,HDI,,Home Improvement Chains,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US0311621009,Amgen,AMG,,Biotechnology,,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A0XYG76,Deutsche Rohstoff,DR0,,Integrated Oil,Mining,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0Z1JH9,PSI Software,PSAN,,Packaged Software,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US0090661010,Airbnb,6Z1,,Other Consumer Services,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000785407,Fabasoft,FAA,,Information Technology Services,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US58933Y1055,Merck ,6MK,,Pharmaceuticals: Major,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+FR0000125007,Compagnie de Saint Gobain SA,GOB,,Building Products,Building Materials: Other,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A31C305,Mynaric,M0YN,,Telecommunications Equipment,Communication Technology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1TNV91,Bitcoin Group,ADE,,Investment Managers,,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DK0060094928,Orsted A/S,D2G,,Electric Utilities,,A,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+FR0010208488,Engie SA,GZF,,Electric Utilities,Multi-utilities,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A1X3W00,Medigene,MDG1,,Biotechnology,Biotechnology,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000606306,Raiffeisen Bank International,RAW,,Major Banks,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A1YC996,Social Chain,PU11,,Advertising/Marketing Services,Advertising,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE0005654933,Einhell Germany,EIN3,,Tools & Hardware,Home Construction & Furnishings,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US57636Q1040,Mastercard,M4I,,Miscellaneous Commercial Services,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+FR0000124141,Veolia Environnement SA,VVD,,Water Utilities,Water,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000A25NJ6,Wolftank Adisa Holding,WAH,,Investment Managers,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+FR0000120644,Danone SA,BSN,,Food: Meat/Fish/Dairy,Food Products,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2GS633,Allgeier,AEIN,,Information Technology Services,IT-Services,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US6745991058,Occidental Petroleum Corp,OPC,,Oil & Gas Production,Oil: Crude Producers,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US37045V1008,General Motors Co,8GM,,Motor Vehicles,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005855183,MS Industrie,MSAG,,Electronic Equipment/Instruments,Diversified Financial,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+FR0000120578,Sanofi SA,SNW,,Pharmaceuticals: Major,Pharmaceuticals,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US2441991054,Deere ,DCO,,Trucks/Construction/Farm Machinery,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US3364331070,First Solar,F3A,,Semiconductors,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2GS609,Wallstreet online,WSO1,,Investment Managers,Diversified Financial,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US4878361082,Kellogg Co,KEL,,Food: Specialty/Candy,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000BFB0027,Metro,B4B3,,Apparel/Footwear Retail,"Retail, Multiline",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+LU2010095458,Global Fashion Group SA,GFG,,Apparel/Footwear Retail,"Retail, Internet",A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+AT0000746409,Verbund,OEWA,,Electric Utilities,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A0KF6M8,HanseYachts,H9Y,,Recreational Products,Heavy Machinery,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US75513E1010,Raytheon Technologies Corp,5UR,,Aerospace & Defense,,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE0005759807,init innovation in traffic systems,IXX,,Information Technology Services,Electronic Components & Hardware,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0006464506,Leifheit,LEI,,Home Furnishings,Household Appliances & Housewares,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+FR0000120172,Carrefour SA,CAR,,Specialty Stores,Food Retailers and Wholesalers,D,EUR,194,XET,XETR,Xetra,FALSE,D15,D15
+US8552441094,Starbucks Corp,SRB,,Restaurants,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US0258161092,American Express Co,AEC1,,Finance/Rental/Leasing,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0006569908,MLP,MLP,,Investment Managers,Diversified Financial,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005854343,Ecotel Communication,E4C,,Specialty Telecommunications,Fixed-Line Telecommunication,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US1101221083,Bristol-Myers Squibb Co,BRM,,Pharmaceuticals: Major,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A3CRRN9,Cherry,C3RY,,Computer Peripherals,Electronic Components & Hardware,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A0LR9G9,Exasol,EXL,,Packaged Software,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006200108,Indus Holding,INH,,Miscellaneous Manufacturing,"Industrial, Diversified",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DK0060448595,Coloplast A/S,CBHD,,Medical Specialties,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007830572,Daldrup & Soehne,4DS,,Oilfield Services/Equipment,Renewable Energies,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0JC8S7,Datagroup,D6H,,Information Technology Services,IT-Services,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+FR0000130809,Societe Generale SA,SGE,,Major Banks,Banks,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US8725901040,T-Mobile US,TM5,,Wireless Telecommunications,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1K0201,Gesco,GSC1,,Other Metals/Minerals,"Industrial, Diversified",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US1921085049,Coeur Mining,CDM1,,Precious Metals,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US36467W1099,GAMESTOP CORP. (NEW) A,GS2C,,Electronics/Appliance Stores,,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0XFWK2,SHS Viveon,SHWK,,Information Technology Services,,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+GB00BDR05C01,National Grid,NNGF,,Electric Utilities,,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US55087P1049,Lyft,LY0,,Other Transportation,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0001218063,Finlab,A7A,,Financial Conglomerates,Securities Brokers,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000FPH9000,Francotyp Postalia Holding,FPH,,Office Equipment/Supplies,Industrial Machinery,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US9497461015,Wells Fargo ,NWT,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0STSQ8,M1 Kliniken,M12,,Medical/Nursing Services,Health Care,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000A00Y78,Petro Welt Technologies,O2C,,Contract Drilling,Oil & Gas,A,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US3755581036,Gilead Sciences,GIS,,Biotechnology,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US0028241000,Abbott Laboratories,ABL,,Medical Specialties,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+IT0004147952,Newron Pharmaceuticals SpA,NP5,,Pharmaceuticals: Major,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1PHBB5,R Stahl,RSL2,,Electrical Products,Industrial Products & Services,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US3703341046,General Mills,GRM,,Food: Major Diversified,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+CNE1000031C1,Haier Smart Home Co Ltd,690D,,Electronics/Appliances,Household Appliances & Housewares,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US83304A1060,Snap,1SI,,Packaged Software,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+NL0012969182,Adyen,1N8,,Packaged Software,Transaction Processing Services,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US2786421030,eBay,EBA,,Internet Retail,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2G9MZ9,Stemmer Imaging,S9I,,Electronics/Appliances,IT-Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US9314271084,Walgreens Boots Alliance,W8A,,Pharmaceuticals: Major,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0MZ4B0,Delignit,DLX,,Building Products,Renewable Energies,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A0M93V6,Advanced Blockchain,BWQ,,Packaged Software,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A3E5A59,SynBiotic,L3DA,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+ES0148396007,Industria de Diseno Textil SA,IXD1,,Apparel/Footwear Retail,,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+US00165C1045,AMC Entertainment Holdings.,AH9,,Movies/Entertainment,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2GS625,CR Capital Real Estate,CRZK,,Real Estate Development,Real Estate,C,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+ES0144580Y14,Iberdrola SA,IBE1,,Electric Utilities,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0007507501,WashTec,WSU,,Industrial Machinery,Industrial Machinery,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000652011,Erste Group Bank,EBO,,Major Banks,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US3453708600,Ford Motor Co,FMC1,,Motor Vehicles,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US9311421039,Walmart,WMT,,Specialty Stores,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A14KEB5,home24,H24,,Specialty Stores,"Retail, Internet",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007201907,Firstnsor,SIS,,Semiconductors,Semiconductors,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1A6V48,KPS,KSC,,Internet Software/Services,IT-Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005494165,EQS Group,EQS,,Packaged Software,IT-Services,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005492938,Masterflex,MZX,,Miscellaneous Manufacturing,Industrial Products & Services,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+ATFREQUENT09,Frequentis,FQT,,Packaged Software,Communications Technology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+NL0000226223,STMicroelectronics,STM,,Auto Parts: OEM,Semiconductors,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A0XYGA7,technotrans,TTR1,,Industrial Machinery,Advanced Industrial Equipment,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+FR0000121972,Schneider Electric,SND,,Electrical Products,Electrical Components,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0MSN11,Nynomic,M7U,,Electronic Equipment/Instruments,Advanced Industrial Equipment,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005760029,ABO Wind,AB9,,Engineering & Construction,,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US0937121079,Bloom Energy Corp,1ZB,,Electrical Products,,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A0EQ578,HELMA Eigenheimbau,H5E,,Real Estate Development,Home Construction & Furnishings,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A3E5E55,Ringmetall,HP3A,,Industrial Machinery,Containers & Packaging,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005137004,QSC,QSC,,Computer Communications,Communications Technology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006618309,Medical Columbus,MCE,,Packaged Software,IT-Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A3CQ7F4,Bike24 Holding,BIKE,,Internet Retail,"Retail, Internet",B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005110001,All for One Group,A1OS,,Miscellaneous Commercial Services,IT-Services,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A11QVV0,Heidelberg Pharma,WL6,,Biotechnology,Biotechnology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+NL0000238145,Ad Pepper Media International,APM,,Advertising/Marketing Services,Advertising,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+GB00BLGZ9862,Tesco,TCO0,,Food Retail,,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006968001,Progress Werk Oberkirch,PWO,,Auto Parts: OEM,Auto Parts & Equipment,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A12UK08,Mountain Alliance,ECF,,Advertising/Marketing Services,"Retail, Internet",A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+FR0000120073,L'Air Liquide Societe Anonyme pour l'Etude et l'Exploitation des Procedes George,AIL,,Chemicals: Specialty,Specialty Chemicals,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE0006942808,Scherzer ,PZS,,Financial Conglomerates,Private Equity & Venture Capital,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006204589,mVISE,C1V,,Packaged Software,Telecommunication Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2NBVD5,DFV Deutsche Familienversicherung,DFVA,,Specialty Insurance,Insurance,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1EWXA4,clearvise,ABO,,Electric Utilities,,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+BE0974320526,Umicore SA,NVJP,,Other Metals/Minerals,Specialty Chemicals,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A111338,SLM Solutions Group,AM3D,,Information Technology Services,Advanced Industrial Equipment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000720008,Telekom Austria,TA1,,Major Telecommunications,,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A289VV1,Haemato,HAEK,,Pharmaceuticals: Major,Real Estate,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US92532F1003,Vertex Pharmaceuticals,VX1,,Pharmaceuticals: Major,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000730007,Andritz,AZ2,,Industrial Machinery,,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2GSVV5,Grounds Real Estate Development,AMMN,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006046113,Biofrontera,B8F,,Pharmaceuticals: Major,Biotechnology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2YN777,Pferdewetten de,EMH,,Movies/Entertainment,Leisure,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005156004,Gigaset,GGS,,Telecommunications Equipment,Communications Technology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005570808,Umweltbank,UBK,,Regional Banks,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+IE00BD1RP616,Bank of Ireland Group,BIRG,,Major Banks,Banks,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005227235,Biotest,BIO3,,Pharmaceuticals: Other,Pharmatceuticals,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0L1NN5,Heliad Equity Partners GmbH ,HPBK,,Investment Managers,Diversified Financial,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005498901,Data Modul Produktion und Vertrieb von Elektronischen Systemen,DAM,,Electronic Equipment/Instruments,Electronic Components & Hardware,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0007448508,IVU Traffic Technologies,IVU,,Packaged Software,IT-Services,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0KPPR7,Nabaltec,NTG,,Miscellaneous Manufacturing,Industrial Products & Services,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006605009,Medion,MDN,,Industrial Conglomerates,Industrial Products & Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2YN702,UMT United Mobility Technology,UMDK,,Semiconductors,Internet,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005533400,Deutsche Grundstuecksauktionen,DGR,,Miscellaneous Commercial Services,Real Estate,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US9884981013,Yum! Brands,TGR,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A11QLU3,UniDevice,UDC,,Electronics Distributors,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A2TSQH7,KATEK,KTEK,,Electronic Production Equipment,Auto Parts & Equipment,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A3CMGN3,hGears,HGEA,,Tools & Hardware,Auto Parts & Equipment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0001644565,Erlebnis Akademie,EAD,,Other Consumer Services,,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005218309,Mobotix,MBQ,,Computer Peripherals,Electronic Components & Hardware,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US30212P3038,Expedia Group,E3X1,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005895403,Grammer,GMM,,Auto Parts: OEM,Auto Parts & Equipment,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A0B9N37,JDC Group,A8A,,Investment Managers,Diversified Financial,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005088108,Baader Bank,BWB,,Investment Banks/Brokers,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2QEFA1,Fashionette,FSNT,,Internet Retail,"Retail, Internet",C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005580005,Dierig Holding,DIE,,Apparel/Footwear,Clothing & Footwear,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US09062X1037,Biogen,IDP,,Biotechnology,,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A168205,Shareholder Value Beteiligungen,SVE,,Investment Managers,Private Equity & Venture Capital,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005407407,CeoTronics Audio Video Data Communication,CEKG,,Computer Communications,Communications Technology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US88688T1007,Tilray Brands,2HQ,,Agricultural Commodities/Milling,,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A12UPJ7,Pantaflix,PAL,,Movies/Entertainment,Movies & Entertainment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005201602,Berentzen Gruppe,BEZ,,Beverages: Alcoholic,Beverages,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006208408,Kap,IUR,,Investment Managers,Diversified Financial,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A3CMGM5,APONTIS PHARMA,APPH,,Pharmaceuticals: Major,Pharmaceuticals,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0LD2U1,alstria office REIT,AOX,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US1941621039,Colgate-Palmolive Co,CPA,,Household/Personal Care,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0JM2M1,Blue Cap,B7E,,Industrial Conglomerates,"Industrial, Diversified",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0008041005,Deutsche Effecten und Wechsel Beteiligungsgesellschaft,EFF,,Investment Managers,Diversified Financial,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US4062161017,Halliburton Co,HAL,,Oilfield Services/Equipment,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1TNWJ4,MPC Muenchmeyer Petersen Capital,MPCK,,Financial Conglomerates,Diversified Financial,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A2E4T77,H&R GmbH ,2HRA,,Chemicals: Specialty,"Chemicals, Specialty",A,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0007551509,Uzin Utz,UZU,,Industrial Specialties,Building Materials,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+SE0000106270,H & M Hennes & Mauritz AB,HMSB,,Apparel/Footwear Retail,,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+AT0000946652,Schoeller Bleckmann Oilfield Equipment,SLL,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007229007,Schloss Wachenheim,SWA,,Beverages: Alcoholic,Beverages,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006972508,Publity,PBY,,Financial Conglomerates,Real Estate,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A289B07,Teles Informationstechnologien,TLIK,,Internet Software/Services,Internet,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006577109,Nanorepro,NN6,,Hospital/Nursing Management,Biotechnology,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0006569403,Albis Leasing,ALG,,Finance/Rental/Leasing,Diversified Financial,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005176903,Surteco Group,SUR,,Forest Products,Forest & Paper Products,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A2N4H07,Westwing Group,WEW,,Specialty Stores,"Retail, Internet",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A289V03,MPH Health Care,93M1,,Financial Conglomerates,Pharmaceuticals,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+FR0010220475,Alstom SA,AOMD,,Trucks/Construction/Farm Machinery,Electrical Components,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007857476,Klassik Radio,KA8,,Broadcasting,Broadcasting,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005932735,Yoc,YOC,,Packaged Software,Telecommunication Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+FR0004056851,VALNEVA,AYJ,,Biotechnology,Pharmaceuticals,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A1X3WX6,ERWE Immobilien,DTKK,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0XFSF0,Demire Deutsche Mittelstand Real Estate,DMRE,,Real Estate Investment Trusts,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A254W52,Mic,M3BK,,Financial Conglomerates,Private Equity & Venture Capital,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A0JDBC7,Limes Schlosskliniken,LIK,,Medical/Nursing Services,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005156236,Schweizer Electronic,SCE,,Semiconductors,Semiconductors,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+ES0113211835,Banco Bilbao Vizcaya Argentaria SA,BOY,,Major Banks,Banks,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000937503,voestalpine,VAS,,Steel,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005178008,Softing,SYT,,Information Technology Services,IT- Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1K0375,Artnet,ART,,Internet Software/Services,"Retail, Internet",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005202303,Quirin Privatbank,QB7,,Financial Conglomerates,Credit Banks,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A1TNNN5,AS Creation Tapeten,ACWN,,Home Furnishings,Home Construction & Furnishings,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006292006,KSB ,KSB,,Industrial Machinery,Industrial Machinery,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0XYHT5,IBU tec advanced materials,IBU,,Industrial Specialties,Industrial Products & Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US0304201033,American Water Works Company,AWC,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000831706,Wienerberger,WIB,,Construction Materials,,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A3E5ED2,Veganz Group,VEZ,,Food Distributors,Food,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0H52F5,Mvv Energie,MVV1,,Electric Utilities,Multi-Utilities,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A1A6WE6,DocCheck,AJ91,,Medical Distributors,Internet,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A3H2135,Max 21,MA10,,Packaged Software,Private Equity & Venture Capital,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1X3YY0,Bastei Luebbe,BST,,Publishing: Books/Magazines,Publishing & Printing,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005754402,LS telcom,LSX,,Specialty Telecommunications,Telecommunication Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000969985,AT & S Austria Technologie & Systemtechnik,AUS,,Electronic Components,,C,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A2AA204,DF Deutsche Forfait,DFTK,,Miscellaneous Commercial Services,Diversified Financial,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A13SUL5,Defama Deutsche Fachmarkt,DEF,,Real Estate Development,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1MMEV4,SGT German Private Equity GmbH ,GSJ,,Investment Managers,Private Equity & Venture Capital,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005649503,Edel ,EDL,,Movies/Entertainment,Movies & Entertainment,C,EUR,194,XET,XETR,Xetra,FALSE,D15,D15
+DE000A2P4LJ5,PharmaSGP Holding,PSG,,Pharmaceuticals: Other,Pharmaceuticals,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007571424,GK Software,GKS,,Packaged Software,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+IT0000062072,Assicurazioni Generali SpA,ASG,,Multi-Line Insurance,Full Line Insurance,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US6174464486,Morgan Stanley,DWD,,Investment Banks/Brokers,,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0HNF96,InCity Immobilien,IC8,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005008007,Adler Real Estate,ADL,,Real Estate Development,Real Estate,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+NL0000303709,Aegon,AEND,,Multi-Line Insurance,Life Insurance,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0BL849,Vita 34,V3V,,Biotechnology,Healthcare,A,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+FR0000125486,Vinci SA,SQU,,Engineering & Construction,Construction,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005209589,artec technologies,A6T,,Packaged Software,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0KD0F7,Muehlhan,M4N,,Trucks/Construction/Farm Machinery,Industrial Products & Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US0394831020,Archer Daniels Midland Co,ADM,,Agricultural Commodities/Milling,,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE0006201106,Friwo,CEA,,Industrial Conglomerates,"Industrial, Diversified",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0BVU28,USU Software,OSP2,,Packaged Software,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1681X5,Singulus Technologies,SNG,,Semiconductors,Advanced Industrial Equipment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000ZEAL241,ZEAL Network,TIMA,,Movies/Entertainment,"Retail, Internet",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005146807,Delticom,DEX,,Specialty Stores,"Retail, Internet",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006044001,Maternus Kliniken,MAK,,Managed Health Care,Health Care,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1EMHE0,Tonkensrar,GTK,,Food: Specialty/Candy,Food,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+LU1296758029,Corestate Capital Holding SA,CCAP,,Financial Conglomerates,Real Estate,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0008435967,NUeRNBERGER Beteiligungs,NBG6,,Life/Health Insurance,Insurance,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2YNT30,AlzChem Group,ACT,,Chemicals: Major Diversified,"Chemicals, Specialty",B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A0MVLS8,EnviTec Biogas,ETG,,Engineering & Construction,Renewable Energies,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005407100,CENIT,CSH,,Electronic Components,IT-Services,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000644505,Lenzing,LEN,,Textiles,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A31C3Y4,Altech Advanced Materials,AMA,,Containers/Packaging,Renewable Energies,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+FR0000127771,Vivendi SA,VVU,,Media Conglomerates,Radio and TV Broadcasters,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+CH0303692047,EDAG Engineering Group,ED4,,Engineering & Construction,Auto Parts & Equipment,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+CA4969024047,Kinross Gold Corp,KIN2,,Precious Metals,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2NB7S2,Traumhaus,TRU,,Homebuilding,,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A161NR7,Naga Group,N4G,,Miscellaneous Commercial Services,Securities Brokers,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2E4SV8,Cyan,CYR,,Computer Communications,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005118806,11 88 0 Solutions,TGT,,Specialty Telecommunications,Telecommunication Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2BPK34,Black Pearl Digital,VRL,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006627201,Muehlbauer Holding,MUB,,Electronic Equipment/Instruments,Electronic Components & Hardware,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005199905,Ludwig Beck am Rathauseck Textilhaus Feldmeier,ECK,,Department Stores,"Retail, Multiline",B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+AT0000652250,S Immo,T1L,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2DAN10,Softline,SFD1,,Information Technology Services,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A1EMG56,Sporttotal,WIG1,,Advertising/Marketing Services,Advertising,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005181606,Weng Fine Art,WFA,,Specialty Stores,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+LU1618151879,Logwin SA,TGHN,,Trucking,Logistics,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0KEXC7,Vectron Systems,V3S,,Computer Processing Hardware,Advanced Industrial Equipment,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005220008,EnBW Energie Baden Wuerttemberg,EBK,,Electric Utilities,Electricity,J,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005203947,BRAIN Biotech,BNN,,Biotechnology,"Chemicals, Specialty",B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A0LBKW6,UET United Electronic Technology,CFC,,Financial Conglomerates,"Industrial, Diversified",C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+NL0014332678,JDE Peets,JDE,,Beverages: Non-Alcoholic,Soft Drinks,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2G8332,Niiio Finance Group,NIIN,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+CH0006539198,Highlight Communications,HLG,,Movies/Entertainment,Movies & Entertainment,D,EUR,194,XET,XETR,Xetra,FALSE,,
+DE000A1RFMY4,RCM Beteiligungs,RCMN,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A3H3L44,2Invest,,,Biotechnology,Biotechnology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A254211,Intershop Communications,ISHA,,Packaged Software,Internet,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+GB0008706128,Lloyds Banking Group,LLD,,Major Banks,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005489561,United Labels,ULC,,Apparel/Footwear,"Retail, Specialty",A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A0DNAY5,bet-at-home,ACX,,Movies/Entertainment,"Retail, Internet",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+NL0011794037,Koninklijke Ahold Delhaize,AHOG,,Food Retail,Food Retailers and Wholesalers,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007830788,Ifa Systems,IS8,,Industrial Conglomerates,Industrial Products & Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+IT0003497168,Telecom Italia SpA,TQI,,Specialty Telecommunications,Telecommunications Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007008906,Realtech,RTC,,Miscellaneous Commercial Services,IT-Services,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000821103,UNIQA Insurance Group,UN9,,Multi-Line Insurance,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005194005,BayWa,BYW,,Wholesale Distributors,Industrial Products & Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1X3X33,WCM Beteiligungs und Grundbesitz,WCMK,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006214687,Mueller Die Lila Logistik,MLL,,Miscellaneous Commercial Services,Logistics,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005775803,Foris,FRS,,Investment Managers,Diversified Financial,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+CA9628791027,Wheaton Precious Metals Corp,SII,,Precious Metals,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007279507,Splendid Medien,SPM,,Movies/Entertainment,Movies & Entertainment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005104806,Syzygy,SYZ,,Miscellaneous Commercial Services,IT-Services,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006061104,HMS Bergbau,HMU,,Industrial Conglomerates,Industrial Products & Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US40434L1052,HP,7HP,,Computer Processing Hardware,,A,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US0268747849,American International Group,AINN,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US4128221086,Harley-Davidson,HAR,,Motor Vehicles,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0001262152,B+S Banksysteme,DTD2,,Internet Software/Services,Internet,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A3DSV01,Cantourage Group,HIGH,,Pharmaceuticals: Other,Pharmaceuticals,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2TR919,Spielvereinigung Unterhaching Fussball GmbH ,S6P,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US98978V1035,Zoetis,ZOE,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+GB00BD6K4575,Compass Group,XGR2,,Restaurants,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005408686,OEKOWORLD,VVV3,,Financial Conglomerates,Diversified Financial,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0Z2Y48,Verianos Real Estate,VROS,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005479307,Varengold Bank,VG8,,Investment Banks/Brokers,Securities Brokers,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A2E4LE9,Voltabox,VBX,,Electrical Products,Advanced Industrial Equipment,B,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0007846867,Viscom,V6C,,Industrial Machinery,Advanced Industrial Equipment,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007501009,TTL Beteiligungs und Grundbesitz,TTO,,Financial Conglomerates,Real Estate,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+IT0003497176,Telecom Italia SpA,TQIR,,Major Telecommunications,Telecommunications Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000837307,Zumtobel Group,T9Z,,Electrical Products,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US8969452015,Tripadvisor,T6A,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0KFRJ1,CytoTools,T5O,,Pharmaceuticals: Major,Biotechnology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2AAA75,Seven Principles,T3T1,,Internet Software/Services,IT-Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1RFMZ1,SM Wirtschaftsberatungs,SMWN,,Investment Managers,Diversified Financial,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2G8X31,Serviceware,SJJ,,Packaged Software,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1TNU68,STS Group,SF3,,Auto Parts: OEM,Auto Parts & Equipment,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A3DRAE2,SMT Scharf,S4AA,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000922554,Rosenbauer International,ROI,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+FR0000131906,Renault SA,RNL,,Motor Vehicles,Automobiles,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007042301,Rhoen Klinikum,RHK,,Hospital/Nursing Management,Health Care,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005558696,Paragon GmbH ,PGN,,Auto Parts: OEM,Auto Parts & Equipment,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE0006967805,Pro DV,PDA,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2LQ850,PREOS Global Office Real Estate & Technology,PAG,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A3E5EG5,PAION,PA8K,,Pharmaceuticals: Major,Biotechnology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0HGQS8,Plan Optik,P4O,,Industrial Machinery,Advanced Industrial Equipment,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0005228779,Orbis,OBS,,Miscellaneous Commercial Services,Industrial Products & Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+LU0251710041,Cpi Property Group SA,O5G,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006286560,OVB Holding,O4B,,Investment Managers,Diversified Financial,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000APOST4,Oesterreichische Post,O3P,,Air Freight/Couriers,,A,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A2E4MK4,Noratis,NUVA,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0B9VV6,Coreo,NNS,,Industrial Conglomerates,"Industrial, Diversified",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0N4N52,NFON,NFN,,Wireless Telecommunications,Wireless Telecommunication,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1MME74,Netfonds,NF4,,Investment Managers,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE0006656101,mwb Fairtrade Wertpapierhandelsbank,MWB,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006595101,Mediclin,MED,,Managed Health Care,Health Care,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0008148206,Merkur Bank,MBK,,Regional Banks,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0LBFE4,Mevis Medical Solutions,M3V,,Packaged Software,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A12UP29,Lloyd Fonds,L1OA,,Investment Managers,Diversified Financial,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006578008,KHD Humboldt Wedag International,KWG,,Construction Materials,Building Materials,B,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE0005859698,InVision,IVX,,Packaged Software,Software,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006223605,Intertainment,ITN,,Movies/Entertainment,Movies & Entertainment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005874846,InTiCa Systems,IS7,,Electronic Components,Electronic Components & Hardware,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A3MQR99,GBS Software,INW,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US4523271090,Illumina,ILU,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+LU2290523658,HomeToGo,HTG,,Finance/Rental/Leasing,"Retail, Internet",C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A3E5E63,Homes & Holiday,HHHA,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0006042708,Hawesko Holding,HAW,,Specialty Stores,"Retail, Food & Drug",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0LR4P1,HWA,H9W,,Motor Vehicles,Automobile Manufacturers,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0JJTG7,Gateway Real Estate,H1I,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005495626,Geratherm Medical,GME,,Medical Specialties,Medical Technology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+SE0013774668,Epti AB,G7H,,,,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0007612103,Going Public Media,G6P,,Publishing: Newspapers,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+FI4000106299,Ferratum Oyj,FRU,,Finance/Rental/Leasing,Diversified Financial,B,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005774103,Fortec Elektronik,FEV,,Electronics Distributors,Electronic Components & Hardware,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+DE000A1YC913,FCR Immobilien,FC9,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+LU0472835155,exceet Group SA,EXC,,Electronic Components,Electronic Components & Hardware,A,EUR,194,XET,XETR,Xetra,FALSE,D15,
+CH0557519201,TMC Content Group,ERO,,Movies/Entertainment,Movies & Entertainment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+SE0000108649,Telefonaktiebolaget LM Ericsson,ERCG,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A11Q059,elumeo,ELB,,Other Consumer Specialties,"Retail, Internet",C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0KFKH0,elexxion,E8X,,Industrial Machinery,Advanced Industrial Equipment,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0KFKB3,Accentro Real Estate,E7S,,Real Estate Development,Real Estate,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A0V9LA7,Datron,DAR,,Industrial Machinery,Industrial Machinery,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A1PG508,Fast Finance 24 Holding,CSY,,Industrial Conglomerates,Industrial Products & Services,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A2LQUA5,Creditshelf,CSQ,,Finance/Rental/Leasing,Diversified Financial,C,EUR,194,XET,XETR,Xetra,TRUE,CX,D15
+DE000A2G9M17,Capsensixx,CPX,,Investment Managers,Diversified Financial,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0005227201,Biotest,BIO,,Pharmaceuticals: Other,Pharmatceuticals,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE0002605557,BAVARIA Industries Group,B8A,,Industrial Conglomerates,"Industrial, Diversified",D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT000AGRANA3,Agrana Beteiligungs,AGB2,,Food: Specialty/Candy,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT0000609607,Porr,ABS2,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+DE000A3H2101,Aap Implantate,AAQ1,,Medical/Nursing Services,Medical Technology,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+SE0018538068,MGI-Media and Games Invest,8EW,,Internet Software/Services,Internet,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US26614N1028,Dupont De Nemours,6D81,,Chemicals: Major Diversified,,C,EUR,194,XET,XETR,Xetra,FALSE,CX,D15
+US05722G1004,Baker Hughes Co,68V,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US23355L1061,DXC Technology Co,2XT,,Data Processing Services,,C,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US22052L1044,Corteva,2X0,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US42824C1099,Hewlett Packard Enterprise Co,2HP,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+AT00000FACC2,FACC,1FC,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,
+US98850P1093,Yum China Holdings,0YU,,,,D,EUR,194,XET,XETR,Xetra,FALSE,D15,

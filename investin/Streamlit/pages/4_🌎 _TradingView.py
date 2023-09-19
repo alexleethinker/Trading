@@ -7,15 +7,9 @@ page_config()
 
 timezone = 'UTC'
 data_path = '{data_dir}/spot/stock_spot_global_primary.csv'.format(data_dir=data_dir)
-translated_industry = '{data_dir}/static/translation.xlsx'.format(data_dir=data_dir)
 
 df = pd.read_csv(data_path,encoding = 'utf-8')
-# trans_df = pd.read_csv(translated_industry, encoding = 'gbk')
-trans_df = pd.read_excel(open(translated_industry, 'rb'),sheet_name='industry_trans')
-market_df = pd.read_excel(open(translated_industry, 'rb'),sheet_name='market_trans')
-
-df = df.merge(trans_df, on = 'industry').merge(market_df, on = 'market')
-df['description'] = df['description'].str.replace('(UK)','').str.replace('-X','')
+df['证券名称'] = df['证券名称'].str.replace('(UK)','').str.replace('-X','')
 
 
 def plot_plate(plate = '欧洲'):
@@ -24,7 +18,7 @@ def plot_plate(plate = '欧洲'):
         dfi = df.fillna('')
         dfi = dfi[dfi['Traded_USD'] > dfi['Traded_USD'].quantile(.6) ]
 
-        path=[px.Constant("世界(USD)"),'plate','市场','大行业','一级行业','二级行业']
+        path=[px.Constant("世界(USD)"),'plate','市场','一级行业','二级行业','三级行业']
         custom_data=['change','name','market_cap_USD']
         range_color = 4
         hovertemplate= "%{label}<br>%{customdata[0]:.2f}%<br>总市值=%{customdata[2]:d}亿"    
@@ -33,7 +27,7 @@ def plot_plate(plate = '欧洲'):
         dfi = df[df['plate'] == plate]
         dfi = dfi[dfi['Traded_USD'] > dfi['Traded_USD'].quantile(.75) ]
 
-        path=['plate','市场','大行业','一级行业','二级行业','description']
+        path=['plate','市场','一级行业','二级行业','三级行业','证券名称']
         custom_data=['change','name','market_cap_USD','close','市场','Traded_USD']
         range_color = 8
         hovertemplate= "%{customdata[1]}<br>%{label}<br>%{customdata[3]:.1f} (%{customdata[0]:.2f})%<br>总市值=%{customdata[2]:d}亿<br>成交额=%{customdata[5]:.2f}亿"                  

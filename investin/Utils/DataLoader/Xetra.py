@@ -9,8 +9,11 @@ from investin.Utils.config import data_dir
 
 class StockSpotXetra():
     def __init__(self) -> None:
-        pass
-
+        self.read_dir = data_dir + '/static/Europe/Xetra/xetra_degiro.csv'
+        self.xetra_master_dir = data_dir + '/static/Europe/Xetra/xetra_masterdata.csv'
+        self.write_dir = data_dir + '/spot/stock_spot_xetra.csv'
+        self.translate_dir = data_dir + '/static/TradingView/translations/translation.xlsx'
+        
     def _get_headers(self, url):
         clientDate = datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z' 
         salt = 'w4ivc1ATTGta6njAZzMbkL3kJwxMfEAKDa3MNr'
@@ -60,18 +63,27 @@ class StockSpotXetra():
     #     return df
     
     def clean(self, df):
-        degiro_df = pd.read_csv( data_dir + '/static/xetra_degiro.csv') 
+        degiro_df = pd.read_csv( self.read_dir) 
         df = degiro_df.merge(df, how = 'left', on = ['isin'])
         return df
     
+    def add_xetra_master(self, df):
+        trans_df = pd.read_excel(open(self.translate_dir, 'rb'),sheet_name='industry_trans').drop(columns=['sector'])
+        master_df = pd.read_csv(self.xetra_master_dir,encoding = 'utf-8')
+        df = df.merge(trans_df, on = 'industry').merge(master_df , on = 'isin')
+        df.loc[~df['名称翻译'].isnull(), 'name'] = df[~df['名称翻译'].isnull()]['名称翻译']
+        df = df.rename(columns={"name": "证券名称"})
+        return df
+    
     def update(self, df):
-        df.to_csv( data_dir + '/spot/stock_spot_xetra.csv', index = False, encoding = 'utf-8')
+        df.to_csv( self.write_dir, index = False, encoding = 'utf-8')
 
     def run(self):
         try:
             print('Start fetch Xetra stock prices')
             df = self.fetch_xetra_prices()
             df = self.clean(df)
+            df = self.add_xetra_master(df)
             self.update(df)
             print('Data all updated')
         except Exception as e:

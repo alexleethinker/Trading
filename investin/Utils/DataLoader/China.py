@@ -18,7 +18,8 @@ def market_suffix(code):
 
 class StockSpotChinaA():
     def __init__(self) -> None:
-        pass
+        self.read_dir = data_dir +'/static/EM/China/a_stocks.xlsx'
+        self.write_dir = data_dir + '/spot/stock_spot_china_a.csv'
 
     def fetch(self):
         url = 'http://40.push2.eastmoney.com/api/qt/clist/get'
@@ -115,14 +116,14 @@ class StockSpotChinaA():
         
 
     def clean(self, temp_df):
-        stock_custom_industry = pd.read_excel(open(data_dir +'/static/a_stocks.xlsx', 'rb'),sheet_name='a_stocks_info').drop(['股票简称'], axis=1)
+        stock_custom_industry = pd.read_excel(open(self.read_dir, 'rb'),sheet_name='a_stocks_info').drop(['股票简称'], axis=1)
         df = temp_df.merge(stock_custom_industry,how='left',on=['证券代码'])
         df = df[~df['一级行业'].isnull()]
         df = df[~df['涨跌幅'].isnull()]
         return df
     
     def update(self, df):   
-        df.to_csv( data_dir + '/spot/stock_spot_china_a.csv', index = False, encoding = 'utf-8')
+        df.to_csv( self.write_dir, index = False, encoding = 'utf-8')
 
     def run(self):
         try:
@@ -132,5 +133,6 @@ class StockSpotChinaA():
             self.update(clean_df)
             print('Data updated')
         except Exception as e:
+            print(e)
             print('Error occurs during data loading, retrying')
             self.run()

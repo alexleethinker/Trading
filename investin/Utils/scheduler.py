@@ -43,8 +43,8 @@ def start_cronjob():
     scheduler.add_job(StockSpotChinaA().run, 'cron', day_of_week='mon-fri',hour='7',minute='1')
 
     scheduler.add_job(update_spot_degiro_at_trading, 'cron', day_of_week='mon-fri',hour='7-15',minute='0/1',second='30')
-    scheduler.add_job(StockSpotEuronext().run, 'cron', day_of_week='mon-fri',hour='2',minute='36,55')
-    scheduler.add_job(StockSpotXetra().run, 'cron', day_of_week='mon-fri',hour='2',minute='36,55')
+    scheduler.add_job(StockSpotEuronext().run, 'cron', day_of_week='mon-fri',hour='15',minute='36,55')
+    scheduler.add_job(StockSpotXetra().run, 'cron', day_of_week='mon-fri',hour='15',minute='36,55')
 
     scheduler.add_job(StockSpotHKEX().run, 'cron', day_of_week='mon-fri',hour='1-8',minute='0/5')
     scheduler.add_job(StockSpotUS().run, 'cron', day_of_week='mon-fri',hour='13-21',minute='0/5')

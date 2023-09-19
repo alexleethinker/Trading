@@ -7,32 +7,32 @@ page_config()
 
 timezone = 'UTC'
 data_path = '{data_dir}/spot/stock_spot_global_primary.csv'.format(data_dir=data_dir)
-translated_industry = '{data_dir}/static/translation.xlsx'.format(data_dir=data_dir)
+# translated_industry = '{data_dir}/static/TradingView/translations/translation.xlsx'.format(data_dir=data_dir)
 
 df = pd.read_csv(data_path,encoding = 'utf-8')
-trans_df = pd.read_excel(open(translated_industry, 'rb'),sheet_name='industry_trans')
-market_df = pd.read_excel(open(translated_industry, 'rb'),sheet_name='market_trans')
+# trans_df = pd.read_excel(open(translated_industry, 'rb'),sheet_name='industry_trans')
+# market_df = pd.read_excel(open(translated_industry, 'rb'),sheet_name='market_trans')
 
-df = df.merge(trans_df, on = 'industry').merge(market_df, on = 'market').fillna("")
+# df = df.merge(trans_df, on = 'industry').merge(market_df, on = 'market').fillna("")
 
 
 
 def plot_plate(industry):
     if industry in ['消费','金融']:
         path=[px.Constant("industry"),'plate','市场']
-        dfi = df[df['大行业'].isin([industry]) & (~df['一级行业'].isin(['商业服务','经销商']))]
+        dfi = df[df['一级行业'].isin([industry]) & (~df['二级行业'].isin(['商业服务','经销商']))]
 
     elif industry in ['汽车','制药']:
-        path=[px.Constant(industry),'二级行业','plate','市场','description']
-        dfi = df[df['一级行业'].isin([industry])]
+        path=[px.Constant(industry),'三级行业','plate','市场','证券名称']
+        dfi = df[df['二级行业'].isin([industry])]
 
     else:
-        path=[px.Constant(industry),'plate','市场','description']
+        path=[px.Constant(industry),'plate','市场','证券名称']
         if industry in ['石油']:
-            dfi = df[df['一级行业'].isin(['能源'])]
-            dfi = dfi[~dfi['二级行业'].isin(['煤炭'])]  
+            dfi = df[df['二级行业'].isin(['能源'])]
+            dfi = dfi[~dfi['三级行业'].isin(['煤炭'])]  
         else:        
-            dfi = df[df['二级行业'].isin([industry])]
+            dfi = df[df['三级行业'].isin([industry])]
 
 
     dfi = dfi[dfi['market_cap_USD'] > dfi['market_cap_USD'].quantile(.75) ]
