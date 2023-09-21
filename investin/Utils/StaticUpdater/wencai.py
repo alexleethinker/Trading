@@ -1,9 +1,10 @@
 import pywencai
 
 
-query = '所属概念 公司亮点 所属同花顺行业 所属指数类'
+# query = '所属概念 公司亮点 所属同花顺行业 所属指数类'
+query = '行业 概念 市值'
 loop = True
-query_type = 'stock'
+query_type = 'hkstock'
 
 '''
 stock	股票
@@ -19,6 +20,6 @@ lccp	理财
 foreign_exchange	外汇
 '''
 
-r = pywencai.get(query=query)
+r = pywencai.get(query=query,loop = loop, log = True, query_type = query_type)
 
-print(r)
+r.to_csv('hk_stock_details.csv', index = False)

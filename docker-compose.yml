@@ -15,7 +15,7 @@ services:
     volumes: 
       - ./:/home
     working_dir: /home
-    command:  streamlit run investin/Streamlit/📈_主页.py  
+    command:  streamlit run investin/Streamlit/🗞️_主页.py  
 
     
   data-loader:
@@ -30,13 +30,13 @@ services:
     command: python -m investin.Utils.scheduler
 
 
-  wencai:
-    image: quant
-    container_name: wencai-loader
-    hostname: wencai-loader
-    volumes: 
-      - ./:/home
-    env_file:
-      - .env
-    working_dir: /home
-    command: python -m investin.Utils.StaticUpdater.wencai
+  # wencai:
+  #   image: quant
+  #   container_name: wencai-loader
+  #   hostname: wencai-loader
+  #   volumes: 
+  #     - ./:/home
+  #   env_file:
+  #     - .env
+  #   working_dir: /home
+  #   command: python -m investin.Utils.StaticUpdater.wencai

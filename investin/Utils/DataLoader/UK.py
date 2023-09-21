@@ -100,6 +100,7 @@ class StockSpotUK():
         df = df[~df['总市值'].isnull()]
         df['总市值'] = (df['总市值']/10000000000).round(2)
         df['成交额'] = (df['成交额']/10000000000).round(2)
+        df =df.rename(columns={"名称": "证券名称"})
         return df
     
     def update(self, df):   

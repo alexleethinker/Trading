@@ -90,7 +90,7 @@ class StockSpotHK():
                 "昨收价",
                 '成交额',
                 "总市值",
-                "港股市值",
+                "流通市值",
             ]
         ]
         temp_df["最新价"] = pd.to_numeric(temp_df["最新价"], errors="coerce")
@@ -102,7 +102,7 @@ class StockSpotHK():
         temp_df["昨收价"] = pd.to_numeric(temp_df["昨收价"], errors="coerce")
         temp_df["总市值"] = pd.to_numeric(temp_df["总市值"], errors="coerce")
         temp_df["成交额"] = pd.to_numeric(temp_df["成交额"], errors="coerce")
-        temp_df["港股市值"] = pd.to_numeric(temp_df["港股市值"], errors="coerce")          
+        temp_df["流通市值"] = pd.to_numeric(temp_df["流通市值"], errors="coerce")          
         return temp_df
 
 class StockSpotHKEX():
@@ -143,13 +143,18 @@ class StockSpotHKEX():
         df['证券代码'] = df['证券代码'] + '.HK'
         df = df[~df['涨跌幅'].isnull()]
         df = df[df['总市值'] > 0]
+        
+        df['am_u'] = df['am_u'].str.replace('B','1000000000').str.replace('M','1000000').str.replace('K','1000')
+        df["am"] = pd.to_numeric(df["am"], errors="coerce")
+        df["am_u"] = pd.to_numeric(df["am_u"], errors="coerce")
+        df['成交额'] = ((df['am'] * df['am_u'])/100000000).round(1).fillna(0) 
         return df
 
     def update(self, df):
         df.to_csv( data_dir + '/spot/stock_spot_hk.csv', index = False, encoding = 'utf-8')
 
     def run(self):
-        print('Start fetching China A stock data')
+        print('Start fetching HK stock data')
         hk_industry_df = self.get_industry_df()
         hkex_df = self.get_hkex_df()
         df = hk_industry_df.merge(hkex_df, on = '证券代码', how = 'inner')
