@@ -1,0 +1,11 @@
+APScheduler==3.10.4
+exchange_calendars==4.5
+lxml==4.9.3
+pandas==2.1.1
+plotly==5.17.0
+pytz==2022.7
+pywencai==0.12.0
+Requests==2.31.0
+streamlit==1.26.0
+streamlit_autorefresh==1.0.1
+zhconv==1.4.3
