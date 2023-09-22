@@ -105,6 +105,14 @@ class StockSpotHK():
         temp_df["流通市值"] = pd.to_numeric(temp_df["流通市值"], errors="coerce")          
         return temp_df
 
+
+
+
+
+
+
+
+
 class StockSpotHKEX():
     def __init__(self) -> None:
         pass
