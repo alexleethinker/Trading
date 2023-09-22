@@ -48,9 +48,9 @@ def check_plate(market):
     elif market in east_asia:
         market = '亚太'
     elif market in latin_america :
-        market = '拉丁美洲'
+        market = '拉美'
     elif market in middle_east + africa + east_eur:
-        market = '中东/非/东欧'
+        market = '中东非'
     elif market in indian:
         market = '南亚'
     elif market in asan:

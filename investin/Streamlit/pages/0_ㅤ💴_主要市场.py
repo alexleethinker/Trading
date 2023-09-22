@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from streamlit_autorefresh import st_autorefresh
 from utils.config import page_config, update_at, data_dir
 from utils.figure import treemap
 page_config()
@@ -15,13 +14,14 @@ def load_df(exchange):
         df = df[~df['change'].isnull()]
         df['Traded_USD'] = df['Traded_USD']* 10000
         df = df[df['Traded_USD'] > df['Traded_USD'].quantile(.5)]
+        timezone = 'Europe/Amsterdam'
 
     elif exchange == '™️XETRA':
         df['turnover'] = pd.to_numeric(df['turnover'], errors="coerce")/10000
         df['marketCapitalisation'] = pd.to_numeric(df['marketCapitalisation'], errors="coerce")/100000000
         df = df[df['turnover'] > df['turnover'].quantile(.5) ]
+        timezone = 'Europe/Berlin'
 
-    timezone = 'Europe/Amsterdam'
     update_at(data_path, timezone)   
     return df
 
@@ -68,7 +68,7 @@ def plot_fig(market):
         file = 'china_a'
     elif market == '🇭🇰 港股':
         title = '港股-HKD'
-        timezone = 'Asia/Shanghai'
+        timezone = 'Asia/Hong_Kong'
         file = 'hk'
     elif market == '🇺🇸 美股':
         title = '美股-USD'
@@ -137,9 +137,9 @@ def main(market):
     else:
         plot_fig(market)
 
-col1, col2 = st.columns([9, 1])
+col = st.columns([9, 1])
 
-with col1:
+with col[0]:
     st.radio(
         "",
         key="market",
@@ -147,7 +147,7 @@ with col1:
         horizontal=True,
         label_visibility='collapsed'
     )
-with col2:
+with col[1]:
     traded_value_on = st.toggle('成交额')
 # Plot!
 main(st.session_state.market)

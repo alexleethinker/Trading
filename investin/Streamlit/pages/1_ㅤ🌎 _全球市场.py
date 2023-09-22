@@ -53,8 +53,8 @@ def plot_plate(plate = '欧洲'):
 
 
 
-col1, col2 = st.columns([9, 1])
-with col1:
+col = st.columns([9, 1])
+with col[0]:
     st.radio(
         "",
         key="plate",
@@ -62,7 +62,7 @@ with col1:
         horizontal=True,
         label_visibility='collapsed'
     )
-with col2:
+with col[1]:
     traded_value_on = st.toggle('成交额')
     
     
