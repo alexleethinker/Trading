@@ -30,7 +30,7 @@ def plot_plate(exchange):
     if exchange == '™️EuroNext':
         fig = treemap(df,
                       path=[px.Constant("EuroNext-USD"),'一级行业','二级行业','三级行业','证券名称'],
-                      values='Traded_USD',
+                      values='Traded_USD' if traded_value_on else 'market_cap_USD',
                       color='change',
                       range_color= 8,
                       custom_data=['change','symbol','market_cap_USD','last_price','country','Traded_USD','exchange','icb_industry','exchange_degiro','category'],
@@ -39,7 +39,7 @@ def plot_plate(exchange):
     elif exchange == '™️XETRA':                   
         fig = treemap(df,
                       path=[px.Constant("XETRA-EUR"),'一级行业','二级行业','三级行业','证券名称'],
-                      values='turnover',
+                      values='turnover' if traded_value_on else 'marketCapitalisation',
                       color='changeToPrevDay',
                       range_color= 8,
                       custom_data=['changeToPrevDay','symbol','marketCapitalisation','overview.lastPrice','xetr_industry','exchange_degiro','category','originCountry','turnover'],
@@ -57,7 +57,7 @@ def plot_fig_euro():
     with tab2:
         fig_extra = plot_plate("™️XETRA")
         st.plotly_chart(fig_extra, use_container_width=True)
-        st.markdown('数据来源：™️XETRA')
+        st.markdown('数据来源：™️XETRA（延迟15分钟）')
 
 
 
@@ -81,11 +81,11 @@ def plot_fig(market):
         
             
     if market == '🇨🇳 A股':
-        values = '流通市值' 
+        values = '成交额' if traded_value_on else '流通市值' 
         custom_data=['涨跌幅','流通市值','所属同花顺行业','投资逻辑','最新价','证券代码','主营产品','成交额']
         hovertemplate= "%{customdata[5]}<br>%{label}<br>%{customdata[4]:.2f}  (%{customdata[0]:.2f}%)<br>流通市值=%{customdata[1]:d}亿<br>成交额=%{customdata[7]:.2f}亿<br>%{customdata[2]}<br>主营产品：%{customdata[6]}<br>%{customdata[3]}<br>"
     else:
-        values = '总市值'
+        values = '成交额' if traded_value_on else '总市值'
         custom_data=['涨跌幅','证券代码','总市值','最新价','成交额']
         hovertemplate= "%{customdata[1]}<br>%{label}<br>%{customdata[3]:.2f}  (%{customdata[0]:.2f}%)<br>总市值=%{customdata[2]:d}亿<br>成交额=%{customdata[4]:.2f}亿"
     
@@ -105,7 +105,7 @@ def plot_fig(market):
                             color='涨跌幅', 
                             range_color = 4, 
                             custom_data=['涨跌幅',values],
-                            hovertemplate= "%{label}<br>涨跌幅=%{customdata[0]:.2f}%<br>流通市值=%{customdata[1]:d}亿"
+                            hovertemplate= "%{label}<br>涨跌幅=%{customdata[0]:.2f}%<br>"+ values +"=%{customdata[1]:d}亿"
                             )
         else:
             fig = treemap(df, 
@@ -137,15 +137,18 @@ def main(market):
     else:
         plot_fig(market)
 
+col1, col2 = st.columns([9, 1])
 
-st.radio(
-    "",
-    key="market",
-    options=['🇨🇳 A股','🇭🇰 港股','🇺🇸 美股','🇬🇧 英股','🇪🇺 欧股'],
-    horizontal=True,
-    label_visibility='collapsed'
-)
-
+with col1:
+    st.radio(
+        "",
+        key="market",
+        options=['🇨🇳 A股','🇭🇰 港股','🇺🇸 美股','🇬🇧 英股','🇪🇺 欧股'],
+        horizontal=True,
+        label_visibility='collapsed'
+    )
+with col2:
+    traded_value_on = st.toggle('成交额')
 # Plot!
 main(st.session_state.market)
 

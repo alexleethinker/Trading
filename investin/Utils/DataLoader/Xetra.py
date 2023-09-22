@@ -65,6 +65,7 @@ class StockSpotXetra():
     def clean(self, df):
         degiro_df = pd.read_csv( self.read_dir) 
         df = degiro_df.merge(df, how = 'left', on = ['isin'])
+        df = df[df['marketCapitalisation'] > 0]
         return df
     
     def add_xetra_master(self, df):

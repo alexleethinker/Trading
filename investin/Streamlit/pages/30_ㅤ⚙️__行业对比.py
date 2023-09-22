@@ -57,4 +57,4 @@ st.radio(
 # Plot!
 fig = plot_plate(st.session_state.industry)
 st.plotly_chart(fig, use_container_width=True)
-st.markdown('数据来源：TradingView')
+st.markdown('数据来源：TradingView（大部分市场延迟15分钟）')
