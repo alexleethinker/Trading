@@ -1,0 +1,96 @@
+fullname,short_name,exchange_for_display,source_logo_url,tv_symbol_page_url,currency_code,isin,is_primary_listing,primary_symbol,ticker_title
+NASDAQ:AAPL,AAPL,NASDAQ,https://s3-symbol-logo.tradingview.com/country/US.svg,/symbols/NASDAQ-AAPL/,USD,US0378331005,True,NASDAQ:AAPL,Apple
+BCBA:AAPL,AAPL,BYMA,https://s3-symbol-logo.tradingview.com/country/AR.svg,/symbols/BCBA-AAPL/,ARS,ARDEUT116183,False,NASDAQ:AAPL,Apple
+XETR:APC,APC,XETR,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/XETR-APC/,EUR,US0378331005,False,NASDAQ:AAPL,Apple
+TRADEGATE:APC,APC,TRADEGATE,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/TRADEGATE-APC/,EUR,US0378331005,False,NASDAQ:AAPL,Apple
+BMFBOVESPA:AAPL34,AAPL34,B3,https://s3-symbol-logo.tradingview.com/country/BR.svg,/symbols/BMFBOVESPA-AAPL34/,BRL,BRAAPLBDR004,False,NASDAQ:AAPL,Apple
+NEO:AAPL,AAPL,NEO,https://s3-symbol-logo.tradingview.com/country/CA.svg,/symbols/NEO-AAPL/,CAD,CA03785Y1007,False,NASDAQ:AAPL,Apple
+BMV:AAPL,AAPL,BMV,https://s3-symbol-logo.tradingview.com/country/MX.svg,/symbols/BMV-AAPL/,MXN,US0378331005,False,NASDAQ:AAPL,Apple
+GETTEX:APC,APC,GETTEX,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/GETTEX-APC/,EUR,US0378331005,False,NASDAQ:AAPL,Apple
+BCBA:AAPLD,AAPLD,BYMA,https://s3-symbol-logo.tradingview.com/country/AR.svg,/symbols/BCBA-AAPLD/,USD,ARDEUT116183,False,NASDAQ:AAPL,Apple
+MIL:1AAPL,1AAPL,MIL,https://s3-symbol-logo.tradingview.com/country/IT.svg,/symbols/MIL-1AAPL/,EUR,US0378331005,False,NASDAQ:AAPL,Apple
+FWB:APC,APC,FWB,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/FWB-APC/,EUR,US0378331005,False,NASDAQ:AAPL,Apple
+BVC:AAPL,AAPL,BVC,https://s3-symbol-logo.tradingview.com/country/CO.svg,/symbols/BVC-AAPL/,COP,US0378331005,False,NASDAQ:AAPL,Apple
+MOEX:AAPL-RM,AAPL-RM,MOEX,https://s3-symbol-logo.tradingview.com/country/RU.svg,/symbols/MOEX-AAPL-RM/,RUB,US0378331005,False,NASDAQ:AAPL,Apple
+SIX:AAPL,AAPL,SIX,https://s3-symbol-logo.tradingview.com/country/CH.svg,/symbols/SIX-AAPL/,CHF,US0378331005,False,NASDAQ:AAPL,Apple
+BCS:AAPL,AAPL,SSE,https://s3-symbol-logo.tradingview.com/country/CL.svg,/symbols/BCS-AAPL/,USD,US0378331005,False,NASDAQ:AAPL,Apple
+SIX:AAPL.USD,AAPL.USD,SIX,https://s3-symbol-logo.tradingview.com/country/CH.svg,/symbols/SIX-AAPL.USD/,USD,US0378331005,False,NASDAQ:AAPL,Apple
+VIE:AAPL,AAPL,WB,https://s3-symbol-logo.tradingview.com/country/AT.svg,/symbols/VIE-AAPL/,EUR,US0378331005,False,NASDAQ:AAPL,Apple
+SWB:APC,APC,SWB,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/SWB-APC/,EUR,US0378331005,False,NASDAQ:AAPL,Apple
+MUN:APC,APC,MUN,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/MUN-APC/,EUR,US0378331005,False,NASDAQ:AAPL,Apple
+BVL:AAPL,AAPL,BVL,https://s3-symbol-logo.tradingview.com/country/PE.svg,/symbols/BVL-AAPL/,USD,US0378331005,False,NASDAQ:AAPL,Apple
+LSIN:0R2V,0R2V,LSIN,https://s3-symbol-logo.tradingview.com/country/GB.svg,/symbols/LSIN-0R2V/,USD,US0378331005,False,NASDAQ:AAPL,Apple
+BCBA:AAPLB,AAPLB,BYMA,https://s3-symbol-logo.tradingview.com/country/AR.svg,/symbols/BCBA-AAPLB/,ARS,ARDEUT116183,False,NASDAQ:AAPL,Apple
+BER:APC,APC,BER,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/BER-APC/,EUR,US0378331005,False,NASDAQ:AAPL,Apple
+SIX:AAPL.EUR,AAPL.EUR,SIX,https://s3-symbol-logo.tradingview.com/country/CH.svg,/symbols/SIX-AAPL.EUR/,EUR,US0378331005,False,NASDAQ:AAPL,Apple
+BCBA:AAPLC,AAPLC,BYMA,https://s3-symbol-logo.tradingview.com/country/AR.svg,/symbols/BCBA-AAPLC/,USD,ARDEUT116183,False,NASDAQ:AAPL,Apple
+BCS:AAPLCL,AAPLCL,SSE,https://s3-symbol-logo.tradingview.com/country/CL.svg,/symbols/BCS-AAPLCL/,CLP,US0378331005,False,NASDAQ:AAPL,Apple
+TURQUOISE:AAPLN,AAPLN,Turquoise,https://s3-symbol-logo.tradingview.com/country/GB.svg,/symbols/TURQUOISE-AAPLN/,USD,US0378331005,False,NASDAQ:AAPL,Apple
+GETTEX:APC8,APC8,GETTEX,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/GETTEX-APC8/,EUR,CA03785Y1007,False,NASDAQ:AAPL,Apple
+DUS:APC,APC,DUS,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/DUS-APC/,EUR,US0378331005,False,NASDAQ:AAPL,Apple
+HAM:APC,APC,HAM,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/HAM-APC/,EUR,US0378331005,False,NASDAQ:AAPL,Apple
+BCBA:AAPDB,AAPDB,BYMA,https://s3-symbol-logo.tradingview.com/country/AR.svg,/symbols/BCBA-AAPDB/,USD,ARDEUT116183,False,NASDAQ:AAPL,Apple
+BX:APC,APC,BX,https://s3-symbol-logo.tradingview.com/country/CH.svg,/symbols/BX-APC/,CHF,US0378331005,False,NASDAQ:AAPL,Apple
+FWB:APC8,APC8,FWB,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/FWB-APC8/,EUR,CA03785Y1007,False,NASDAQ:AAPL,Apple
+BCBA:AAPCB,AAPCB,BYMA,https://s3-symbol-logo.tradingview.com/country/AR.svg,/symbols/BCBA-AAPCB/,USD,ARDEUT116183,False,NASDAQ:AAPL,Apple
+HAN:APC,APC,HAN,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/HAN-APC/,EUR,US0378331005,False,NASDAQ:AAPL,Apple
+MUN:APC8,APC8,MUN,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/MUN-APC8/,EUR,CA03785Y1007,False,NASDAQ:AAPL,Apple
+NYSE:DELL,DELL,NYSE,https://s3-symbol-logo.tradingview.com/country/US.svg,/symbols/NYSE-DELL/,USD,US24703L2025,True,NYSE:DELL,Dell Technologies Inc.
+XETR:12DA,12DA,XETR,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/XETR-12DA/,EUR,US24703L2025,False,NYSE:DELL,Dell Technologies Inc.
+TRADEGATE:12DA,12DA,TRADEGATE,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/TRADEGATE-12DA/,EUR,US24703L2025,False,NYSE:DELL,Dell Technologies Inc.
+DUS:12DA,12DA,DUS,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/DUS-12DA/,EUR,US24703L2025,False,NYSE:DELL,Dell Technologies Inc.
+VIE:DELL,DELL,WB,https://s3-symbol-logo.tradingview.com/country/AT.svg,/symbols/VIE-DELL/,EUR,US24703L2025,False,NYSE:DELL,Dell Technologies Inc.
+BMFBOVESPA:D1EL34,D1EL34,B3,https://s3-symbol-logo.tradingview.com/country/BR.svg,/symbols/BMFBOVESPA-D1EL34/,BRL,BRD1ELBDR009,False,NYSE:DELL,Dell Technologies Inc.
+BMV:DELLC,DELLC,BMV,https://s3-symbol-logo.tradingview.com/country/MX.svg,/symbols/BMV-DELLC/,MXN,US24703L2025,False,NYSE:DELL,Dell Technologies Inc.
+GETTEX:12DA,12DA,GETTEX,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/GETTEX-12DA/,EUR,US24703L2025,False,NYSE:DELL,Dell Technologies Inc.
+LSE:0A7D,0A7D,LSE,https://s3-symbol-logo.tradingview.com/country/GB.svg,/symbols/LSE-0A7D/,USD,US24703L2025,False,NYSE:DELL,Dell Technologies Inc.
+FWB:12DA,12DA,FWB,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/FWB-12DA/,EUR,US24703L2025,False,NYSE:DELL,Dell Technologies Inc.
+MOEX:DELL-RM,DELL-RM,MOEX,https://s3-symbol-logo.tradingview.com/country/RU.svg,/symbols/MOEX-DELL-RM/,RUB,US24703L2025,False,NYSE:DELL,Dell Technologies Inc.
+MUN:12DA,12DA,MUN,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/MUN-12DA/,EUR,US24703L2025,False,NYSE:DELL,Dell Technologies Inc.
+SWB:12DA,12DA,SWB,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/SWB-12DA/,EUR,US24703L2025,False,NYSE:DELL,Dell Technologies Inc.
+BER:12DA,12DA,BER,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/BER-12DA/,EUR,US24703L2025,False,NYSE:DELL,Dell Technologies Inc.
+HAN:12DA,12DA,HAN,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/HAN-12DA/,EUR,US24703L2025,False,NYSE:DELL,Dell Technologies Inc.
+HAM:12DA,12DA,HAM,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/HAM-12DA/,EUR,US24703L2025,False,NYSE:DELL,Dell Technologies Inc.
+BX:12DA,12DA,BX,https://s3-symbol-logo.tradingview.com/country/CH.svg,/symbols/BX-12DA/,CHF,US24703L2025,False,NYSE:DELL,Dell Technologies Inc.
+NYSE:HPQ,HPQ,NYSE,https://s3-symbol-logo.tradingview.com/country/US.svg,/symbols/NYSE-HPQ/,USD,US40434L1052,True,NYSE:HPQ,HP Inc.
+BCBA:HPQ,HPQ,BYMA,https://s3-symbol-logo.tradingview.com/country/AR.svg,/symbols/BCBA-HPQ/,ARS,ARDEUT110194,False,NYSE:HPQ,HP Inc.
+XETR:7HP,7HP,XETR,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/XETR-7HP/,EUR,US40434L1052,False,NYSE:HPQ,HP Inc.
+TRADEGATE:7HP,7HP,TRADEGATE,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/TRADEGATE-7HP/,EUR,US40434L1052,False,NYSE:HPQ,HP Inc.
+BMV:HPQ,HPQ,BMV,https://s3-symbol-logo.tradingview.com/country/MX.svg,/symbols/BMV-HPQ/,MXN,US40434L1052,False,NYSE:HPQ,HP Inc.
+BMFBOVESPA:HPQB34,HPQB34,B3,https://s3-symbol-logo.tradingview.com/country/BR.svg,/symbols/BMFBOVESPA-HPQB34/,BRL,BRHPQBBDR006,False,NYSE:HPQ,HP Inc.
+GETTEX:7HP,7HP,GETTEX,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/GETTEX-7HP/,EUR,US40434L1052,False,NYSE:HPQ,HP Inc.
+LSE:0J2E,0J2E,LSE,https://s3-symbol-logo.tradingview.com/country/GB.svg,/symbols/LSE-0J2E/,USD,US40434L1052,False,NYSE:HPQ,HP Inc.
+VIE:HPQ,HPQ,WB,https://s3-symbol-logo.tradingview.com/country/AT.svg,/symbols/VIE-HPQ/,EUR,US40434L1052,False,NYSE:HPQ,HP Inc.
+BCS:HPQCL,HPQCL,SSE,https://s3-symbol-logo.tradingview.com/country/CL.svg,/symbols/BCS-HPQCL/,CLP,US40434L1052,False,NYSE:HPQ,HP Inc.
+FWB:7HP,7HP,FWB,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/FWB-7HP/,EUR,US40434L1052,False,NYSE:HPQ,HP Inc.
+DUS:7HP,7HP,DUS,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/DUS-7HP/,EUR,US40434L1052,False,NYSE:HPQ,HP Inc.
+MOEX:HPQ-RM,HPQ-RM,MOEX,https://s3-symbol-logo.tradingview.com/country/RU.svg,/symbols/MOEX-HPQ-RM/,RUB,US40434L1052,False,NYSE:HPQ,HP Inc.
+BCS:HPQ,HPQ,SSE,https://s3-symbol-logo.tradingview.com/country/CL.svg,/symbols/BCS-HPQ/,USD,US40434L1052,False,NYSE:HPQ,HP Inc.
+BX:7HP,7HP,BX,https://s3-symbol-logo.tradingview.com/country/CH.svg,/symbols/BX-7HP/,CHF,US40434L1052,False,NYSE:HPQ,HP Inc.
+BER:7HP,7HP,BER,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/BER-7HP/,EUR,US40434L1052,False,NYSE:HPQ,HP Inc.
+BCBA:HPQD,HPQD,BYMA,https://s3-symbol-logo.tradingview.com/country/AR.svg,/symbols/BCBA-HPQD/,USD,ARDEUT110194,False,NYSE:HPQ,HP Inc.
+SIX:HPQ,HPQ,SIX,https://s3-symbol-logo.tradingview.com/country/CH.svg,/symbols/SIX-HPQ/,CHF,US40434L1052,False,NYSE:HPQ,HP Inc.
+MUN:7HP,7HP,MUN,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/MUN-7HP/,EUR,US40434L1052,False,NYSE:HPQ,HP Inc.
+SWB:7HP,7HP,SWB,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/SWB-7HP/,EUR,US40434L1052,False,NYSE:HPQ,HP Inc.
+HAM:7HP,7HP,HAM,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/HAM-7HP/,EUR,US40434L1052,False,NYSE:HPQ,HP Inc.
+HAN:7HP,7HP,HAN,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/HAN-7HP/,EUR,US40434L1052,False,NYSE:HPQ,HP Inc.
+SIX:HPQ.USD,HPQ.USD,SIX,https://s3-symbol-logo.tradingview.com/country/CH.svg,/symbols/SIX-HPQ.USD/,USD,US40434L1052,False,NYSE:HPQ,HP Inc.
+BCBA:HPQC,HPQC,BYMA,https://s3-symbol-logo.tradingview.com/country/AR.svg,/symbols/BCBA-HPQC/,USD,ARDEUT110194,False,NYSE:HPQ,HP Inc.
+TURQUOISE:HPQN,HPQN,Turquoise,https://s3-symbol-logo.tradingview.com/country/GB.svg,/symbols/TURQUOISE-HPQN/,USD,US40434L1052,False,NYSE:HPQ,HP Inc.
+NYSE:HPE,HPE,NYSE,https://s3-symbol-logo.tradingview.com/country/US.svg,/symbols/NYSE-HPE/,USD,US42824C1099,True,NYSE:HPE,Hewlett Packard Enterprise Company
+XETR:2HP,2HP,XETR,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/XETR-2HP/,EUR,US42824C1099,False,NYSE:HPE,Hewlett Packard Enterprise Company
+TRADEGATE:2HP,2HP,TRADEGATE,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/TRADEGATE-2HP/,EUR,US42824C1099,False,NYSE:HPE,Hewlett Packard Enterprise Company
+LSE:0J51,0J51,LSE,https://s3-symbol-logo.tradingview.com/country/GB.svg,/symbols/LSE-0J51/,USD,US42824C1099,False,NYSE:HPE,Hewlett Packard Enterprise Company
+BMV:HPE,HPE,BMV,https://s3-symbol-logo.tradingview.com/country/MX.svg,/symbols/BMV-HPE/,MXN,US42824C1099,False,NYSE:HPE,Hewlett Packard Enterprise Company
+FWB:2HP,2HP,FWB,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/FWB-2HP/,EUR,US42824C1099,False,NYSE:HPE,Hewlett Packard Enterprise Company
+VIE:HPE,HPE,WB,https://s3-symbol-logo.tradingview.com/country/AT.svg,/symbols/VIE-HPE/,EUR,US42824C1099,False,NYSE:HPE,Hewlett Packard Enterprise Company
+MUN:2HP,2HP,MUN,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/MUN-2HP/,EUR,US42824C1099,False,NYSE:HPE,Hewlett Packard Enterprise Company
+GETTEX:2HP,2HP,GETTEX,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/GETTEX-2HP/,EUR,US42824C1099,False,NYSE:HPE,Hewlett Packard Enterprise Company
+MOEX:HPE-RM,HPE-RM,MOEX,https://s3-symbol-logo.tradingview.com/country/RU.svg,/symbols/MOEX-HPE-RM/,RUB,US42824C1099,False,NYSE:HPE,Hewlett Packard Enterprise Company
+BMFBOVESPA:H1PE34,H1PE34,B3,https://s3-symbol-logo.tradingview.com/country/BR.svg,/symbols/BMFBOVESPA-H1PE34/,BRL,BRH1PEBDR006,False,NYSE:HPE,Hewlett Packard Enterprise Company
+SWB:2HP,2HP,SWB,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/SWB-2HP/,EUR,US42824C1099,False,NYSE:HPE,Hewlett Packard Enterprise Company
+DUS:2HP,2HP,DUS,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/DUS-2HP/,EUR,US42824C1099,False,NYSE:HPE,Hewlett Packard Enterprise Company
+HAM:2HP,2HP,HAM,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/HAM-2HP/,EUR,US42824C1099,False,NYSE:HPE,Hewlett Packard Enterprise Company
+BER:2HP,2HP,BER,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/BER-2HP/,EUR,US42824C1099,False,NYSE:HPE,Hewlett Packard Enterprise Company
+HAN:2HP,2HP,HAN,https://s3-symbol-logo.tradingview.com/country/DE.svg,/symbols/HAN-2HP/,EUR,US42824C1099,False,NYSE:HPE,Hewlett Packard Enterprise Company
+BX:2HP,2HP,BX,https://s3-symbol-logo.tradingview.com/country/CH.svg,/symbols/BX-2HP/,CHF,US42824C1099,False,NYSE:HPE,Hewlett Packard Enterprise Company
