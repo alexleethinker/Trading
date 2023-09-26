@@ -83,15 +83,17 @@ class StockSpotEuronext():
         df.to_csv( self.write_dir , index = False, encoding = 'utf-8')
 
     def run(self):
-        try:
-            print('Start fetching Euronext data')
-            euronext_df = self.fetch_prices()
-            print('Start cleaning data')
-            df = self.clean(euronext_df)
-            self.update(df)
-            print('Data updated')
-        except Exception as e:
-            print('Error occurs during data loading, retrying')
-            self.run()
-
+        attempts = 0
+        while attempts < 3:
+            try:
+                print('Start fetching Euronext data')
+                euronext_df = self.fetch_prices()
+                print('Start cleaning data')
+                df = self.clean(euronext_df)
+                self.update(df)
+                print('Data updated')
+                break
+            except Exception as e:
+                attempts += 1
+                print('errors occur, retrying {attempts} times'.format(attempts=attempts))          
 

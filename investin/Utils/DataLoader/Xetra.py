@@ -80,13 +80,16 @@ class StockSpotXetra():
         df.to_csv( self.write_dir, index = False, encoding = 'utf-8')
 
     def run(self):
-        try:
-            print('Start fetch Xetra stock prices')
-            df = self.fetch_xetra_prices()
-            df = self.clean(df)
-            df = self.add_xetra_master(df)
-            self.update(df)
-            print('Data all updated')
-        except Exception as e:
-            print('Error occurs during data loading, retrying')
-            self.run()  
+        attempts = 0
+        while attempts < 3:
+            try:
+                print('Start fetch Xetra stock prices')
+                df = self.fetch_xetra_prices()
+                df = self.clean(df)
+                df = self.add_xetra_master(df)
+                self.update(df)
+                print('Data all updated')
+                break
+            except Exception as e:
+                attempts += 1
+                print('errors occur, retrying {attempts} times'.format(attempts=attempts))

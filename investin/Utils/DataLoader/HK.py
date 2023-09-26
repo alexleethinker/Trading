@@ -162,10 +162,17 @@ class StockSpotHKEX():
         df.to_csv( data_dir + '/spot/stock_spot_hk.csv', index = False, encoding = 'utf-8')
 
     def run(self):
-        print('Start fetching HK stock data')
-        hk_industry_df = self.get_industry_df()
-        hkex_df = self.get_hkex_df()
-        df = hk_industry_df.merge(hkex_df, on = '证券代码', how = 'inner')
-        df = self.clean(df)
-        self.update(df)
-        print('Data updated')
+        attempts = 0
+        while attempts < 3:
+            try:
+                print('Start fetching HK stock data')
+                hk_industry_df = self.get_industry_df()
+                hkex_df = self.get_hkex_df()
+                df = hk_industry_df.merge(hkex_df, on = '证券代码', how = 'inner')
+                df = self.clean(df)
+                self.update(df)
+                print('Data updated')
+                break
+            except Exception as e:
+                attempts += 1
+                print('errors occur, retrying {attempts} times'.format(attempts=attempts))          

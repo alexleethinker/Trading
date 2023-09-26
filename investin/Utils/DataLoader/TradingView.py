@@ -220,22 +220,23 @@ class StockSpotTradingView():
 
     def run(self):
 
-        try:
-            print('Start fetch global stock prices')
-            df = self.fetch_global_prices()
-            df = self.clean(df)
-            print('Start cleaning data')
-            df = self.correct_industry(df)
-            df = self.translate_name(df)
-            df = self.translate_industry(df)
-            self.update(df, mode = 'all')
-            self.update(df, mode = 'primary')
-            print('Data all updated')
-
-        except Exception as e:
-            print(e)
-            print('Error occurs during data loading, retrying')
-            self.run()            
+        attempts = 0
+        while attempts < 3:
+            try:
+                print('Start fetch global stock prices')
+                df = self.fetch_global_prices()
+                df = self.clean(df)
+                print('Start cleaning data')
+                df = self.correct_industry(df)
+                df = self.translate_name(df)
+                df = self.translate_industry(df)
+                self.update(df, mode = 'all')
+                self.update(df, mode = 'primary')
+                print('Data all updated')
+                break
+            except Exception as e:
+                attempts += 1
+                print('errors occur, retrying {attempts} times'.format(attempts=attempts))          
 
 
     
