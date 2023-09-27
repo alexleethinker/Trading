@@ -4,7 +4,6 @@ import json
 import os
 from bs4 import BeautifulSoup
 from tqdm import tqdm
-import time
 try:
     from investin.Utils.config import data_dir
 except:

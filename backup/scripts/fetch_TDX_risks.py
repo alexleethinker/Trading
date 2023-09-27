@@ -35,7 +35,7 @@ all_risk_table = pd.DataFrame()
 code_l = list(set(spot['代码'].tolist()).difference(all_stock_risks['code'].tolist()))
 
 print("获取股票Risk...")
-
+# http://page3.tdx.com.cn:7615/site/pcwebcall_static/bxb/bxb.html?code=600089&color=0
 for code in tqdm(code_l):
     url = 'http://page3.tdx.com.cn:7615/site/pcwebcall_static/bxb/json/' + code + '.json'
 

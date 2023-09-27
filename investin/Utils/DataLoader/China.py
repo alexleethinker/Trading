@@ -1,7 +1,6 @@
-import requests
 import pandas as pd
 from investin.Utils.config import data_dir
-
+from investin.Utils.DataLoader.common.EM import fetch_spot_em
 
 def market_suffix(code):
     if code[:1] == '6':
@@ -15,108 +14,20 @@ def market_suffix(code):
     return code
 
 
-
 class StockSpotChinaA():
     def __init__(self) -> None:
         self.read_dir = data_dir +'/static/EM/China/a_stocks.xlsx'
         self.write_dir = data_dir + '/spot/stock_spot_china_a.csv'
 
     def fetch(self):
-        url = 'http://40.push2.eastmoney.com/api/qt/clist/get'
-        params = {
-            'pn': '1',
-            'pz': '6000',
-            'po': '1',
-            'np': '1',
-            'ut': 'bd1d9ddb04089700cf9c27f6f7426281',
-            'fltt': '2',
-            'invt': '2',
-            'fid': 'f3',
-            'fs': 'm:0 t:6,m:0 t:13,m:0 t:80,m:1 t:2,m:1 t:23,m:0 t:81 s:2048',
-            'fields': 'f2,f3,f4,f5,f6,f7,f8,f9,f10,f12,f13,f14,f15,f16,f17,f18,f20,f21,f23,f24,f25,f22,f11,f62,f128,f136,f115,f152',
-            '_': '1631107510188',
-        }
-
-        r = requests.get(url, params=params, timeout=10)
-        data_json = r.json()
-        temp_df = pd.DataFrame(data_json['data']['diff'])
-        temp_df.reset_index(inplace=True)
-        temp_df['index'] = range(1, len(temp_df)+1)
-        temp_df.columns = [
-            '序号',
-            '最新价',
-            '涨跌幅',
-            '涨跌额',
-            '成交量',
-            '成交额',
-            '振幅',
-            '换手率',
-            '市盈率-动态',
-            '量比',
-            '_',
-            '代码',
-            '_',
-            '名称',
-            '最高',
-            '最低',
-            '今开',
-            '昨收',
-            '总市值',
-            '流通市值',
-            '_',
-            '市净率',
-            '_',
-            '_',
-            '_',
-            '_',
-            '_',
-            '_',
-            '_',
-            '_',
-            '_',
-        ]
-
-        temp_df = temp_df[[
-            '代码',
-            '名称',
-            '最新价',
-            '总市值',
-            '流通市值',
-            '涨跌幅',
-            '涨跌额',
-            '成交量',
-            '成交额',
-            '振幅',
-            '最高',
-            '最低',
-            '今开',
-            '昨收',
-            '量比',
-            '换手率',
-            '市盈率-动态',
-            '市净率',
-        ]]
-        temp_df['证券代码'] = temp_df['代码'].apply(market_suffix)
-        temp_df['证券名称'] = temp_df['名称'].str.replace(' ','').str.replace('Ａ','A')
-        temp_df['流通市值'] = (pd.to_numeric(temp_df['流通市值'], errors="coerce")/100000000).round(1).fillna('') 
-        temp_df['总市值'] = (pd.to_numeric(temp_df['总市值'], errors="coerce")/100000000).round(1).fillna('') 
-        temp_df['最新价'] = pd.to_numeric(temp_df['最新价'], errors="coerce")
-        temp_df['涨跌幅'] = pd.to_numeric(temp_df['涨跌幅'], errors="coerce")
-        temp_df['涨跌额'] = pd.to_numeric(temp_df['涨跌额'], errors="coerce")
-        temp_df['成交量'] = pd.to_numeric(temp_df['成交量'], errors="coerce")
-        temp_df['成交额'] = (pd.to_numeric(temp_df['成交额'], errors="coerce")/100000000).round(2).fillna('') 
-        temp_df['振幅'] = pd.to_numeric(temp_df['振幅'], errors="coerce")
-        temp_df['最高'] = pd.to_numeric(temp_df['最高'], errors="coerce")
-        temp_df['最低'] = pd.to_numeric(temp_df['最低'], errors="coerce")
-        temp_df['今开'] = pd.to_numeric(temp_df['今开'], errors="coerce")
-        temp_df['量比'] = pd.to_numeric(temp_df['量比'], errors="coerce")
-        temp_df['换手率'] = pd.to_numeric(temp_df['换手率'], errors="coerce")
-        temp_df = temp_df[['证券代码','证券名称','流通市值','总市值','最新价', '涨跌幅','成交额','换手率']]
+        temp_df = fetch_spot_em(market='China')
         return temp_df
         
 
     def clean(self, temp_df):
         stock_custom_industry = pd.read_excel(open(self.read_dir, 'rb'),sheet_name='a_stocks_info').drop(['股票简称'], axis=1)
+        temp_df['证券代码'] = temp_df['证券代码'].apply(market_suffix)
+        temp_df['证券名称'] = temp_df['证券名称'].str.replace(' ','').str.replace('Ａ','A')
         df = temp_df.merge(stock_custom_industry,how='left',on=['证券代码'])
         df = df[~df['一级行业'].isnull()]
         df = df[~df['涨跌幅'].isnull()]
