@@ -4,6 +4,16 @@ from investin.Utils.config import data_dir
 from investin.Utils.DataLoader.common.EM import fetch_spot_em
 
 
+
+def remove_suffix(name):
+    suffix = [' PLC',' ORD',' HOLDINGS',' GROUP']
+    for i in suffix:
+        name = name.split(i)[0]
+    return name
+
+
+
+
 class StockSpotUK():
     def __init__(self):
         # self.read_dir = data_dir +'/static/EM/US/uk_stocks.xlsx'
@@ -17,6 +27,7 @@ class StockSpotUK():
         global_df = pd.read_csv( data_dir + '/spot/stock_spot_global_all.csv',low_memory=False)[['name','market','一级行业','二级行业','三级行业']]
         uk_df = global_df[global_df['market'] == 'uk']
         df = temp_df.merge(uk_df,how='left',left_on=['证券代码'], right_on=['name'])
+        df['证券名称'] = df['证券名称'].apply(remove_suffix)
         df = df[~df['涨跌幅'].isnull()]
         df = df[~df['三级行业'].isnull()]
         df = df[~df['总市值'].isnull()]

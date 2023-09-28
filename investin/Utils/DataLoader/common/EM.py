@@ -53,13 +53,17 @@ def fetch_spot_em(market):
     temp_df = pd.DataFrame(data_json['data']['diff'])
     temp_df = temp_df.rename(columns = em_fields)
 
-    temp_df['流通市值'] = (pd.to_numeric(temp_df['流通市值'], errors="coerce")/100000000).round(2).fillna('') 
-    temp_df['总市值'] = (pd.to_numeric(temp_df['总市值'], errors="coerce")/100000000).round(2).fillna('') 
-    temp_df['成交额'] = (pd.to_numeric(temp_df['成交额'], errors="coerce")/100000000).round(2).fillna('') 
+    temp_df['流通市值'] = (pd.to_numeric(temp_df['流通市值'], errors="coerce")/100000000).round(2).fillna(0) 
+    temp_df['总市值'] = (pd.to_numeric(temp_df['总市值'], errors="coerce")/100000000).round(2).fillna(0) 
+    temp_df['成交额'] = (pd.to_numeric(temp_df['成交额'], errors="coerce")/100000000).round(2).fillna(0) 
     temp_df['最新价'] = pd.to_numeric(temp_df['最新价'], errors="coerce")
     temp_df['涨跌幅'] = pd.to_numeric(temp_df['涨跌幅'], errors="coerce")
     temp_df['换手率'] = pd.to_numeric(temp_df['换手率'], errors="coerce")
     temp_df = temp_df[['证券代码','证券名称','流通市值','总市值','最新价', '涨跌幅','成交额','换手率']]
+    
+    temp_df = temp_df[temp_df['流通市值'] > 0]
+    temp_df = temp_df[temp_df['总市值'] > 0]
+    temp_df = temp_df[temp_df['成交额'] > 0]
     return temp_df
 
 
