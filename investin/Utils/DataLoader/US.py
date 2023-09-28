@@ -14,7 +14,7 @@ class StockSpotUS():
         return temp_df
     
     def clean(self, temp_df):
-        stock_custom_industry = pd.read_excel(open(self.read_dir, 'rb'),sheet_name='us_stocks_industry')
+        stock_custom_industry = pd.read_excel(open(self.read_dir, 'rb'),sheet_name='us_stocks_industry').drop(columns = '证券名称')
         df = temp_df.merge(stock_custom_industry,how='left',on=['证券代码'])
         df = df[~df['涨跌幅'].isnull()]
         df = df[~df['三级行业'].isnull()]
