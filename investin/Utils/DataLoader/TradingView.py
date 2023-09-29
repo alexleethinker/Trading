@@ -26,7 +26,7 @@ def get_USD_forex_table():
 
 def check_plate(market):
     fvey = ['america','canada']
-    eur = ['uk','belgium','france','germany','italy','luxembourg','netherlands','portugal','spain','switzerland','cyprus','greece']
+    eur = ['uk','belgium',"czech",'france','germany','italy','luxembourg','netherlands','portugal','spain','switzerland','cyprus','greece']
     n_eur = ['iceland','denmark','finland','norway','sweden']
     china = ['china','hongkong']
     east_asia = ['japan','korea','taiwan','australia','newzealand']
@@ -34,7 +34,7 @@ def check_plate(market):
     middle_east = ['bahrain','egypt','israel','kuwait','qatar','turkey','uae','ksa']
     africa = ['kenya','morocco','nigeria','tunisia','rsa']
     asan = ['indonesia','malaysia','philippines','singapore','thailand','vietnam']
-    indian = ['india','pakistan','srilanka']
+    indian = ["bangladesh",'india','pakistan','srilanka']
     east_eur = ['russia','lithuania','latvia','estonia','serbia','hungary','romania','poland','slovakia']    
     
     if market in fvey:
@@ -78,8 +78,9 @@ class StockSpotTradingView():
 
     def fetch_global_prices(self):
         country = 'global'
+        markets = '["america","argentina","australia","austria","bahrain","bangladesh","belgium","brazil","canada","chile","china","colombia","cyprus","czech","denmark","egypt","estonia","finland","france","germany","greece","hongkong","hungary","iceland","india","indonesia","israel","italy","japan","kenya","kuwait","latvia","lithuania","luxembourg","malaysia","mexico","morocco","netherlands","newzealand","nigeria","norway","pakistan","peru","philippines","poland","portugal","qatar","romania","russia","ksa","serbia","singapore","slovakia","rsa","korea","spain","srilanka","sweden","switzerland","taiwan","thailand","tunisia","turkey","uae","uk","venezuela","vietnam"]'
         columns = '["name","description","logoid","type","close","currency","change","Value.Traded","market_cap_basic","fundamental_currency_code","sector","industry","market","is_primary","exchange","country"]'
-        payload = '{"columns":'+ columns +',"filter":[{"left":"typespecs","operation":"has_none_of","right":["etn","etf"]}],"ignore_unknown_fields":false,"price_conversion":{"to_currency":"usd"},"range":[0,90000],"sort":{"sortBy":"market_cap_basic","sortOrder":"desc"},"markets":["america","argentina","australia","bahrain","belgium","brazil","canada","chile","china","colombia","cyprus","denmark","egypt","estonia","finland","france","germany","greece","hongkong","hungary","iceland","india","indonesia","israel","italy","japan","kenya","kuwait","latvia","lithuania","luxembourg","malaysia","mexico","morocco","netherlands","newzealand","nigeria","norway","pakistan","peru","philippines","poland","portugal","qatar","romania","russia","ksa","serbia","singapore","slovakia","rsa","korea","spain","srilanka","sweden","switzerland","taiwan","thailand","tunisia","turkey","uae","uk","venezuela","vietnam"]}'
+        payload = '{"columns":'+ columns +',"filter":[{"left":"typespecs","operation":"has_none_of","right":["etn","etf"]}],"ignore_unknown_fields":false,"price_conversion":{"to_currency":"usd"},"range":[0,80000],"sort":{"sortBy":"market_cap_basic","sortOrder":"desc"},"markets":' + markets + '}'
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'}
         url = 'https://scanner.tradingview.com/' + country + '/scan'
         r = requests.post(url, headers = headers, data = payload, timeout=10).text
@@ -209,7 +210,8 @@ class StockSpotTradingView():
 
         if mode == 'all':
             df.to_csv( data_dir + '/spot/stock_spot_global_{mode}.csv'.format(mode=mode), index = False, encoding = 'utf-8')
-
+            num = len(df)
+            print(f'All markets with {num} symbols updated')
         elif mode == 'primary':
             primary_df = df[( ((df['is_primary'] == True) & (df['type'] == 'stock')) | \
                 ((df['is_primary'] == True) & (df['type'] == 'dr') & (df['market'].isin(['netherlands','america']))) | \
@@ -217,13 +219,15 @@ class StockSpotTradingView():
                 ((df['name'].isin(['STLAM'])) & (df['market'].isin(['italy'])))    ) & \
                 (~df['exchange'].isin(['OTC']))   &   (~df['name'].isin(['BRKB'])) ]
             primary_df.to_csv( data_dir + '/spot/stock_spot_global_{mode}.csv'.format(mode=mode), index = False, encoding = 'utf-8')
+            num = len(primary_df)
+            print(f'Primary markets with {num} symbols updated')
 
     def run(self):
 
         attempts = 0
         while attempts < 3:
             try:
-                print('Start fetch global stock prices')
+                print('Start fetching global stock prices')
                 df = self.fetch_global_prices()
                 df = self.clean(df)
                 print('Start cleaning data')
@@ -232,7 +236,7 @@ class StockSpotTradingView():
                 df = self.translate_industry(df)
                 self.update(df, mode = 'all')
                 self.update(df, mode = 'primary')
-                print('Data all updated')
+                
                 break
             except Exception as e:
                 attempts += 1
