@@ -1,0 +1,77 @@
+exchange,fullExchangeName,suffix,exchangeDataDelayedBy,market
+DFM,Dubai,AE,15,ab_market
+BUE,Buenos Aires,BA,20,ar_market
+VIE,Vienna,VI,15,at_market
+ASX,ASX,AX,20,au_market
+BRU,Brussels,BR,15,be_market
+SAO,S�o Paulo,SA,15,br_market
+TOR,Toronto,TO,15,ca_market
+VAN,TSXV,V,0,ca_market
+CNQ,Canadian Sec,CN,0,ca_market
+NEO,Cboe CA,NE,0,ca_market
+EBS,Swiss,SW,15,ch_market
+SGO,Santiago,SN,20,cl_market
+SHZ,Shenzhen,SZ,15,cn_market
+SHH,Shanghai,SS,15,cn_market
+BVC,BVC,CL,15,co_market
+PRA,Prague,PR,15,cz_market
+GER,XETRA,DE,15,de_market
+CPH,Copenhagen,CO,0,dk_market
+DUS,Dusseldorf,DU,15,dr_market
+BER,Berlin,BE,15,dr_market
+HAN,Hanover,HA,15,dr_market
+MUN,Munich,MU,15,dr_market
+FRA,Frankfurt,F,15,dr_market
+STU,Stuttgart,SG,15,dr_market
+HAM,Hamburg,HM,15,dr_market
+MCE,MCE,MC,15,es_market
+HEL,Helsinki,HE,0,fi_market
+PAR,Paris,PA,15,fr_market
+AQS,Aquis AQSE,AQ,0,gb_market
+IOB,IOB,IL,15,gb_market
+CXE,Cboe UK,XC,0,gb_market
+LSE,LSE,L,15,gb_market
+ATH,Athens,AT,15,gr_market
+HKG,HKSE,HK,15,hk_market
+BUD,Budapest,BD,15,hu_market
+ICE,Iceland,IC,0,ic_market
+JKT,Jakarta,JK,10,id_market
+ISE,Irish,IR,15,ie_market
+TLV,Tel Aviv,TA,15,il_market
+NSI,NSE,NS,15,in_market
+BSE,BSE,BO,15,in_market
+MIL,Milan,MI,15,it_market
+JPX,Tokyo,T,20,jp_market
+FKA,Fukuoka,F,20,jp_market
+SAP,Sapporo,S,20,jp_market
+KSC,KSE,KS,20,kr_market
+KOE,KOSDAQ,KQ,20,kr_market
+KUW,Kuwait,KW,0,kw_market
+MEX,Mexico,MX,20,mx_market
+KLS,Kuala Lumpur,KL,15,my_market
+AMS,Amsterdam,AS,0,nl_market
+OSL,Oslo,OL,15,no_market
+NZE,NZSE,NZ,15,nz_market
+WSE,Warsaw,WA,0,pl_market
+LIS,Lisbon,LS,15,pt_market
+DOH,Qatar,QA,15,qa_market
+RIS,Riga,RG,0,rg_market
+STO,Stockholm,ST,0,se_market
+SES,SES,SI,10,sg_market
+SAU,Saudi,SR,15,sr_market
+SET,Thailand,BK,15,th_market
+TAL,Tallinn,TL,0,tl_market
+IST,Istanbul,IS,15,tr_market
+TAI,Taiwan,TW,20,tw_market
+TWO,Taipei Exchange,TWO,20,tw_market
+ASE,NYSE American,,0,us_market
+PNK,Other OTC,,0,us_market
+NGM,NasdaqGM,,0,us_market
+BTS,Cboe US,,0,us_market
+NMS,NasdaqGS,,0,us_market
+NYQ,NYSE,,0,us_market
+NCM,NasdaqCM,,0,us_market
+CCS,Caracas,CR,15,ve_market
+VSE,HOSE,VN,15,vn_market
+LIT,Vilnius,VS,0,vs_market
+JNB,Johannesburg,JO,15,za_market

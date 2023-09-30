@@ -1,97 +1,97 @@
-market,tv_exchange,investing_exchange
-america,NASDAQ,NASDAQ
-america,NYSE,NYSE
-america,OTC,OTC Markets
-america,AMEX,NYSE Amex
-argentina,BCBA,Buenos Aires
-australia,ASX,Sydney
-austria,VIE,Vienna
-bahrain,BAHRAIN,Bahrain
-bangladesh,DSEBD,DSE
-belgium,EURONEXT,Brussels
-brazil,BMFBOVESPA,BM&FBovespa 
-canada,NEO,CBOE Canada
-canada,TSX,Toronto
-canada,TSXV,TSXV
-canada,CSE,CSE
-chile,BCS,Santiago
-china,SSE,Shanghai
-china,SZSE,Shenzhen
-colombia,BVC,Colombia
-cyprus,CSECY,Cyprus
-czech,PSECZ,Prague
-denmark,OMXCOP,Copenhagen
-egypt,EGX,Egypt
-estonia,OMXTSE,Tallinn
-finland,OMXHEX,Helsinki
-france,EURONEXT,Paris
-germany,BER,Berlin
-germany,XETR,Xetra
-germany,TRADEGATE,TradeGate
-germany,SWB,Stuttgart
-germany,MUN,Munich
-germany,DUS,Dusseldorf
-germany,HAN,
-germany,HAM,Hamburg
-germany,FWB,Frankfurt
-greece,ATHEX,Athens
-hongkong,HKEX,Hong Kong
-hungary,BET,Budapest
-iceland,OMXICE,Iceland
-india,BSE,BSE
-india,NSE,NSE
-indonesia,IDX,Jakarta
-israel,TASE,Tel Aviv
-italy,MIL,Milan
-japan,TSE,Tokyo
-japan,NAG,
-japan,FSE,
-japan,SAPSE,
-kenya,NSEKE,Kenya
-korea,KRX,Seoul
-korea,KRX,KOSDAQ
-korea,KRX,KONEX
-ksa,TADAWUL,Saudi Arabia
-kuwait,KSE,Kuwait City
-latvia,OMXRSE,NASDAQ OMX Riga
-lithuania,OMXVSE,Vilnius
-luxembourg,LUXSE,Luxembourg
-malaysia,MYX,Kuala Lumpur
-mexico,BMV,Mexico
-morocco,CSEMA,
-netherlands,EURONEXT,Amsterdam
-newzealand,NZX,New Zealand
-nigeria,NSENG,
-norway,OSL,Oslo
-pakistan,PSX,
-peru,BVL,
-philippines,PSE,Philippines
-poland,GPW,Warsaw
-poland,NEWCONNECT,
-portugal,EURONEXT,Lisbon
-qatar,QSE,Doha
-romania,BVB,
-rsa,JSE,Johannesburg
-russia,MOEX,Moscow
-serbia,BELEX,
-singapore,SGX,Singapore
-slovakia,BSSE,
-spain,BME,Madrid
-srilanka,CSELK,
-sweden,OMXSTO,Stockholm
-sweden,NGM,NGM
-switzerland,SIX,Switzerland
-taiwan,TWSE,Taiwan
-taiwan,TPEX,TPEX
-thailand,SET,Thailand
-tunisia,BVMT,
-turkey,BIST,Istanbul
-uae,ADX,Abu Dhabi
-uae,DFM,Dubai
-uae,NASDAQDUBAI,
-uk,LSIN,
-uk,LSE,London
-venezuela,BVCV,
-vietnam,HOSE,Ho Chi Minh
-vietnam,UPCOM,
-vietnam,HNX,Ho Chi Minh
+market,tv_exchange,investing_exchange,yahoo_suffix
+america,NASDAQ,NASDAQ,
+america,NYSE,NYSE,
+america,OTC,OTC Markets,
+america,AMEX,NYSE Amex,
+argentina,BCBA,Buenos Aires,BA
+australia,ASX,Sydney,AX
+austria,VIE,Vienna,VI
+bahrain,BAHRAIN,Bahrain,
+bangladesh,DSEBD,DSE,
+belgium,EURONEXT,Brussels,BR
+brazil,BMFBOVESPA,BM&FBovespa ,SA
+canada,NEO,CBOE Canada,NE
+canada,TSX,Toronto,TO
+canada,TSXV,TSXV,V
+canada,CSE,CSE,CN
+chile,BCS,Santiago,SN
+china,SSE,Shanghai,SS
+china,SZSE,Shenzhen,SZ
+colombia,BVC,Colombia,CL
+cyprus,CSECY,Cyprus,
+czech,PSECZ,Prague,PR
+denmark,OMXCOP,Copenhagen,CO
+egypt,EGX,Egypt,
+estonia,OMXTSE,Tallinn,TL
+finland,OMXHEX,Helsinki,HE
+france,EURONEXT,Paris,PA
+germany,BER,Berlin,BE
+germany,XETR,Xetra,DE
+germany,TRADEGATE,TradeGate,
+germany,SWB,Stuttgart,SG
+germany,MUN,Munich,MU
+germany,DUS,Dusseldorf,DU
+germany,HAN,,HA
+germany,HAM,Hamburg,HM
+germany,FWB,Frankfurt,F
+greece,ATHEX,Athens,AT
+hongkong,HKEX,Hong Kong,HK
+hungary,BET,Budapest,BD
+iceland,OMXICE,Iceland,IC
+india,BSE,BSE,BO
+india,NSE,NSE,NS
+indonesia,IDX,Jakarta,JK
+israel,TASE,Tel Aviv,TA
+italy,MIL,Milan,MI
+japan,TSE,Tokyo,T
+japan,NAG,,
+japan,FSE,,
+japan,SAPSE,,
+kenya,NSEKE,Kenya,
+korea,KRX,Seoul,KS
+korea,KRX,KOSDAQ,KQ
+korea,KRX,KONEX,
+ksa,TADAWUL,Saudi Arabia,SR
+kuwait,KSE,Kuwait City,KW
+latvia,OMXRSE,NASDAQ OMX Riga,RG
+lithuania,OMXVSE,Vilnius,VS
+luxembourg,LUXSE,Luxembourg,
+malaysia,MYX,Kuala Lumpur,KL
+mexico,BMV,Mexico,MX
+morocco,CSEMA,,
+netherlands,EURONEXT,Amsterdam,AS
+newzealand,NZX,New Zealand,NZ
+nigeria,NSENG,,
+norway,OSL,Oslo,OL
+pakistan,PSX,,
+peru,BVL,,
+philippines,PSE,Philippines,
+poland,GPW,Warsaw,WA
+poland,NEWCONNECT,,
+portugal,EURONEXT,Lisbon,LS
+qatar,QSE,Doha,QA
+romania,BVB,,
+rsa,JSE,Johannesburg,JO
+russia,MOEX,Moscow,
+serbia,BELEX,,
+singapore,SGX,Singapore,SI
+slovakia,BSSE,,
+spain,BME,Madrid,MC
+srilanka,CSELK,,
+sweden,OMXSTO,Stockholm,ST
+sweden,NGM,NGM,
+switzerland,SIX,Switzerland,SW
+taiwan,TWSE,Taiwan,TW
+taiwan,TPEX,TPEX,TWO
+thailand,SET,Thailand,BK
+tunisia,BVMT,,
+turkey,BIST,Istanbul,IS
+uae,ADX,Abu Dhabi,AE
+uae,DFM,Dubai,AE
+uae,NASDAQDUBAI,,
+uk,LSIN,,IL
+uk,LSE,London,L
+venezuela,BVCV,,
+vietnam,HOSE,Ho Chi Minh,VN
+vietnam,UPCOM,,
+vietnam,HNX,Ho Chi Minh,VN
