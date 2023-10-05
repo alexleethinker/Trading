@@ -20,6 +20,7 @@ def show_dataframe(df, market = None):
     adj_list_10 =  ['南亚','东盟','中东非','拉美']
     
     # df['异动值'] = df['成交额'] * df['涨跌幅'].abs() * np.log10( (math.e - 1) * df['涨跌幅'].abs() + 1) / (np.log(df[market_value] + 1) + 1)
+    df = df[~df['异动值'].isnull()]
     df['异动值'] = df['异动值'] * 100 if market in adj_list_100 else df['异动值']
     df['异动值'] = df['异动值'] * 10 if market in adj_list_10 else df['异动值']
        
@@ -34,7 +35,7 @@ def show_dataframe(df, market = None):
             hide_index=True)
     with col[1]:
         st.markdown('市场异动 (市值 < 200亿)')
-        st.dataframe(df[df[market_value] < 200].head(10)\
+        st.dataframe(df[df[market_value] < 200].head(20)\
             .style.applymap(color_style, subset=['涨跌幅'])\
             .bar(subset=['异动值'], color='#d65f5f')\
             .format({'涨跌幅': "{:.2f}%"},precision=2),

@@ -106,7 +106,8 @@ class StockSpotTradingView():
     def add_isin(self,df):
         isin_df = pd.read_csv(self.isin_dir)[['fullname','isin','is_primary_listing','primary_symbol','ticker_title']]\
                                             .rename(columns={"fullname": "full_symbol"})
-        df = df.merge(isin_df, how = 'left', on = 'full_symbol')
+        df = df.merge(isin_df, how = 'left', on = 'full_symbol').rename(columns={"isin": "isin_tv"})
+        df['ticker_title'] = df['ticker_title'].apply(remove_suffix)
         return df
         
         

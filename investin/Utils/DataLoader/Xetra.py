@@ -82,6 +82,7 @@ class StockSpotXetra():
         return df
     
     def update(self, df):
+        df['异动值'] = df['成交额'] * df['涨跌幅'].abs() * np.log10( (math.e - 1) * df['涨跌幅'].abs() + 1) / (np.log(df['总市值'] + 1) + 1) 
         df.to_csv( self.write_dir, index = False, encoding = 'utf-8')
 
     def run(self):

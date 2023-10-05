@@ -11,7 +11,7 @@ from investin.Utils.DataLoader.TradingView import StockSpotTradingView
 # StockSpotUS().run()
 # StockSpotHKEX().run()
 # StockSpotTradingView().run()
-StockSpotEuronext().run()
+# StockSpotEuronext().run()
 StockSpotXetra().run()
 
 # StockSpotUK().run()
