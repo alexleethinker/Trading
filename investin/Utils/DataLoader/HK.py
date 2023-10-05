@@ -5,6 +5,9 @@ from lxml import etree
 from zhconv import convert
 from investin.Utils.DataLoader.common.EM import fetch_spot_em
 from investin.Utils.config import data_dir
+import numpy as np
+import math
+
 
 def translate(string):
     return convert(string, 'zh-cn')
@@ -78,6 +81,7 @@ class StockSpotHKEX():
         return df
 
     def update(self, df):
+        df['异动值'] = df['成交额'] * df['涨跌幅'].abs() * np.log10( (math.e - 1) * df['涨跌幅'].abs() + 1) / (np.log(df['总市值'] + 1) + 1)
         df.to_csv( data_dir + '/spot/stock_spot_hk.csv', index = False, encoding = 'utf-8')
 
     def run(self):

@@ -3,7 +3,8 @@ import pandas as pd
 import json
 import lxml.html
 from investin.Utils.config import data_dir
-
+import numpy as np
+import math
 
 class StockSpotEuronext():
     def __init__(self) -> None:
@@ -67,16 +68,16 @@ class StockSpotEuronext():
         return df
 
     def clean(self, euronext_df):
-        global_df = pd.read_csv( data_dir + '/spot/stock_spot_global_all.csv',low_memory=False).drop(columns=['change','currency','证券名称'])
+        global_df = pd.read_csv( data_dir + '/spot/stock_spot_global_all.csv',low_memory=False).drop(columns=['最新价','涨跌幅','currency','证券名称'])
         # df = euronext_df.merge(global_df, how = 'left', left_on = ['symbol','market'], right_on = ['name','market'])
         degiro_df = pd.read_csv( self.read_dir) 
-        degiro_df = degiro_df.merge(global_df, how = 'left', left_on = ['symbol','market'], right_on = ['name','market'])
-        df = degiro_df.merge(euronext_df, how = 'left', on = ['euronext_code'])
+        degiro_df = degiro_df.merge(global_df, how = 'left', left_on = ['symbol','market'], right_on = ['证券代码','market'])
+        df = degiro_df.merge(euronext_df, how = 'left', on = ['euronext_code']).drop(columns=['证券代码'])
         # replace names with translated names
         df.loc[~df['名称翻译'].isnull(), 'stock_name'] = df[~df['名称翻译'].isnull()]['名称翻译']
         df.loc[~df['dr_name'].isnull() & df['名称翻译'].isnull(), 'stock_name'] = df[~df['dr_name'].isnull() & df['名称翻译'].isnull()]['dr_name'] + ' SE'
         df['stock_name'] = df['stock_name'].str.replace('�','').str.replace(' SpA','').str.replace(' NV','')
-        df = df.rename(columns={"stock_name": "证券名称"})
+        df = df.rename(columns={"stock_name": "证券名称",'symbol':'证券代码','change':'涨跌幅','last_price':'最新价'})
         return df
     
     def update(self, df):

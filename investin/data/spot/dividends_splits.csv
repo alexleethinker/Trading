@@ -1,139 +1,87 @@
 isin,exchange,symbol,href,country,type,dividend,split_ratio,pre_close
-FI4000074984,BATS Europe,VALMTh,valmt?cid=1064327,Europe,Final,0.65,,22.96
-FI4000074984,Helsinki,VALMT,valmt,Finland,Final,0.65,,22.1
-FI0009000459,London,0K9W,huhtamaki?cid=948659,UK,Final,0.5,,30.27
-FI0009000459,Helsinki,HUH1V,huhtamaki,Finland,Final,0.5,,30.43
-FI4000252127,Helsinki,TTALO,terveystalo,Finland,Final,0.14,,7.52
-SE0005704079,Stockholm,KAPIAB,kalleback-property-invest-ab,Sweden,Quarterly,3,,175
-SE0011166974,BATS Europe,FABGs,fabege,Europe,Interim,0.6,,93.14
-FI0009007132,Helsinki,FORTUM,fortum,Finland,Final,0.45,,11.29
-FI0009007132,London,0HAH,fortum?cid=948577,UK,Final,0.45,,11.27
-FI4000480504,Helsinki,ORTHEX,orthex-oyj,Finland,Final,0.05,,4.67
-SE0017769847,Stockholm,ENGCONb,engcon-ab,Sweden,Final,0.42,,74.35
-TREOZSU00023,Istanbul,OZSUB,ozsu-balik-uretim-as,Turkey,Interim,0.0662814,,30.68
-TREMTRK00015,Istanbul,MTRKS,matriks-bilgi-dagitim-hizmetleri-as,Turkey,Annual,0.3731343,,65.05
-TRELKMH00013,Istanbul,LKMNH,lokman-hekim-saglik,Turkey,Interim,0.2291666,,38.5
-BMG6773R1051,Hong Kong,0398,oriental-watch-holdings-ltd,Hong_Kong,Final,0.075,,3.845
-BMG6773R1051,Hong Kong,0398,oriental-watch-holdings-ltd,Hong_Kong,Bonus,0.22,,3.845
-,NYSE,DCP_pc,dcp-midstream-lp-pr-c,USA,Quarterly,0.4969,,24.97
-,NYSE,EHC,healthsouth-corp,USA,Quarterly,0.15,,67.42
-US8574771031,Vienna,STT,state-street?cid=1204429,Austria,Quarterly,0.69,,67
-US8574771031,Frankfurt,STT,state-street?cid=22281,Germany,Quarterly,0.69,,63.44
-,NYSE,STT,state-street,USA,Quarterly,0.69,,66.87
-,NYSE,APD,air-prods---chem,USA,Quarterly,1.75,,285.12
-BRS1TTBDR003,BM&FBovespa,S1TT34,state-street-drc-sa,Brazil,Quarterly,2.2279012,,353.79
-BRA1PDBDR005,BM&FBovespa,A1PD34,air-products-and-chemicals-inc-drc,Brazil,Quarterly,1.4125477,,359.37
-,NYSE,CUBE,cubesmart,USA,Quarterly,0.49,,38.66
-MYL7155OO004,Kuala Lumpur,SKPR,skp-resources-bhd,Malaysia,Annual,0.045,,1.04
-,NYSE,FPI,farmland-partners-inc,USA,Quarterly,0.06,,10.2
-US0091581068,Frankfurt,APD,air-prods---chem?cid=989649,Germany,Quarterly,1.75,,270.3
-US0091581068,Vienna,APD,air-prods---chem?cid=1204066,Austria,Quarterly,1.75,,
-,NYSE,RSG,republic-services-inc,USA,Quarterly,0.535,,144.98
-US7607591002,Frankfurt,RSGU,republic-services-inc?cid=31214,Germany,Quarterly,0.535,,137.3
-BE0974256852,Frankfurt,COLR,colruyt?cid=23444,Germany,Annual,0.56,,40.43
-BE0974256852,Brussels,COLR,colruyt,Belgium,Annual,0.56,,40.56
-BE0974256852,London,0N4Y,colruyt?cid=948778,UK,Annual,0.56,,40.56
-,Toronto,TRP_pc,transcanada-cum-red-first-5-prf,Canada,Quarterly,0.121813,,10.29
-,Toronto,TRP_pe,transcanada-corp-pref-e,Canada,Quarterly,0.235125,,14.5
-BRR1SGBDR003,BM&FBovespa,R1SG34,republic-services-inc-drc,Brazil,Quarterly,0.8538888,,357.27
-,NYSE,FRT_pc,federal-realty-adr-c,USA,Quarterly,0.3125,,19.96
-,NYSE,WWW,wolverine-world-wide-inc,USA,Quarterly,0.1,,7.66
-US4571871023,Frankfurt,CNPC,ingredion-inc?cid=20226,Germany,Quarterly,0.78,,92.7
-,NYSE,INGR,ingredion-inc,USA,Quarterly,0.78,,97.57
-,NYSE,TSQ,townsquare-media-llc,USA,Quarterly,0.1875,,8.7
-,NYSE,AGM_pg,federal-agricultural-mortgage-prf-g,USA,Quarterly,0.3046875,,18.59
-,NYSE,AGM_pd,federal-agricultural-mortgage-pr-d,USA,Quarterly,0.35625,,22.45
-,NYSE,AGM_pe,federal-agricultural-mortgage-pr-e,USA,Quarterly,0.359375,,22.17
-,NYSE,AGM_pc,federal-agricult-mortgage-pc-pref,USA,Quarterly,0.375,,24.9
-,NYSE,AGM_pf,federal-agricultural-mortgage-prf,USA,Quarterly,0.328125,,20.5
-,NASDAQ,WERN,werner-enterprise,USA,Quarterly,0.14,,38.68
-AU000000FFI4,Sydney,FFI,ffi-holdings-ltd,Australia,Final,0.1,,4.54
-,NASDAQ,LBRDP,liberty-broadband-prf,USA,Quarterly,0.4375,,22.23
-TRATUPRS91E8,Istanbul,TUPRS,tupras,Turkey,Annual,7.5254479,,164
-,NASDAQ,ANDE,the-andersons,USA,Quarterly,0.185,,52.46
-BRR1JFBDR004,BM&FBovespa,R1JF34,raymond-james-financial-drc-sa,Brazil,Quarterly,0.7080661,,250.26
-MYL1562OO007,Kuala Lumpur,SPOR,berjaya-sports-toto-bhd,Malaysia,Interim,0.025,,1.56
-US7547301090,Mexico,RJF,raymond-james-financial-inc?cid=1072270,Mexico,Quarterly,0.42,,"1,669"
-MYL7169OO005,Kuala Lumpur,DOMN,dominant-enterprise-bhd,Malaysia,Interim,0.01,,0.775
-,Toronto,BNS_pi,bns-pref-40,Canada,Quarterly,0.303125,,22.09
-,NASDAQ,CWCO,consolidated-water,USA,Quarterly,0.095,,28.23
-BMG6873Y1176,Hong Kong,0239,pak-fah-yeow-international-ltd,Hong_Kong,Interim,0.03,,1.695
-BMG6873Y1176,Hong Kong,0239,pak-fah-yeow-international-ltd,Hong_Kong,Bonus,0.055,,1.695
-CA0641491075,Mexico,BNS,scotiabank?cid=993726,Mexico,Quarterly,1.06,,820
-,Toronto,BNS,scotiabank,Canada,Quarterly,1.06,,62
-CA0641491075,Frankfurt,BNS,scotiabank?cid=963586,Germany,Quarterly,1.06,,43.22
-AU000000GVF5,Sydney,GVF,global-value-fund-ltd,Australia,Final,0.033,,1.155
-,NYSE,PWR,quanta-services,USA,Quarterly,0.08,,188.84
-KYG7306W1087,Frankfurt,PWEG,pw-medtech?cid=984058,Germany,Interim,0.049,,0.086
-SE0007665823,London,0RFP,resurs-holding-ab?cid=989912,UK,Interim,0.91,,24.18
-SE0007665823,BATS Europe,RESURs,resurs-holding-ab?cid=1065523,Europe,Interim,0.91,,23.92
-KYG7306W1087,Hong Kong,1358,pw-medtech,Hong_Kong,Interim,0.049,,0.821
-SE0007665823,Stockholm,RESURS,resurs-holding-ab,Sweden,Interim,0.91,,24.26
-BRQ1UABDR003,BM&FBovespa,Q1UA34,quanta-services-drc-sa,Brazil,Quarterly,0.0221889,,69.2
-AU0000107088,Sydney,FNX,bridge-global-capital-management,Australia,Annual,0.02,,0.325
-,OTC Markets,CUYTY,colruyt-sa,USA,Other,0.132182,,9.9
-,Toronto,TCLa,transcontinental-inc,Canada,Quarterly,0.225,,11.62
-,Toronto,TCLb,transcontinental-b,Canada,Quarterly,0.225,,12.65
-,NYSE,KIM_pl,kimco-realty-adr,USA,Quarterly,0.32031,,20.61
-VN000000CLL4,Ho Chi Minh,CLL,cat-lai-port-jsc,Vietnam,Annual,1160,,"41,700"
-VN000000CLL4,Ho Chi Minh,CLL,cat-lai-port-jsc,Vietnam,Annual,2520,,"41,700"
-,NYSE,PKE,park-electrochemical-corp,USA,Quarterly,0.125,,15.63
-MYL5147OO003,Kuala Lumpur,SAHB,samchem-holdings-bhd,Malaysia,Interim,0.005,,0.515
-,NYSE,O,realty-income,USA,Monthly,0.256,,49.62
-,NYSE,ACR_pd,acres-commercial-realty-prf-d,USA,Quarterly,0.4921875,,18.51
-,NYSE,CHH,choice-hotels-international-inc,USA,Quarterly,0.2875,,123.06
-,NYSE,VTR,ventas-inc,USA,Quarterly,0.45,,42.2
-,NYSE,ACR_pc,acres-commercial-realty-prf,USA,Quarterly,0.5390625,,21.68
-US92276F1003,Frankfurt,VTR,ventas-inc?cid=23218,Germany,Quarterly,0.45,,39.25
-US7561091049,Mexico,O,realty-income?cid=1184896,Mexico,Monthly,0.256,,891
-US7561091049,Frankfurt,O,realty-income?cid=20833,Germany,Monthly,0.256,,46.97
-BRV1TABDR008,BM&FBovespa,V1TA34,ventas-drc-sa,Brazil,Quarterly,0.748355,,105.68
-,NYSE,LFT_pa,lument-finance-trust-prf,USA,Quarterly,0.4921875,,17.13
-,NYSE,AHH_pa,armada-hoffler-properties-inc-pr-a,USA,Quarterly,0.421875,,20.93
-BRR1INBDR000,BM&FBovespa,R1IN34,realty-income-corp,Brazil,Monthly,0.4286227,,124.39
-,NASDAQ,HURC,hurco-companies,USA,Quarterly,0.16,,21.5
-VN000000VGC3,Ho Chi Minh,VGC,viglacera,Vietnam,Interim,1000,,"48,000"
-,OTC Markets,FOJCY,fortum-exch,USA,Other,0.054981,,2.3
-,NASDAQ,PEGA,pegasystems-inc,USA,Quarterly,0.03,,43.17
-VN000000TMX1,Hanoi,TMX,"cement.t.,-jsc",Vietnam,Annual,600,,"11,500"
-ID1000105406,Jakarta,PLIN,plaza-indonesi,Indonesia,Annual,77,,"3,790"
-,NYSE,SFBS,srvsfrst-bn,USA,Quarterly,0.28,,52.31
-VN000000SPC0,Hanoi,SPC,saigon-plant-protection-jsc,Vietnam,Interim,500,,"14,700"
-,OTC Markets,WEGZY,weg-adr,USA,Other,0.0079877,,7.4
-SE0010832204,Stockholm,CIBUS,cibus-nordic-real-estate,Sweden,Monthly,0.08,,105.35
-,NASDAQ,FULT,fulton-financial,USA,Quarterly,0.16,,11.97
-,OTC Markets,CZBT,citizens-virginia,USA,Quarterly,0.27,,28.8
-,OTC Markets,ORBN,oregon,USA,Quarterly,0.26,,24
-,OTC Markets,AATC,image-sensing-sys,USA,Quarterly,0.13,,6
-,NYSE,MFA,mfa-financial-inc,USA,Quarterly,0.35,,9.59
-,NYSE,GPMT,granite-point-mortgage-trust-inc,USA,Quarterly,0.2,,5
-,NYSE,KMF,kayne-anderson-midstream-energy,USA,Quarterly,0.16,,7.12
-,NASDAQ,GSBC,great-southern-ba,USA,Quarterly,0.4,,47.92
-,NYSE,AXS_pe,axis-capital-holdings-ltd-pref-e,USA,Quarterly,0.34375,,19.91
-,NYSE,KYN,kayne-anderson-mlp-invest-closed,USA,Quarterly,0.21,,8.51
-,NYSE,AXS,axis-capital,USA,Quarterly,0.44,,57.17
-,NASDAQ,ISTR,investar-ho,USA,Quarterly,0.1,,10.79
-,NYSE,GPMT_pa,granite-point-mortgage-trust-prf-a,USA,Quarterly,0.4375,,16.35
-,NYSE,WMC,western-asset-mortgage-capital,USA,Quarterly,0.35,,9.4
-,NYSE,WKC,world-fuel-services,USA,Quarterly,0.14,,22.78
-,NYSE,ESP,espey-mfg-and-electronics-corp,USA,Quarterly,0.15,,15.95
-,NYSE,CIG,energetica-minas-gerais,USA,Other,0.03287,,2.46
-SE0010832204,London,0ABQ,cibus-nordic-real-estate?cid=1197551,UK,Monthly,0.08,,106
-,NASDAQ,PKBK,parke-bancorp,USA,Quarterly,0.18,,16.3
-BMG0692U1099,Frankfurt,AXS,axis-capital?cid=20427,Germany,Quarterly,0.44,,54
-,NASDAQ,PLPC,preformed-line-pr,USA,Quarterly,0.2,,165.75
-,OTC Markets,BKNIY,bankinter-sa,USA,Other,0.110531,,6.32
-,NASDAQ,INDB,independent-bank,USA,Quarterly,0.55,,48.34
-US2044096012,Mexico,CIGN,energetica-minas-gerais?cid=27037,Mexico,Interim,0.03287,,43
-US74762E1029,Frankfurt,PWR,quanta-services?cid=25337,Germany,Quarterly,0.08,,182.4
-,OTC Markets,LRENY,lojas-renner-adr,USA,Other,0.027261,,2.68
-,NASDAQ,WASH,washington-trust,USA,Quarterly,0.56,,26.73
-,OTC Markets,FBGBY,fabege-adr,USA,Other,0.053958,,26
-,NYSE,CIGc,energetica-minas-gerais-c,USA,Other,0.03287,,3.961
-AU000000WBE7,Sydney,WBE,transerv-energy-ltd,Australia,,,1:50,0.001
-MYL5265OO003,Kuala Lumpur,DOLP,dolphin-international-bhd,Malaysia,,,1:10,0.03
-,NYSE,FATH,altimar-acquisition-ii,USA,,,1:20,6
-,TSXV,EPOh,encanto-potash-corp,Canada,,,1:5,0.015
-,TSXV,OGO,columbus-exploration-corporation,Canada,,,1:10,0.035
-TRACIMSA91F9,Istanbul,CIMSA,cimsa,Turkey,,,7:1,296.8
-TREMRCN00023,Istanbul,MERCN,mercan-kimya-sanayi-ve-ticaret-as,Turkey,,,3:1,44.8
+PHY248161036,Philippines,FEU,far-eastern-un,Philippines,Final,16,,565
+,NYSE,FCT,first-trust-senior-floating-rate-ii,USA,Monthly,0.097,,10.05
+,NYSE,OLP,one-liberty-properties-inc,USA,Quarterly,0.45,,19.02
+,NYSE,FIF,first-trust-energy-infrastr-closed,USA,Monthly,0.1,,15.28
+EGS739Z1C016,Egypt,MAAL,marseilia-egyptian-gulf-real-estate,Egypt,Interim,0.05,,0.909
+EGS739Z1C016,Egypt,MAAL,marseilia-egyptian-gulf-real-estate,Egypt,Final,0.05,,0.909
+,NYSE,SCS,steelcase-inc,USA,Quarterly,0.1,,11.21
+,NYSE,TWO,two-harbors-investment-corp,USA,Quarterly,0.45,,13.04
+,NYSE,SLVM,sylvamo,USA,Other,0.3,,44.13
+,NYSE,SLVM,sylvamo,USA,Quarterly,0.3,,44.13
+IL0003540197,Tel Aviv,TLSY,telsys,Israel,Interim,946.18639,,"26,500"
+IL0003540197,Tel Aviv,TLSY,telsys,Israel,Interim,606.15066,,"26,500"
+,NYSE,FAM,first-trust-aberdeen-global-opportu,USA,Monthly,0.06,,5.64
+,NYSE,IDE,voya-infrastr-industrials-materials,USA,Quarterly,0.229,,9.51
+,NYSE,IHD,voya-emerging-markets-high-div-eq,USA,Quarterly,0.135,,4.92
+,NYSE,IAE,voya-asia-pacific-high-div-equityom,USA,Quarterly,0.16,,5.75
+MYL3069OO001,Kuala Lumpur,MEGA,mega-first-corporation-bhd,Malaysia,Interim,0.04,,3.4
+,NYSE,IGA,voya-global-advantage-premium-oppor,USA,Quarterly,0.197,,8.35
+,NYSE,IGD,voya-global-equity-divid-premium-op,USA,Monthly,0.04,,4.9
+,OTC Markets,YITYY,yit-adr,USA,Other,0.027491,,1.1
+TH6957010007,Thailand,LHHOTELu,lh-hotel-leasehold-real-estate,Thailand,Final,0.3,,10.7
+,NYSE,BRT,brt-realty-trust,USA,Quarterly,0.25,,17.25
+,NYSE,ELP,copel-comp-paranaense-de-energia,USA,Other,0.130277,,8.68
+,NYSE,ELP,copel-comp-paranaense-de-energia,USA,Quarterly,0.118796,,8.68
+BRA1GIBDR003,BM&FBovespa,A1GI34,agilent-technologies-drc-sa,Brazil,Quarterly,0.3688596,,294.99
+ARBCOM460283,Buenos Aires,ELP,companhia-paranaense-de-energia-drc,Argentina,Bonus,0.476451,,"20,000"
+,NASDAQ,SCVL,shoe-carnival,USA,Quarterly,0.12,,24.12
+,NASDAQ,UPBD,rent-a-center-inc,USA,Quarterly,0.34,,29.85
+US90187B8046,Frankfurt,2H2,two-harbors-investment-corp?cid=24287,Germany,Quarterly,0.45,,12.5
+US2505651081,Frankfurt,D9W,dsw-inc?cid=1136282,Germany,Quarterly,0.05,,11.9
+NA000A1T6SV9,Namibia,CGP,bank-wind-nm,Namibia,Final,0.61,,"1,640"
+,NYSE,ETI_p,entergy-texas-inc-pr,USA,Quarterly,0.3359375,,23.5
+,NYSE,A,agilent-tech,USA,Quarterly,0.225,,112
+,NYSE,DBI,dsw-inc,USA,Quarterly,0.05,,12.66
+,NYSE,FSD,first-trust-highome-long-sho-closed,USA,Monthly,0.105,,10.7
+,NYSE,DOC,physicns-rlty-tr,USA,Quarterly,0.23,,12.07
+,NYSE,FDEU,first-trust-dynamic-europe-equityom,USA,Monthly,0.07,,12.38
+,NYSE,FPF,first-trust-intermed-duration-pref,USA,Monthly,0.1075,,14.78
+,NYSE,FMY,first-trust-mortgage-income-fund,USA,Monthly,0.0675,,11.18
+CH0252620700,Switzerland,PEDU,perrot-duval-holding-sa,Switzerland,Other,1,,78
+CH0252620700,Switzerland,PEDU,perrot-duval-holding-sa,Switzerland,Annual,1,,78
+,NYSE,CAH,cardinal-health,USA,Quarterly,0.5006,,87.8
+,NYSE,ESE,esco-technologies-inc,USA,Quarterly,0.08,,108.01
+MYL2224OO003,Kuala Lumpur,SDGS,selangor-dredging-bhd,Malaysia,Annual,0.025,,0.6
+LK0458N00006,Colombo,MAHA,mahaweli-coconut,Sri_Lanka,Annual,1.5,,30
+,NYSE,BRX,brixmor-property,USA,Quarterly,0.26,,20.89
+SA15M1HH2NH5,Saudi Arabia,2223,saudi-aramco-base-oil,Saudi_Arabia,Interim,5,,149
+MYL5069OO009,Kuala Lumpur,BLDN,bld-plantation-bhd,Malaysia,Annual,0.03,,11
+,NYSE,FEI,first-trust-mlp---income-closed,USA,Monthly,0.05,,7.99
+,NYSE,FPL,first-trust-new-opp.-mlp---energy,USA,Monthly,0.0375,,6.32
+ARDEUT110798,Buenos Aires,CAH,cardinal-health-drc,Argentina,Quarterly,0.166867,,"23,950"
+IT0005445280,Milan,ABIT,abitare-in-spa,Italy,Interim,0.376,,5.9
+BRBEESACNOR9,BM&FBovespa,BEES3,banestes-sa-banco-do-estado,Brazil,Other,0.0188343,,8.68
+IT0004412497,Milan,BTGI,bastogi-spa,Italy,Annual,0.009,,0.596
+BRITUBACNPR1,BM&FBovespa,ITUB4,itauunibanco-pn-edj-n1,Brazil,Other,0.015,,27.25
+BRITUBACNOR4,BM&FBovespa,ITUB3,itauunibanco-on-edj-n1,Brazil,Other,0.015,,23.02
+SA31RG522S19,Saudi Arabia,4280,kingdom,Saudi_Arabia,Quarterly,0.07,,7.1
+BRBEESACNPR6,BM&FBovespa,BEES4,banestes-sa-banco-do-estado-pref,Brazil,Other,0.0188343,,9.91
+LK0152N00005,Colombo,SHAW,lee-hedges,Sri_Lanka,Annual,1,,82
+NO0010078850,Oslo,CAMBI,cambi-asa,Norway,Other,0.6,,14.15
+TW0001586006,TPEX,1586,china-fineblanking-technology-co,Taiwan,Annual,0.2,1.005:1,33.7
+,NYSE,AQNA,algonquin-power-utilities-pr-a,USA,Quarterly,0.4296875,,25.51
+ARBCOM460267,Buenos Aires,ITUB,itau-unibanco-holding-sa,Argentina,Bonus,0.003539,,"4,414.5"
+US4655621062,Mexico,ITUBN,itau-unibanco-holding-sa-adr?cid=27044,Mexico,Bonus,0.003008,,85.21
+,NYSE,ITUB,itau-unibanco-holding-sa-adr,USA,Monthly,0.003008,,5.35
+,NYSE,WSR,whitestone-reit,USA,Monthly,0.04,,9.67
+LK0039N00004,Colombo,CTEA,ceylon-tea-services,Sri_Lanka,Final,15,,"1,025"
+LK0049N00003,Colombo,CFLB,the-colombo-fort-land---building,Sri_Lanka,Annual,0.25,,31
+FI0009800643,Helsinki,YIT,yit,Finland,Final,0.09,,2.17
+LK0363N00008,Colombo,RAIG,raigam-waya,Sri_Lanka,Annual,0.2,,7.6
+LK0106N00001,Colombo,LPRT,lake-house-printers---publishers,Sri_Lanka,Annual,5,,218
+,NYSE,BNS,scotiabank?cid=20675,USA,Quarterly,1.06,,45.95
+MYL9326OO009,Kuala Lumpur,LBAL,lb-aluminium-bhd,Malaysia,Annual,0.025,,0.515
+IL0008290103,Tel Aviv,DLEA,delek-automotive,Israel,Interim,100,,"2,375"
+MYQ0002OO004,Kuala Lumpur,KOIN,kotra-industries-bhd,Malaysia,Interim,0.155,,5.5
+LK0087N00003,Colombo,HUNT,hunter---co,Sri_Lanka,Annual,5,,670
+,OTC Markets,SMSMY,sims-metal-management-ltd-pk,USA,Other,0.119548,,8.37
+BRC1AHBDR006,BM&FBovespa,C1AH34,cardinal-health-inc-sao,Brazil,Quarterly,1.6597854,,435.61
+AU0000298432,Sydney,ADXDA,adx-energy-ltd,Australia,,,1:10,0.009
+,NYSE,AKA,aka-brands-holding,USA,,,1:12,0.51
+,NYSE,ARR,armour-residential-r,USA,,,1:5,4.21
+,NASDAQ,EBET,esports-technologies,USA,,,1:30,0.0518
+,NASDAQ,UTRS,minerva-surgical,USA,,,1:20,0.166
+,NYSE,SKIL,churchill-capital-corp-ii,USA,,,1:20,0.903
+,NASDAQ,NCTY,the9-ltd,USA,,,1:10,0.7296
+,OTC Markets,NECAD,new-amer-energy,USA,,,1:500,0.0001

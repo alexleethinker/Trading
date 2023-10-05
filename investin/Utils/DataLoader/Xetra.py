@@ -4,7 +4,8 @@ import json
 from datetime import datetime
 import hashlib
 from investin.Utils.config import data_dir
-
+import numpy as np
+import math
 
 
 class StockSpotXetra():
@@ -66,14 +67,18 @@ class StockSpotXetra():
         degiro_df = pd.read_csv( self.read_dir) 
         df = degiro_df.merge(df, how = 'left', on = ['isin'])
         df = df[df['marketCapitalisation'] > 0]
+        df = df.rename(columns={"name": "证券名称",'changeToPrevDay':'涨跌幅','turnover':'成交额',\
+                        'overview.lastPrice':'最新价','marketCapitalisation':'总市值','symbol':'证券代码'})
+        df['成交额'] = pd.to_numeric(df['成交额'], errors="coerce")/100000000
+        df['总市值'] = pd.to_numeric(df['总市值'], errors="coerce")/100000000
         return df
     
     def add_xetra_master(self, df):
         trans_df = pd.read_excel(open(self.translate_dir, 'rb'),sheet_name='industry_trans').drop(columns=['sector'])
         master_df = pd.read_csv(self.xetra_master_dir,encoding = 'utf-8')
         df = df.merge(trans_df, on = 'industry').merge(master_df , on = 'isin')
-        df.loc[~df['名称翻译'].isnull(), 'name'] = df[~df['名称翻译'].isnull()]['名称翻译']
-        df = df.rename(columns={"name": "证券名称"})
+        df.loc[~df['名称翻译'].isnull(), '证券名称'] = df[~df['名称翻译'].isnull()]['名称翻译']
+
         return df
     
     def update(self, df):

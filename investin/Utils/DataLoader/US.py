@@ -1,7 +1,8 @@
-import requests
 import pandas as pd
 from investin.Utils.config import data_dir
 from investin.Utils.DataLoader.common.EM import fetch_spot_em
+import numpy as np
+import math
 
 def remove_suffix(name):
     suffix = [' plc',' inc',' Inc',' Ltd',' Holdings',' Corp']
@@ -28,7 +29,8 @@ class StockSpotUS():
         df = df[~df['总市值'].isnull()]
         return df
     
-    def update(self, df):   
+    def update(self, df): 
+        df['异动值'] = df['成交额'] * df['涨跌幅'].abs() * np.log10( (math.e - 1) * df['涨跌幅'].abs() + 1) / (np.log(df['总市值'] + 1) + 1)  
         df.to_csv( self.write_dir, index = False, encoding = 'utf-8')
 
     def run(self):

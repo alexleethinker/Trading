@@ -2,6 +2,16 @@ import requests
 import pandas as pd
 import json
 from investin.Utils.config import data_dir
+import numpy as np
+import math
+
+
+
+def remove_suffix(name):
+    suffix = [',',' PLC',' ORD',' HOLDINGS',' GROUP', ' plc',' inc',' Inc', ' INC',' Ltd',' Holdings',' Corp']
+    for i in suffix:
+        name = name.split(i)[0]
+    return name
 
 
 def get_USD_forex_table():
@@ -67,6 +77,7 @@ class StockSpotTradingView():
         self.us_dir = data_dir + '/static/EM/US/us_stocks.xlsx'
         self.a_dir  = data_dir + '/static/EM/China/a_stocks.xlsx'
 
+        self.isin_dir = data_dir + '/static/TradingView/isin.csv'
         self.correct_ind = data_dir + '/static/TradingView/correct_industry.csv'
         self.tw_dir = data_dir + '/static/TradingView/tw_all_securaties.csv'
         self.sg_dir = data_dir + '/static/TradingView/sg_stocks.csv'
@@ -91,6 +102,14 @@ class StockSpotTradingView():
         df = pd.concat([df_s, df_data], axis=1)
         return df
 
+
+    def add_isin(self,df):
+        isin_df = pd.read_csv(self.isin_dir)[['fullname','isin','is_primary_listing','primary_symbol','ticker_title']]\
+                                            .rename(columns={"fullname": "full_symbol"})
+        df = df.merge(isin_df, how = 'left', on = 'full_symbol')
+        return df
+        
+        
     def correct_industry(self, df):
         correct_df = pd.read_csv(self.correct_ind)
 
@@ -114,6 +133,7 @@ class StockSpotTradingView():
 
         correct_df = pd.concat([correct_df, tw_df, us_df, a_df], ignore_index=True).drop_duplicates(subset=['code', 'market'])
 
+        
         df = df.merge(correct_df, how = 'left', left_on=['name','market'], right_on= ['code','market'])
         df.loc[~df['correct_industry'].isnull(), 'industry'] = df[~df['correct_industry'].isnull()]['correct_industry']
         # df = df.drop(columns = 'industry')
@@ -168,7 +188,8 @@ class StockSpotTradingView():
 
         translate_df = pd.concat([tw_df, sg_df, hk_df, uk_df, us_df, a_df, other_df], ignore_index=True)
 
-        df = df.merge(translate_df, how = 'left', left_on=['name','market'], right_on= ['证券代码','market'])
+        df = df.rename(columns={"name": "证券代码"})
+        df = df.merge(translate_df, how = 'left', on=['证券代码','market'])
         df['description'] = df['description'].str.replace(', S.A.','').str.replace(' S.A.','').str.replace(' LTD','').str.replace(' PLC','')\
                             .str.replace(' A/S','').str.replace(' OYJ','').str.replace(' AG NA','').str.replace(' SE NA','')\
                             .str.replace(' O.N.','').str.replace(' O N','').str.replace(' N.V.','')
@@ -179,7 +200,8 @@ class StockSpotTradingView():
         dr_df = pd.read_csv(self.dr_name_dir)
         df = df.merge(dr_df, how = 'left', on=['logoid'])
         df.loc[~df['dr_name'].isnull() & df['名称翻译'].isnull(), 'description'] = df[~df['dr_name'].isnull() & df['名称翻译'].isnull()]['dr_name'] + '-X'
-        df = df.rename(columns={"description": "证券名称"})
+        df = df.rename(columns={"description": "证券名称",'change':'涨跌幅','close':'最新价'})
+        df['证券名称'] = df['证券名称'].apply(remove_suffix)
         return df
 
 
@@ -194,12 +216,12 @@ class StockSpotTradingView():
         USD_forex_table = get_USD_forex_table()
         df = df.merge(USD_forex_table,left_on='currency', right_on = 'currency_id')
         
-        df['market_cap_USD'] = (df['market_cap_basic']/100000000).fillna(0)
-        df = df[df['market_cap_USD'] > 0]
-        df['Traded_USD'] = (df['Value.Traded']* df['forex_rate']/100000000).fillna(0)
+        df['总市值'] = (df['market_cap_basic']/100000000).fillna(0)
+        df = df[df['总市值'] > 0]
+        df['成交额'] = (df['Value.Traded']* df['forex_rate']/100000000).fillna(0)
         df = df[df['Value.Traded'] > 0]
-        df['turnover_rate'] = (df['Traded_USD'] / df['market_cap_USD']).round(4)
-        df['plate'] = df['market'].apply(check_plate)
+        df['换手率'] = (df['成交额'] / df['总市值']).round(4)
+        df['地区'] = df['market'].apply(check_plate)
         df = df[~df['change'].isnull()]
         df = df[~df['industry'].isnull()]
         df = df[~df['sector'].isnull()]
@@ -207,17 +229,19 @@ class StockSpotTradingView():
         return df
     
     def update(self, df, mode = 'all'):
+        df['异动值'] = df['成交额'] * df['涨跌幅'].abs() * np.log10( (math.e - 1) * df['涨跌幅'].abs() + 1) / (np.log(df['总市值'] + 1) + 1)
 
         if mode == 'all':
+            df = df[~df['full_symbol'].isin(['OTC:CTTRF'])]
             df.to_csv( data_dir + '/spot/stock_spot_global_{mode}.csv'.format(mode=mode), index = False, encoding = 'utf-8')
             num = len(df)
             print(f'All markets with {num} symbols updated')
         elif mode == 'primary':
             primary_df = df[( ((df['is_primary'] == True) & (df['type'] == 'stock')) | \
                 ((df['is_primary'] == True) & (df['type'] == 'dr') & (df['market'].isin(['netherlands','america']))) | \
-                ((df['name'].isin(['PHIA','DSM','ABN'])) & (df['market'].isin(['netherlands']))) | \
-                ((df['name'].isin(['STLAM'])) & (df['market'].isin(['italy'])))    ) & \
-                (~df['exchange'].isin(['OTC']))   &   (~df['name'].isin(['BRKB'])) ]
+                ((df['证券代码'].isin(['PHIA','DSM','ABN'])) & (df['market'].isin(['netherlands']))) | \
+                ((df['证券代码'].isin(['STLAM'])) & (df['market'].isin(['italy'])))    ) & \
+                (~df['exchange'].isin(['OTC']))  ]
             primary_df.to_csv( data_dir + '/spot/stock_spot_global_{mode}.csv'.format(mode=mode), index = False, encoding = 'utf-8')
             num = len(primary_df)
             print(f'Primary markets with {num} symbols updated')
@@ -231,6 +255,7 @@ class StockSpotTradingView():
                 df = self.fetch_global_prices()
                 df = self.clean(df)
                 print('Start cleaning data')
+                df = self.add_isin(df)
                 df = self.correct_industry(df)
                 df = self.translate_name(df)
                 df = self.translate_industry(df)

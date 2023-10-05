@@ -5,21 +5,20 @@ from utils.config import page_config, update_at, data_dir
 from utils.figure import treemap
 page_config()
 
+from utils.tables import show_dataframe
+
 
 def load_df(exchange):
     data_path = '{data_dir}/spot/stock_spot_{exchange}.csv'.format(data_dir=data_dir, exchange = exchange.replace('™️','').lower())
     df = pd.read_csv(data_path,encoding = 'utf-8')
 
+    df = df[~df['涨跌幅'].isnull()]
+    # df['成交额'] = df['成交额']* 100
+    df = df[df['成交额'] > df['成交额'].quantile(.5)]
     if exchange == '™️EuroNext':
-        df = df[~df['change'].isnull()]
-        df['Traded_USD'] = df['Traded_USD']* 10000
-        df = df[df['Traded_USD'] > df['Traded_USD'].quantile(.5)]
         timezone = 'Europe/Amsterdam'
 
     elif exchange == '™️XETRA':
-        df['turnover'] = pd.to_numeric(df['turnover'], errors="coerce")/10000
-        df['marketCapitalisation'] = pd.to_numeric(df['marketCapitalisation'], errors="coerce")/100000000
-        df = df[df['turnover'] > df['turnover'].quantile(.5) ]
         timezone = 'Europe/Berlin'
 
     update_at(data_path, timezone)   
@@ -27,38 +26,40 @@ def load_df(exchange):
 
 def plot_plate(exchange):
     df = load_df(exchange).fillna('')
+    # values = 
     if exchange == '™️EuroNext':
         fig = treemap(df,
                       path=[px.Constant("EuroNext-USD"),'一级行业','二级行业','三级行业','证券名称'],
-                      values='Traded_USD' if traded_value_on else 'market_cap_USD',
-                      color='change',
+                      values='成交额' if traded_value_on else '总市值' ,
+                      color='涨跌幅',
                       range_color= 8,
-                      custom_data=['change','symbol','market_cap_USD','last_price','country','Traded_USD','exchange','icb_industry','exchange_degiro','category'],
-                      hovertemplate= "%{customdata[8]}-%{customdata[9]} | %{customdata[1]}<br>%{customdata[4]}<br>%{label}<br>%{customdata[3]} (%{customdata[0]:.2f}%)<br>总市值=%{customdata[2]:.1f}亿<br>成交额=%{customdata[5]:d}万<br>%{customdata[7]}"                  
+                      custom_data=['涨跌幅','证券代码','总市值','最新价','country','成交额','exchange','icb_industry','exchange_degiro','category'],
+                      hovertemplate= "%{customdata[8]}-%{customdata[9]} | %{customdata[1]}<br>%{customdata[4]}<br>%{label}<br>%{customdata[3]} (%{customdata[0]:.2f}%)<br>总市值=%{customdata[2]:.2f}亿<br>成交额=%{customdata[5]:.3f}亿<br>%{customdata[7]}"                  
                       )
     elif exchange == '™️XETRA':                   
         fig = treemap(df,
                       path=[px.Constant("XETRA-EUR"),'一级行业','二级行业','三级行业','证券名称'],
-                      values='turnover' if traded_value_on else 'marketCapitalisation',
-                      color='changeToPrevDay',
+                      values='成交额' if traded_value_on else '总市值',
+                      color='涨跌幅',
                       range_color= 8,
-                      custom_data=['changeToPrevDay','symbol','marketCapitalisation','overview.lastPrice','xetr_industry','exchange_degiro','category','originCountry','turnover'],
-                      hovertemplate= "%{customdata[5]}-%{customdata[6]} | %{customdata[1]}<br>%{customdata[7]}<br>%{label}<br>%{customdata[3]} (%{customdata[0]:.2f}%)<br>总市值=%{customdata[2]:.1f}亿<br>成交额=%{customdata[8]:d}万<br>%{customdata[4]}"                  
-                      )                    
-    return fig
+                      custom_data=['涨跌幅','证券代码','总市值','最新价','xetr_industry','exchange_degiro','category','originCountry','成交额'],
+                      hovertemplate= "%{customdata[5]}-%{customdata[6]} | %{customdata[1]}<br>%{customdata[7]}<br>%{label}<br>%{customdata[3]} (%{customdata[0]:.2f}%)<br>总市值=%{customdata[2]:.2f}亿<br>成交额=%{customdata[8]:.3f}亿<br>%{customdata[4]}"                  
+                      )  
+        
+    st.plotly_chart(fig, use_container_width=True)
+    
+    show_dataframe(df, '🇪🇺 欧股') 
+
 
 
 def plot_fig_euro():   
     tab1, tab2 = st.tabs(["™️EuroNext", "™️XETRA"])
     with tab1:
-        fig_euronext = plot_plate("™️EuroNext")
-        st.plotly_chart(fig_euronext, use_container_width=True)
+        plot_plate("™️EuroNext")
         st.markdown('数据来源：™️EuroNext')
     with tab2:
-        fig_extra = plot_plate("™️XETRA")
-        st.plotly_chart(fig_extra, use_container_width=True)
+        plot_plate("™️XETRA")
         st.markdown('数据来源：™️XETRA（延迟15分钟）')
-
 
 
 def plot_fig(market):
@@ -127,8 +128,9 @@ def plot_fig(market):
     with tab2:
         fig = plot_fig(plate= False)
         st.plotly_chart(fig, use_container_width=True)
+    
+    show_dataframe(df, market)
     st.markdown('数据来源：东方财富网')
-
     
 
 def main(market):
