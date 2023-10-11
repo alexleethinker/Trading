@@ -28,29 +28,46 @@ def plot_plate(plate = '欧洲'):
         custom_data=['涨跌幅','证券代码', values]
         range_color = 4
         hovertemplate= "%{label}<br>%{customdata[0]:.2f}%<br>" + values + "=%{customdata[2]:d}亿"  
-
+        
+        update_at(data_path, timezone)
+        fig = treemap(      dfi, 
+                            path=path, 
+                            values=values, 
+                            color='涨跌幅', 
+                            range_color = range_color, 
+                            custom_data=custom_data,
+                            hovertemplate = hovertemplate
+                        )
+        st.plotly_chart(fig, use_container_width=True)
+        
     else:
         dfi = df[df['地区'] == plate]
-        dfi = dfi[dfi['成交额'] > dfi['成交额'].quantile(.75) ]
-
-        path=['地区','市场','一级行业','二级行业','三级行业','证券名称']
+        
+        block = 'exchange' if plate == '欧洲' else '市场'
+        
+        path=[block,'一级行业','二级行业','三级行业','证券名称']
         custom_data=['涨跌幅','证券代码','总市值','最新价','市场','成交额']
         range_color = 8
         hovertemplate= "%{customdata[1]}<br>%{label}<br>%{customdata[3]:.1f} (%{customdata[0]:.2f})%<br>总市值=%{customdata[2]:d}亿<br>成交额=%{customdata[5]:.2f}亿"                  
+        update_at(data_path, timezone)
+
+        market_list = dfi.groupby([block])[['总市值']].sum().sort_values('总市值',ascending=False).reset_index()[block].tolist()
+        tabs = st.tabs(market_list)
+        for i in range(len(market_list)):
+            with tabs[i]:
+                dfj = dfi[dfi[block] == market_list[i]]
+                dfj = dfj[dfj['成交额'] > dfj['成交额'].quantile(.75) ]
+                fig = treemap(dfj, 
+                    path=path, 
+                    values=values, 
+                    color='涨跌幅', 
+                    range_color = range_color, 
+                    custom_data=custom_data,
+                    hovertemplate = hovertemplate
+                )
+                st.plotly_chart(fig, use_container_width=True)
     
-    update_at(data_path, timezone)
-    
-    fig = treemap(      dfi, 
-                        path=path, 
-                        values=values, 
-                        color='涨跌幅', 
-                        range_color = range_color, 
-                        custom_data=custom_data,
-                        hovertemplate = hovertemplate
-                    )
-    st.plotly_chart(fig, use_container_width=True)
-    
-    show_dataframe(dfi, plate)
+                show_dataframe(dfj, plate)
 
 
 

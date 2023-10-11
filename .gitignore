@@ -2,3 +2,5 @@ market_data/
 __pycache__/
 .streamlit/
 .vscode
+
+hitory/
