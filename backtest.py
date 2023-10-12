@@ -11,4 +11,4 @@ result = strategy.backtest()
 
 
 
-print(result.orders)
+print(result.metrics_df)
