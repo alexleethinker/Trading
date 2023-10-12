@@ -12,15 +12,15 @@ df = pd.read_csv(data_path,encoding = 'utf-8')
 
 def plot_plate(industry):
     if industry in ['消费','金融']:
-        path=[px.Constant(industry),'plate','市场']
+        path=[px.Constant(industry),'地区','市场']
         dfi = df[df['一级行业'].isin([industry]) & (~df['二级行业'].isin(['商业服务','经销商']))]
 
     elif industry in ['汽车','制药']:
-        path=[px.Constant(industry),'三级行业','plate','市场','证券名称']
+        path=[px.Constant(industry),'三级行业','地区','市场','证券名称']
         dfi = df[df['二级行业'].isin([industry])]
 
     else:
-        path=[px.Constant(industry),'plate','市场','证券名称']
+        path=[px.Constant(industry),'地区','市场','证券名称']
         if industry in ['石油']:
             dfi = df[df['二级行业'].isin(['能源'])]
             dfi = dfi[~dfi['三级行业'].isin(['煤炭'])]  
@@ -28,14 +28,14 @@ def plot_plate(industry):
             dfi = df[df['三级行业'].isin([industry])]
 
 
-    dfi = dfi[dfi['market_cap_USD'] > dfi['market_cap_USD'].quantile(.75) ]
+    dfi = dfi[dfi['总市值'] > dfi['总市值'].quantile(.75) ]
     update_at(data_path, timezone)
     fig = treemap(dfi, 
                     path=path,  
-                    values='market_cap_USD',
-                    color='change', 
+                    values='总市值',
+                    color='涨跌幅', 
                     range_color = 8,
-                    custom_data=['change','name','market_cap_USD','close','市场','Traded_USD'],
+                    custom_data=['涨跌幅','证券代码','总市值','最新价','市场','成交额'],
                     hovertemplate= "%{label}<br>%{customdata[3]} (%{customdata[0]:.2f}%)<br>总市值=%{customdata[2]:d}亿<br>成交额=%{customdata[5]:.2f}亿"                  
                     )               
     return fig

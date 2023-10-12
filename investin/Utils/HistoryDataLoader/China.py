@@ -2,8 +2,13 @@ from investin.Utils.HistoryDataLoader.common.stock import stock_zh_a_hist
 from investin.Utils.DataLoader.common.EM import fetch_spot_em
 from tqdm import tqdm
 from datetime import datetime
+import warnings
+warnings.filterwarnings('ignore')
 from investin.Utils.config import data_dir
+import pandas as pd
 
+save_dir = f'{data_dir}/history/stock/china.h5'
+today = datetime.today().strftime('%Y%m%d')
 
 def market_suffix(code):
     if code[:1] == '6':
@@ -16,24 +21,29 @@ def market_suffix(code):
         pass
     return code
 
-
-save_dir = f'{data_dir}/history/stock/china.h5'
-today = datetime.today().strftime('%Y%m%d')
-
-stock_daily = stock_zh_a_hist(symbol='600089', period='daily', adjust="hfq")
-
-
 print("获取股票代码列表...")
 stock_list = fetch_spot_em(market='China')['证券代码']
+store = pd.HDFStore(save_dir, mode='a')
+saved_list = [x.replace('/','').split('.')[0] for x in store.keys()]
+
+
+stock_list = list( set(stock_list) - set(saved_list) )
+
 
 print("更新股票历史行情...")
 def fetch_hist(stock):
     with pool_sema:
         try:
-            df = stock_zh_a_hist(symbol = stock['证券代码'][:6], period='daily', adjust="hfq")
-            df.to_hdf( save_dir, key = stock['证券代码'], mode='w', index = False)   
+            df = stock_zh_a_hist(symbol = stock, period='daily', adjust="hfq", timeout= (10,10))
+            df['日期'] = pd.to_datetime(df['日期'])
+            df = df.set_index(['日期'])
+            try:
+                updates = df.loc[df.index.difference(store[market_suffix(stock)].index)]
+            except:
+                updates = df
+            store.append(market_suffix(stock), updates)
         except:
-            print( stock['证券代码'] + " failed")
+            print( stock + " failed")
         pool_sema.release()
 
 
@@ -41,11 +51,11 @@ def fetch_hist(stock):
 import threading
 threads = []
 
-max_connections = 100  # 定义最大线程数
+max_connections = 10 # 定义最大线程数
 pool_sema = threading.BoundedSemaphore(max_connections) # 或使用Semaphore方法
 
-with tqdm(total=stock_list.shape[0]) as pbar:
-    for row, stock in stock_list.head(10).iterrows():
+with tqdm(total=len(stock_list)) as pbar:
+    for stock in stock_list:
         t = threading.Thread(target = fetch_hist, args = (stock,))
         threads.append(t)
     #print(threads)
@@ -56,4 +66,3 @@ with tqdm(total=stock_list.shape[0]) as pbar:
     # 等待所有thread完成之后再执行之后的代码    
     for t in threads: 
         t.join()
-        
