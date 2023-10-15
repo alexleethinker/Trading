@@ -2,6 +2,7 @@ from utils.config import page_config, data_dir
 page_config()
 import streamlit as st
 import datetime
+from pandas.tseries.offsets import BDay
 import pandas as pd
 from utils.figure import treemap
 import plotly.express as px
@@ -20,25 +21,28 @@ with col[0]:
     d = st.date_input("选择日期", datetime.date(2003, 11, 11),\
                                 min_value= datetime.date(2003, 10, 14),\
                                 max_value= datetime.datetime.today().date(),\
-                                on_change= reset_date)
+                                on_change= reset_date,\
+                                label_visibility="collapsed")
     
 with col[1]:
     if 'date' not in st.session_state:
         st.session_state['date'] = d
     def next_day():
-        st.session_state['date'] += datetime.timedelta(days=1)
+        st.session_state['date'] += BDay(1)
     def previous_day():
-        st.session_state['date'] -= datetime.timedelta(days=1)
+        st.session_state['date'] -= BDay(1)
     
-    sub_col = st.columns([3,1,1,3])
+    sub_col = st.columns([3,1,1,5])
     with sub_col[1]:
         st.button("上一日", on_click=previous_day)
     with sub_col[2]:
         st.button("下一日", on_click=next_day)
-        
+    
+
 with col[2]:
     traded_value_on = st.toggle('成交额')
-    
+
+st.markdown(f'<div align="center">{st.session_state["date"].strftime("%Y-%m-%d %A")}</div>', unsafe_allow_html=True)    
 
 
 def get_date_list():

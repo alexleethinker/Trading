@@ -15,12 +15,12 @@ store = pd.HDFStore(h5_dir, 'r')
 stock_list = [x.replace('/','') for x in store.keys()]   
 
 
-def history_spot(date):
+def history_spot():
     df = pd.DataFrame()
-    for symbol in stock_list:
+    for symbol in tqdm(stock_list):
         try:
             dfi = store[symbol]
-            dfi = dfi[dfi.index == date]
+            # dfi = dfi[dfi.index == date]
             dfi.insert(loc=0, column='证券代码', value=symbol)
             df = pd.concat([df, dfi], ignore_index=True)
         except:
@@ -39,11 +39,11 @@ def write_snapshot(df, date):
     df.to_feather(f'{data_dir}/history/snapshot/{market}/{date}.feather')
 
 date_list = get_date_list()
-
+df = history_spot()
 
 for date in tqdm(date_list):
-    df = history_spot(date)
-    write_snapshot(df, date)
+    dfi = df[df.index == date]
+    write_snapshot(dfi, date)
 
 
 store.close()
