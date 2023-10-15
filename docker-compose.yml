@@ -15,6 +15,7 @@ services:
     volumes: 
       - ./:/home
     working_dir: /home
+    restart: always
     command:  streamlit run investin/Streamlit/🗞️_主页.py  
 
     

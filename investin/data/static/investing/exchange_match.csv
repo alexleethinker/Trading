@@ -1,17 +1,17 @@
-market,tv_exchange,investing_exchange,yahoo_suffix
-america,NASDAQ,NASDAQ,
-america,NYSE,NYSE,
+market,tv_exchange,investing_exchange,yahoo_suffix,IBKR,degiro
+america,NASDAQ,NASDAQ,,nasdaq
+america,NYSE,NYSE,,nyse
 america,OTC,OTC Markets,
 america,AMEX,NYSE Amex,
 argentina,BCBA,Buenos Aires,BA
 australia,ASX,Sydney,AX
-austria,VIE,Vienna,VI
+austria,VIE,Vienna,VI,vse
 bahrain,BAHRAIN,Bahrain,
 bangladesh,DSEBD,DSE,
-belgium,EURONEXT,Brussels,BR
+belgium,EURONEXT,Brussels,BR,enext.be,EBR
 brazil,BMFBOVESPA,BM&FBovespa ,SA
 canada,NEO,CBOE Canada,NE
-canada,TSX,Toronto,TO
+canada,TSX,Toronto,TO,tse
 canada,TSXV,TSXV,V
 canada,CSE,CSE,CN
 chile,BCS,Santiago,SN
@@ -20,13 +20,13 @@ china,SZSE,Shenzhen,SZ
 colombia,BVC,Colombia,CL
 cyprus,CSECY,Cyprus,
 czech,PSECZ,Prague,PR
-denmark,OMXCOP,Copenhagen,CO
+denmark,OMXCOP,Copenhagen,CO,cph
 egypt,EGX,Egypt,
 estonia,OMXTSE,Tallinn,TL
 finland,OMXHEX,Helsinki,HE
-france,EURONEXT,Paris,PA
+france,EURONEXT,Paris,PA,sbf,EPA
 germany,BER,Berlin,BE
-germany,XETR,Xetra,DE
+germany,XETR,Xetra,DE,ibis,XET
 germany,TRADEGATE,TradeGate,
 germany,SWB,Stuttgart,SG
 germany,MUN,Munich,MU
@@ -42,7 +42,7 @@ india,BSE,BSE,BO
 india,NSE,NSE,NS
 indonesia,IDX,Jakarta,JK
 israel,TASE,Tel Aviv,TA
-italy,MIL,Milan,MI
+italy,MIL,Milan,MI,,MIL
 japan,TSE,Tokyo,T
 japan,NAG,,
 japan,FSE,,
@@ -57,30 +57,30 @@ latvia,OMXRSE,NASDAQ OMX Riga,RG
 lithuania,OMXVSE,Vilnius,VS
 luxembourg,LUXSE,Luxembourg,
 malaysia,MYX,Kuala Lumpur,KL
-mexico,BMV,Mexico,MX
+mexico,BMV,Mexico,MX,mexi
 morocco,CSEMA,,
-netherlands,EURONEXT,Amsterdam,AS
+netherlands,EURONEXT,Amsterdam,AS,aeb,EAM
 newzealand,NZX,New Zealand,NZ
 nigeria,NSENG,,
-norway,OSL,Oslo,OL
+norway,OSL,Oslo,OL,omxno
 pakistan,PSX,,
 peru,BVL,,
 philippines,PSE,Philippines,
 poland,GPW,Warsaw,WA
 poland,NEWCONNECT,,
-portugal,EURONEXT,Lisbon,LS
+portugal,EURONEXT,Lisbon,LS,bvl,ELI
 qatar,QSE,Doha,QA
 romania,BVB,,
 rsa,JSE,Johannesburg,JO
-russia,MOEX,Moscow,
+russia,MOEX,Moscow,,moex
 serbia,BELEX,,
 singapore,SGX,Singapore,SI
 slovakia,BSSE,,
 spain,BME,Madrid,MC
 srilanka,CSELK,,
 sweden,OMXSTO,Stockholm,ST
-sweden,NGM,NGM,
-switzerland,SIX,Switzerland,SW
+sweden,NGM,NGM,,sfb
+switzerland,SIX,Switzerland,SW,ebs
 taiwan,TWSE,Taiwan,TW
 taiwan,TPEX,TPEX,TWO
 thailand,SET,Thailand,BK
@@ -89,8 +89,8 @@ turkey,BIST,Istanbul,IS
 uae,ADX,Abu Dhabi,AE
 uae,DFM,Dubai,AE
 uae,NASDAQDUBAI,,
-uk,LSIN,,IL
-uk,LSE,London,L
+uk,LSIN,,IL,lseiob1
+uk,LSE,London,L,lse
 venezuela,BVCV,,
 vietnam,HOSE,Ho Chi Minh,VN
 vietnam,UPCOM,,
