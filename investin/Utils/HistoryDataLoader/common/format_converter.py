@@ -21,6 +21,8 @@ def history_spot():
         try:
             dfi = store[symbol]
             # dfi = dfi[dfi.index == date]
+            dfi.reset_index(inplace=True)
+            dfi = dfi.rename(columns = {'index':'日期'})
             dfi.insert(loc=0, column='证券代码', value=symbol)
             df = pd.concat([df, dfi], ignore_index=True)
         except:
@@ -41,8 +43,9 @@ def write_snapshot(df, date):
 date_list = get_date_list()
 df = history_spot()
 
+
 for date in tqdm(date_list):
-    dfi = df[df.index == date]
+    dfi = df[df['日期'] == date].reset_index().drop(columns = ['index','日期'])
     write_snapshot(dfi, date)
 
 

@@ -18,7 +18,7 @@ col = st.columns([2,7,1])
 with col[0]:
     def reset_date():
         del st.session_state['date'] 
-    d = st.date_input("选择日期", datetime.date(2003, 11, 11),\
+    d = st.date_input("选择日期", datetime.date(2015, 6, 17),\
                                 min_value= datetime.date(2003, 10, 14),\
                                 max_value= datetime.datetime.today().date(),\
                                 on_change= reset_date,\
@@ -32,7 +32,7 @@ with col[1]:
     def previous_day():
         st.session_state['date'] -= BDay(1)
     
-    sub_col = st.columns([3,1,1,5])
+    sub_col = st.columns([3,2,2,5])
     with sub_col[1]:
         st.button("上一日", on_click=previous_day)
     with sub_col[2]:

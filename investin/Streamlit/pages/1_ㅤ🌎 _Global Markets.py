@@ -25,7 +25,7 @@ def plot_plate(plate = '欧洲'):
 
         details = [] if plate == '概览' else ['一级行业','二级行业','三级行业']
         path=[px.Constant(values + "(USD)"),'地区','市场'] + details
-        custom_data=['涨跌幅','证券代码', values]
+        custom_data=['涨跌幅', values]
         range_color = 4
         hovertemplate= "%{label}<br>%{customdata[0]:.2f}%<br>" + values + "=%{customdata[2]:d}亿"  
         
@@ -45,8 +45,14 @@ def plot_plate(plate = '欧洲'):
         
         block = 'exchange' if plate == '欧洲' else '市场'
         
+        dfi['exchange'] = dfi['exchange'].replace(dict.fromkeys(['MIL','LUXSE'],'EURONEXT'))\
+                                         .replace(dict.fromkeys(['BME'],'SIX'))\
+                                         .replace(dict.fromkeys(['OMXCOP','OMXHEX','OMXSTO','OMXICE','OSL'],'OMX')) 
+        if plate == '欧洲':
+            dfi =dfi[dfi['exchange'].isin(['EURONEXT','LSE','XETR','SIX','OMX'])]     
+        
         path=[block,'一级行业','二级行业','三级行业','证券名称']
-        custom_data=['涨跌幅','证券代码','总市值','最新价','市场','成交额']
+        custom_data=['涨跌幅','full_symbol','总市值','最新价','市场','成交额']
         range_color = 8
         hovertemplate= "%{customdata[1]}<br>%{label}<br>%{customdata[3]:.1f} (%{customdata[0]:.2f})%<br>总市值=%{customdata[2]:d}亿<br>成交额=%{customdata[5]:.2f}亿"                  
         update_at(data_path, timezone)
@@ -56,6 +62,7 @@ def plot_plate(plate = '欧洲'):
         for i in range(len(market_list)):
             with tabs[i]:
                 dfj = dfi[dfi[block] == market_list[i]]
+                
                 dfj = dfj[dfj['成交额'] > dfj['成交额'].quantile(.75) ]
                 fig = treemap(dfj, 
                     path=path, 

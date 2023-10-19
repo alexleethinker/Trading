@@ -6,6 +6,7 @@ em_fields = {
     'f2':'最新价',
     'f3':'涨跌幅',
     'f6':'成交额',
+    'f7':'振幅',
     'f8':'换手率',
     'f12':'证券代码',
     'f14':'证券名称',
@@ -58,8 +59,9 @@ def fetch_spot_em(market):
     temp_df['成交额'] = (pd.to_numeric(temp_df['成交额'], errors="coerce")/100000000).round(2).fillna(0) 
     temp_df['最新价'] = pd.to_numeric(temp_df['最新价'], errors="coerce")
     temp_df['涨跌幅'] = pd.to_numeric(temp_df['涨跌幅'], errors="coerce")
+    temp_df['振幅'] = pd.to_numeric(temp_df['振幅'], errors="coerce")
     temp_df['换手率'] = pd.to_numeric(temp_df['换手率'], errors="coerce")
-    temp_df = temp_df[['证券代码','证券名称','流通市值','总市值','最新价', '涨跌幅','成交额','换手率']]
+    temp_df = temp_df[['证券代码','证券名称','流通市值','总市值','最新价', '涨跌幅','振幅','成交额','换手率']]
     
     temp_df = temp_df[temp_df['流通市值'] > 0]
     temp_df = temp_df[temp_df['总市值'] > 0]
