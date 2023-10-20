@@ -8,7 +8,7 @@ import math
 
 
 def remove_suffix(name):
-    suffix = [',',' PLC',' ORD',' HOLDINGS',' GROUP', ' plc',' inc',' Inc', ' INC',' Ltd',' Holdings',' Corp']
+    suffix = [',',' PLC',' ORD',' HOLDINGS',' GROUP', ' plc',' inc',' Inc', ' INC',' Ltd',' Holdings',' Corp','ON NM']
     for i in suffix:
         name = name.split(i)[0]
     return name

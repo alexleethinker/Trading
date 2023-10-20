@@ -57,7 +57,7 @@ def plot_plate(plate = '欧洲'):
         hovertemplate= "%{customdata[1]}<br>%{label}<br>%{customdata[3]:.1f} (%{customdata[0]:.2f})%<br>总市值=%{customdata[2]:d}亿<br>成交额=%{customdata[5]:.2f}亿"                  
         update_at(data_path, timezone)
 
-        market_list = dfi.groupby([block])[['总市值']].sum().sort_values('总市值',ascending=False).reset_index()[block].tolist()
+        market_list = dfi.groupby([block])[['成交额']].sum().sort_values('成交额',ascending=False).reset_index()[block].tolist()
         tabs = st.tabs(market_list)
         for i in range(len(market_list)):
             with tabs[i]:
