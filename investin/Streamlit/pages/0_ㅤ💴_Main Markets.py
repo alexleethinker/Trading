@@ -7,6 +7,15 @@ page_config()
 
 from utils.tables import show_dataframe
 
+with st.sidebar:
+
+    language = st.selectbox(
+        'Language',
+        ('English', '中文'))
+
+source_text = '数据来源：' if language == '中文' else 'Data Source: '
+
+
 
 def load_df(exchange):
     data_path = '{data_dir}/spot/stock_spot_{exchange}.csv'.format(data_dir=data_dir, exchange = exchange.replace('™️','').lower())
@@ -21,7 +30,7 @@ def load_df(exchange):
     elif exchange == '™️XETRA':
         timezone = 'Europe/Berlin'
 
-    update_at(data_path, timezone)   
+    update_at(data_path, timezone, language=language)   
     return df
 
 def plot_plate(exchange):
@@ -48,7 +57,7 @@ def plot_plate(exchange):
         
     st.plotly_chart(fig, use_container_width=True)
     
-    show_dataframe(df, '🇪🇺 欧股') 
+    show_dataframe(df, '🇪🇺 欧股', language=language) 
 
 
 
@@ -56,10 +65,10 @@ def plot_fig_euro():
     tab1, tab2 = st.tabs(["™️EuroNext", "™️XETRA"])
     with tab1:
         plot_plate("™️EuroNext")
-        st.markdown('数据来源：™️EuroNext')
+        st.markdown(f'{source_text}™️EuroNext')
     with tab2:
         plot_plate("™️XETRA")
-        st.markdown('数据来源：™️XETRA（延迟15分钟）')
+        st.markdown(f'{source_text}™️XETRA（15 mins Delay）')
 
 
 def plot_fig(market):
@@ -98,7 +107,7 @@ def plot_fig(market):
     df = df[df['成交额'] > df['成交额'].quantile(.75) ]
     
     def plot_fig(plate= True):
-        update_at(data_path, timezone)
+        update_at(data_path, timezone, language=language)
         if plate:
             fig = treemap(df, 
                             path=[px.Constant(title),'一级行业','二级行业','三级行业'],
@@ -119,9 +128,11 @@ def plot_fig(market):
                             )
         return fig
     
-
-    tab1, tab2 = st.tabs(["板块概览", "个股详情"])
-    
+    if language == '中文':
+        tab1, tab2 = st.tabs(["板块概览", "个股详情"])
+    else:
+        tab1, tab2 = st.tabs(["Overview", "Details"])
+        
     with tab1:
         fig_plate = plot_fig(plate = True)
         st.plotly_chart(fig_plate, use_container_width=True)
@@ -129,8 +140,8 @@ def plot_fig(market):
         fig = plot_fig(plate= False)
         st.plotly_chart(fig, use_container_width=True)
     
-    show_dataframe(df, market)
-    st.markdown('数据来源：东方财富网')
+    show_dataframe(df, market, language=language)
+    st.markdown(f'{source_text}EastMoney')
     
 
 def main(market):
@@ -139,18 +150,32 @@ def main(market):
     else:
         plot_fig(market)
 
-col = st.columns([9, 1])
+col = st.columns([8, 1])
 
 with col[0]:
+    
+    options = ['🇨🇳 A股','🇭🇰 港股','🇺🇸 美股','🇬🇧 英股','🇪🇺 欧股'] if language == '中文' else ['🇨🇳 China','🇭🇰 HongKong','🇺🇸 US','🇬🇧 UK','🇪🇺 Europe'] 
     st.radio(
         "",
         key="market",
-        options=['🇨🇳 A股','🇭🇰 港股','🇺🇸 美股','🇬🇧 英股','🇪🇺 欧股'],
+        options=options,
         horizontal=True,
         label_visibility='collapsed'
     )
 with col[1]:
-    traded_value_on = st.toggle('成交额')
+    if language == '中文':
+        traded_value_on = st.toggle('成交额')
+    else: 
+        traded_value_on = st.toggle('Turnover')
 # Plot!
-main(st.session_state.market)
+
+def translte_options(market):
+    market = market.replace('🇨🇳 China', '🇨🇳 A股')\
+                   .replace('🇭🇰 HongKong','🇭🇰 港股')\
+                    .replace('🇺🇸 US', '🇺🇸 美股')\
+                    .replace('🇬🇧 UK','🇬🇧 英股')\
+                    .replace('🇪🇺 Europe','🇪🇺 欧股')
+    return market
+
+main(translte_options(st.session_state.market))
 

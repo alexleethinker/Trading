@@ -8,7 +8,7 @@ def color_style(val):
 def color_abnormal(val):
     return 'color: gold'
 
-def show_dataframe(df, market = None):
+def show_dataframe(df, market = None, language = '中文'):
     
     if '市场' in df.values.tolist():
         pass
@@ -39,9 +39,16 @@ def show_dataframe(df, market = None):
     df = df[(df['涨跌幅'].abs() > 0.5) & (df['异动值'] > 1) ].sort_values('异动值', ascending= False)\
         [['证券代码','证券名称','涨跌幅','异动值', market_value,'成交额', industry]].head(100)
         
+        
+    def markdown_fill(compare, values):
+        values = values if language == '中文' else [i/10 for i in values]
+        mv_text = str(int(values[0])) + compare + str(int(values[1]))  if compare == '-' else compare + str(int(values[0])) 
+        markdown_text =  f'市场异动 (市值 {mv_text}亿)' if language == '中文' else f'Abnormal Movements (MarketValue {mv_text} Billion)' 
+        return markdown_text
+    
     col = st.columns([1, 1, 1])
     with col[0]:
-        st.markdown('市场异动 (市值 > 400亿)')
+        st.markdown(markdown_fill('>', [400]))
         st.dataframe(df[df[market_value] > 400].head(20)\
             .style.applymap(color_style, subset=['涨跌幅'])\
             .applymap(color_abnormal, subset=['异动值'])\
@@ -50,7 +57,7 @@ def show_dataframe(df, market = None):
         # st.write(html_abnormal_mov, unsafe_allow_html= True)
 
     with col[1]:
-        st.markdown('市场异动 (市值 100-400亿)')
+        st.markdown(markdown_fill('-',[100,400]))
         st.dataframe(df[df[market_value].between(100,400)].head(20)\
             .style.applymap(color_style, subset=['涨跌幅'])\
             .applymap(color_abnormal, subset=['异动值'])\
@@ -58,7 +65,7 @@ def show_dataframe(df, market = None):
             hide_index=True)
     
     with col[2]:
-        st.markdown('市场异动 (市值 < 100亿)')
+        st.markdown(markdown_fill('<',[100]))
         st.dataframe(df[df[market_value] < 100].head(20)\
             .style.applymap(color_style, subset=['涨跌幅'])\
             .applymap(color_abnormal, subset=['异动值'])\

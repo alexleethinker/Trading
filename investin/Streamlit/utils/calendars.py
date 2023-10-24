@@ -7,7 +7,7 @@ from utils.config import data_dir
 
 exchange_dir = '{data_dir}/static/exchanges.csv'.format(data_dir=data_dir)
 
-def get_trading_calendars():
+def get_trading_calendars(language = '中文'):
     exchanges = xcals.get_calendar_names(include_aliases=False)
     today = datetime.today().strftime('%Y-%m-%d')
     now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -29,11 +29,11 @@ def get_trading_calendars():
     today_calendars = today_calendars[today_calendars['Selected'].isin([1])]
     today_calendars = today_calendars.sort_values(['open','close']).reset_index(drop=True)
 
-
+    country = '国家' if language == '中文' else 'Country'
     color_discrete_map = {True: 'lightskyblue', False: 'gray'}
-    fig = px.timeline(today_calendars, x_start="open", x_end="close", y="国家",color="is_open",
+    fig = px.timeline(today_calendars, x_start="open", x_end="close", y=country,color="is_open",
                       color_discrete_map=color_discrete_map,
-                      hover_name= "国家",
+                      hover_name= country,
                       custom_data=['open','close'],
                     )
     fig.update_yaxes(autorange="reversed",categoryorder='array', categoryarray=today_calendars['国家']) # otherwise tasks are listed from the bottom up

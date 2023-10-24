@@ -55,6 +55,7 @@ def page_config(
         )
 
 
-def update_at(data_path, timezone):
-    text = '更新时间： ' + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone(timezone)).strftime('%Y-%m-%d %H:%M:%S') +  ' ({timezone})'.format(timezone=timezone)
+def update_at(data_path, timezone, language='中文'):
+    lang = '更新时间： ' if language == '中文' else 'Updated at: '
+    text = lang + datetime.fromtimestamp(os.path.getmtime(data_path)).astimezone(tz=pytz.timezone(timezone)).strftime('%Y-%m-%d %H:%M:%S') +  ' ({timezone})'.format(timezone=timezone)
     st.markdown(text)  
