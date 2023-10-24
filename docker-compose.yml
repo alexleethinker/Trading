@@ -16,7 +16,7 @@ services:
       - ./:/home
     working_dir: /home
     restart: always
-    command:  streamlit run investin/Streamlit/🗞️_主页.py  
+    command:  streamlit run investin/Streamlit/⌚️_Exchange_Clocks.py  
 
     
   data-loader:

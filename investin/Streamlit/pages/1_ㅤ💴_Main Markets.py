@@ -11,7 +11,7 @@ with st.sidebar:
 
     language = st.selectbox(
         'Language',
-        ('English', '中文'))
+        ('中文','English'))
 
 source_text = '数据来源：' if language == '中文' else 'Data Source: '
 

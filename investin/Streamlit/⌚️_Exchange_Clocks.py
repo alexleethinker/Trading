@@ -9,7 +9,7 @@ with st.sidebar:
 
     language = st.selectbox(
         'Language',
-        ('English', '中文'))
+        ('中文','English'))
 
 if language == '中文':
     st.markdown("<h4 style='text-align: center;'>主要股票交易所开盘时钟(UTC)</h4>", unsafe_allow_html=True)

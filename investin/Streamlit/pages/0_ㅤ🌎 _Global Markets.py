@@ -10,7 +10,7 @@ with st.sidebar:
 
     language = st.selectbox(
         'Language',
-        ('English', '中文'))
+        ('中文','English'))
 
 
 timezone = 'UTC'
@@ -111,7 +111,7 @@ def plot_plate(plate = '欧洲'):
                 )
                 st.plotly_chart(fig, use_container_width=True)
     
-                show_dataframe(dfj, plate)
+                show_dataframe(dfj, plate, language=language, source='tradingview')
 
 
 
@@ -121,7 +121,7 @@ with col[0]:
     if language =='中文':
         options=['🌎 概览','🌎 全球','🇨🇳 中国','🇺🇸 北美','🇪🇺 欧洲','🇯🇵 亚太','🇮🇳 南亚','🇸🇬 东盟','🇸🇦 中东非','🇧🇷 拉美']
     else:
-        options=['🌎 Overview','🌎 Global','🇨🇳 China','🇺🇸 North America','🇪🇺 Europe','🇯🇵 APAC','🇮🇳 South Asia','🇸🇬 ASEAN','🇸🇦 MENA','🇧🇷 Latin America']
+        options=['🌎 Overview','🌎 Global','🇨🇳 China','🇺🇸 NorthAmerica','🇪🇺 Europe','🇯🇵 APAC','🇮🇳 SouthAsia','🇸🇬 ASEAN','🇸🇦 MENA','🇧🇷 LatinAmerica']
     
     st.radio(
         "",
@@ -142,13 +142,13 @@ def translte_options(market):
     market = market.replace('Overview', '概览')\
                    .replace('Global','全球')\
                     .replace('China', '中国')\
-                    .replace('North America','北美')\
+                    .replace('NorthAmerica','北美')\
                     .replace('Europe','欧洲')\
                     .replace('APAC','亚太')\
-                    .replace('South Asia','南亚')\
+                    .replace('SouthAsia','南亚')\
                     .replace('ASEAN','东盟')\
                     .replace('MENA','中东非')\
-                    .replace('Latin America','拉美')
+                    .replace('LatinAmerica','拉美')
     return market  
     
 plot_plate(translte_options(st.session_state.plate.split(' ')[1]))
