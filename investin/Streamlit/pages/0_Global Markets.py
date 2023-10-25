@@ -53,7 +53,7 @@ def plot_plate(plate = '欧洲'):
         
         custom_data=['涨跌幅', values]
         range_color = 4
-        hovertemplate= "%{label}<br>%{customdata[0]:.2f}%<br>" + values + "=%{customdata[2]:d}亿"  
+        hovertemplate= "%{label}<br>%{customdata[0]:.2f}%<br>" + values_show + "=%{customdata[1]:d}亿"  
         
         update_at(data_path, timezone, language=language)
         fig = treemap(      dfi, 
@@ -117,7 +117,7 @@ with col[0]:
     if language =='中文':
         options=['🌎 概览','🌎 全球','🇨🇳 中国','🇺🇸 北美','🇪🇺 欧洲','🇯🇵 亚太','🇮🇳 南亚','🇸🇬 东盟','🇸🇦 中东非','🇧🇷 拉美']
     else:
-        options=['🌎 Overview','🌎 Global','🇨🇳 China','🇺🇸 NorthAmerica','🇪🇺 Europe','🇯🇵 APAC','🇮🇳 SouthAsia','🇸🇬 ASEAN','🇸🇦 MENA','🇧🇷 LatinAmerica']
+        options=['🌎 Overview','🌎 Global','🇺🇸 NorthAmerica','🇪🇺 Europe','🇨🇳 China','🇯🇵 APAC','🇮🇳 SouthAsia','🇸🇬 ASEAN','🇸🇦 MENA','🇧🇷 LatinAmerica']
     
     st.radio(
         "",
