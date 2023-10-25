@@ -2,8 +2,13 @@ import streamlit as st
 from datetime import datetime
 import pytz
 import os
+import argparse
 
-
+def get_args():
+    parser = argparse.ArgumentParser(description='Language parser')
+    parser.add_argument('--language', default='中文')
+    args = parser.parse_args()
+    return args
 
 data_dir = os.getenv('DATA_DIR') 
 

@@ -36,7 +36,7 @@ def get_trading_calendars(language = '中文'):
                       hover_name= country,
                       custom_data=['open','close'],
                     )
-    fig.update_yaxes(autorange="reversed",categoryorder='array', categoryarray=today_calendars['国家']) # otherwise tasks are listed from the bottom up
+    fig.update_yaxes(autorange="reversed",categoryorder='array', categoryarray=today_calendars[country]) # otherwise tasks are listed from the bottom up
 
     fig.update_layout(
         xaxis = dict(side = 'top'),

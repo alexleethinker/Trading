@@ -8,7 +8,6 @@ services:
     container_name: stock-dashboard
     hostname: stock-dashboard
     ports:
-      - 80:80
       - 443:443
     env_file:
       - .env
@@ -16,7 +15,25 @@ services:
       - ./:/home
     working_dir: /home
     restart: always
-    command:  streamlit run investin/Streamlit/⌚️_Exchange_Clocks.py  
+    command:  streamlit run investin/Streamlit/main.py
+
+
+  en-dashboard:
+    build: 
+      context: .
+    image: quant
+    container_name: en-dashboard
+    hostname: en-dashboard
+    ports:
+      - 8443:443
+    env_file:
+      - .env
+    volumes: 
+      - ./:/home
+    working_dir: /home
+    restart: always
+    # command:  streamlit run investin/Streamlit/📖_Main_Page.py  
+    command:  streamlit run investin/Streamlit/main.py -- --language=English
 
     
   data-loader:
