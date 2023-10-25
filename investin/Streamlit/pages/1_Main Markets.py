@@ -31,10 +31,16 @@ def load_df(exchange):
 
 def plot_plate(exchange):
     df = load_df(exchange).fillna('')
+    
+    if language == '中文':
+        path_list = ['一级行业','二级行业','三级行业','证券名称']
+    else:
+        path_list = ['sector','industry','en_name']
+    
     # values = 
     if exchange == '™️EuroNext':
         fig = treemap(df,
-                      path=[px.Constant("EuroNext-USD"),'一级行业','二级行业','三级行业','证券名称'],
+                      path=[px.Constant("EuroNext-USD")] + path_list,
                       values='成交额' if traded_value_on else '总市值' ,
                       color='涨跌幅',
                       range_color= 8,
@@ -43,7 +49,7 @@ def plot_plate(exchange):
                       )
     elif exchange == '™️XETRA':                   
         fig = treemap(df,
-                      path=[px.Constant("XETRA-EUR"),'一级行业','二级行业','三级行业','证券名称'],
+                      path=[px.Constant("XETRA-EUR")] + path_list,
                       values='成交额' if traded_value_on else '总市值',
                       color='涨跌幅',
                       range_color= 8,
@@ -53,7 +59,7 @@ def plot_plate(exchange):
         
     st.plotly_chart(fig, use_container_width=True)
     
-    show_dataframe(df, '🇪🇺 欧股', language=language) 
+    show_dataframe(df, '🇪🇺 欧股', language=language, source='euro') 
 
 
 
@@ -68,6 +74,11 @@ def plot_fig_euro():
 
 
 def plot_fig(market):
+    
+    source = None
+    ind_list = ['一级行业','二级行业','三级行业']
+    symbol_list = ['证券名称']
+    
     if market == '🇨🇳 A股':
         title = 'A股-RMB'
         timezone = 'Asia/Shanghai'
@@ -84,6 +95,9 @@ def plot_fig(market):
         title = '英股-GBP'
         timezone = 'Europe/London'
         file = 'uk'
+        source = 'euro'
+        ind_list = ['sector','industry']
+        symbol_list = ['en_name']
         
             
     if market == '🇨🇳 A股':
@@ -106,7 +120,7 @@ def plot_fig(market):
         update_at(data_path, timezone, language=language)
         if plate:
             fig = treemap(df, 
-                            path=[px.Constant(title),'一级行业','二级行业','三级行业'],
+                            path=[px.Constant(title)] + ind_list,
                             values=values, 
                             color='涨跌幅', 
                             range_color = 4, 
@@ -115,7 +129,7 @@ def plot_fig(market):
                             )
         else:
             fig = treemap(df, 
-                            path=[px.Constant(title),'一级行业','二级行业','三级行业','证券名称'], 
+                            path=[px.Constant(title)] + ind_list + symbol_list, 
                             values=values, 
                             color='涨跌幅', 
                             range_color = 8, 
@@ -136,7 +150,7 @@ def plot_fig(market):
         fig = plot_fig(plate= False)
         st.plotly_chart(fig, use_container_width=True)
     
-    show_dataframe(df, market, language=language)
+    show_dataframe(df, market, language=language, source = source)
     st.markdown(f'{source_text}EastMoney')
     
 
@@ -150,7 +164,7 @@ col = st.columns([8, 1])
 
 with col[0]:
     
-    options = ['🇨🇳 A股','🇭🇰 港股','🇺🇸 美股','🇬🇧 英股','🇪🇺 欧股'] if language == '中文' else ['🇨🇳 China','🇭🇰 HongKong','🇺🇸 US','🇬🇧 UK','🇪🇺 Europe'] 
+    options = ['🇨🇳 A股','🇭🇰 港股','🇺🇸 美股','🇬🇧 英股','🇪🇺 欧股'] if language == '中文' else ['🇪🇺 Europe','🇬🇧 UK','🇺🇸 US','🇨🇳 China','🇭🇰 HongKong'] 
     st.radio(
         "",
         key="market",

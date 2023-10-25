@@ -24,7 +24,7 @@ class StockSpotUK():
         return temp_df
     
     def clean(self, temp_df):
-        global_df = pd.read_csv( data_dir + '/spot/stock_spot_global_all.csv',low_memory=False)[['证券代码','market','一级行业','二级行业','三级行业']]
+        global_df = pd.read_csv( data_dir + '/spot/stock_spot_global_all.csv',low_memory=False)[['证券代码','market','一级行业','二级行业','三级行业','sector','industry','en_name']]
         uk_df = global_df[global_df['market'] == 'uk']
         df = temp_df.merge(uk_df,how='left',on=['证券代码'])
         df['证券名称'] = df['证券名称'].apply(remove_suffix)

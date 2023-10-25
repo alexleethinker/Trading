@@ -74,9 +74,10 @@ class StockSpotXetra():
         return df
     
     def add_xetra_master(self, df):
-        trans_df = pd.read_excel(open(self.translate_dir, 'rb'),sheet_name='industry_trans').drop(columns=['sector'])
-        master_df = pd.read_csv(self.xetra_master_dir,encoding = 'utf-8')
+        trans_df = pd.read_excel(open(self.translate_dir, 'rb'),sheet_name='industry_trans')
+        master_df = pd.read_csv(self.xetra_master_dir,encoding = 'utf-8').drop(columns=['sector'])
         df = df.merge(trans_df, on = 'industry').merge(master_df , on = 'isin')
+        df['en_name'] = df['证券名称']
         df.loc[~df['名称翻译'].isnull(), '证券名称'] = df[~df['名称翻译'].isnull()]['名称翻译']
 
         return df

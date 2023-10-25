@@ -38,6 +38,8 @@ def show_dataframe(df, market = None, language = '中文', source = None):
         industry = '二级行业' if market in ['🇨🇳 A股','🇭🇰 港股', '🇺🇸 美股', '🇬🇧 英股'] else 'industry'
         if source == 'tradingview':
             symbol_name = 'ticker_title'
+        elif source in ['euro']:
+            symbol_name = 'en_name'
         else:
             symbol_name = '证券名称'
             

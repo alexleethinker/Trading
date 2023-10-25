@@ -74,9 +74,10 @@ class StockSpotEuronext():
         degiro_df = degiro_df.merge(global_df, how = 'left', left_on = ['symbol','market'], right_on = ['证券代码','market'])
         df = degiro_df.merge(euronext_df, how = 'left', on = ['euronext_code']).drop(columns=['证券代码'])
         # replace names with translated names
+        df['stock_name'] = df['stock_name'].str.replace('�','').str.replace(' SpA','').str.replace(' NV','')
+        df['en_name'] = df['stock_name']
         df.loc[~df['名称翻译'].isnull(), 'stock_name'] = df[~df['名称翻译'].isnull()]['名称翻译']
         df.loc[~df['dr_name'].isnull() & df['名称翻译'].isnull(), 'stock_name'] = df[~df['dr_name'].isnull() & df['名称翻译'].isnull()]['dr_name'] + ' SE'
-        df['stock_name'] = df['stock_name'].str.replace('�','').str.replace(' SpA','').str.replace(' NV','')
         df = df.rename(columns={"stock_name": "证券名称",'symbol':'证券代码','change':'涨跌幅','last_price':'最新价'})
         return df
     

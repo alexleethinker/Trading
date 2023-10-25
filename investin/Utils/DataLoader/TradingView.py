@@ -195,7 +195,7 @@ class StockSpotTradingView():
                             .str.replace(' A/S','').str.replace(' OYJ','').str.replace(' AG NA','').str.replace(' SE NA','')\
                             .str.replace(' O.N.','').str.replace(' O N','').str.replace(' N.V.','')
 
-        df['english_name'] = df['description'] 
+        df['en_name'] = df['description'].apply(remove_suffix)
         df.loc[~df['名称翻译'].isnull(), 'description'] = df[~df['名称翻译'].isnull()]['名称翻译']
 
         dr_df = pd.read_csv(self.dr_name_dir)
