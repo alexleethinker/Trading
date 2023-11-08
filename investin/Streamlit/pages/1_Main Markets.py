@@ -96,8 +96,9 @@ def plot_fig(market):
         timezone = 'Europe/London'
         file = 'uk'
         source = 'euro'
-        ind_list = ['sector','industry']
-        symbol_list = ['en_name']
+        if language != '中文':
+            ind_list = ['sector','industry']
+            symbol_list = ['en_name']
         
             
     if market == '🇨🇳 A股':

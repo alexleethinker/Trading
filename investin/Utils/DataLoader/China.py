@@ -47,11 +47,13 @@ class StockSpotChinaA():
             try:
                 print('Start fetching China A stock data')
                 temp_df = self.fetch()
+                print('Start cleaning data')
                 clean_df = self.clean(temp_df)
                 self.update(clean_df)
                 print('Data updated')
                 break
             except Exception as e:
                 attempts += 1
+                print(e)
                 print('errors occur, retrying {attempts} times'.format(attempts=attempts))          
 
