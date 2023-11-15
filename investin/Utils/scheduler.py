@@ -50,7 +50,7 @@ def start_cronjob():
     scheduler.add_job(StockSpotUK().run, 'cron', day_of_week='mon-fri',hour='15',minute='36,55')
     
     scheduler.add_job(StockSpotHKEX().run, 'cron', day_of_week='mon-fri',hour='0-8',minute='0/1')
-    scheduler.add_job(StockSpotUS().run, 'cron', day_of_week='mon-fri',hour='13-22',minute='0/1')
+    scheduler.add_job(StockSpotUS().run, 'cron', day_of_week='mon-fri',hour='14-22',minute='0/1')
     scheduler.add_job(StockSpotTradingView().run, 'cron', day_of_week='mon-fri',hour='0-21',minute='0/1')
     scheduler.start()
 

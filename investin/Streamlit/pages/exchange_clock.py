@@ -9,7 +9,7 @@ language = args.language
 
 
 if language == '中文':
-    st.markdown('[English Version](https://investin.top:8443)')
+    st.markdown('[English Version](https://english.investin.top)')
     st.markdown("<h4 style='text-align: center;'>主要股票交易所开盘时钟(UTC)</h4>", unsafe_allow_html=True)
 else:
     st.markdown('[中文页面](https://investin.top)')

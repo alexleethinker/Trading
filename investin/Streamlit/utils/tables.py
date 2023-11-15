@@ -100,7 +100,7 @@ def show_dataframe(df, market = None, language = '中文', source = None):
     
     with col[2]:
         st.markdown(markdown_fill('<',[100]))
-        st.dataframe(df[df[market_value] < 100].head(20)\
+        st.dataframe(df[df[market_value] < 100].head(40)\
             .style.applymap(color_style, subset=['涨跌幅'])\
             .applymap(color_abnormal, subset=['异动值'])\
             .format({'涨跌幅': "{:.2f}%"},precision=2),
