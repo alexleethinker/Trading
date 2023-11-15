@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import pandas as pd
 html_abnormal_mov = open('investin/Streamlit/utils/abnormal_mov.html', "r").read() 
 
 def color_style(val):
@@ -49,6 +50,8 @@ def show_dataframe(df, market = None, language = '中文', source = None):
     # df['异动值'] = df['成交额'] * df['涨跌幅'].abs() * np.log10( (math.e - 1) * df['涨跌幅'].abs() + 1) / (np.log(df[market_value] + 1) + 1)
     
     df = df.drop_duplicates()
+    
+    df_stop = df[(df['涨跌幅'].abs() > 7.98)][['证券代码',symbol_name,'涨跌幅','异动值', market_value,'成交额', industry]]
     df = df[(df['涨跌幅'].abs() > 0.5) & (df['异动值'] > 1) ].sort_values('异动值', ascending= False)\
         [['证券代码',symbol_name,'涨跌幅','异动值', market_value,'成交额', industry]].head(100)
         
@@ -80,7 +83,8 @@ def show_dataframe(df, market = None, language = '中文', source = None):
     col = st.columns([1, 1, 1])
     with col[0]:
         st.markdown(markdown_fill('>', [400]))
-        st.dataframe(df[df[market_value] > 400].head(20)\
+        df_show =  pd.concat([df[df[market_value] > 400].head(20),df_stop[df_stop[market_value] > 400]]).drop_duplicates(subset=['证券代码',symbol_name,'涨跌幅']).reset_index(drop=True)
+        st.dataframe(df_show\
             .style.applymap(color_style, subset=['涨跌幅'])\
             .applymap(color_abnormal, subset=['异动值'])\
             .format({'涨跌幅': "{:.2f}%"},precision=2),
@@ -91,7 +95,8 @@ def show_dataframe(df, market = None, language = '中文', source = None):
 
     with col[1]:
         st.markdown(markdown_fill('-',[100,400]))
-        st.dataframe(df[df[market_value].between(100,400)].head(20)\
+        df_show =  pd.concat([df[df[market_value].between(100,400)].head(20),df_stop[df_stop[market_value].between(100,400)]]).drop_duplicates(subset=['证券代码',symbol_name,'涨跌幅']).reset_index(drop=True)
+        st.dataframe(df_show\
             .style.applymap(color_style, subset=['涨跌幅'])\
             .applymap(color_abnormal, subset=['异动值'])\
             .format({'涨跌幅': "{:.2f}%"},precision=2),
@@ -100,7 +105,9 @@ def show_dataframe(df, market = None, language = '中文', source = None):
     
     with col[2]:
         st.markdown(markdown_fill('<',[100]))
-        st.dataframe(df[df[market_value] < 100].head(40)\
+        df_show =  pd.concat([df[df[market_value] < 100].head(30),df_stop[df_stop[market_value] < 100]]).drop_duplicates(subset=['证券代码',symbol_name,'涨跌幅']).reset_index(drop=True)
+
+        st.dataframe(df_show\
             .style.applymap(color_style, subset=['涨跌幅'])\
             .applymap(color_abnormal, subset=['异动值'])\
             .format({'涨跌幅': "{:.2f}%"},precision=2),
