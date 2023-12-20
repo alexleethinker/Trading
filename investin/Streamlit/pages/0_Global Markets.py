@@ -34,15 +34,15 @@ def plot_plate(plate = '欧洲'):
     
     if plate in ['概览','全球']:
         if traded_value_on:
-            path = '{data_dir}/spot/stock_spot_global_all.csv'.format(data_dir=data_dir)
-            df_copy = pd.read_csv(path,encoding = 'utf-8')
+            dir = '{data_dir}/spot/stock_spot_global_all.csv'.format(data_dir=data_dir)
+            df_copy = pd.read_csv(dir,encoding = 'utf-8')
             dfi = df_copy.fillna('')
         else:
             dfi = df.fillna('')
         dfi = dfi[dfi['成交额'] > dfi['成交额'].quantile(.6) ]
+        dfi = dfi[~dfi['证券代码'].isin(['CLIME_BTU_B'])]
         dfi['market'] = dfi['market'].str.capitalize()
         dfi['region'] = dfi['地区'].apply(translte_region)
-
         if language == '中文':
             details = [] if plate == '概览' else ['一级行业','二级行业','三级行业']
             path=[px.Constant(values + "(USD)"),'地区','市场'] + details
