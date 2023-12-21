@@ -1,6 +1,8 @@
 market_data/
 __pycache__/
 .streamlit/
+.pybrokercache/
+.ipynb_checkpoints/
 .vscode
 
 *.h5
