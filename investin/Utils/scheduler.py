@@ -7,7 +7,7 @@ from investin.Utils.DataLoader.HK import StockSpotHKEX
 from investin.Utils.DataLoader.Euronext import StockSpotEuronext
 from investin.Utils.DataLoader.Xetra import StockSpotXetra
 from investin.Utils.DataLoader.TradingView import StockSpotTradingView
-from investin.Utils.IntradayDataLoader.indices import indices_intraday, indices_intraday_china, indices_intraday_hk, indices_intraday_india, indices_intraday_apac, indices_intraday_europe, indices_intraday_US
+from investin.Utils.IntradayDataLoader.indices import indices_intraday, indices_intraday_china, indices_intraday_hk, indices_intraday_india, indices_intraday_apac, indices_intraday_europe, indices_intraday_US,  indices_intraday_forex
 
 
 import datetime
@@ -63,6 +63,8 @@ def start_cronjob():
     scheduler.add_job(StockSpotTradingView().run, 'cron', day_of_week='mon-fri',hour='0-22',minute='0/1')
     scheduler.add_job(indices_intraday_apac, 'cron', day_of_week='mon-fri',hour='1-8',minute='0/1')
     scheduler.add_job(indices_intraday_india, 'cron', day_of_week='mon-fri',hour='3-11',minute='0/1')
+    
+    scheduler.add_job(indices_intraday_forex, 'cron', day_of_week='mon-fri',hour='0-23',minute='0/1')
     
     scheduler.add_job(indices_intraday, 'cron', day_of_week='mon-fri',hour='22',minute='1')
     scheduler.start()

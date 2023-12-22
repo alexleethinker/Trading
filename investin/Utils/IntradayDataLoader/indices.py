@@ -35,6 +35,7 @@ def run(secid):
 
 def indices_intraday():
     indices_df = pd.read_csv(read_path,encoding = 'utf-8')
+    indices_df = indices_df[~indices_df['region'].isin(['外汇'])]
     for i, row in indices_df.iterrows():
         run(row['indices'])
 
@@ -74,9 +75,13 @@ def indices_intraday_europe():
     for i, row in indices_df.iterrows():
         run(row['indices'])    
 
-
+def indices_intraday_forex():
+    indices_df = pd.read_csv(read_path,encoding = 'utf-8')
+    indices_df = indices_df[indices_df['region'].isin(['外汇'])]
+    for i, row in indices_df.iterrows():
+        run(row['indices'])  
 
 if __name__ == '__main__':
     
     
-    indices_intraday_apac()
+    indices_intraday_forex()
