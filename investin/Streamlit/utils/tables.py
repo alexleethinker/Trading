@@ -80,7 +80,7 @@ def show_dataframe(df, market = None, language = '中文', source = None):
     
     
     
-    col = st.columns([1, 1, 1])
+    col = st.columns([1, 1])
     with col[0]:
         st.markdown(markdown_fill('>', [400]))
         df_show =  pd.concat([df[df[market_value] > 400].head(20),df_stop[df_stop[market_value] > 400]]).drop_duplicates(subset=['证券代码',symbol_name,'涨跌幅']).reset_index(drop=True)
@@ -103,10 +103,12 @@ def show_dataframe(df, market = None, language = '中文', source = None):
             hide_index=True,
             column_config= df_config())
     
-    with col[2]:
-        st.markdown(markdown_fill('<',[100]))
-        df_show =  pd.concat([df[df[market_value] < 100].head(30),df_stop[df_stop[market_value] < 100]]).drop_duplicates(subset=['证券代码',symbol_name,'涨跌幅']).reset_index(drop=True)
-
+    
+    col = st.columns([1, 1])
+    
+    with col[0]:
+        st.markdown(markdown_fill('-',[10,100]))
+        df_show =  pd.concat([df[df[market_value].between(10,100)].head(20),df_stop[df_stop[market_value].between(10,100)]]).drop_duplicates(subset=['证券代码',symbol_name,'涨跌幅']).reset_index(drop=True)
         st.dataframe(df_show\
             .style.applymap(color_style, subset=['涨跌幅'])\
             .applymap(color_abnormal, subset=['异动值'])\
@@ -114,4 +116,13 @@ def show_dataframe(df, market = None, language = '中文', source = None):
             hide_index=True,
             column_config= df_config())
    
-    
+    with col[1]:
+        st.markdown(markdown_fill('<',[10]))
+        df_show =  pd.concat([df[df[market_value] < 10].head(30),df_stop[df_stop[market_value] < 10]]).drop_duplicates(subset=['证券代码',symbol_name,'涨跌幅']).reset_index(drop=True)
+
+        st.dataframe(df_show\
+            .style.applymap(color_style, subset=['涨跌幅'])\
+            .applymap(color_abnormal, subset=['异动值'])\
+            .format({'涨跌幅': "{:.2f}%"},precision=2),
+            hide_index=True,
+            column_config= df_config())    

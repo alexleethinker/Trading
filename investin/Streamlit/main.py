@@ -15,6 +15,7 @@ if language == '中文':
             Page("investin/Streamlit/pages/0_Global Markets.py", "全球市场", "🌎"),
             Page("investin/Streamlit/pages/2_Indutries.py", "行业对比", "⚙️"),
             Page("investin/Streamlit/pages/5_Time Machine.py", "历史切面", "🕙"),
+            Page("investin/Streamlit/pages/indices.py", "指数", "🕙"),
             # Page("investin/Streamlit/pages/6_ 📈_量化回测.py", "Backtest Engine", "📈"),
         ]
     )    
