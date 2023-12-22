@@ -25,7 +25,7 @@ def get_index(secid, order):
         last_chg = "{:.2%}".format(df.chg.tail(1).values[0].round(2)/100)
         df = df.reindex(list(range(0, order + 1))).reset_index(drop=True) 
     else:
-        df = df.reindex(list(range(0, order + 1))).reset_index(drop=True) 
+        df = pd.DataFrame().reindex(list(range(0, order + 1))).reset_index(drop=True) 
         last_ticker = preClose
         last_chg = "{:.2%}".format(0)
         

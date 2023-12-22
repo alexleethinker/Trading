@@ -32,7 +32,7 @@ WINE,威严葡萄酒,45.14,0.4514,61.0,6.27,6.1,0.0003,0.07,uk,消费,食品饮�
 PRE,PENSANA,65.88,0.6587999999999999,23.1,6.21,4.14,0.0024,0.37,uk,资源,矿产,其他金属,Non-Energy Minerals,Other Metals/Minerals,PENSANA,0.010559708314934258
 BRH,BRAVEHEART INVESTMENT,5.74,0.0574,9.0,5.88,5.88,0.0001,0.21,uk,金融,资产管理,投资经理,Finance,Investment Managers,BRAVEHEART INVESTMENT,0.0005822340851304154
 ABDX,ABINGDON HEALTH,10.95,0.10949999999999999,9.0,5.88,5.88,0.0002,0.2,uk,医药,医疗,医疗器械,Health Technology,Medical Specialties,ABINGDON HEALTH,0.0011137332802197229
-HBR,HARBOUR ENERGY,2408.94,24.0894,312.7,5.82,5.62,0.1654,0.7,uk,资源,能源,油气生产,Energy Minerals,Oil & Gas Production,HARBOUR ENERGY,0.23741904584459061
+HBR,HARBOUR ENERGY,2408.94,24.0894,312.7,5.82,5.62,0.1666,0.7,uk,资源,能源,油气生产,Energy Minerals,Oil & Gas Production,HARBOUR ENERGY,0.2391415540369335
 GCM,GCM RESOURCES,5.71,0.0571,2.75,5.77,3.85,0.0005,0.84,uk,资源,能源,煤炭,Energy Minerals,Coal,GCM RESOURCES,0.002837097440805475
 AAZ,ANGLO ASIAN MINING,68.55,0.6855,60.0,5.63,0.0,0.0004,0.06,uk,资源,矿产,贵金属,Non-Energy Minerals,Precious Metals,ANGLO ASIAN MINING,0.0015214792466247376
 PANR,PANTHEON RESOURCES,212.29,2.1229,23.4,5.5,6.04,0.0038,0.18,uk,资源,能源,油气生产,Energy Minerals,Oil & Gas Production,PANTHEON RESOURCES,0.01133328274553738
@@ -91,7 +91,7 @@ XPF,XP FACTORY,29.67,0.2967,17.0,3.03,3.03,0.0007000000000000001,0.23,uk,消费,
 DLAR,得利来,168.27,1.6827,85.9,3.0,4.08,0.002,0.12,uk,消费,商业服务,印刷,Commercial Services,Commercial Printing/Forms,DE LA RUE,0.003711402328292886
 NANO,NANOCO,59.79,0.5979,18.43,2.96,6.31,0.0007000000000000001,0.11,uk,科技,电子,半导体,Electronic Technology,Semiconductors,NANOCO,0.003228302541163731
 GMS,GULF MARINE SERVICES,142.3,1.423,14.0,2.94,3.31,0.0005,0.04,uk,资源,能源,油服工程,Industrial Services,Oilfield Services/Equipment,GULF MARINE SERVICES,0.0007245667345138172
-BNC,桑坦德银行(UK),52764.59,527.6459,330.5,2.8,2.95,0.0281,0.01,uk,金融,银行,主要银行,Finance,Major Banks,BANCO SANTANDER SA EUR0.50(REGD) (CDI),0.008928919026566983
+BNC,桑坦德银行(UK),52764.59,527.6459,330.5,2.8,2.95,0.030299999999999997,0.01,uk,金融,银行,主要银行,Finance,Major Banks,BANCO SANTANDER SA EUR0.50(REGD) (CDI),0.00962798030266831
 IRON,IRONVELD,7.28,0.0728,0.185,2.78,2.78,0.0001,0.11,uk,资源,矿产,钢,Non-Energy Minerals,Steel,IRONVELD,0.0001978464900514589
 BMY,布卢姆斯伯里出版,380.3,3.803,466.0,2.76,2.43,0.0003,0.01,uk,消费,可选消费,出版：书籍/杂志,Consumer Services,Publishing: Books/Magazines,BLOOMSBURY PUBLISHING,0.00024463764177114314
 RNK,兰科集团,367.25,3.6725,78.4,2.75,5.77,0.0004,0.01,uk,消费,可选消费,电影娱乐,Consumer Services,Movies/Entertainment,RANK,0.0009425648238582068
@@ -184,7 +184,7 @@ LTG,LEARNING TECHNOLOGIES,647.56,6.475599999999999,81.85,1.43,4.71,0.0036,0.06,u
 RKH,洛克霍普勘探,64.02,0.6402,10.75,1.42,6.6,0.0004,0.06,uk,资源,能源,油气生产,Energy Minerals,Oil & Gas Production,ROCKHOPPER EXPLORATION,0.0019274138996152683
 AAF,AIRTEL AFRICA,4866.81,48.6681,129.5,1.41,2.19,0.0096,0.02,uk,科技,通信,电信运营,Communications,Specialty Telecommunications,AIRTEL AFRICA,0.002905357468164369
 W7L,WARPAINT LONDON,280.06,2.8006,362.5,1.4,1.4,0.0017000000000000001,0.06,uk,消费,经销商,医疗经销商,Distribution Services,Medical Distributors,WARPAINT LONDON,0.000542412415171568
-ROR,ROTORK,2777.29,27.7729,322.6,1.38,2.7,0.0098,0.04,uk,制造业,机械,机械加工设备,Producer Manufacturing,Industrial Machinery,ROTORK,0.004559661429016388
+ROR,ROTORK,2777.29,27.7729,322.6,1.38,2.7,0.0103,0.04,uk,制造业,机械,机械加工设备,Producer Manufacturing,Industrial Machinery,ROTORK,0.004792297216211101
 HAT,H&T,193.99,1.9399000000000002,441.0,1.38,1.38,0.0003,0.02,uk,金融,资产管理,金融租赁,Finance,Finance/Rental/Leasing,H & T,0.00010513226607650306
 PODP,POD POINT,34.37,0.34369999999999995,22.3,1.36,3.18,0.0006,0.18,uk,制造业,机械,电力设备,Producer Manufacturing,Electrical Products,POD POINT,0.0011937793712182817
 BILN,BILLINGTON,57.69,0.5769,446.0,1.36,1.36,0.0002,0.03,uk,制造业,建筑业,建筑工程,Industrial Services,Engineering & Construction,BILLINGTON HOLDING,9.780272975715215e-05
@@ -193,7 +193,7 @@ MGNS,MORGAN SINDALL,1065.51,10.6551,2250.0,1.35,2.25,0.0199,0.19,uk,制造业,�
 ALL,ATLANTIC LITHIUM LIMITED,138.06,1.3806,22.55,1.35,2.25,0.0018,0.14,uk,资源,矿产,钢,Non-Energy Minerals,Steel,ATLANTIC LITHIUM LIMITED,0.0014903963852548063
 UTG,联合集团,4597.5,45.975,1055.0,1.34,1.63,0.0169,0.04,uk,金融,房地产,房地产开发,Finance,Real Estate Development,UNITE,0.003293831233652963
 TTG,TT ELECTRONICS,271.34,2.7133999999999996,153.0,1.32,1.06,0.0001,0.0,uk,科技,电子,元器件,Electronic Technology,Electronic Components,TT ELECTRONICS,2.936378716270583e-05
-TET,TREATT,302.37,3.0237,500.0,1.32,3.04,0.0031,0.1,uk,制造业,化工,特殊化学品,Process Industries,Chemicals: Specialty,TREATT,0.0031280944575963845
+TET,TREATT,302.37,3.0237,500.0,1.32,3.04,0.0034000000000000002,0.11,uk,制造业,化工,特殊化学品,Process Industries,Chemicals: Specialty,TREATT,0.0034308132760734545
 GYM,THE GYM,192.99,1.9299000000000002,108.0,1.31,2.63,0.0005,0.03,uk,消费,可选消费,其他消费者服务,Consumer Services,Other Consumer Services,GYM,0.00047015408616207614
 MEN,MOLECULAR ENERGIES,1615.59,16.1559,78.5,1.29,10.97,0.0001,0.0,uk,资源,能源,油气生产,Energy Minerals,Oil & Gas Production,MOLECULAR ENERGIES,0.0003705116485802177
 GENL,GENEL ENERGY,221.57,2.2157,79.3,1.28,2.17,0.0009,0.04,uk,资源,能源,油气生产,Energy Minerals,Oil & Gas Production,GENEL ENERGY,0.0006078128098019966
@@ -234,7 +234,7 @@ QLT,QUILTER,1444.82,14.4482,102.9,0.98,0.98,0.0032,0.02,uk,金融,资产管理,�
 SMS,智能电表系统,1236.52,12.3652,927.0,0.98,1.31,0.060899999999999996,0.5,uk,制造业,建筑业,建筑工程,Industrial Services,Engineering & Construction,SMART METERING SYSTEMS,0.011369771980204736
 FSG,FORESIGHT,486.84,4.868399999999999,419.0,0.96,0.72,0.001,0.02,uk,金融,资产管理,投资经理,Finance,Investment Managers,FORESIGHT,0.0001466810943289814
 SFR,SEVERFIELD,195.01,1.9501,63.0,0.96,2.88,0.0006,0.03,uk,制造业,建筑业,建筑工程,Industrial Services,Engineering & Construction,SEVERFIELD,0.0006427947556151913
-RMV,RIGHTMOVE,4582.26,45.8226,571.6,0.95,2.3,0.0447,0.1,uk,金融,房地产,房地产开发,Finance,Real Estate Development,RIGHTMOVE,0.014739050237776797
+RMV,RIGHTMOVE,4582.26,45.8226,571.6,0.95,2.3,0.0451,0.1,uk,金融,房地产,房地产开发,Finance,Real Estate Development,RIGHTMOVE,0.014870943304781508
 CARD,CARD FACTORY,366.52,3.6652,106.6,0.95,2.46,0.0016,0.04,uk,消费,零售,专卖店,Retail Trade,Specialty Stores,CARD FACTORY,0.0011129478894651241
 CVSG,CVS,1229.02,12.2902,1718.0,0.94,2.53,0.012199999999999999,0.1,uk,医药,健康服务,健康服务,Health Services,Hospital/Nursing Management,CVS,0.0062654905456637055
 IGG,IG,2925.99,29.2599,759.5,0.93,1.46,0.056900000000000006,0.2,uk,金融,资产管理,投资银行,Finance,Investment Banks/Brokers,IG,0.01026966085041335
@@ -249,13 +249,13 @@ BYG,BIG YELLOW,2423.01,24.230100000000004,1235.0,0.9,2.45,0.011899999999999999,0
 IHR,IMPACT HEALTHCARE REIT,373.76,3.7376,90.2,0.89,2.91,0.0032,0.09,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,IMPACT HEALTHCARE REIT,0.002835528209114945
 XPP,蔼克彼电源,320.65,3.2064999999999997,1354.0,0.89,2.53,0.0252,0.79,uk,制造业,机械,电力设备,Producer Manufacturing,Electrical Products,XP POWER,0.019052004232755226
 GPE,GREAT PORTLAND ESTATES,1088.59,10.8859,428.8,0.89,2.35,0.0033,0.03,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,GREAT PORTLAND ESTATES,0.0015670313567162876
-GFRD,GALLIFORD TRY,233.03,2.3303,227.0,0.89,1.33,0.0016,0.07,uk,制造业,建筑业,建筑工程,Industrial Services,Engineering & Construction,GALLIFORD TRY,0.000498976265469809
+GFRD,GALLIFORD TRY,233.03,2.3303,227.0,0.89,1.33,0.0025,0.11,uk,制造业,建筑业,建筑工程,Industrial Services,Engineering & Construction,GALLIFORD TRY,0.0007796504147965766
 LMP,LONDONMETRIC PROPERTY,2117.09,21.170900000000003,194.3,0.88,2.7,0.008100000000000001,0.04,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,LONDONMETRIC PROPERTY,0.004008362306173181
 SPI,SPIRE HEALTHCARE,925.45,9.2545,229.0,0.88,0.88,0.0021,0.02,uk,医药,健康服务,健康服务,Health Services,Hospital/Nursing Management,SPIRE HEALTHCARE,0.000222153652222913
 VSVS,VESUVIUS,1304.3,13.043,482.0,0.88,1.26,0.029500000000000002,0.23,uk,制造业,机械,综合制造,Producer Manufacturing,Miscellaneous Manufacturing,VESUVIUS,0.005106654727963247
 RGL,REGIONAL REIT LIMITED,179.22,1.7922,34.75,0.87,0.58,0.0012,0.07,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,REGIONAL REIT,0.00020451861397179219
 TW.,泰勒温佩,5131.11,51.311099999999996,145.2,0.87,1.63,0.1017,0.2,uk,制造业,建筑业,住宅建筑,Consumer Durables,Homebuilding,TAYLOR WIMPEY,0.01939124572105858
-RR.,劳斯莱斯,25452.09,254.5209,302.4,0.87,1.73,0.218,0.09,uk,制造业,汽车,汽车整车,Electronic Technology,Motor Vehicles,ROLLS ROYCE,0.034529377481356927
+RR.,劳斯莱斯,25452.09,254.5209,302.4,0.87,1.73,0.2195,0.09,uk,制造业,汽车,汽车整车,Electronic Technology,Motor Vehicles,ROLLS ROYCE,0.034766964941091036
 PCTN,PICTON PROPERTY INCOME LD,384.42,3.8442000000000003,70.2,0.86,2.73,0.0014000000000000002,0.04,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,PICTON PROPERTY,0.0011196851479401404
 IPO,IP,606.47,6.0647,58.5,0.86,2.76,0.0187,0.31,uk,消费,商业服务,综合商业,Commercial Services,Miscellaneous Commercial Services,IP,0.01325789874119682
 HSBA,汇丰控股,120969.8,1209.698,627.8,0.85,1.08,0.5936,0.05,uk,金融,银行,主要银行,Finance,Major Banks,HSBC,0.03607333169244889
@@ -293,7 +293,7 @@ FRES,弗雷斯尼洛,4313.78,43.1378,585.4,0.69,1.41,0.0073,0.02,uk,资源,矿�
 CREO,CREO MEDICAL,132.76,1.3276,36.75,0.68,0.68,0.0002,0.02,uk,医药,医疗,医疗器械,Health Technology,Medical Specialties,CREO MEDICAL,2.4780402241784477e-05
 ASCL,ASCENTIAL,1312.87,13.128699999999998,295.2,0.68,1.3,0.0051,0.04,uk,消费,商业服务,综合商业,Commercial Services,Miscellaneous Commercial Services,ASCENTIAL,0.0009263090578240076
 PTEC,PLAYTECH,1380.69,13.8069,446.4,0.68,1.76,0.0292,0.21,uk,科技,IT技术,软件开发,Technology Services,Packaged Software,PLAYTECH,0.0084099524271534
-AUTO,AUTO TRADER,6565.42,65.6542,722.2,0.67,1.34,0.048600000000000004,0.07,uk,科技,IT技术,互联网,Technology Services,Internet Software/Services,AUTO TRADER,0.0064985061503964915
+AUTO,AUTO TRADER,6565.42,65.6542,722.2,0.67,1.34,0.049400000000000006,0.08,uk,科技,IT技术,互联网,Technology Services,Internet Software/Services,AUTO TRADER,0.006605477445053223
 WHR,WAREHOUSE REIT,389.6,3.8960000000000004,91.7,0.66,1.1,0.0013,0.03,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,WAREHOUSE REIT,0.00025463716313727116
 TIFS,TI FLUID SYSTEMS,791.22,7.9122,153.2,0.66,1.58,0.018500000000000003,0.23,uk,制造业,汽车,汽车零部件,Producer Manufacturing,Auto Parts: OEM,TI FLUID SYSTEMS,0.0052266404782190376
 IOM,IOMART,173.22,1.7322,154.4,0.65,0.78,0.0003,0.02,uk,科技,IT技术,数据处理,Technology Services,Data Processing Services,IOMART,4.309385376792067e-05
@@ -305,13 +305,13 @@ PETS,PETS AT HOME,1514.68,15.1468,319.0,0.63,2.02,0.008100000000000001,0.05,uk,�
 SAFE,SAFESTORE,1931.21,19.3121,885.5,0.63,0.85,0.0079,0.04,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,SAFESTORE,0.0006546065591467894
 BWY,BELLWAY,3088.87,30.8887,2586.0,0.62,1.56,0.0213,0.07,uk,制造业,建筑业,住宅建筑,Consumer Durables,Homebuilding,BELLWAY GBP0.125,0.004214022457394841
 OSB,OSB,1784.76,17.8476,454.6,0.62,2.26,0.009899999999999999,0.06,uk,金融,银行,主要银行,Finance,Major Banks,OSB,0.003914582831045202
-LGEN,法通保险,14954.25,149.5425,250.1,0.6,1.33,0.0802,0.05,uk,金融,保险,多险种保险,Finance,Multi-Line Insurance,LEGAL & GENERAL,0.009161781350996228
+LGEN,法通保险,14954.25,149.5425,250.1,0.6,1.33,0.081,0.05,uk,金融,保险,多险种保险,Finance,Multi-Line Insurance,LEGAL & GENERAL,0.00925317069115579
 MRL,MARLOWE,404.04,4.0404,417.5,0.6,0.6,0.001,0.02,uk,消费,商业服务,综合商业,Commercial Services,Miscellaneous Commercial Services,MARLOWE,7.053410348433885e-05
 STEM,STHREE,569.84,5.6984,422.5,0.6,2.62,0.0134,0.24,uk,消费,商业服务,人力资源,Commercial Services,Personnel Services,STHREE,0.008959025342440257
 CGEO,GEORGIA CAPITAL,439.07,4.3907,1016.0,0.59,0.99,0.0024,0.06,uk,金融,资产管理,金融集团,Finance,Financial Conglomerates,GEORGIA CAPITAL,0.0003819233772285406
 WG.,伍德集团,1172.67,11.726700000000001,169.5,0.59,1.9,0.0467,0.4,uk,消费,商业服务,综合商业,Commercial Services,Miscellaneous Commercial Services,JOHN WOOD,0.015771733505163536
 PAY,PAYPOINT,370.66,3.7066000000000003,510.0,0.59,1.97,0.0129,0.35,uk,金融,银行,地区银行,Finance,Regional Banks,PAYPOINT,0.00640040434567337
-MKS,马莎百货,5366.09,53.6609,272.0,0.59,1.18,0.0425,0.08,uk,消费,零售,百货商店,Retail Trade,Department Stores,MARKS & SPENCER,0.004824270161943
+MKS,马莎百货,5366.09,53.6609,272.0,0.59,1.18,0.0435,0.08,uk,消费,零售,百货商店,Retail Trade,Department Stores,MARKS & SPENCER,0.004937782401047541
 IDOX,IDOX,312.03,3.1203,68.4,0.59,0.0,0.0012,0.04,uk,科技,IT技术,软件开发,Technology Services,Packaged Software,IDOX,8.909274262529028e-05
 RNWH,RENEW,678.21,6.782100000000001,857.0,0.59,1.64,0.015300000000000001,0.23,uk,制造业,建筑业,建筑工程,Industrial Services,Engineering & Construction,RENEW,0.004783816352310009
 LRE,兰开夏郡控股,1486.2,14.862,610.5,0.58,1.24,0.0055000000000000005,0.04,uk,金融,保险,财产/意外伤害保险,Finance,Property/Casualty Insurance,LANCASHIRE HLDGS COM SHS USD0.50,0.0008980637623530978
@@ -331,13 +331,13 @@ IMI,皇家金属工业(IMI),4468.42,44.684200000000004,1709.0,0.53,3.12,0.0225,0
 PTAL,PETROTAL CORPORATION COM SHS NP,435.63,4.3563,47.75,0.53,0.53,0.0025,0.06,uk,资源,能源,石油,Energy Minerals,Integrated Oil,PETROTAL CORP COM SHS(DI),0.00013911083919560294
 KYGA,KERRY,135.01,1.3500999999999999,76.8,0.52,0.52,0.0007000000000000001,0.05,uk,消费,食品饮料,零食,Consumer Non-Durables,Food: Specialty/Candy,KERRY,5.4422977525775916e-05
 SCT,SOFTCAT,2714.63,27.1463,1360.0,0.52,2.51,0.0433,0.16,uk,科技,IT技术,信息技术,Technology Services,Information Technology Services,SOFTCAT,0.01817467092420604
-SVS,第一太平戴维斯,1420.07,14.2007,983.5,0.51,1.58,0.016399999999999998,0.12,uk,金融,房地产,房地产开发,Finance,Real Estate Development,SAVILLS,0.003968575711034207
+SVS,第一太平戴维斯,1420.07,14.2007,983.5,0.51,1.58,0.0169,0.12,uk,金融,房地产,房地产开发,Finance,Real Estate Development,SAVILLS,0.004089568872955982
 MONY,MONEYSUPERMARKET.COM,1479.7,14.797,275.6,0.51,2.92,0.0361,0.24,uk,科技,IT技术,互联网,Technology Services,Internet Software/Services,MONEYSUPERMARKET.COM,0.021851822208936722
 BDEV,巴莱特开发公司,5514.21,55.1421,565.8,0.5,1.1,0.0318,0.06,uk,制造业,建筑业,住宅建筑,Consumer Durables,Homebuilding,BARRATT DEVELOPMENTS,0.0032066727229872684
 ABDN,ABRDN,3393.36,33.9336,182.6,0.5,1.57,0.0338,0.1,uk,金融,资产管理,投资经理,Finance,Investment Managers,ABRDN,0.006618692072821626
 PHLL,PETERSHILL PARTNERS,1838.95,18.3895,163.8,0.49,3.07,0.0218,0.12,uk,金融,资产管理,金融集团,Finance,Financial Conglomerates,PETERSHILL PARTNERS,0.013464133454259291
 BOOT,BOOT (HENRY),276.01,2.7601,206.0,0.49,2.44,0.0003,0.01,uk,制造业,建筑业,住宅建筑,Consumer Durables,Homebuilding,BOOT(HENRY),0.00022528477491564445
-LXI,LXI REIT,1805.34,18.0534,105.3,0.48,2.1,0.0070999999999999995,0.04,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,LXI REIT,0.0025064367998762376
+LXI,LXI REIT,1805.34,18.0534,105.3,0.48,2.1,0.0072,0.04,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,LXI REIT,0.002541738726635058
 CKN,克拉克森,970.54,9.7054,3160.0,0.48,1.43,0.0038,0.04,uk,制造业,运输,海运,Transportation,Marine Shipping,CLARKSON,0.0008684688999439184
 IMB,帝国烟草,16074.15,160.7415,1819.0,0.47,0.69,0.1025,0.06,uk,消费,日常消费,烟草,Consumer Non-Durables,Tobacco,IMPERIAL BRANDS GBP0.10,0.0039461620376454775
 PDG,PENDRAGON,457.87,4.5787,32.2,0.47,0.62,0.030299999999999997,0.66,uk,消费,零售,专卖店,Retail Trade,Specialty Stores,PENDRAGON,0.0021763541089636824
@@ -350,70 +350,71 @@ SMDS,史密斯,4293.52,42.9352,311.7,0.45,1.13,0.0202,0.05,uk,制造业,化工,�
 ADM,Admiral集团,8224.28,82.2428,2685.0,0.45,1.05,0.0471,0.06,uk,金融,保险,财产/意外伤害保险,Finance,Property/Casualty Insurance,ADMIRAL,0.004084717030597082
 HLCL,HELICAL,276.46,2.7645999999999997,226.0,0.44,0.89,0.031,1.12,uk,金融,房地产,房地产开发,Finance,Real Estate Development,HELICAL,0.0047808919581749584
 PFD,PREMIER FOODS,1183.28,11.832799999999999,136.2,0.44,2.8,0.023799999999999998,0.2,uk,消费,食品饮料,零食,Consumer Non-Durables,Food: Specialty/Candy,PREMIER FOODS,0.014338557778947807
-DLG,直线保险集团,2431.31,24.3131,185.4,0.43,1.81,0.0385,0.16,uk,金融,保险,财产/意外伤害保险,Finance,Property/Casualty Insurance,DIRECT LINE INSURANCE,0.010109424520173313
+DLG,直线保险集团,2431.31,24.3131,185.4,0.43,1.81,0.0395,0.16,uk,金融,保险,财产/意外伤害保险,Finance,Property/Casualty Insurance,DIRECT LINE INSURANCE,0.01037200697524275
 ACRL,ACCROL,114.64,1.1464,35.95,0.42,0.42,0.0002,0.02,uk,消费,日常消费,个人护理,Consumer Non-Durables,Household/Personal Care,ACCROL,1.1237135495147279e-05
-TTE,TOTALENERGIES SE TOTALENERGIES,1506.69,15.0669,62.46,0.42,0.42,0.0006,0.0,uk,资源,能源,石油,Energy Minerals,Integrated Oil,TOTALENERGIES SE EUR2.5,1.574362416104335e-05
-WIZZ,威兹航空控股,2259.06,22.5906,2186.0,0.41,2.25,0.0294,0.13,uk,制造业,运输,航空公司,Transportation,Airlines,WIZZ AIR HLDGS,0.010924990033378977
+TTE,TOTALENERGIES SE TOTALENERGIES,1506.69,15.0669,62.46,0.42,0.42,0.0007000000000000001,0.0,uk,资源,能源,石油,Energy Minerals,Integrated Oil,TOTALENERGIES SE EUR2.5,1.836756152121725e-05
+WIZZ,威兹航空控股,2259.06,22.5906,2186.0,0.41,2.25,0.0301,0.13,uk,制造业,运输,航空公司,Transportation,Airlines,WIZZ AIR HLDGS,0.011185108843697524
 HEIQ,HEIQ,16.1,0.161,12.3,0.41,9.8,0.0002,0.15,uk,制造业,化工,纺织品,Process Industries,Textiles,HEIQ,0.0021341102979095072
-AAL,英美资源公司,25839.33,258.3933,1931.8,0.41,1.79,0.17800000000000002,0.07,uk,资源,矿产,其他金属,Non-Energy Minerals,Other Metals/Minerals,ANGLO AMERICAN USD0.54945,0.029645199470091234
+AAL,英美资源公司,25839.33,258.3933,1931.8,0.41,1.79,0.1795,0.07,uk,资源,矿产,其他金属,Non-Energy Minerals,Other Metals/Minerals,ANGLO AMERICAN USD0.54945,0.029895018566749303
 BAB,巴布考克国际集团,2005.2,20.052,396.6,0.41,2.03,0.0085,0.04,uk,制造业,机械,工程机械,Producer Manufacturing,Trucks/Construction/Farm Machinery,BABCOCK INTERNATIONAL,0.0027801757879418335
 DOTD,DOTDIGITAL,306.6,3.0660000000000003,100.0,0.4,1.71,0.002,0.07,uk,科技,IT技术,软件开发,Technology Services,Packaged Software,DOTDIGITAL,0.0008473699827398505
 AVAP,AVATION,88.96,0.8896,125.5,0.4,0.4,0.0001,0.01,uk,金融,资产管理,金融租赁,Finance,Finance/Rental/Leasing,AVATION,5.5536646242940054e-06
 CURY,CURRYS,580.35,5.8035000000000005,51.2,0.39,1.27,0.0296,0.51,uk,消费,经销商,批发经销商,Distribution Services,Wholesale Distributors,CURRYS,0.006477816607561846
-SHEL,壳牌,168540.64,1685.4064,2566.5,0.37,0.88,0.7623000000000001,0.05,uk,资源,能源,石油,Energy Minerals,Integrated Oil,SHELL,0.031831752478833665
+WPM,惠顿贵金属,17599.04,175.99040000000002,3885.0,0.39,0.39,0.0014000000000000002,0.0,uk,资源,矿产,贵金属,Non-Energy Minerals,Precious Metals,WHEATON PRECIOUS METALS CORP COM(CDI),1.9692318411776384e-05
+SHEL,壳牌,168540.64,1685.4064,2566.5,0.37,0.88,0.7668,0.05,uk,资源,能源,石油,Energy Minerals,Integrated Oil,SHELL,0.03201966128921639
 MSLH,MARSHALLS,705.78,7.057799999999999,279.0,0.36,2.09,0.003,0.04,uk,制造业,建筑业,建筑材料,Non-Energy Minerals,Construction Materials,MARSHALLS,0.0013445953971377763
 SAE,SIMEC ATLANTIS ENERGY LIMITED O,10.16,0.1016,1.405,0.36,0.0,0.0004,0.33,uk,公用事业,电力,电力公司,Utilities,Electric Utilities,SIMEC ATLANTIS ENERGY,2.7458401158494614e-05
 ACSO,ACCESSO TECHNOLOGY,238.09,2.3809,569.0,0.35,3.0,0.0005,0.02,uk,科技,IT技术,软件开发,Technology Services,Packaged Software,ACCESSO TECHNOLOGY,0.0005337015216550873
-SMIN,史密斯集团,6139.26,61.3926,1766.5,0.34,0.77,0.0246,0.04,uk,制造业,机械,电力设备,Producer Manufacturing,Electrical Products,SMITHS,0.0013507448832429398
+SMIN,史密斯集团,6139.26,61.3926,1766.5,0.34,0.77,0.0248,0.04,uk,制造业,机械,电力设备,Producer Manufacturing,Electrical Products,SMITHS,0.001361726548960362
 GHH,GOOCH & HOUSEGO,152.14,1.5213999999999999,590.0,0.34,1.7,0.0006,0.04,uk,科技,电子,元器件,Electronic Technology,Electronic Components,GOOCH & HOUSEGO,0.00031445823919169503
 INF,英富曼集团,10593.57,105.9357,773.8,0.34,0.67,0.0493,0.05,uk,科技,IT技术,互联网,Technology Services,Internet Software/Services,INFORMA,0.0019373525317684863
-SBRY,森宝利(英伯瑞),7095.69,70.95689999999999,299.6,0.33,0.8,0.08470000000000001,0.12,uk,消费,零售,食品零售,Retail Trade,Food Retail,SAINSBURY(J),0.004823730208660176
+SBRY,森宝利(英伯瑞),7095.69,70.95689999999999,299.6,0.33,0.8,0.0858,0.12,uk,消费,零售,食品零售,Retail Trade,Food Retail,SAINSBURY(J),0.004886376055525892
 YCA,YELLOW CAKE,1331.5,13.315,614.0,0.33,1.14,0.023700000000000002,0.18,uk,消费,经销商,批发经销商,Distribution Services,Wholesale Distributors,YELLOW CAKE,0.00347656233421654
 STJ,圣詹姆斯广场,3736.0,37.36,681.0,0.32,3.03,0.0202,0.05,uk,金融,保险,人寿/健康保险,Finance,Life/Health Insurance,ST JAMES'S PLACE,0.010442514587195756
 CLIG,伦敦城市投资集团,73.42,0.7342,310.0,0.32,1.29,0.0004,0.06,uk,金融,资产管理,投资信托,Miscellaneous,Investment Trusts/Mutual Funds,CITY OF LONDON INVESTMENT,0.00016885387501673616
 TIG,TEAM INTERNET,333.36,3.3336,125.0,0.32,2.09,0.0025,0.08,uk,消费,商业服务,广告营销,Commercial Services,Advertising/Marketing Services,TEAM INTERNET,0.0014022749233054872
 AWE,ALPHAWAVE IP,897.39,8.9739,126.0,0.32,2.23,0.0181,0.2,uk,科技,IT技术,软件开发,Technology Services,Packaged Software,ALPHAWAVE IP,0.008367518825914178
-LSEG,伦敦证券交易所,46381.48,463.81480000000005,9284.0,0.3,1.12,0.12710000000000002,0.03,uk,科技,IT技术,互联网,Technology Services,Internet Software/Services,LONDON STOCK EXCHANGE,0.009289585456803846
+LSEG,伦敦证券交易所,46381.48,463.81480000000005,9284.0,0.3,1.12,0.1288,0.03,uk,科技,IT技术,互联网,Technology Services,Internet Software/Services,LONDON STOCK EXCHANGE,0.009413836403118296
 EMG,英仕曼集团,2817.42,28.1742,234.3,0.3,2.1,0.0163,0.06,uk,金融,资产管理,投资经理,Finance,Investment Managers,MAN,0.005193646695158991
 RKT,利洁时,38864.74,388.6474,5442.0,0.29,1.0,0.3986,0.1,uk,消费,日常消费,个人护理,Consumer Non-Durables,Household/Personal Care,RECKITT BENCKISER,0.024853375493586682
-EPIC,EDISTON PROPERTY INVESTMENT COM,146.67,1.4667,69.4,0.29,0.87,0.005,0.34,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,EDISTON PROPERTY INVESTMENT CO,0.0009076683715185784
+EPIC,EDISTON PROPERTY INVESTMENT COM,146.67,1.4667,69.4,0.29,0.87,0.006,0.41,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,EDISTON PROPERTY INVESTMENT CO,0.0010892020458222941
 ALPH,ALPHA,755.97,7.5597,1745.0,0.29,0.0,0.0005,0.01,uk,金融,银行,地区银行,Finance,Regional Banks,ALPHA,8.090679600277252e-06
 VTU,VERTU MOTORS,237.58,2.3758,70.2,0.29,2.43,0.0016,0.07,uk,消费,零售,专卖店,Retail Trade,Specialty Stores,VERTU MOTORS,0.0012522699549389247
-SN.,施乐辉公司,9380.3,93.803,1074.0,0.28,0.98,0.06480000000000001,0.07,uk,医药,医疗,医疗器械,Health Technology,Medical Specialties,SMITH & NEPHEW,0.004904452295773257
+SN.,施乐辉公司,9380.3,93.803,1074.0,0.28,0.98,0.065,0.07,uk,医药,医疗,医疗器械,Health Technology,Medical Specialties,SMITH & NEPHEW,0.004919589494217002
 PGH,PERSONAL,56.25,0.5625,180.0,0.28,1.11,0.0001,0.02,uk,金融,保险,保险经纪人,Finance,Insurance Brokers/Services,PERSONAL,3.557195122055781e-05
 DRX,DRAX,1865.81,18.6581,485.1,0.27,2.56,0.1173,0.63,uk,公用事业,电力,电力公司,Utilities,Electric Utilities,DRAX,0.05527226123326291
-DPH,DECHRA PHARMACEUTICALS,4387.65,43.87649999999999,3852.0,0.26,0.47,0.9481,2.16,uk,医药,制药,主要制药,Health Technology,Pharmaceuticals: Major,DECHRA PHARMACEUTICALS,0.023848425541898994
+DPH,DECHRA PHARMACEUTICALS,4387.65,43.87649999999999,3852.0,0.26,0.47,0.9493,2.17,uk,医药,制药,主要制药,Health Technology,Pharmaceuticals: Major,DECHRA PHARMACEUTICALS,0.02387861023829207
 INDV,INDIVIOR,1604.53,16.0453,1174.0,0.26,1.54,0.0155,0.1,uk,医药,制药,主要制药,Health Technology,Pharmaceuticals: Major,INDIVIOR,0.0034962044920817115
 GAW,GAMES WORKSHOP,3291.53,32.9153,9990.0,0.25,1.96,0.009399999999999999,0.03,uk,消费,可选消费,休闲产品,Consumer Durables,Recreational Products,GAMES WORKSHOP,0.0026075616503865753
 CNE,CAPRICORN ENERGY,151.17,1.5116999999999998,161.2,0.25,7.34,0.0027,0.18,uk,资源,能源,油气生产,Energy Minerals,Oil & Gas Production,CAPRICORN ENERGY,0.011698414567020303
-BATS,英美烟草,51213.74,512.1374,2290.0,0.24,0.68,0.33880000000000005,0.07,uk,消费,日常消费,烟草,Consumer Non-Durables,Tobacco,BRITISH AMERICAN TOBACCO,0.01069568848412188
+BATS,英美烟草,51213.74,512.1374,2290.0,0.24,0.68,0.3394,0.07,uk,消费,日常消费,烟草,Consumer Non-Durables,Tobacco,BRITISH AMERICAN TOBACCO,0.010714630081201194
 BARC,巴克莱,22971.33,229.7133,151.78,0.24,1.45,0.18460000000000001,0.08,uk,金融,资产管理,投资银行,Finance,Investment Banks/Brokers,BARCLAYS,0.02256549528944246
 CPG,康帕斯集团,36252.57,362.5257,2120.0,0.24,0.99,0.1343,0.04,uk,消费,可选消费,餐厅,Consumer Services,Restaurants,COMPASS,0.008320414567128563
 UU.,联合公用事业集团,7299.62,72.9962,1070.5,0.23,1.36,0.067,0.09,uk,公用事业,水务,水务,Utilities,Water Utilities,UNITED UTILITIES,0.00899066227772259
 OTB,ON THE BEACH,287.65,2.8764999999999996,172.6,0.23,2.9,0.0404,1.4,uk,消费,可选消费,其他消费者服务,Consumer Services,Other Consumer Services,ON THE BEACH,0.03865247533953771
-VOD,沃达丰(UK),18727.41,187.2741,69.16,0.23,0.49,0.2952,0.16,uk,科技,通信,电信运营,Communications,Wireless Telecommunications,VODAFONE,0.0061514598782791
+VOD,沃达丰(UK),18727.41,187.2741,69.16,0.23,0.49,0.2959,0.16,uk,科技,通信,电信运营,Communications,Wireless Telecommunications,VODAFONE,0.006166046673383422
 GRI,GRAINGER,2015.53,20.1553,271.8,0.22,1.11,0.0132,0.07,uk,金融,房地产,房地产开发,Finance,Real Estate Development,GRAINGER,0.001676017064510447
 FOXT,FOXTONS,137.09,1.3709,45.5,0.22,1.1,0.0001,0.01,uk,金融,房地产,房地产开发,Finance,Real Estate Development,FOXTONS,2.721054450110133e-05
 HLN,HALEON,29689.15,296.8915,321.5,0.22,0.84,0.0719,0.02,uk,消费,经销商,医疗经销商,Distribution Services,Medical Distributors,HALEON,0.003499149277305974
 OXIG,牛津仪器,1359.86,13.5986,2350.0,0.21,4.26,0.0038,0.03,uk,科技,电子,半导体,Electronic Technology,Semiconductors,OXFORD INSTRUMENTS,0.0040464972634524695
 ESP,EMPIRIC STUDENT PROPERTY,570.25,5.7025,94.5,0.21,0.95,0.0019,0.03,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,EMPIRIC STUDENT PROP GBP0.01,0.0002614058960200316
-ULVR,联合利华,94636.53,946.3652999999999,3787.0,0.21,0.53,0.2662,0.03,uk,消费,日常消费,个人护理,Consumer Non-Durables,Household/Personal Care,UNILEVER,0.00505138490317669
+ULVR,联合利华,94636.53,946.3652999999999,3787.0,0.21,0.53,0.2668,0.03,uk,消费,日常消费,个人护理,Consumer Non-Durables,Household/Personal Care,UNILEVER,0.005062770443905113
 SXS,思百吉,3870.44,38.7044,3807.0,0.21,1.32,0.054299999999999994,0.14,uk,制造业,机械,电力设备,Producer Manufacturing,Electrical Products,SPECTRIS,0.007874236167578128
-BP.,英国石油,80234.75,802.3475,467.2,0.2,0.76,0.5733,0.07,uk,资源,能源,石油,Energy Minerals,Integrated Oil,BP,0.020561372129979296
+BP.,英国石油,80234.75,802.3475,467.2,0.2,0.76,0.5747,0.07,uk,资源,能源,石油,Energy Minerals,Integrated Oil,BP,0.020611583050931626
 DWL,DOWLAIS,1430.2,14.302,102.65,0.2,1.46,0.0063,0.04,uk,制造业,汽车,汽车零部件,Producer Manufacturing,Auto Parts: OEM,DOWLAIS,0.0013450288400082499
 ENOG,ENERGEAN,1908.2,19.082,1040.0,0.19,2.79,0.0149,0.08,uk,资源,能源,油气生产,Energy Minerals,Oil & Gas Production,ENERGEAN,0.007929798746066544
 MGAM,摩根新材料,817.59,8.1759,286.5,0.17,1.57,0.0172,0.21,uk,制造业,化工,特种工业品,Process Industries,Industrial Specialties,MORGAN ADVANCED MATERIALS,0.004767931294834119
-BLND,英国土地公司,3764.7,37.647,406.0,0.17,1.58,0.1618,0.43,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,BRITISH LAND CO,0.03130391867902483
+BLND,英国土地公司,3764.7,37.647,406.0,0.17,1.58,0.16399999999999998,0.44,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,BRITISH LAND CO,0.03172955910605729
 EBOX,TRITAX EUROBOX,482.47,4.8247,59.8,0.17,3.52,0.0034999999999999996,0.07,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,TRITAX EUROBOX,0.003782777856804728
 III,3I集团,23564.81,235.6481,2421.0,0.17,1.28,0.12050000000000001,0.05,uk,金融,资产管理,投资经理,Finance,Investment Managers,3I,0.01204684032728938
 EZJ,易捷航空,3926.49,39.2649,518.0,0.15,1.28,0.042699999999999995,0.11,uk,制造业,运输,航空公司,Transportation,Airlines,EASYJET,0.005879064744342973
-NXT,耐斯特,10471.34,104.71340000000001,8210.0,0.15,2.0,0.077,0.07,uk,消费,零售,百货商店,Retail Trade,Department Stores,NEXT,0.017602882536415954
+NXT,耐斯特,10471.34,104.71340000000001,8210.0,0.15,2.0,0.0779,0.07,uk,消费,零售,百货商店,Retail Trade,Department Stores,NEXT,0.017808630514114323
 AGR,ASSURA,1435.87,14.358699999999999,48.32,0.12,1.2,0.05,0.36,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,ASSURA,0.007814112915941411
-BBOX,TRITAX BIG BOX REIT,3224.93,32.2493,169.4,0.12,1.48,0.019799999999999998,0.06,uk,金融,资产管理,投资信托,Miscellaneous,Investment Trusts/Mutual Funds,TRITAX BIG BOX REIT,0.003574346551255677
+BBOX,TRITAX BIG BOX REIT,3224.93,32.2493,169.4,0.12,1.48,0.0199,0.06,uk,金融,资产管理,投资信托,Miscellaneous,Investment Trusts/Mutual Funds,TRITAX BIG BOX REIT,0.0035923988065650492
 SSE,苏格兰和南方能源公司,20239.95,202.39950000000002,1852.0,0.11,0.65,0.3839,0.19,uk,公用事业,电力,电力公司,Utilities,Electric Utilities,SSE GBP0.50,0.012869447435224191
 BKG,伯克利集团,5065.15,50.6515,4774.0,0.1,0.88,0.0226,0.04,uk,金融,房地产,房地产开发,Finance,Real Estate Development,BERKELEY,0.0016090326937312051
 CCH,可口可乐HBC,8398.89,83.9889,2289.0,0.09,1.79,0.0212,0.03,uk,消费,食品饮料,饮料,Consumer Non-Durables,Beverages: Non-Alcoholic,COCA-COLA HBC AG,0.004254655856957931
-IHG,洲际酒店(UK),11707.13,117.0713,7106.0,0.08,0.96,0.0735,0.06,uk,消费,可选消费,酒店,Consumer Services,Hotels/Resorts/Cruise lines,INTERCONTINENTAL HOTELS,0.005173719915565582
+IHG,洲际酒店(UK),11707.13,117.0713,7106.0,0.08,0.96,0.07490000000000001,0.06,uk,消费,可选消费,酒店,Consumer Services,Hotels/Resorts/Cruise lines,INTERCONTINENTAL HOTELS,0.005272266961576356
 GBG,GB,700.65,7.0065,277.4,0.07,1.3,0.0026,0.04,uk,科技,IT技术,软件开发,Technology Services,Packaged Software,GB,0.0005593095141899736
 CCC,COMPUTACENTER,3170.84,31.7084,2778.0,0.07,1.22,0.0072,0.02,uk,科技,IT技术,信息技术,Technology Services,Information Technology Services,COMPUTACENTER,0.0009607672801569092
 HTWS,HELIOS TOWERS,870.86,8.7086,82.9,0.06,4.77,0.0022,0.03,uk,科技,通信,电信运营,Communications,Specialty Telecommunications,HELIOS TOWERS,0.0030895421382559876
@@ -531,6 +532,7 @@ EME,EMPYREAN ENERGY,5.96,0.0596,0.605,0.0,0.0,0.0001,0.1,uk,资源,能源,石油
 ELCO,ELECO PUBLIC LIMITED COMPANY OR,67.4,0.674,81.0,0.0,0.0,0.0001,0.02,uk,科技,IT技术,软件开发,Technology Services,Packaged Software,ELECO PUBLIC LIMITED COMPANY,0.0
 EDEN,EDEN RESEARCH,31.2,0.312,5.85,0.0,0.0,0.0002,0.06,uk,制造业,化工,农用化学品,Process Industries,Chemicals: Agricultural,EDEN RESEARCH,0.0
 ECK,ECKOH,103.11,1.0311,35.5,0.0,0.0,0.0002,0.01,uk,消费,商业服务,综合商业,Commercial Services,Miscellaneous Commercial Services,ECKOH,0.0
+DRV,DRIVER,14.63,0.1463,28.0,0.0,0.0,0.0001,0.1,uk,制造业,建筑业,建筑工程,Industrial Services,Engineering & Construction,DRIVER,0.0
 DPP,达美乐波兰,69.47,0.6947,9.75,0.0,0.0,0.0002,0.04,uk,消费,可选消费,餐厅,Consumer Services,Restaurants,DP POLAND,0.0
 DELT,DELTIC ENERGY,20.95,0.2095,22.5,0.0,0.0,0.0001,0.05,uk,金融,资产管理,投资信托,Miscellaneous,Investment Trusts/Mutual Funds,DELTIC ENERGY,0.0
 DATA,GLOBALDATA,16.35,0.1635,193.5,0.0,1.81,0.0018,1.11,uk,消费,商业服务,综合商业,Commercial Services,Miscellaneous Commercial Services,GLOBALDATA,0.0017369036595900258
@@ -538,7 +540,7 @@ DAL,DALATA HOTEL,867.0,8.67,388.0,0.0,5.67,0.0006,0.01,uk,消费,可选消费,�
 CUSN,CORNISH METALS INC. COM SHS NPV,54.87,0.5487,10.25,0.0,0.0,0.0002,0.03,uk,资源,矿产,其他金属,Non-Energy Minerals,Other Metals/Minerals,CORNISH METALS,0.0
 CTL,CLEANTECH LITHIUM,29.4,0.294,20.25,0.0,0.0,0.0004,0.14,uk,资源,矿产,其他金属,Non-Energy Minerals,Other Metals/Minerals,CLEANTECH LITHIUM,0.0
 CRTA,CIRATA,85.05,0.8504999999999999,74.0,0.0,0.0,0.0002,0.03,uk,科技,IT技术,软件开发,Technology Services,Packaged Software,CIRATA,0.0
-CRDA,禾大国际,7057.18,70.5718,5054.0,0.0,1.11,0.026600000000000002,0.04,uk,制造业,化工,特殊化学品,Process Industries,Chemicals: Specialty,CRODA INTERNATIONAL,0.0025964229932424108
+CRDA,禾大国际,7057.18,70.5718,5054.0,0.0,1.11,0.0271,0.04,uk,制造业,化工,特殊化学品,Process Industries,Chemicals: Specialty,CRODA INTERNATIONAL,0.0026452279367244103
 CPC,CITY PUB,145.56,1.4556,139.0,0.0,0.0,0.0002,0.01,uk,消费,可选消费,餐厅,Consumer Services,Restaurants,CITY PUB,0.0
 COST,COSTAIN,177.1,1.771,64.0,0.0,1.25,0.0013,0.07,uk,制造业,建筑业,建筑工程,Industrial Services,Engineering & Construction,COSTAIN,0.0004007874392179898
 CORO,CORO ENERGY,7.02,0.0702,0.245,0.0,0.0,0.0001,0.15,uk,资源,能源,油气生产,Energy Minerals,Oil & Gas Production,CORO ENERGY,0.0
@@ -591,20 +593,20 @@ ACC,ACCESS INTELLIGENCE,69.6,0.696,54.5,0.0,0.0,0.0001,0.01,uk,科技,IT技术,�
 ABDP,AB DYNAMICS,414.51,4.1451,1810.0,0.0,0.0,0.001,0.02,uk,科技,电子,仪器设备,Electronic Technology,Electronic Equipment/Instruments,AB DYNAMICS,0.0
 AAU,ARIANA RESOURCES,25.14,0.2514,2.2,0.0,0.0,0.0002,0.07,uk,资源,矿产,贵金属,Non-Energy Minerals,Precious Metals,ARIANA RESOURCES,0.0
 AA4,AMEDEO AIR FOUR PLUS LIMITED RE,183.42,1.8341999999999998,42.25,0.0,0.59,0.001,0.06,uk,金融,资产管理,金融租赁,Finance,Finance/Rental/Leasing,AMEDEO AIR FOUR PLUS LIMITED,8.784965819191406e-05
-GSK,葛兰素史克(UK),59651.7,596.5169999999999,1449.6,-0.03,0.9,0.2481,0.04,uk,医药,制药,主要制药,Health Technology,Pharmaceuticals: Major,GSK,0.012260795754912087
+GSK,葛兰素史克(UK),59651.7,596.5169999999999,1449.6,-0.03,0.9,0.2488,0.04,uk,医药,制药,主要制药,Health Technology,Pharmaceuticals: Major,GSK,0.012295388890859038
 SGE,赛捷集团,12102.53,121.0253,1179.5,-0.04,0.89,0.08439999999999999,0.07,uk,科技,IT技术,软件开发,Technology Services,Packaged Software,SAGE,0.005215404268703371
-NG.,英国国家电网,39131.71,391.3171,1061.0,-0.05,0.99,0.21100000000000002,0.05,uk,公用事业,电力,电力公司,Utilities,Electric Utilities,NATIONAL GRID,0.01292937249990831
+NG.,英国国家电网,39131.71,391.3171,1061.0,-0.05,0.99,0.21230000000000002,0.05,uk,公用事业,电力,电力公司,Utilities,Electric Utilities,NATIONAL GRID,0.013009032140903005
 NETW,NETWORK INTERNATIONAL,2076.65,20.7665,389.8,-0.05,0.26,0.0809,0.39,uk,金融,银行,地区银行,Finance,Regional Banks,NETWORK INTL HLDGS,0.0008268210096414616
 WDS,WOODSIDE ENERGY,31395.76,313.95759999999996,1647.0,-0.06,0.79,0.0219,0.01,uk,资源,能源,油气生产,Energy Minerals,Oil & Gas Production,WOODSIDE ENERGY,0.0009542633427060193
-REL,RELX集团,58027.18,580.2718,3075.0,-0.06,1.1,0.2725,0.05,uk,消费,商业服务,综合商业,Commercial Services,Miscellaneous Commercial Services,RELX GBP0.1444,0.01875831442629501
+REL,RELX集团,58027.18,580.2718,3075.0,-0.06,1.1,0.2726,0.05,uk,消费,商业服务,综合商业,Commercial Services,Miscellaneous Commercial Services,RELX GBP0.1444,0.018765198211405577
 DNLM,DUNELM,2259.91,22.5991,1119.0,-0.09,2.59,0.04190000000000001,0.19,uk,消费,零售,专卖店,Retail Trade,Specialty Stores,DUNELM,0.019205360514432737
 POLR,POLAR CAPITAL,463.48,4.6348,458.0,-0.11,2.29,0.0040999999999999995,0.09,uk,金融,资产管理,投资经理,Finance,Investment Managers,POLAR CAPITAL HLDGS,0.002385215592886381
 GEN,GENUIT,994.19,9.9419,399.0,-0.13,2.25,0.003,0.03,uk,制造业,机械,综合制造,Producer Manufacturing,Miscellaneous Manufacturing,GENUIT,0.0013672384731637118
 LAND,土地证券集团,5355.53,53.555299999999995,719.0,-0.14,1.67,0.021,0.04,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,LAND SECURITIES,0.004122482595950973
-RWI,RENEWI,519.28,5.1928,645.0,-0.15,2.79,0.0060999999999999995,0.12,uk,公用事业,环保,环境工程,Industrial Services,Environmental Services,RENEWI,0.004599134823215534
+RWI,RENEWI,519.28,5.1928,645.0,-0.15,2.79,0.006999999999999999,0.13,uk,公用事业,环保,环境工程,Industrial Services,Environmental Services,RENEWI,0.005277695698771925
 BNZL,本泽商贸,10819.65,108.1965,3201.0,-0.16,0.59,0.0646,0.06,uk,消费,经销商,批发经销商,Distribution Services,Wholesale Distributors,BUNZL,0.0020352823794016358
 ASLI,ABRDN EUROPEAN LOGISTICS INCOME,255.14,2.5513999999999997,61.9,-0.16,0.65,0.0008,0.03,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,ABRDN EUROPEAN LOGISTICS,7.46964476077823e-05
-BOWL,HOLLYWOOD BOWL,520.29,5.2029,303.0,-0.16,2.64,0.019799999999999998,0.38,uk,消费,可选消费,电影娱乐,Consumer Services,Movies/Entertainment,HOLLYWOOD BOWL,0.013751927607726462
+BOWL,HOLLYWOOD BOWL,520.29,5.2029,303.0,-0.16,2.64,0.020099999999999996,0.39,uk,消费,可选消费,电影娱乐,Consumer Services,Movies/Entertainment,HOLLYWOOD BOWL,0.013960290147237467
 DOCS,DR. MARTENS,871.89,8.7189,89.8,-0.17,2.33,0.0137,0.16,uk,消费,日常消费,服装鞋类,Consumer Non-Durables,Apparel/Footwear,DR. MARTENS,0.006817744717696674
 GAMA,GAMMA COMMUNICATIONS,1105.18,11.0518,1134.0,-0.18,2.29,0.0455,0.41,uk,科技,通信,电信运营,Communications,Major Telecommunications,GAMMA COMMUNICATIONS,0.020702605352846754
 JMAT,庄信万丰,3100.36,31.003600000000002,1690.0,-0.18,1.33,0.0231,0.07,uk,制造业,化工,化学原料,Process Industries,Chemicals: Major Diversified,JOHNSON MATTHEY,0.003553814099438631
@@ -618,8 +620,8 @@ AEWU,AEW UK REIT,159.38,1.5937999999999999,100.6,-0.2,1.59,0.001,0.06,uk,金融,
 SDR,SCHRODERS,7062.49,70.6249,438.1,-0.21,0.8,0.011200000000000002,0.02,uk,金融,资产管理,投资经理,Finance,Investment Managers,SCHRODERS,0.0006384081967074623
 BHP,BHP,3063.31,30.6331,2659.5,-0.21,1.59,0.1,0.33,uk,资源,矿产,钢,Non-Energy Minerals,Steel,BHP,0.020416662396984156
 TSCO,乐购,20262.7,202.627,286.7,-0.21,0.49,0.1582,0.08,uk,消费,零售,食品零售,Retail Trade,Food Retail,TESCO,0.0032557016387379225
-WPP,WPP集团(UK),8076.33,80.7633,751.4,-0.21,0.8,0.1093,0.14,uk,消费,商业服务,广告营销,Commercial Services,Advertising/Marketing Services,WPP,0.006077549907435648
-WEIR,伟尔集团,4840.47,48.404700000000005,1864.5,-0.21,0.94,0.0268,0.06,uk,制造业,机械,工程机械,Producer Manufacturing,Trucks/Construction/Farm Machinery,WEIR,0.002146453621077783
+WPP,WPP集团(UK),8076.33,80.7633,751.4,-0.21,0.8,0.1101,0.14,uk,消费,商业服务,广告营销,Commercial Services,Advertising/Marketing Services,WPP,0.006122033346831335
+WEIR,伟尔集团,4840.47,48.404700000000005,1864.5,-0.21,0.94,0.0277,0.06,uk,制造业,机械,工程机械,Producer Manufacturing,Trucks/Construction/Farm Machinery,WEIR,0.0022185360188005446
 SUPR,SUPERMARKET INCOME REIT,1086.72,10.8672,87.2,-0.23,1.6,0.010700000000000001,0.1,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,SUPERMARKET,0.0028286001983839357
 ANTO,安托法加斯塔公司,16774.35,167.74349999999998,1701.5,-0.23,1.32,0.057300000000000004,0.03,uk,资源,矿产,其他金属,Non-Energy Minerals,Other Metals/Minerals,ANTOFAGASTA,0.006347446646949239
 SCE,SURFACE TRANSFORMS,37.32,0.3732,10.6,-0.24,0.0,0.0002,0.05,uk,制造业,汽车,汽车零部件,Producer Manufacturing,Auto Parts: OEM,SURFACE TRANSFORMS,5.464693891405872e-06
@@ -629,7 +631,7 @@ CABP,CAB PAYMENTS,189.08,1.8908,74.4,-0.27,5.09,0.0026,0.14,uk,金融,银行,地
 SPE,SOPHEON,98.11,0.9811,917.5,-0.27,0.27,0.0002,0.02,uk,科技,IT技术,软件开发,Technology Services,Packaged Software,SOPHEON,5.3088126855631855e-06
 RNO,瑞诺德集团,80.02,0.8001999999999999,35.5,-0.28,1.97,0.0006,0.07,uk,制造业,机械,机械加工设备,Producer Manufacturing,Industrial Machinery,RENOLD,0.00047787071595134625
 PHP,PRIMARY HEALTH PROPERTIES,1393.96,13.9396,104.3,-0.29,1.91,0.0106,0.08,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,PRIMARY HEALTH PROPERTIES,0.003452510088812347
-BA.,BAE系统公司,33105.18,331.0518,1090.0,-0.32,1.01,0.1295,0.04,uk,制造业,机械,航空航天与国防,Electronic Technology,Aerospace & Defense,BAE SYSTEMS,0.008399564943036139
+BA.,BAE系统公司,33105.18,331.0518,1090.0,-0.32,1.01,0.13,0.04,uk,制造业,机械,航空航天与国防,Electronic Technology,Aerospace & Defense,BAE SYSTEMS,0.008431995695711954
 LABS,LIFE SCIENCE REIT,214.2,2.142,61.2,-0.33,2.61,0.0021,0.1,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,LIFE SCIENCE REIT,0.0018888433511636993
 FSJ,FISHER (JAMES) & SONS,154.22,1.5422,306.0,-0.33,2.77,0.0002,0.01,uk,制造业,运输,海运,Transportation,Marine Shipping,FISHER(JAMES)& SONS,0.000217926818944174
 AXS,ACCSYS TECHNOLOGIES,145.5,1.455,60.8,-0.33,0.33,0.0001,0.01,uk,制造业,化工,特种工业品,Process Industries,Industrial Specialties,ACCSYS TECHNOLOGIES EUR0.05,3.3915431041738575e-06
@@ -641,9 +643,9 @@ PAG,PARAGON BANKING,1507.14,15.0714,689.5,-0.36,1.3,0.023799999999999998,0.16,uk
 KIE,KIER,491.03,4.910299999999999,110.0,-0.36,2.54,0.0212,0.43,uk,制造业,建筑业,建筑工程,Industrial Services,Engineering & Construction,KIER,0.014147534690215801
 HSW,HOSTELWORLD,169.37,1.6937,137.0,-0.36,0.36,0.0002,0.01,uk,消费,可选消费,其他消费者服务,Consumer Services,Other Consumer Services,HOSTELWORLD,7.5631973227232654e-06
 GNS,GENUS,1434.18,14.341800000000001,2172.0,-0.37,1.83,0.0051,0.04,uk,制造业,化工,农产品,Process Industries,Agricultural Commodities/Milling,GENUS,0.0015447524232462613
-SKG,司墨飞·卡帕集团,8294.89,82.9489,3186.0,-0.38,1.5,0.1007,0.12,uk,制造业,化工,包装,Process Industries,Containers/Packaging,SMURFIT KAPPA,0.015398449561857782
+SKG,司墨飞·卡帕集团,8294.89,82.9489,3186.0,-0.38,1.5,0.10220000000000001,0.12,uk,制造业,化工,包装,Process Industries,Containers/Packaging,SMURFIT KAPPA,0.015627820707267783
 ABF,英联食品,18068.15,180.68150000000003,2366.0,-0.38,1.26,0.0623,0.03,uk,消费,食品饮料,主食,Consumer Non-Durables,Food: Major Diversified,ASSOCIATED BRITISH FOODS,0.006332972921431737
-SVT,赛文特,7833.16,78.3316,2619.0,-0.38,0.95,0.1263,0.16,uk,公用事业,水务,水务,Utilities,Water Utilities,SEVERN TRENT,0.009385689110905348
+SVT,赛文特,7833.16,78.3316,2619.0,-0.38,0.95,0.1268,0.16,uk,公用事业,水务,水务,Utilities,Water Utilities,SEVERN TRENT,0.009422845441510674
 APH,ALLIANCE PHARMA,211.02,2.1102000000000003,39.05,-0.38,1.66,0.0004,0.02,uk,医药,制药,主要制药,Health Technology,Pharmaceuticals: Major,ALLIANCE PHARMA,0.00018219145086043908
 VMUK,VIRGIN MONEY UK,1090.37,10.903699999999999,167.0,-0.39,0.92,0.0062,0.06,uk,金融,银行,地区银行,Finance,Regional Banks,VIRGIN MONEY UK,0.000675515426266545
 ROO,DELIVEROO,1934.25,19.3425,127.1,-0.39,2.12,0.0581,0.3,uk,科技,IT技术,软件开发,Technology Services,Packaged Software,DELIVEROO CLASS A,0.02046698771793633
@@ -656,10 +658,10 @@ RWA,ROBERT WALTERS,329.94,3.2994,456.0,-0.44,1.31,0.0002,0.01,uk,消费,商业�
 BPM,B.P. MARSH & PARTNERS,166.7,1.6669999999999998,448.0,-0.44,0.44,0.0004,0.03,uk,金融,资产管理,投资经理,Finance,Investment Managers,B.P.MARSH & PARTNERS,2.1726008847511257e-05
 XAR,赛尔,86.55,0.8654999999999999,110.0,-0.45,0.45,0.0001,0.01,uk,制造业,机械,机械加工设备,Producer Manufacturing,Industrial Machinery,XAAR,6.895098491394843e-06
 MNDI,英国蒙迪集团,5359.15,53.591499999999996,1528.0,-0.46,1.04,0.08689999999999999,0.16,uk,制造业,化工,包装,Process Industries,Containers/Packaging,MONDI,0.00804617265527669
-STAN,渣打集团,17376.17,173.7617,652.0,-0.46,1.71,0.0729,0.04,uk,金融,银行,主要银行,Finance,Major Banks,STANDARD CHARTERED,0.012040398939327622
+STAN,渣打集团,17376.17,173.7617,652.0,-0.46,1.71,0.07519999999999999,0.04,uk,金融,银行,主要银行,Finance,Major Banks,STANDARD CHARTERED,0.01242027435167952
 FORT,FORTERRA,369.43,3.6943,173.6,-0.46,3.1,0.0124,0.34,uk,制造业,建筑业,建筑材料,Non-Energy Minerals,Construction Materials,FORTERRA,0.012094643586139698
-FLTR,FLUTTER ENTERTAINMENT,24872.3,248.72299999999998,14065.0,-0.46,1.31,0.1844,0.07,uk,消费,可选消费,博彩,Consumer Services,Casinos/Gaming,FLUTTER ENTERTAINMENT,0.018968795239517566
-HSX,HISCOX LTD,3638.32,36.3832,1048.0,-0.47,2.47,0.014499999999999999,0.04,uk,金融,保险,多险种保险,Finance,Multi-Line Insurance,HISCOX,0.005577569170637076
+FLTR,FLUTTER ENTERTAINMENT,24872.3,248.72299999999998,14065.0,-0.46,1.31,0.1852,0.07,uk,消费,可选消费,博彩,Consumer Services,Casinos/Gaming,FLUTTER ENTERTAINMENT,0.01905108936203174
+HSX,HISCOX LTD,3638.32,36.3832,1048.0,-0.47,2.47,0.015,0.04,uk,金融,保险,多险种保险,Finance,Multi-Line Insurance,HISCOX,0.005769899142038354
 PHNX,凤凰集团控股,5232.03,52.320299999999996,522.4,-0.5,0.72,0.0693,0.13,uk,金融,保险,人寿/健康保险,Finance,Life/Health Insurance,PHOENIX,0.0035063103116814297
 DSCV,DISCOVERIE,749.65,7.4965,778.0,-0.51,3.45,0.0143,0.19,uk,制造业,机械,电力设备,Producer Manufacturing,Electrical Products,DISCOVERIE,0.013208974360409085
 CMCL,喀里多尼亚矿业(UK),184.21,1.8421,960.0,-0.52,0.0,0.0004,0.02,uk,资源,矿产,贵金属,Non-Energy Minerals,Precious Metals,CALEDONIA MINING CORP,2.8207521585817708e-05
@@ -669,13 +671,13 @@ ITH,ITHACA ENERGY,1478.95,14.7895,145.8,-0.55,5.05,0.0025,0.02,uk,资源,能源,
 SNR,英国 Senior,747.4,7.474,178.2,-0.56,1.56,0.0024,0.03,uk,制造业,机械,航空航天与国防,Electronic Technology,Aerospace & Defense,SENIOR GBP0.10,0.0006754102749930222
 GROW,MOLTEN VENTURES,496.64,4.9664,285.0,-0.56,2.3,0.0037,0.07,uk,金融,资产管理,投资银行,Finance,Investment Banks/Brokers,MOLTEN VENTURES,0.002122151533338165
 TXP,TOUCHSTONE EXPLORATION INC COM,103.64,1.0364,44.25,-0.56,0.56,0.0014000000000000002,0.13,uk,资源,能源,油气生产,Energy Minerals,Oil & Gas Production,TOUCHSTONE EXPLORATION,0.0001341278023347929
-TUI,途易集团,3638.98,36.3898,616.5,-0.56,1.37,0.059500000000000004,0.16,uk,消费,可选消费,其他消费者服务,Consumer Services,Other Consumer Services,TUI AG,0.009270303031027657
+TUI,途易集团,3638.98,36.3898,616.5,-0.56,1.37,0.060700000000000004,0.17,uk,消费,可选消费,其他消费者服务,Consumer Services,Other Consumer Services,TUI AG,0.00945726712577107
 DOM,达美乐比萨(UK),1522.19,15.2219,384.0,-0.57,2.28,0.0053,0.03,uk,消费,可选消费,餐厅,Consumer Services,Restaurants,DOMINO'S PIZZA,0.002207721656348875
 MTRO,METRO BANK,60.09,0.6009,34.8,-0.57,2.86,0.0016,0.27,uk,金融,银行,地区银行,Finance,Regional Banks,METRO BANK,0.0024019493889827115
 BAG,BARR (A.G.),579.19,5.791900000000001,517.0,-0.58,1.73,0.0016,0.03,uk,消费,食品饮料,饮料,Consumer Non-Durables,Beverages: Non-Alcoholic,BARR(A.G.),0.0005687244979229762
 BVXP,BIOVENTIX,224.45,2.2445,4300.0,-0.58,0.58,0.0008,0.03,uk,消费,商业服务,综合商业,Commercial Services,Miscellaneous Commercial Services,BIOVENTIX,6.400454023735948e-05
 GOOD,GOOD ENERGY,57.57,0.5757,341.0,-0.58,0.58,0.0004,0.08,uk,公用事业,电力,新能源发电,Utilities,Alternative Power Generation,GOOD ENERGY,4.7891469318869404e-05
-BRBY,博柏利,5093.12,50.9312,1420.5,-0.59,1.61,0.2412,0.47,uk,消费,日常消费,服装鞋类,Consumer Non-Durables,Apparel/Footwear,BURBERRY,0.04518299049300866
+BRBY,博柏利,5093.12,50.9312,1420.5,-0.59,1.61,0.24239999999999998,0.47,uk,消费,日常消费,服装鞋类,Consumer Non-Durables,Apparel/Footwear,BURBERRY,0.04540778149048631
 JDW,WETHERSPOON ( J.D.),1019.18,10.191799999999999,813.0,-0.61,1.22,0.0085,0.08,uk,消费,可选消费,餐厅,Consumer Services,Restaurants,WETHERSPOON(J.D.),0.0014904180113051084
 LDG,LOGISTICS DEVELOPMENT,63.44,0.6344,11.925,-0.63,0.63,0.0003,0.05,uk,制造业,运输,物流,Transportation,Air Freight/Couriers,LOGISTICS DEVELOPMENT,4.037701151129726e-05
 EPWN,EPWIN,114.2,1.1420000000000001,79.0,-0.63,0.63,0.0005,0.05,uk,制造业,建筑业,建筑材料,Non-Energy Minerals,Construction Materials,EPWIN,5.696381576047237e-05
@@ -712,11 +714,11 @@ IPF,国际个人金融,268.98,2.6898,120.0,-0.83,2.07,0.003,0.11,uk,金融,资�
 JDG,JUDGES SCIENTIFIC,621.81,6.2181,9400.0,-0.84,1.05,0.0019,0.03,uk,科技,电子,仪器设备,Electronic Technology,Electronic Equipment/Instruments,JUDGES SCIENTIFIC,0.00030013442765991635
 BEZ,BEAZLEY,3554.18,35.541799999999995,528.5,-0.84,2.16,0.0258,0.07,uk,金融,保险,专业保险,Finance,Specialty Insurance,BEAZLEY (UK),0.008157901529797767
 OCN,OCEAN WILSONS (HOLDINGS) LD,411.98,4.119800000000001,1165.0,-0.85,0.85,0.0003,0.01,uk,制造业,运输,海运,Transportation,Marine Shipping,OCEAN WILSONS HLDGS,3.7868731614907746e-05
-CRH,CRH公司,36956.11,369.5611,5326.0,-0.86,0.74,0.1315,0.04,uk,制造业,建筑业,建筑材料,Non-Energy Minerals,Construction Materials,CRH,0.00644443891593483
+CRH,CRH公司,36956.11,369.5611,5326.0,-0.86,0.74,0.1353,0.04,uk,制造业,建筑业,建筑材料,Non-Energy Minerals,Construction Materials,CRH,0.006630666048106329
 GMR,GAMING REALMS,101.46,1.0146,34.55,-0.86,0.86,0.0001,0.01,uk,科技,IT技术,软件开发,Technology Services,Packaged Software,GAMING REALMS,1.9929496238216536e-05
 PPH,PPHE HOTEL,478.06,4.7806,1130.0,-0.88,1.32,0.0009,0.02,uk,消费,可选消费,酒店,Consumer Services,Hotels/Resorts/Cruise lines,PPHE HOTEL,0.000221813851655709
 SSIT,SERAPHIM SPACE INVESTMENT TRUST,79.46,0.7946,33.5,-0.89,6.8,0.0002,0.02,uk,金融,资产管理,投资信托,Miscellaneous,Investment Trusts/Mutual Funds,SERAPHIME INVESTMENT TRUST,0.0009467819956121776
-RBG,REVOLUTION BARS,12.77,0.1277,5.55,-0.89,0.89,0.0012,0.94,uk,消费,可选消费,餐厅,Consumer Services,Restaurants,REVOLUTION BARS,0.00038422303208870013
+RBG,REVOLUTION BARS,12.77,0.1277,5.55,-0.89,0.89,0.0018,1.38,uk,消费,可选消费,餐厅,Consumer Services,Restaurants,REVOLUTION BARS,0.0005763345481330502
 TGA,THUNGELA RESOURCES LIMITED,876.48,8.764800000000001,643.0,-0.89,1.94,0.0019,0.02,uk,公用事业,电力,新能源发电,Utilities,Alternative Power Generation,THUNGELA RESOURCES(DI),0.0007159286726704114
 HIK,HIKMA PHARMACEUTICALS,3919.75,39.1975,1773.0,-0.89,3.38,0.020499999999999997,0.05,uk,医药,制药,仿制药,Health Technology,Pharmaceuticals: Generic,HIKMA PHARMACEUTICALS,0.01229684871489273
 VLX,豪利士集团,585.93,5.859299999999999,323.0,-0.92,1.84,0.0032,0.05,uk,制造业,机械,电力设备,Producer Manufacturing,Electrical Products,VOLEX,0.0012463159088362673
@@ -730,12 +732,12 @@ SBID,印度国家银行,20.18,0.2018,77.2,-1.03,0.77,0.0001,0.03,uk,金融,银�
 SGRO,思格卢公司,10869.21,108.6921,885.4,-1.03,1.3,0.061799999999999994,0.06,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,SEGRO,0.007187137795716592
 STVG,苏格兰电视台,88.77,0.8876999999999999,190.0,-1.04,0.0,0.0001,0.01,uk,消费,可选消费,广播,Consumer Services,Broadcasting,STV,2.8308434193342488e-05
 WKP,WORKSPACE,1089.04,10.8904,567.5,-1.05,2.09,0.0042,0.04,uk,金融,房地产,房地产投资信托,Finance,Real Estate Investment Trusts,WORKSPACE,0.0016717045103027389
-IAG,国际航空集团,7754.26,77.54260000000001,157.75,-1.07,1.47,0.1265,0.16,uk,制造业,运输,航空公司,Transportation,Airlines,INTERNATIONAL CONSOLIDATED AIRLINE,0.018973491948111126
+IAG,国际航空集团,7754.26,77.54260000000001,157.75,-1.07,1.47,0.1283,0.17,uk,制造业,运输,航空公司,Transportation,Airlines,INTERNATIONAL CONSOLIDATED AIRLINE,0.019243470489665272
 SHOE,SHOE ZONE,104.01,1.0401,225.0,-1.1,1.1,0.0006,0.05,uk,消费,日常消费,服装鞋类,Consumer Non-Durables,Apparel/Footwear,SHOE ZONE,0.00017758534473422756
 ITRK,天祥集团,6759.14,67.59140000000001,4188.0,-1.11,1.25,0.0296,0.04,uk,消费,商业服务,综合商业,Commercial Services,Miscellaneous Commercial Services,INTERTEK,0.003524472378409582
 BME,B&M EUROPEAN VALUE RETAIL S.A.,5711.9,57.119,569.6,-1.11,2.19,0.0355,0.06,uk,消费,零售,折扣店,Retail Trade,Discount Stores,B & M EUROPEAN VALUE RETAIL SA,0.010410304442428915
 RBW,RAINBOW RARE EARTHS LIMITED,83.52,0.8351999999999999,13.25,-1.12,1.12,0.0004,0.04,uk,资源,矿产,其他金属,Non-Energy Minerals,Other Metals/Minerals,RAINBOW RARE EARTHS,0.00012991261408518002
-HLMA,英国豪迈,8693.88,86.93879999999999,2290.0,-1.12,1.25,0.0431,0.05,uk,科技,电子,仪器设备,Electronic Technology,Electronic Equipment/Instruments,HALMA,0.004899083624874599
+HLMA,英国豪迈,8693.88,86.93879999999999,2290.0,-1.12,1.25,0.0437,0.05,uk,科技,电子,仪器设备,Electronic Technology,Electronic Equipment/Instruments,HALMA,0.004967284324988864
 I3E,I3 ENERGY,123.85,1.2385,10.3,-1.15,3.84,0.0016,0.13,uk,资源,能源,油气生产,Energy Minerals,Oil & Gas Production,I3 ENERGY,0.002996494337176299
 LOK,LOK'N STORE,278.95,2.7895,848.0,-1.17,1.17,0.0006,0.02,uk,制造业,运输,其他交通,Transportation,Other Transportation,LOK'N STORE,0.00014406493552796595
 AEP,英东种植园,265.09,2.6508999999999996,670.0,-1.18,0.29,0.0002,0.01,uk,制造业,化工,农产品,Process Industries,Agricultural Commodities/Milling,ANGLO-EASTERN PLANTATIONS,4.9472599862513215e-05
@@ -753,14 +755,14 @@ PRU,英国保诚,23735.35,237.3535,862.0,-1.35,1.46,0.2173,0.09,uk,金融,保险
 AML,阿斯顿马丁,1795.59,17.9559,218.0,-1.36,3.98,0.0126,0.07,uk,制造业,汽车,汽车整车,Consumer Durables,Motor Vehicles,ASTON MARTIN LAGONDA GBL HLDGS,0.01137580183723554
 SNG,SYNAIRGEN,13.3,0.133,6.605,-1.42,1.42,0.0005,0.33,uk,医药,制药,主要制药,Health Technology,Pharmaceuticals: Major,SYNAIRGEN,0.0003386642644048032
 BAKK,BAKKAVOR,473.97,4.7397,81.8,-1.45,4.1,0.0003,0.01,uk,消费,食品饮料,零食,Consumer Non-Durables,Food: Specialty/Candy,BAKKAVOR,0.00040539829272371805
-DCC,DCC公司,5616.45,56.1645,5682.0,-1.46,1.84,0.0654,0.12,uk,公用事业,燃气,燃气,Utilities,Gas Distributors,DCC,0.014768288602969996
+DCC,DCC公司,5616.45,56.1645,5682.0,-1.46,1.84,0.06570000000000001,0.12,uk,公用事业,燃气,燃气,Utilities,Gas Distributors,DCC,0.014836033046102889
 JHD,JAMES HALSTEAD,420.91,4.2091,202.0,-1.46,2.44,0.0012,0.03,uk,制造业,建筑业,建筑产品,Producer Manufacturing,Building Products,JAMES HALSTEAD,0.000790312090442119
 FSTA,FULLER SMITH & TURNER,252.18,2.5218000000000003,670.0,-1.47,1.76,0.0006,0.02,uk,消费,可选消费,餐厅,Consumer Services,Restaurants,FULLER SMITH & TURNER 'A'ORD GBP0.40,0.00028266787543434303
 RSW,雷尼绍,2629.12,26.2912,3612.0,-1.47,2.95,0.0264,0.1,uk,制造业,机械,机械加工设备,Producer Manufacturing,Industrial Machinery,RENISHAW,0.014161818096364843
 GDWN,GOODWIN,398.01,3.9800999999999997,5300.0,-1.49,1.86,0.001,0.03,uk,制造业,机械,机械加工设备,Producer Manufacturing,Industrial Machinery,GOODWIN,0.0004446352121407586
 TRR,TRIDENT ROYALTIES,94.67,0.9467,32.5,-1.52,3.94,0.0009,0.09,uk,资源,矿产,贵金属,Non-Energy Minerals,Precious Metals,TRIDENT ROYALTIES,0.0018950671838423962
 NCYT,NOVACYT S.A. EUR1/15TH (CDI),43.45,0.43450000000000005,61.6,-1.52,0.0,0.0003,0.08,uk,医药,医疗,医疗器械,Health Technology,Medical Specialties,NOVACYT EUR0.0667 (CDI),0.00018688882296984114
-RTO,能多洁,10930.17,109.3017,433.3,-1.52,1.66,0.0966,0.09,uk,消费,商业服务,综合商业,Commercial Services,Miscellaneous Commercial Services,RENTOKIL INITIAL,0.016468698054175408
+RTO,能多洁,10930.17,109.3017,433.3,-1.52,1.66,0.09849999999999999,0.09,uk,消费,商业服务,综合商业,Commercial Services,Miscellaneous Commercial Services,RENTOKIL INITIAL,0.0167926165459242
 DUKE,DUKE ROYALTY LIMITED,134.65,1.3465,32.25,-1.53,1.53,0.0004,0.03,uk,金融,资产管理,投资信托,Miscellaneous,Investment Trusts/Mutual Funds,DUKE ROYALTY,0.00018489012864190816
 NIOX,NIOX,269.28,2.6927999999999996,64.0,-1.54,2.46,0.0005,0.02,uk,医药,健康服务,健康服务,Health Services,Medical/Nursing Services,NIOX,0.0003830443983663232
 PRV,PORVAIR,287.43,2.8743,620.0,-1.59,1.59,0.0003,0.01,uk,制造业,机械,机械加工设备,Producer Manufacturing,Industrial Machinery,PORVAIR,0.00011587835373329631
@@ -770,7 +772,7 @@ MRK,MARKS ELECTRICAL,94.98,0.9498000000000001,90.5,-1.63,3.8,0.0001,0.01,uk,消�
 YOU,舆观,1393.33,13.9333,1190.0,-1.65,1.65,0.0102,0.07,uk,消费,商业服务,综合商业,Commercial Services,Miscellaneous Commercial Services,YOUGOV,0.0026528519760002957
 IQE,IQE,226.92,2.2691999999999997,23.6,-1.67,2.92,0.0027,0.12,uk,制造业,机械,机械加工设备,Producer Manufacturing,Industrial Machinery,IQE,0.002812873643166283
 RBD,REABOLD RESOURCES,11.96,0.11960000000000001,0.116,-1.69,0.85,0.0001,0.06,uk,资源,能源,油气生产,Energy Minerals,Oil & Gas Production,REABOLD RESOURCES,8.981650460023872e-05
-JET,JUST EAT TAKEAWAY.COM N.V.,2639.59,26.3959,1200.0,-1.72,1.06,0.009399999999999999,0.04,uk,科技,IT技术,互联网,Technology Services,Internet Software/Services,JUST EAT TAKEAWAY.COMORD EUR0.04 (CDI),0.0022400400949120188
+JET,JUST EAT TAKEAWAY.COM N.V.,2639.59,26.3959,1200.0,-1.72,1.06,0.011899999999999999,0.04,uk,科技,IT技术,互联网,Technology Services,Internet Software/Services,JUST EAT TAKEAWAY.COMORD EUR0.04 (CDI),0.002835795439303513
 SAGA,SAGA,190.86,1.9086,134.6,-1.75,4.96,0.0040999999999999995,0.22,uk,消费,可选消费,其他消费者服务,Consumer Services,Other Consumer Services,SAGA,0.0096263073712815
 FUTR,FUTURE,864.26,8.6426,745.5,-1.78,1.58,0.0203,0.23,uk,消费,可选消费,出版：书籍/杂志,Consumer Services,Publishing: Books/Magazines,FUTURE,0.0067304218664356735
 WRKS,THEWORKS.CO.UK,17.19,0.17190000000000003,27.5,-1.79,1.79,0.0001,0.08,uk,消费,零售,专卖店,Retail Trade,Specialty Stores,THEWORKS.CO.UK,9.427255043800401e-05
@@ -796,7 +798,7 @@ CWR,CERES POWER,333.06,3.3306,172.6,-2.38,4.69,0.004,0.12,uk,科技,电子,电�
 IHC,INSPIRATION HEALTHCARE,27.29,0.2729,40.0,-2.44,2.44,0.0001,0.02,uk,医药,医疗,医疗器械,Health Technology,Medical Specialties,INSPIRATION HEALTHCARE,0.00014062223404143318
 IMM,IMMUPHARMA,5.32,0.053200000000000004,1.595,-2.45,11.01,0.0001,0.1,uk,医药,制药,其他制药,Health Technology,Pharmaceuticals: Other,IMMUPHARMA,0.0013599840816129413
 ULTP,ULTIMATE PRODUCTS,141.11,1.4111000000000002,158.0,-2.47,7.72,0.001,0.07,uk,消费,经销商,批发经销商,Distribution Services,Wholesale Distributors,ULTIMATE PRODUCTS,0.004739689499469996
-ENT,ENTAIN,6260.09,62.6009,980.0,-2.49,2.69,0.0677,0.11,uk,消费,可选消费,博彩,Consumer Services,Casinos/Gaming,ENTAIN,0.026504414167029478
+ENT,ENTAIN,6260.09,62.6009,980.0,-2.49,2.69,0.0682,0.11,uk,消费,可选消费,博彩,Consumer Services,Casinos/Gaming,ENTAIN,0.026700163163831767
 HUM,HUMMINGBIRD RESOURCES,62.45,0.6245,9.75,-2.5,2.5,0.0004,0.07,uk,资源,矿产,贵金属,Non-Energy Minerals,Precious Metals,HUMMINGBIRD RESOURCES,0.0004874250688322602
 AJB,AJ BELL,1303.66,13.0366,316.2,-2.53,2.84,0.0086,0.07,uk,金融,资产管理,投资经理,Finance,Investment Managers,AJ BELL,0.005160033026401236
 TRB,TRIBAL,113.54,1.1354,53.5,-2.55,3.64,0.0017000000000000001,0.15,uk,科技,IT技术,软件开发,Technology Services,Packaged Software,TRIBAL,0.003028143203088083
@@ -828,8 +830,8 @@ REC,RECORD,137.35,1.3735,69.0,-3.63,3.63,0.0013,0.09,uk,金融,资产管理,金�
 TRX,TISSUE REGENIX,37.05,0.3705,52.5,-3.67,3.67,0.0011,0.29,uk,医药,医疗,医疗器械,Health Technology,Medical Specialties,TISSUE REGENIX,0.002651126856082732
 COA,COATS,1214.34,12.1434,76.0,-3.68,3.3,0.0036,0.03,uk,制造业,化工,纺织品,Process Industries,Textiles,COATS,0.0032035445185470395
 EEE,EMPIRE METALS LD,50.47,0.5047,8.85,-3.8,3.8,0.0019,0.37,uk,资源,矿产,贵金属,Non-Energy Minerals,Precious Metals,EMPIRE METALS(DI),0.004494014222662528
-DFS,DFS FURNITURE,266.92,2.6692,114.0,-3.88,4.72,0.0013,0.05,uk,消费,可选消费,家居摆设,Consumer Durables,Home Furnishings,DFS FURNITURE,0.00255989439060768
-COD,COMPAGNIE DE SAINT-GOBAIN COMPA,350.33,3.5033,66.1,-3.92,3.92,0.0015,0.04,uk,制造业,建筑业,建筑产品,Producer Manufacturing,Building Products,COMPAGNIE DE ST-GOBAIN EUR4,0.002085733116015038
+DFS,DFS FURNITURE,266.92,2.6692,114.0,-3.88,4.72,0.0012,0.04,uk,消费,可选消费,家居摆设,Consumer Durables,Home Furnishings,DFS FURNITURE,0.002362979437484012
+COD,COMPAGNIE DE SAINT-GOBAIN COMPA,350.33,3.5033,66.1,-3.92,3.92,0.0016,0.04,uk,制造业,建筑业,建筑产品,Producer Manufacturing,Building Products,COMPAGNIE DE ST-GOBAIN EUR4,0.0022247819904160403
 NXR,NORCROS,162.92,1.6292,182.5,-3.95,0.26,0.0003,0.02,uk,制造业,建筑业,建筑产品,Producer Manufacturing,Building Products,NORCROS,0.0005370919285663254
 HWG,HARWORTH,388.9,3.889,120.0,-4.0,7.2,0.0009,0.02,uk,金融,房地产,房地产开发,Finance,Real Estate Development,HARWORTH,0.002820915686015498
 GST,GOLDEN SAINT TECHNOLOGIES LIMIT,22.26,0.22260000000000002,1.2,-4.0,0.0,0.0007000000000000001,0.31,uk,制造业,建筑业,建筑工程,Industrial Services,Engineering & Construction,GSTECHNOLOGIES,0.0020893044965451047

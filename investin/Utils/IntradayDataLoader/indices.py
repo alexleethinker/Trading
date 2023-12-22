@@ -84,4 +84,4 @@ def indices_intraday_forex():
 if __name__ == '__main__':
     
     
-    indices_intraday_forex()
+    indices_intraday_china()
