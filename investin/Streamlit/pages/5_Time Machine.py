@@ -89,8 +89,8 @@ else:
         df['总市值'] = df['成交额'] / df['换手率'] * 100
         df['异动值'] = df['成交额'] * np.maximum(df['涨跌幅'].abs(), df['振幅']) * np.log10( (math.e - 1) * df['涨跌幅'].abs() + 1) / (np.log(df['总市值'] + 1) + 1) 
 
-
-
+        df = df[df['成交额']!=0]
+        # df = df[df['二级行业']=='半导体']
         fig = treemap(      df, 
                             path=[px.Constant(st.session_state['date'].strftime('%Y-%m-%d')),'一级行业','二级行业','三级行业','证券名称'], 
                             values= '成交额' if traded_value_on else '总市值' , 
