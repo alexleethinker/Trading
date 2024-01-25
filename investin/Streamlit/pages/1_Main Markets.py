@@ -115,7 +115,7 @@ def plot_fig(market):
     df['证券代码'] = df['证券代码'].astype(str)
     df = df[df['证券代码'].str[:1] != '8']
     df = df[~df['证券名称'].str.contains(' Pfd')]
-    df = df[df['成交额'] > df['成交额'].quantile(.75) ]
+    df = df[df['成交额'] > df['成交额'].quantile(.5) ]
     
     def plot_fig(plate= True):
         update_at(data_path, timezone, language=language)

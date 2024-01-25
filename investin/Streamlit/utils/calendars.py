@@ -15,10 +15,13 @@ def get_trading_calendars(language = '中文'):
     today_calendars = pd.DataFrame()
     for exchange in exchanges:
         cal = xcals.get_calendar(exchange)
-        df = cal.schedule.loc[today:today]
-        df['exchange'] = exchange
-        df['is_open'] = cal.is_trading_minute(now)
-        today_calendars = pd.concat([today_calendars, df], ignore_index=True)
+        try:
+            df = cal.schedule.loc[today:today]
+            df['exchange'] = exchange
+            df['is_open'] = cal.is_trading_minute(now)
+            today_calendars = pd.concat([today_calendars, df], ignore_index=True)
+        except:
+            pass
     continuous = today_calendars[today_calendars['break_start'].isnull()][['open','close','exchange','is_open']]
     morning = today_calendars[~today_calendars['break_start'].isnull()][['open','break_start','exchange','is_open']].rename(columns={"break_start": "close"})
     afternoon = today_calendars[~today_calendars['break_start'].isnull()][['break_end','close','exchange','is_open']].rename(columns={"break_end": "open"})
