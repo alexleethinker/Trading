@@ -42,7 +42,7 @@ class StockSpotEuronext():
         df = pd.DataFrame(json.loads(r)['aaData'])
 
         def extract_code(string):
-            string = string.replace("<a href='/en/product/equities/",'').split('/')[0]
+            string = string.replace("<a href='/en/product/equities/",'').split('/')[0].split("' ")[0]
             return string
 
         df['code'] = df[1].apply(extract_code)

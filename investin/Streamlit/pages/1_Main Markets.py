@@ -31,6 +31,7 @@ def load_df(exchange):
 
 def plot_plate(exchange):
     df = load_df(exchange).fillna('')
+    df = df.dropna(subset = ['成交额'])
     
     if language == '中文':
         path_list = ['一级行业','二级行业','三级行业','证券名称']
