@@ -6,10 +6,10 @@ except:
     data_dir = 'investin/data'
     
     
-query = '所属概念 公司亮点 所属同花顺行业 所属指数类'
-# query = '行业 概念 市值'
+# query = '所属概念 公司亮点 所属同花顺行业 所属指数类'
+query = '行业 概念 市值'
 loop = True
-query_type = 'stock'
+query_type = 'hkstock'
 
 '''
 stock	股票
@@ -47,13 +47,13 @@ def clean_index(cell):
 def clean_concepts(cell):
     cell = str(cell)
     cell = ','.join(set(cell.split(';')).difference(exclude_concepts_list))
-    cell = cell.replace('概念股','').replace('概念','')
+    cell = cell.replace('概念股','').replace('概念','').replace('[US]','').replace('[HK]','')
     return cell
     
-r['所属概念'] = r['所属概念'].apply(clean_concepts)
-r['沪深指数'] = r['所属指数类'].apply(clean_index)
+# r['所属概念'] = r['所属概念'].apply(clean_concepts)
+# r['沪深指数'] = r['所属指数类'].apply(clean_index)
 
 
 
-r = r[['股票代码','股票简称','所属同花顺行业','沪深指数','公司亮点','所属概念']]
-r.to_csv('a_stock_details.csv', index = False)
+# r = r[['股票代码','股票简称','所属同花顺行业','沪深指数','公司亮点','所属概念']]
+r.to_csv('hk_stock_details.csv', index = False)
