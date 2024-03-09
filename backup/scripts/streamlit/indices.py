@@ -39,7 +39,7 @@ def index_chart(df):
     line_color = 'red' if (df.dropna().chg.tail(1).values[0] > 0) else 'green'
     
     # df = df.fillna(0)
-    fig = px.line(df, x=df.index, y='chg', height=90, width=200)
+    fig = px.line(df, x=df.index, y='chg', height=45, width=200)
 
     # hide and lock down axes
     fig.update_xaxes(visible=False, fixedrange=True)
@@ -73,13 +73,32 @@ def plot_row(secid, order):
     df, index_name, last_ticker, last_chg = get_index(secid=secid, order=order)
     if df.columns.tolist() != []:
         fig = index_chart(df)
-        col = st.columns([1,1])
+        col = st.columns([2,3])
         with col[0]:
-            st.metric(label=index_name, value=last_ticker, delta=last_chg, delta_color="inverse")
+            # st.metric(label=index_name, value=last_ticker, delta=last_chg, delta_color="inverse")
+            red = 'rgb(220,0,0)'
+            green = 'rgb(0,100,0)'
+            font_color = red if float(last_chg.replace('%','')) > 0 else green
+            htmlstr = f"""<p 
+                    <span style='font-size: 12px; 
+                            margin-top: 0;'>{index_name}</style>
+                    </span>
+                    <span style='font-size: 14px; 
+                          color:  {font_color};
+                          margin-top: 0;'>&nbsp&nbsp{last_ticker}</style>
+                    </span>
+                    <br>
+                    <span style='font-size: 16px; 
+                          background-color:  {font_color};
+                          margin-top: 0;'>{last_chg}</style>
+                    </span>
+                </p>"""
+            st.markdown( htmlstr, unsafe_allow_html=True)
         with col[1]:
             st.plotly_chart(fig, use_container_width=False)
     else:
         pass
+
 
 
 
@@ -91,42 +110,42 @@ indices = pd.read_csv(data_path,encoding = 'utf-8')
 
 
 
-col = st.columns([3,1,4])
+# col = st.columns([2,2,4])
 
-with col[0]:
-    indices_df = indices[indices['region'].isin(['外汇'])]
+# with col[1]:
+#     indices_df = indices[indices['region'].isin(['外汇'])]
+#     for i, row in indices_df.iterrows():
+#         # st.write(type(indices_df.iloc[i]))
+#         # plot_row(row['indices'], row['order'])
+
+# with col[0]:
+
+
+tabs= st.tabs(["中国", "美国",'亚太','欧洲'])
+
+# 100.UDI, 100.BDI, 100.CRB  133.USDCNH
+with tabs[0]:
+    indices_df = indices[indices['region'].isin(['中国'])]
     for i, row in indices_df.iterrows():
         # st.write(type(indices_df.iloc[i]))
         plot_row(row['indices'], row['order'])
 
-with col[2]:
-
-
-    tabs= st.tabs(["中国", "美国",'亚太','欧洲'])
-
-    # 100.UDI, 100.BDI, 100.CRB  133.USDCNH
-    with tabs[0]:
-        indices_df = indices[indices['region'].isin(['中国','香港'])]
-        for i, row in indices_df.iterrows():
-            # st.write(type(indices_df.iloc[i]))
-            plot_row(row['indices'], row['order'])
-
-    with tabs[1]:
-        indices_df = indices[indices['region'].isin(['美国'])]
-        for i, row in indices_df.iterrows():
-            # st.write(type(indices_df.iloc[i]))
-            plot_row(row['indices'], row['order'])
-            
-    with tabs[2]:
-        indices_df = indices[indices['region'].isin(['亚太','印度'])]
-        for i, row in indices_df.iterrows():
-            # st.write(type(indices_df.iloc[i]))
-            plot_row(row['indices'], row['order'])
-    with tabs[3]:
-        indices_df = indices[indices['region'].isin(['欧洲'])]
-        for i, row in indices_df.iterrows():
-            # st.write(type(indices_df.iloc[i]))
-            plot_row(row['indices'], row['order'])
+with tabs[1]:
+    indices_df = indices[indices['region'].isin(['美国'])]
+    for i, row in indices_df.iterrows():
+        # st.write(type(indices_df.iloc[i]))
+        plot_row(row['indices'], row['order'])
+        
+with tabs[2]:
+    indices_df = indices[indices['region'].isin(['亚太','印度','香港'])]
+    for i, row in indices_df.iterrows():
+        # st.write(type(indices_df.iloc[i]))
+        plot_row(row['indices'], row['order'])
+with tabs[3]:
+    indices_df = indices[indices['region'].isin(['欧洲'])]
+    for i, row in indices_df.iterrows():
+        # st.write(type(indices_df.iloc[i]))
+        plot_row(row['indices'], row['order'])
         
 
 
