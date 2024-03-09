@@ -37,7 +37,8 @@ class StockSpotHK():
 
 class StockSpotHKEX():
     def __init__(self) -> None:
-        pass
+        self.read_dir = data_dir +'/static/EM/HK/hk_details.csv'
+        # self.write_dir = data_dir + '/spot/stock_spot_uk.csv'
 
     def get_industry_df(self):
         r = requests.get('https://static03.hket.com/data-lake/p/industry/industry-data.json', timeout=10)
@@ -66,7 +67,7 @@ class StockSpotHKEX():
         hkex_df['涨跌幅'] = pd.to_numeric(hkex_df['pc'], errors="coerce")
         return hkex_df
 
-    def clean(self, df):
+    def clean(self, df):       
         df = df[~df['一级行业'].isnull()]
         df['总市值'] = (df['总市值']/100000000).round(1).fillna(0) 
         df['最新价'] = df['ls']
@@ -81,6 +82,8 @@ class StockSpotHKEX():
         return df
 
     def update(self, df):
+        stock_concepts = pd.read_csv(self.read_dir).drop(['证券名称','港股@总市值'], axis=1)
+        df = df.merge(stock_concepts,how='left',left_on=['ric'], right_on = ['股票代码'])
         df['异动值'] = df['成交额'] * df['涨跌幅'].abs() * np.log10( (math.e - 1) * df['涨跌幅'].abs() + 1) / (np.log(df['总市值'] + 1) + 1)
         df.to_csv( data_dir + '/spot/stock_spot_hk.csv', index = False, encoding = 'utf-8')
 
@@ -98,4 +101,5 @@ class StockSpotHKEX():
                 break
             except Exception as e:
                 attempts += 1
+                print(e)
                 print('errors occur, retrying {attempts} times'.format(attempts=attempts))          

@@ -53,7 +53,7 @@ def show_dataframe(df, market = None, language = '中文', source = None):
     
     df_stop = df[(df['涨跌幅'].abs() > 7.98)][['证券代码',symbol_name,'涨跌幅','异动值', market_value,'成交额', industry]]
     df = df[(df['涨跌幅'].abs() > 0.5) & (df['异动值'] > 1) ].sort_values('异动值', ascending= False)\
-        [['证券代码',symbol_name,'涨跌幅','异动值', market_value,'成交额', industry]].head(100)
+        [['证券代码',symbol_name,'最新价','涨跌幅','异动值', market_value,'成交额', industry]].head(100)
         
         
     def markdown_fill(compare, values):

@@ -109,11 +109,16 @@ def plot_fig(market):
         values = '成交额' if traded_value_on else '流通市值' 
         custom_data=['涨跌幅','流通市值','所属同花顺行业','投资逻辑','最新价','证券代码','主营产品','成交额','所属概念']
         hovertemplate= "%{customdata[5]}<br>%{label}<br>%{customdata[4]:.2f}  (%{customdata[0]:.2f}%)<br>流通市值=%{customdata[1]:d}亿<br>成交额=%{customdata[7]:.2f}亿<br>%{customdata[2]}<br>主营产品：%{customdata[6]}<br>%{customdata[3]}<br><br>%{customdata[8]}"
-    else:
+    elif market in ['🇺🇸 美股','🇭🇰 港股']:
         values = '成交额' if traded_value_on else '总市值'
         custom_data=['涨跌幅','证券代码','总市值','最新价','成交额','所属概念']
         hovertemplate= "%{customdata[1]}<br>%{label}<br>%{customdata[3]:.2f}  (%{customdata[0]:.2f}%)<br>总市值=%{customdata[2]:d}亿<br>成交额=%{customdata[4]:.2f}亿<br>%{customdata[5]}"
-    
+    else:
+        values = '成交额' if traded_value_on else '总市值'
+        custom_data=['涨跌幅','证券代码','总市值','最新价','成交额']
+        hovertemplate= "%{customdata[1]}<br>%{label}<br>%{customdata[3]:.2f}  (%{customdata[0]:.2f}%)<br>总市值=%{customdata[2]:d}亿<br>成交额=%{customdata[4]:.2f}亿<br>"
+         
+        
     data_path = '{data_dir}/spot/stock_spot_{file}.csv'.format(data_dir=data_dir,file=file)
     df = pd.read_csv(data_path,encoding = 'utf-8')
     df['证券代码'] = df['证券代码'].astype(str)
