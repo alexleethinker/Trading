@@ -9,8 +9,8 @@ from investin.Utils.DataLoader.TradingView import StockSpotTradingView
 
 # StockSpotChinaA().run()
 # StockSpotUS().run()
-StockSpotHKEX().run()
-# StockSpotTradingView().run()
+# StockSpotHKEX().run()
+StockSpotTradingView().run()
 # StockSpotEuronext().run()
 # StockSpotXetra().run()
 

@@ -207,4 +207,4 @@ main(translte_options(st.session_state.market))
 
 
 from streamlit_autorefresh import st_autorefresh
-# st_autorefresh(interval=1 * 60 * 1000, key="market_refresh")
+st_autorefresh(interval=1 * 60 * 1000, key="market_refresh")

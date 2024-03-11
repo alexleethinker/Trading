@@ -10,7 +10,7 @@ import math
 def remove_suffix(name):
     suffix = [',',' PLC',' ORD',' HOLDINGS',' GROUP', ' plc',' inc',' Inc', ' INC',' Ltd',' Holdings',' Corp','ON NM']
     for i in suffix:
-        name = name.split(i)[0]
+        name = str(name).split(i)[0]
     return name
 
 
@@ -175,13 +175,12 @@ class StockSpotTradingView():
         us_df = pd.read_excel(open(self.us_dir, 'rb'),sheet_name='us_stocks_industry').rename(columns={"证券名称": "名称翻译"})
         us_df = us_df[["证券代码","名称翻译"]]
         us_df['证券代码'] = us_df['证券代码'].str.replace('_','.')
-        us_df['market'] = 'america'   
-
+        us_df['market'] = 'america' 
+          
         a_df = pd.read_excel(open(self.a_dir, 'rb'),sheet_name='a_stocks_info')
         a_df = a_df[["证券代码","股票简称"]].rename(columns={"股票简称": "名称翻译"})
         a_df["证券代码"] = a_df["证券代码"].str[:6]
         a_df['market'] = 'china'  
-
 
         other_df = pd.read_csv(self.translate_name_dir)
         other_df.loc[other_df['market'].isin(['korea']), '证券代码'] = other_df[other_df['market'].isin(['korea'])]['证券代码'].apply(format_korea_code)   
@@ -194,10 +193,10 @@ class StockSpotTradingView():
         df['description'] = df['description'].str.replace(', S.A.','').str.replace(' S.A.','').str.replace(' LTD','').str.replace(' PLC','')\
                             .str.replace(' A/S','').str.replace(' OYJ','').str.replace(' AG NA','').str.replace(' SE NA','')\
                             .str.replace(' O.N.','').str.replace(' O N','').str.replace(' N.V.','')
-
+        
         df['en_name'] = df['description'].apply(remove_suffix)
         df.loc[~df['名称翻译'].isnull(), 'description'] = df[~df['名称翻译'].isnull()]['名称翻译']
-
+        
         dr_df = pd.read_csv(self.dr_name_dir)
         df = df.merge(dr_df, how = 'left', on=['logoid'])
         df.loc[~df['dr_name'].isnull() & df['名称翻译'].isnull(), 'description'] = df[~df['dr_name'].isnull() & df['名称翻译'].isnull()]['dr_name'] + '-X'
@@ -258,7 +257,9 @@ class StockSpotTradingView():
                 print('Start cleaning data')
                 df = self.add_isin(df)
                 df = self.correct_industry(df)
+                print('translate names')
                 df = self.translate_name(df)
+                print('translate industries')
                 df = self.translate_industry(df)
                 self.update(df, mode = 'all')
                 self.update(df, mode = 'primary')
