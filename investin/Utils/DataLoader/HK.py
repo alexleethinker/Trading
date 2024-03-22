@@ -52,7 +52,7 @@ class StockSpotHKEX():
         return df
 
     def _get_hkex_token(self):
-        url_o='https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/Market-Data/Securities-Prices/Equities?sc_lang=zh-HK'
+        url_o='https://www.hkex.com.hk/Market-Data/Securities-Prices/Equities?sc_lang=zh-HK'
         r = requests.get(url_o)
         token = etree.HTML(r.text).xpath('//*[contains(text(), "Base64-AES-Encrypted-Token")]')[0].text.split(';')[3].split()[1].replace('"','') # type: ignore
         return token

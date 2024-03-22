@@ -58,7 +58,7 @@ def start_cronjob():
     
     scheduler.add_job(StockSpotHKEX().run, 'cron', day_of_week='mon-fri',hour='0-8',minute='0/1')
     # scheduler.add_job(indices_intraday_hk, 'cron', day_of_week='mon-fri',hour='0-8',minute='0/1')
-    scheduler.add_job(StockSpotUS().run, 'cron', day_of_week='mon-fri',hour='14-22',minute='0/1')
+    scheduler.add_job(StockSpotUS().run, 'cron', day_of_week='mon-fri',hour='13-22',minute='0/1')
     # scheduler.add_job(indices_intraday_US, 'cron', day_of_week='mon-fri',hour='14-22',minute='0/1')    
     scheduler.add_job(StockSpotTradingView().run, 'cron', day_of_week='mon-fri',hour='0-22',minute='0/1')
     # scheduler.add_job(indices_intraday_apac, 'cron', day_of_week='mon-fri',hour='1-8',minute='0/1')
