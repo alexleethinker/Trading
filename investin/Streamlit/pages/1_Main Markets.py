@@ -128,7 +128,7 @@ def plot_fig(market):
     
     df = df[df['总市值'] > 2]
     
-    df = df[df['成交额'] > df['成交额'].quantile(.5) ]
+    df = df[df['成交额'] > df['成交额'].quantile(.3) ]
     
     
     def plot_fig(plate= True):
@@ -207,4 +207,4 @@ main(translte_options(st.session_state.market))
 
 
 from streamlit_autorefresh import st_autorefresh
-st_autorefresh(interval=1 * 60 * 1000, key="market_refresh")
+# st_autorefresh(interval=1 * 60 * 1000, key="market_refresh")
