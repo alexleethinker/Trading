@@ -90,7 +90,7 @@ class StockSpotTradingView():
     def fetch_global_prices(self):
         country = 'global'
         markets = '["america","argentina","australia","austria","bahrain","bangladesh","belgium","brazil","canada","chile","china","colombia","cyprus","czech","denmark","egypt","estonia","finland","france","germany","greece","hongkong","hungary","iceland","india","indonesia","israel","italy","japan","kenya","kuwait","latvia","lithuania","luxembourg","malaysia","mexico","morocco","netherlands","newzealand","nigeria","norway","pakistan","peru","philippines","poland","portugal","qatar","romania","russia","ksa","serbia","singapore","slovakia","rsa","korea","spain","srilanka","sweden","switzerland","taiwan","thailand","tunisia","turkey","uae","uk","venezuela","vietnam"]'
-        columns = '["name","description","logoid","type","close","currency","change","Value.Traded","market_cap_basic","fundamental_currency_code","sector","industry","market","is_primary","exchange","country"]'
+        columns = '["isin","name","description","logoid","type","close","currency","change","Value.Traded","market_cap_basic","fundamental_currency_code","sector","industry","market","is_primary","exchange","country"]'
         payload = '{"columns":'+ columns +',"filter":[{"left":"typespecs","operation":"has_none_of","right":["etn","etf"]}],"ignore_unknown_fields":false,"price_conversion":{"to_currency":"usd"},"range":[0,80000],"sort":{"sortBy":"market_cap_basic","sortOrder":"desc"},"markets":' + markets + '}'
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'}
         url = 'https://scanner.tradingview.com/' + country + '/scan'
@@ -104,7 +104,7 @@ class StockSpotTradingView():
 
 
     def add_isin(self,df):
-        isin_df = pd.read_csv(self.isin_dir)[['fullname','isin','is_primary_listing','primary_symbol','ticker_title']]\
+        isin_df = pd.read_csv(self.isin_dir)[['fullname','is_primary_listing','primary_symbol','ticker_title']]\
                                             .rename(columns={"fullname": "full_symbol"})
         df = df.merge(isin_df, how = 'left', on = 'full_symbol').rename(columns={"isin": "isin_tv"})
         df['ticker_title'] = df['ticker_title'].fillna('').apply(remove_suffix)
@@ -199,7 +199,7 @@ class StockSpotTradingView():
         
         dr_df = pd.read_csv(self.dr_name_dir)
         df = df.merge(dr_df, how = 'left', on=['logoid'])
-        df.loc[~df['dr_name'].isnull() & df['名称翻译'].isnull(), 'description'] = df[~df['dr_name'].isnull() & df['名称翻译'].isnull()]['dr_name'] + '-X'
+        df.loc[~df['dr_name'].isnull() & df['名称翻译'].isnull(), 'description'] = '(' + df[~df['dr_name'].isnull() & df['名称翻译'].isnull()]['dr_name'] + ')'
         df = df.rename(columns={"description": "证券名称",'change':'涨跌幅','close':'最新价'})
         df['证券名称'] = df['证券名称'].apply(remove_suffix)
         return df

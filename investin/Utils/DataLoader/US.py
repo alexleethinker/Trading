@@ -46,4 +46,5 @@ class StockSpotUS():
                 break
             except Exception as e:
                 attempts += 1
+                print(e)
                 print('errors occur, retrying {attempts} times'.format(attempts=attempts))

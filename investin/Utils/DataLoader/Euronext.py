@@ -77,7 +77,7 @@ class StockSpotEuronext():
         df['stock_name'] = df['stock_name'].str.replace('�','').str.replace(' SpA','').str.replace(' NV','')
         df['en_name'] = df['stock_name']
         df.loc[~df['名称翻译'].isnull(), 'stock_name'] = df[~df['名称翻译'].isnull()]['名称翻译']
-        df.loc[~df['dr_name'].isnull() & df['名称翻译'].isnull(), 'stock_name'] = df[~df['dr_name'].isnull() & df['名称翻译'].isnull()]['dr_name'] + ' SE'
+        df.loc[~df['dr_name'].isnull() & df['名称翻译'].isnull(), 'stock_name'] = '(' + df[~df['dr_name'].isnull() & df['名称翻译'].isnull()]['dr_name'] + ')'
         df = df.rename(columns={"stock_name": "证券名称",'symbol':'证券代码','change':'涨跌幅','last_price':'最新价'})
         return df
     
