@@ -12,6 +12,14 @@ em_fields = {
     'f14':'证券名称',
     'f20':'总市值',
     'f21':'流通市值',
+    'f9':'市盈率',
+    'f23':'市净率',
+    'f37':'ROE',
+    'f57':'资产负债率',
+    'f58':'净资产',
+    'f112':'EPS',
+    'f113':'每股净资产',
+    'f133':'股息率',
 }
 fields = [ i for i in em_fields]
 fields = ','.join(fields)
@@ -57,12 +65,17 @@ def fetch_spot_em(market):
     temp_df['流通市值'] = (pd.to_numeric(temp_df['流通市值'], errors="coerce")/100000000).round(2).fillna(0) 
     temp_df['总市值'] = (pd.to_numeric(temp_df['总市值'], errors="coerce")/100000000).round(2).fillna(0) 
     temp_df['成交额'] = (pd.to_numeric(temp_df['成交额'], errors="coerce")/100000000).round(2).fillna(0) 
+
+    temp_df['EPS'] = (pd.to_numeric(temp_df['EPS'], errors="coerce")).round(2).fillna(0) 
+    temp_df['每股净资产'] = (pd.to_numeric(temp_df['每股净资产'], errors="coerce")).round(2).fillna(0) 
+    temp_df['资产负债率'] = (pd.to_numeric(temp_df['资产负债率'], errors="coerce")).round(2).fillna(0) 
+
     temp_df['最新价'] = pd.to_numeric(temp_df['最新价'], errors="coerce")
     temp_df['涨跌幅'] = pd.to_numeric(temp_df['涨跌幅'], errors="coerce")
     temp_df['振幅'] = pd.to_numeric(temp_df['振幅'], errors="coerce")
     temp_df['换手率'] = pd.to_numeric(temp_df['换手率'], errors="coerce")
-    temp_df = temp_df[['证券代码','证券名称','流通市值','总市值','最新价', '涨跌幅','振幅','成交额','换手率']]
-    
+    temp_df = temp_df[['证券代码','证券名称','流通市值','总市值','最新价', '涨跌幅','振幅','成交额','换手率','市盈率','市净率','EPS','ROE','每股净资产','股息率','资产负债率']]
+
     temp_df = temp_df[temp_df['流通市值'] > 0]
     temp_df = temp_df[temp_df['总市值'] > 0]
     temp_df = temp_df[temp_df['成交额'] > 0]
@@ -71,5 +84,5 @@ def fetch_spot_em(market):
 
 
 if __name__ == '__main__':
-    df = fetch_spot_em(market='China')
+    df = fetch_spot_em(market='UK')
     print(df)
