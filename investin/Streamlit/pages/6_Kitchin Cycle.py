@@ -32,7 +32,7 @@ industry_level = st.radio(
         key="level",
         options=['二级行业','三级行业'],
         horizontal=True,
-        label_visibility='collapsed'
+        label_visibility='visible'
     )
 
 col = st.columns([1,1,1])
