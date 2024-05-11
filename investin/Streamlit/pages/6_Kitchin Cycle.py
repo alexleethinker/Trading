@@ -50,7 +50,7 @@ with col[2]:
         "三级行业",
         tuple(a_stock[a_stock['二级行业'].isin([level_2])]['三级行业'].unique()))
     else:
-        passhtop
+        pass
 
 
 industry_name = level_3 if industry_level == '三级行业' else level_2
