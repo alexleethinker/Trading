@@ -16,7 +16,7 @@ if language == '中文':
             Page("investin/Streamlit/pages/0_Global Markets.py", "全球市场", "🌎"),
             Page("investin/Streamlit/pages/2_Indutries.py", "行业对比", "⚙️"),
             Page("investin/Streamlit/pages/5_Time Machine.py", "历史切面", "🕙"),
-            # Page("investin/Streamlit/pages/6_ 📈_量化回测.py", "Backtest Engine", "📈"),
+            Page("investin/Streamlit/pages/6_Kitchin Cycle.py", "库存周期", "⚙️"),
         ]
     )    
 else:
@@ -27,6 +27,6 @@ else:
             Page("investin/Streamlit/pages/1_Main Markets.py", "Main Markets", "💴"),
             Page("investin/Streamlit/pages/2_Indutries.py", "Indutries", "⚙️"),
             Page("investin/Streamlit/pages/5_Time Machine.py", "Time Machine", "🕙"),
-            # Page("investin/Streamlit/pages/6_ 📈_量化回测.py", "Backtest Engine", "📈"),
+            Page("investin/Streamlit/pages/6_Kitchin Cycle.py", "itchin Cycle", "⚙️"),
         ]
     ) 
