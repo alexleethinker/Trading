@@ -39,10 +39,9 @@ level_2 = st.selectbox(
     tuple(a_stock[a_stock['一级行业'].isin([level_1])]['二级行业'].unique()))
 
 if industry_level == '三级行业':
-    level_3 = st.multiselect(
-        "三级行业",
-        list(a_stock[a_stock['二级行业'].isin([level_2])]['三级行业'].unique()),
-        list(a_stock[a_stock['二级行业'].isin([level_2])]['三级行业'].unique())[0])
+    level_3 = st.selectbox(
+    "三级行业",
+    tuple(a_stock[a_stock['二级行业'].isin([level_2])]['三级行业'].unique()))
 else:
     pass
 
