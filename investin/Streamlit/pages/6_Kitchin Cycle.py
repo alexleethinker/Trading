@@ -69,7 +69,7 @@ df = pd.concat([capex_df, inventory_df, income_df], axis=1).rename(columns={0: "
 
 
 
-historical_percentile = (inventory_df.tail(1)[0] - inventory_df.min()) / (inventory_df.max() - inventory_df.min())
+historical_percentile = (inventory_df.tail(1)[0] - inventory_df.tail(40).min()) / (inventory_df.tail(40).max() - inventory_df.tail(40).min())
 
 fig = px.line(df, color_discrete_sequence = ['red','yellow','lightgreen'], title = industry_name+'行业库存周期 - 历史分位值:'+ "{:.0%}".format(historical_percentile) ,
               labels={
