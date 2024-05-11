@@ -27,9 +27,13 @@ income = prepare_raw('营业收入')
 
 
 start_date = '2004-01-01'
-industry_level = st.selectbox(
-    "研究范围",
-    ('二级行业','三级行业'))
+industry_level = st.radio(
+        "研究范围",
+        key="level",
+        options=['二级行业','三级行业'],
+        horizontal=True,
+        label_visibility='collapsed'
+    )
 
 col = st.columns([1,1,1])
 with col[0]:
