@@ -27,6 +27,6 @@ else:
             Page("investin/Streamlit/pages/1_Main Markets.py", "Main Markets", "💴"),
             Page("investin/Streamlit/pages/2_Indutries.py", "Indutries", "⚙️"),
             Page("investin/Streamlit/pages/5_Time Machine.py", "Time Machine", "🕙"),
-            Page("investin/Streamlit/pages/6_Kitchin Cycle.py", "itchin Cycle", "⚙️"),
+            Page("investin/Streamlit/pages/6_Kitchin Cycle.py", "Kitchin Cycle", "⚙️"),
         ]
     ) 
