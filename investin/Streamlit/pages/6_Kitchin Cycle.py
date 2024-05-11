@@ -27,8 +27,26 @@ income = prepare_raw('营业收入')
 
 
 start_date = '2004-01-01'
-industry_level = '二级行业'
-industry_name = '汽车整车'
+industry_level = st.selectbox(
+    "研究范围",
+    ('二级行业','三级行业'))
+
+level_1 = st.selectbox(
+    "一级行业",
+    ('金融','科技','资源','化工','建筑业','电力设备','交通运输','汽车','机械','可选消费','必需消费','生物医药','公共事业'))
+level_2 = st.selectbox(
+    "二级行业",
+    tuple(a_stock[a_stock['一级行业'].isin([level_1])]['二级行业'].unique()))
+
+if industry_level == '三级行业':
+    level_3 = st.multiselect(
+        "三级行业",
+        list(a_stock[a_stock['二级行业'].isin([level_1])]['三级行业'].unique()),)
+else:
+    pass
+
+
+industry_name = level_3 if industry_level == '三级行业' else level_2
 
 def calculate_change(df):
     df = df[df[industry_level].isin([industry_name])].groupby([industry_level]).sum().T/100000000
