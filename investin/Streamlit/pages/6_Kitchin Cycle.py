@@ -46,7 +46,7 @@ with col[2]:
         "三级行业",
         tuple(a_stock[a_stock['二级行业'].isin([level_2])]['三级行业'].unique()))
     else:
-        pass
+        passhtop
 
 
 industry_name = level_3 if industry_level == '三级行业' else level_2
@@ -67,7 +67,7 @@ df = pd.concat([capex_df, inventory_df, income_df], axis=1).rename(columns={0: "
 
 historical_percentile = (inventory_df.tail(1)[0] - inventory_df.min()) / (inventory_df.max() - inventory_df.min())
 
-fig = px.line(df, color_discrete_sequence = ['red','grey','lightgreen'], title = industry_name+'行业库存周期 - 历史分位值:'+ "{:.0%}".format(historical_percentile) ,
+fig = px.line(df, color_discrete_sequence = ['red','yellow','lightgreen'], title = industry_name+'行业库存周期 - 历史分位值:'+ "{:.0%}".format(historical_percentile) ,
               labels={
                      "value": "同比增长率",
                      "index": "",
@@ -81,7 +81,7 @@ def fig_render(fig):
         'showlegend': True
         })
     fig.update_coloraxes(showscale=False)
-    fig.update_yaxes(zeroline = True, zerolinecolor = 'black', zerolinewidth = 0.5)
+    fig.update_yaxes(zeroline = True, zerolinecolor = 'white', zerolinewidth = 0.5)
     return fig
 
 fig =  fig_render(fig)
