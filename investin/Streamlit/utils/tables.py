@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-html_abnormal_mov = open('investin/Streamlit/utils/abnormal_mov.html', "r").read() 
+# html_abnormal_mov = open('investin/Streamlit/utils/abnormal_mov.html', "r").read() 
 
 def color_style(val):
     color = 'red' if val > 0 else 'green'

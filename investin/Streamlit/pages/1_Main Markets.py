@@ -185,7 +185,7 @@ with col[0]:
         key="market",
         options=options,
         horizontal=True,
-        label_visibility='collapsed'
+        # label_visibility='collapsed'
     )
 with col[1]:
     if language == '中文':
