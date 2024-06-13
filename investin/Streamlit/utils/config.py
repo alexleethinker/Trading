@@ -10,7 +10,7 @@ def get_args():
     args = parser.parse_args()
     return args
 
-data_dir = os.getenv('DATA_DIR') 
+data_dir = os.getenv('DATA_DIR') if os.getenv('DATA_DIR') != None else 'investin/data'
 
 
 # def page_config():

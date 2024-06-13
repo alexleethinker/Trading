@@ -16,7 +16,7 @@ def remove_suffix(name):
 
 def get_USD_forex_table():
     url = 'https://scanner.tradingview.com/forex/scan'
-    payload = '{"columns":["currency_logoid","base_currency_logoid","name","description","update_mode","type","typespecs","close","pricescale","minmov","fractional","minmove2","currency","change","change_abs","bid","ask","high","low","Recommend.All"],"ignore_unknown_fields":false,"options":{"lang":"en"},"range":[0,2000],"sort":{"sortBy":"name","sortOrder":"asc","nullsFirst":false},"preset":"forex_rates_all"}'
+    payload = '{"columns":["currency_logoid","base_currency_logoid","name","description","update_mode","type","typespecs","close","pricescale","minmov","fractional","minmove2","currency","change","change_abs","bid","ask","high","low","Recommend.All"],"ignore_unknown_fields":false,"options":{"lang":"en"},"range":[0,8000],"sort":{"sortBy":"name","sortOrder":"asc","nullsFirst":false},"preset":"forex_rates_all"}'
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'}
     r = requests.post(url, headers = headers, data = payload, timeout=10).text
     forex_df = pd.DataFrame(json.loads(r)['data'])['d']
@@ -254,20 +254,22 @@ class StockSpotTradingView():
                 print('Start fetching global stock prices')
                 df = self.fetch_global_prices()
                 df = self.clean(df)
+                print(len(df[df['market'] == 'taiwan']))
                 print('Start cleaning data')
-                df = self.add_isin(df)
-                df = self.correct_industry(df)
+                # df = self.add_isin(df)
+                df = self.correct_industry(df)                
                 print('translate names')
                 df = self.translate_name(df)
                 print('translate industries')
-                df = self.translate_industry(df)
+                df = self.translate_industry(df)         
                 self.update(df, mode = 'all')
                 self.update(df, mode = 'primary')
                 
                 break
             except Exception as e:
                 attempts += 1
-                print('errors occur, retrying {attempts} times'.format(attempts=attempts))          
+                print('errors occur, retrying {attempts} times'.format(attempts=attempts))   
+                print(e)       
 
 
     
