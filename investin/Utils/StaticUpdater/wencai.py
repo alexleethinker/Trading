@@ -6,10 +6,10 @@ except:
     data_dir = 'investin/data'
     
     
-# query = '所属概念 公司亮点 所属同花顺行业 所属指数类 机构持股占流通股比例 北向资金持股比例 最终控制人'
-query = '行业 概念 市值'
+query = '所属概念 公司亮点 所属同花顺行业 所属指数类 机构持股占流通股比例 北向资金持股比例 最终控制人'
+# query = '行业 概念 市值'
 loop = True
-query_type = 'hkstock'
+query_type = 'stock'
 
 '''
 stock	股票
@@ -27,7 +27,7 @@ foreign_exchange	外汇
 
 r = pywencai.get(query=query,loop = loop, log = True, query_type = query_type)
 # r = pd.read_csv('a_stock_details.csv', encoding="utf-8")
-r = pywencai.get(query='最终控制人',loop = False, log = True, query_type = 'stock')
+# r = pywencai.get(query='最终控制人',loop = False, log = True, query_type = 'stock')
 
 
 index_selected_list = ['上证50','沪深300','中证500','中证1000','中证2000']
@@ -50,10 +50,10 @@ def clean_concepts(cell):
     cell = cell.replace('概念股','').replace('概念','').replace('[US]','').replace('[HK]','')
     return cell
     
-# r['所属概念'] = r['所属概念'].apply(clean_concepts)
-# r['沪深指数'] = r['所属指数类'].apply(clean_index)
+r['所属概念'] = r['所属概念'].apply(clean_concepts)
+r['沪深指数'] = r['所属指数类'].apply(clean_index)
 
 
 
-# r = r[['股票代码','股票简称','所属同花顺行业','沪深指数','公司亮点','所属概念']]
-r.to_csv('hk_stock_details.csv', index = False)
+r = r[['股票代码','股票简称','所属同花顺行业','沪深指数','公司亮点','所属概念']]
+r.to_csv('a_stock_details.csv', index = False)
