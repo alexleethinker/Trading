@@ -112,15 +112,15 @@ def plot_fig(market):
         hovertemplate= "%{customdata[5]}<br>\
 %{label}  |  %{customdata[9]} <br>\
 %{customdata[4]:.2f}  (%{customdata[0]:.2f}%)       %{customdata[13]}/BPS<br>\
-流通市值=%{customdata[1]:d}亿<br>\
-成交额=%{customdata[7]:.2f}亿       换手=%{customdata[10]:.1f}<br>\
+流通市值= %{customdata[1]:d}亿<br>\
+成交额= %{customdata[7]:.2f}亿       换手= %{customdata[10]:.1f}<br>\
 主营产品：%{customdata[6]}<br>\
 %{customdata[3]}<br>\
 ----------------------------------------------------------------------<br>\
 财务指标：<br>\
-PE=%{customdata[11]}    PB=%{customdata[12]}<br>\
-毛利率=%{customdata[15]:.2f}%   ROE= %{customdata[14]:.2f}%  股息率=%{customdata[18]:.2f}%<br>\
-资产负债率=%{customdata[19]:.2f}%<br>\
+PE= %{customdata[11]}    PB= %{customdata[12]}<br>\
+毛利率= %{customdata[15]:.2f}%   ROE= %{customdata[14]:.2f}%  股息率= %{customdata[18]:.2f}%<br>\
+资产负债率= %{customdata[19]:.2f}%<br>\
 总营收同比= %{customdata[16]:.2f}%   净利润同比= %{customdata[17]:.2f}%"
     elif market in ['🇺🇸 美股','🇭🇰 港股']:
         values = '成交额' if traded_value_on else '总市值'
