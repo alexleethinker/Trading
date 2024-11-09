@@ -118,7 +118,7 @@ def plot_fig(market):
 主营产品：%{customdata[6]}<br>\
 %{customdata[3]}<br>\
 ----------------------------------------------------------------------<br>\
-%{customdata[25]}<br>\
+%{customdata[26]}<br>\
 最终控制人:     %{customdata[24]}  %{customdata[23]}<br>\
 机构持股= %{customdata[20]:.2f}%        %{customdata[22]}  %{customdata[21]}<br>\
 ----------------------------------------------------------------------<br>\
