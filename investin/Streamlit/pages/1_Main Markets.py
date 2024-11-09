@@ -118,8 +118,8 @@ def plot_fig(market):
 主营产品：%{customdata[6]}<br>\
 %{customdata[3]}<br>\
 ----------------------------------------------------------------------<br>\
-机构持股= %{customdata[20]:.2f}%        国家队: %{customdata[22]} - %{customdata[21]:.2f}%<br>\
-最终控制人: %{customdata[24]} - %{customdata[23]:.2f}%<br>\
+机构持股= %{customdata[20]:.2f}%        %{customdata[22]}  %{customdata[21]:.2f}%<br>\
+最终控制人: %{customdata[24]}  %{customdata[23]:.2f}%<br>\
 ----------------------------------------------------------------------<br>\
 财务指标：<br>\
 PE= %{customdata[11]}    PB= %{customdata[12]}<br>\
