@@ -114,6 +114,7 @@ def plot_fig(market):
 流通市值=%{customdata[1]:d}亿<br>\
 成交额=%{customdata[7]:.2f}亿  (换手=%{customdata[10]:.1f})<br>\
 主营产品：%{customdata[6]}<br>\
+----------------------------------------<br>\
 %{customdata[3]}<br>\
 财务指标：<br>\
         PE=%{customdata[11]}  PB=%{customdata[12]}<br>\

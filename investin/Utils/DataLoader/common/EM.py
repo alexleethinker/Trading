@@ -73,6 +73,7 @@ def fetch_spot_em(market):
     temp_df['EPS'] = (pd.to_numeric(temp_df['EPS'], errors="coerce")).round(2).fillna(0) 
     temp_df['每股净资产'] = (pd.to_numeric(temp_df['每股净资产'], errors="coerce")).round(2).fillna(0) 
     temp_df['资产负债率'] = (pd.to_numeric(temp_df['资产负债率'], errors="coerce")).round(2).fillna(0) 
+    temp_df['股息率'] = (pd.to_numeric(temp_df['股息率'], errors="coerce")).round(2).fillna(0) 
 
     temp_df['最新价'] = pd.to_numeric(temp_df['最新价'], errors="coerce")
     temp_df['涨跌幅'] = pd.to_numeric(temp_df['涨跌幅'], errors="coerce")
