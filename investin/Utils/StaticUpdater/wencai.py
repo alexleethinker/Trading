@@ -22,7 +22,7 @@ foreign_exchange	外汇
 '''
 
 def get_basic_info():
-    query = '所属概念 公司亮点 所属同花顺行业 所属指数类 机构持股比例 最终控制人'
+    query = '所属概念 公司亮点 所属同花顺行业 所属指数类 机构持股比例 企业性质'
     loop = True
     query_type = 'stock'
     df = pywencai.get(query=query,loop = loop, log = True, query_type = query_type)
@@ -50,7 +50,7 @@ def get_basic_info():
     df['所属概念'] = df['所属概念'].apply(clean_concepts)
     df['沪深指数'] = df['所属指数类'].apply(clean_index)
 
-    df = df[['股票代码','股票简称','所属同花顺行业','沪深指数','公司亮点','所属概念','机构持股占流通股比例','最终控制人持股比例','最终控制人类型','最终控制人']].rename(columns={"股票代码":"证券代码"})
+    df = df[['股票代码','股票简称','所属同花顺行业','沪深指数','公司亮点','所属概念','机构持股占流通股比例','最终控制人持股比例','企业性质','最终控制人类型','最终控制人']].rename(columns={"股票代码":"证券代码"})
   
     def remove_duplicates(x):
         try:
@@ -64,7 +64,8 @@ def get_basic_info():
 
     df['最终控制人类型'] = df['最终控制人类型'].apply(remove_duplicates)
     df['最终控制人'] = df['最终控制人'].apply(remove_duplicates)
-
+    df['机构持股占流通股比例'] = pd.to_numeric(df['机构持股占流通股比例'], errors="coerce").round(2)
+    df['最终控制人持股比例'] = pd.to_numeric(df['最终控制人持股比例'], errors="coerce").round(2)
 
     a_stock_info = pd.read_excel(open(data_dir + '/static/EM/China/a_stocks.xlsx', 'rb'),sheet_name='a_stocks_info')
     a_stock_info = a_stock_info[['证券代码','三级行业','二级行业','一级行业','主营产品','投资逻辑']]
@@ -118,19 +119,19 @@ replace
 国家集成电路产业投资基金二期股份有限公司 大基金二期
 ''' 
 
-# get_basic_info()
+get_basic_info()
 
 
-query = '国家队持股'
-loop = True
-query_type = 'stock'
-df = pywencai.get(query=query,loop = loop, log = True, query_type = query_type)
-df.columns = [x.split('[')[0] for x in df.columns.tolist()]
-df = df[['股票代码','股票简称','机构本期持股占流通股比例明细','持股机构名称明细']]#.rename(columns={"股票代码":"证券代码"})
-df.columns = ['股票代码','股票简称','国家队持股比例','国家队机构名称']
+# query = '国家队持股'
+# loop = True
+# query_type = 'stock'
+# df = pywencai.get(query=query,loop = loop, log = True, query_type = query_type)
+# df.columns = [x.split('[')[0] for x in df.columns.tolist()]
+# df = df[['股票代码','股票简称','机构本期持股占流通股比例明细','持股机构名称明细']]#.rename(columns={"股票代码":"证券代码"})
+# df.columns = ['股票代码','股票简称','国家队持股比例','国家队机构名称']
 
-# print(df)
+# # print(df)
 
-df.to_csv('GJD_details.csv', index = False)
+# df.to_csv('GJD_details.csv', index = False)
 
 
