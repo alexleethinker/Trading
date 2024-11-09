@@ -34,6 +34,10 @@ class StockSpotChinaA():
         df = temp_df.merge(stock_custom_industry,how='left',on=['证券代码'])
         df = df[~df['一级行业'].isnull()]
         df = df[~df['涨跌幅'].isnull()]
+        df['机构持股占流通股比例'] = pd.to_numeric(df['机构持股占流通股比例'], errors="coerce").round(2)
+        df['最终控制人持股比例'] = pd.to_numeric(df['最终控制人持股比例'], errors="coerce").round(2)
+        df['国家队持股比例'] = pd.to_numeric(df['国家队持股比例'], errors="coerce").round(2)
+        	 
         return df
     
     def update(self, df):  
