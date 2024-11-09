@@ -112,7 +112,8 @@ def plot_fig(market):
                      '机构持股占流通股比例','国家队持股比例','国家队机构名称','最终控制人持股比例','最终控制人类型','控制人','企业性质']
         hovertemplate= "%{customdata[5]}<br>\
 %{label}  |  %{customdata[9]} <br>\
-%{customdata[4]:.2f}  (%{customdata[0]:.2f}%)       %{customdata[13]}/BPS<br>\
+%{customdata[4]:.2f}  (%{customdata[0]:.2f}%)<br>\
+%{customdata[13]}/BPS<br>\
 流通市值= %{customdata[1]:d}亿<br>\
 成交额= %{customdata[7]:.2f}亿       换手= %{customdata[10]:.1f}<br>\
 主营产品：%{customdata[6]}<br>\
