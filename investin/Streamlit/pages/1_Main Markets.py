@@ -117,10 +117,10 @@ def plot_fig(market):
 %{customdata[3]}<br>\
 ----------------------------------------------------------------------<br>\
 财务指标：<br>\
-        PE=%{customdata[11]}  PB=%{customdata[12]}<br>\
-        毛利率=%{customdata[15]:.2f}%  ROE=%{customdata[14]:.2f}%  股息率=%{customdata[18]:.2f}%<br>\
-        资产负债率=%{customdata[19]:.2f}%<br>\
-        总营收同比=%{customdata[16]:.2f}%  净利润同比=%{customdata[17]:.2f}%"
+PE=%{customdata[11]}    PB=%{customdata[12]}<br>\
+毛利率=%{customdata[15]:.2f}%   ROE=%{customdata[14]:.2f}%  股息率=%{customdata[18]:.2f}%<br>\
+资产负债率=%{customdata[19]:.2f}%<br>\
+总营收同比=%{customdata[16]:.2f}%   净利润同比=%{customdata[17]:.2f}%"
     elif market in ['🇺🇸 美股','🇭🇰 港股']:
         values = '成交额' if traded_value_on else '总市值'
         custom_data=['涨跌幅','证券代码','总市值','最新价','成交额','所属概念']
