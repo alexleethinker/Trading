@@ -185,7 +185,7 @@ PE= %{customdata[11]}    PB= %{customdata[12]}<br>\
         st.plotly_chart(fig_plate, use_container_width=True)
     with tab2:
         fig = plot_fig(plate= False)
-        st.plotly_chart(fig, use_container_width=True, height= 1000)
+        st.plotly_chart(fig, use_container_width=True, height= 2000)
     
     show_dataframe(df, market, language=language, source = source)
     st.markdown(f'{source_text}EastMoney')
