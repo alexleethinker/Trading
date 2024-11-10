@@ -52,18 +52,16 @@ def get_basic_info():
 
     df = df[['股票代码','股票简称','所属同花顺行业','沪深指数','公司亮点','所属概念','机构持股占流通股比例','最终控制人持股比例','企业性质','最终控制人类型','最终控制人']].rename(columns={"股票代码":"证券代码"})
   
-    def remove_duplicates(x):
+    def drop_duplicates(x):
         try:
-            l = x.split('||')
-            l = list(set(l))
-            l = ','.join(l)
+            l = ','.join(','.join(set(x.split('||'))))
             return l
         except:
             return x
         
 
-    df['最终控制人类型'] = df['最终控制人类型'].apply(remove_duplicates)
-    df['最终控制人'] = df['最终控制人'].apply(remove_duplicates)
+    df['最终控制人类型'] = df['最终控制人类型'].apply(drop_duplicates)
+    df['最终控制人'] = df['最终控制人'].apply(drop_duplicates)
     df['机构持股占流通股比例'] = pd.to_numeric(df['机构持股占流通股比例'], errors="coerce").round(2)
     df['最终控制人持股比例'] = pd.to_numeric(df['最终控制人持股比例'], errors="coerce").round(2)
 
@@ -119,7 +117,7 @@ replace
 国家集成电路产业投资基金二期股份有限公司 大基金二期
 ''' 
 
-get_basic_info()
+# get_basic_info()
 
 
 # query = '国家队持股'
@@ -135,3 +133,51 @@ get_basic_info()
 # df.to_csv('GJD_details.csv', index = False)
 
 
+def calculate_growth():
+    query = 'PE 扣非PE PB 扣非ROE 扣非净利润同比增长率 每股分红 分红比例 销售净利率  销售毛利率 商誉占净资产比例 ROA  ROE EPS 股息率  总营收增长率 资产负债率'
+    loop = True
+    query_type = 'stock'
+    r = pywencai.get(query=query,loop = loop, log = True, query_type = query_type)
+    r.columns = [x.split('[')[0] for x in r.columns.tolist()]
+    result = r[['股票代码','股票简称','市盈率(pe)','市盈率(pe,扣非ttm)','市净率(pb)','净资产收益率roe-扣除非经常损益','净资产收益率roe(加权,公布值)','总资产报酬率roa','股息率(股票获利率)','分红比例','销售毛利率','销售净利率','归属母公司股东的净利润-扣除非经常损益(同比增长率)','营业总收入(同比增长率)','商誉占净资产比例','资产负债率']]
+    result.columns = ['股票代码','股票简称','PE','扣非PE','PB','扣非ROE','ROE','ROA','股息率','分红比例','毛利率','净利率','扣非净利润增速','营收增速','商誉占比','资产负债率']
+    result = result.apply(pd.to_numeric, errors='ignore').rename(columns={"股票代码":"证券代码"})
+
+    result['扣非PEG']  = (result['扣非PE'] / result['营收增速'])
+
+    def dividend_correct(x):
+        if x >= 0.5:
+            n = 1
+        elif x < 0.25:
+            n = 2
+        else:
+            n = 0.5/x
+        return n
+
+    result['分红比例'] = result['分红比例'].fillna(0)
+    result['扣非市赚率'] = result['扣非PE'] / result['扣非ROE'] * result['分红比例'].apply(dividend_correct)
+    result['市赚率'] =result['PE'] / result['ROE'] * result['分红比例'].apply(dividend_correct)
+
+
+    df = result.fillna('').apply(pd.to_numeric, errors='ignore').round(2).copy()
+
+    # 市赚率
+    # PE<0 ROE > 0, 亏损
+    # 扣非PE<0 扣非ROE>0, 扣非亏损
+    # ROE<0 资不抵债
+
+    df.loc[(df['PE']< 0) & (df['ROE']<0),'市赚率'] = '亏损'
+    df.loc[(df['PE']> 0) & (df['ROE']<0),'市赚率'] = '转盈'
+    df.loc[(df['PE']< 0) & (df['ROE']>0),'市赚率'] = '转亏'
+
+    df.loc[(df['扣非PE']< 0) & (df['扣非ROE']<0),'扣非市赚率'] = '扣非亏损'
+    df.loc[(df['扣非PE']> 0) & (df['扣非ROE']<0),'扣非市赚率'] = '转盈'
+    df.loc[(df['扣非PE']< 0) & (df['扣非ROE']>0),'扣非市赚率'] = '扣非转亏'
+    df.loc[(df['扣非PE']> 0) & (df['扣非ROE']<0) & (df['PE']< 0),'扣非市赚率'] = '扣非亏损'
+
+    df.loc[df['扣非PE']< 0,'扣非PEG'] = '扣非亏损'
+    # 分红比例 < 0
+    # PE 或 盈利增速 < 0
+    df.to_csv(data_dir + '/static/Wencai/a_stock_PE_values.csv', index =False)
+
+calculate_growth()

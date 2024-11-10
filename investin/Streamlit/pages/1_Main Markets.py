@@ -109,7 +109,8 @@ def plot_fig(market):
         values = '成交额' if traded_value_on else '流通市值' 
         custom_data=['涨跌幅','流通市值','所属同花顺行业','投资逻辑','最新价','证券代码','主营产品','成交额','所属概念',\
                      '地区板块','换手率','市盈率','市净率','每股净资产','ROE','毛利率','总营收同比','净利润同比','股息率','资产负债率',\
-                     '机构持股占流通股比例','国家队持股比例','国家队机构名称','最终控制人持股比例','最终控制人类型','控制人','企业性质']
+                     '机构持股占流通股比例','国家队持股比例','国家队机构名称','最终控制人持股比例','最终控制人类型','控制人','企业性质',\
+                     '扣非PEG','扣非市赚率','商誉占比','分红比例']
         hovertemplate= "%{customdata[5]}<br>\
 %{label}  |  %{customdata[9]} <br>\
 %{customdata[4]:.2f}  (%{customdata[0]:.2f}%)<br>\
@@ -125,8 +126,10 @@ def plot_fig(market):
 ----------------------------------------------------------------------<br>\
 财务指标：<br>\
 PE= %{customdata[11]}    PB= %{customdata[12]}<br>\
-毛利率= %{customdata[15]:.2f}%   ROE= %{customdata[14]:.2f}%  股息率= %{customdata[18]:.2f}%<br>\
-资产负债率= %{customdata[19]:.2f}%<br>\
+扣非市赚率= %{customdata[28]}    扣非PEG= %{customdata[27]}<br>\
+毛利率= %{customdata[15]:.2f}%   ROE= %{customdata[14]:.2f}%<br>\
+股息率= %{customdata[18]:.2f}%   分红比例= %{customdata[30]:.2f}%<br>\
+资产负债率= %{customdata[19]:.2f}%   商誉占比= %{customdata[29]:.2f}%<br>\
 总营收同比= %{customdata[16]:.2f}%   净利润同比= %{customdata[17]:.2f}%"
     elif market in ['🇺🇸 美股','🇭🇰 港股']:
         values = '成交额' if traded_value_on else '总市值'
