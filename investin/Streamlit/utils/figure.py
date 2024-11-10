@@ -6,7 +6,7 @@ def fig_render(fig, hovertemplate):
     fig.update_layout({
         'plot_bgcolor': 'rgba(0, 0, 0, 0)',
         'paper_bgcolor': 'rgba(0, 0, 0, 0)',
-        'margin': dict(autoexpand=True,l=0,r=0,t=50,b=50),
+        'margin': dict(autoexpand=True,l=0,r=0,t=50,b=80),
         })
     fig.update_coloraxes(showscale=False)
     fig.update_traces(  marker_line_width = 0.5,
