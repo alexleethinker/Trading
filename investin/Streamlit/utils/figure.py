@@ -29,7 +29,7 @@ def treemap(df, path, values, color, range_color, custom_data, hovertemplate):
                     custom_data=custom_data,
                     color_continuous_scale=["seagreen",'lightgrey', "indianred"],
                     color_continuous_midpoint=0 , # 颜色变化中间值设置为增长率=0
-                    height= 800,
+                    height= 700,
                     )
     fig = fig_render(fig, hovertemplate)  
     return fig
