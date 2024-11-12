@@ -17,6 +17,7 @@ if language == '中文':
             Page("investin/Streamlit/pages/2_Indutries.py", "行业对比", "⚙️"),
             Page("investin/Streamlit/pages/5_Time Machine.py", "历史切面", "🕙"),
             Page("investin/Streamlit/pages/6_Kitchin Cycle.py", "库存周期", "⚙️"),
+            Page("investin/Streamlit/pages/7_Qwen Reports.py", "千问研报", "📖"),
         ]
     )    
 else:
