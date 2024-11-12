@@ -20,4 +20,4 @@ for index, report in reports.iterrows():
         st.markdown(i)
         # st.html(report['千问读研报']) 
 # st.dataframe(reports,hide_index=True)   
-st.table(reports)  
+# st.table(reports)  
