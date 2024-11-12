@@ -134,12 +134,12 @@ replace
 
 
 def calculate_growth():
-    query = 'PE 扣非PE PB 扣非ROE 扣非净利润同比增长率 每股分红 分红比例 销售净利率  销售毛利率 商誉占净资产比例 ROA  ROE EPS 股息率  总营收增长率 资产负债率'
+    query = 'PE 扣非PE PB 扣非ROE 扣非净利润同比增长率 每股分红 分红比例 销售净利率  销售毛利率 商誉占净资产比例 ROA  ROE EPS 股息率 资产负债率 过去三年平均营收增速'
     loop = True
     query_type = 'stock'
     r = pywencai.get(query=query,loop = loop, log = True, query_type = query_type)
     r.columns = [x.split('[')[0] for x in r.columns.tolist()]
-    result = r[['股票代码','股票简称','市盈率(pe)','市盈率(pe,扣非ttm)','市净率(pb)','净资产收益率roe-扣除非经常损益','净资产收益率roe(加权,公布值)','总资产报酬率roa','股息率(股票获利率)','分红比例','销售毛利率','销售净利率','归属母公司股东的净利润-扣除非经常损益(同比增长率)','营业总收入(同比增长率)','商誉占净资产比例','资产负债率']]
+    result = r[['股票代码','股票简称','市盈率(pe)','市盈率(pe,扣非ttm)','市净率(pb)','净资产收益率roe-扣除非经常损益','净资产收益率roe(加权,公布值)','总资产报酬率roa','股息率(股票获利率)','分红比例','销售毛利率','销售净利率','归属母公司股东的净利润-扣除非经常损益(同比增长率)','营业收入(同比增长率)平均','商誉占净资产比例','资产负债率']]
     result.columns = ['股票代码','股票简称','PE','扣非PE','PB','扣非ROE','ROE','ROA','股息率','分红比例','毛利率','净利率','扣非净利润增速','营收增速','商誉占比','资产负债率']
     result = result.apply(pd.to_numeric, errors='ignore').rename(columns={"股票代码":"证券代码"})
 
