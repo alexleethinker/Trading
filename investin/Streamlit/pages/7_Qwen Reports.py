@@ -27,7 +27,8 @@ reports['千问读研报'] = reports['千问读研报'].fillna('').str.replace('
 
 
 for index, report in reports.iterrows():
-    st.html(f"<br><h3><font color='lightblue'>{report['行业']}</font></h3>") 
+    st.divider()
+    st.html(f"<h3><font color='lightblue'>{report['行业']}</font></h3>") 
     report_name = report['研报名称'].replace(',','<br>').replace('[','').replace(']','').replace("'",'')
     st.html(f"<font color='lightblue'>{report_name}</font>") 
     # for i in report['千问读研报'].split('<br>'):
