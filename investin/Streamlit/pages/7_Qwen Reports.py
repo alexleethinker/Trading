@@ -2,31 +2,33 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from utils.config import page_config, update_at, data_dir
-# page_config()
-st.set_page_config(layout='centered')
+page_config(layout='centered')
+# st.set_page_config(layout='centered')
 import plotly.express as px
 
-st.markdown('<div style="text-align: center;">千问读研报</div>', unsafe_allow_html=True)
-st.markdown('该页面内容由阿里千问AI大模型自动生成，准确度请自行判断，数据来源：选定券商本周各行业研报')
-
+st.html(f"<h3 style='text-align: center;'><font color='lightblue'>千问读研报</font></h3>") 
+hint = '该页面内容由千问AI自动生成，请酌情参考。数据使用本周券商行业研报，每周日更新'
+st.html(f'<p font-size: 10px">{hint}</p>')
 
 timezone = 'Asia/Shanghai'
-# data_path = f'{data_dir}/spot/Qwen_weekly_reports.csv'
-data_path = f'{data_dir}/static/EM/Qwen_reports.csv'
-update_at(data_path, timezone)
+try:
+    data_path = f'{data_dir}/spot/Qwen_weekly_reports.csv'
+    reports = pd.read_csv(data_path)
+except:
+    data_path = f'{data_dir}/static/EM/Qwen_reports.csv'
+    reports = pd.read_csv(data_path)
 
-reports = pd.read_csv(data_path)
+update_at(data_path, timezone)
 reports.columns = ['行业','研报名称','千问读研报']
-reports = reports.dropna(subset=['研报名称'])
+
+# reports['研报名称'] = reports['研报名称'].apply(lambda x: ','.join(x))
+reports = reports[reports['研报名称']!='[]'].dropna(subset=['研报名称'])
 reports['千问读研报'] = reports['千问读研报'].fillna('').str.replace('###','<br>').str.replace('#','')
 
-# st.dataframe(reports[['行业','研报名称']],hide_index=True,use_container_width=True,) 
 
 for index, report in reports.iterrows():
     st.html(f"<br><h3><font color='lightblue'>{report['行业']}</font></h3>") 
-    st.html(f"<font color='lightblue'>{report['研报名称'].replace(',','<br>')}</font>") 
+    report_name = report['研报名称'].replace(',','<br>').replace('[','').replace(']','').replace("'",'')
+    st.html(f"<font color='lightblue'>{report_name}</font>") 
     for i in report['千问读研报'].split('<br>'):
         st.markdown(i)
-        # st.html(report['千问读研报']) 
-# st.dataframe(reports,hide_index=True)   
-# st.table(reports)  

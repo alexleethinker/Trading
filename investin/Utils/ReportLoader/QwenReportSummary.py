@@ -7,7 +7,7 @@ try:
     from investin.Utils.config import data_dir
 except:
     data_dir = 'investin/data'
-
+tqdm.pandas() 
 
 mappings = {
     '能源': [['国金证券'], ['石油行业','煤炭行业','采掘行业','燃气']],
@@ -76,7 +76,6 @@ def prepare_query_df():
         df['publishDate'] = pd.to_datetime(df['publishDate']).dt.date.astype(str)
         total_df = pd.concat([total_df,df])
 
-
     total_df.loc[total_df['title'].str.contains('能源周'), 'industryName'] = '石油行业'
     df = pd.DataFrame(mappings).T
     def format_title(x):
@@ -103,13 +102,16 @@ def prepare_query_df():
             # pdf_link = list(r.html.find('a.pdf-link')[0].links)[0]
         return highlight_list
     #使用tqdm进度条
-    tqdm.pandas() 
-    df['highlight'] = df['infoCode'].progress_map(fetch_highlight)
+    # 
+    
     for i, row in df.iterrows():
         tmp = total_df[total_df['orgSName'].isin(row[0]) & total_df['industryName'].isin(row[1])]
         tmp['title'] = tmp['title'].apply(format_title)
         df.at[i, 'title'] = (tmp['publishDate'] + ' || ' + tmp['title']).to_list()
         df.at[i, 'infoCode'] = tmp['infoCode'].to_list()
+    df['highlight'] = df['infoCode'].progress_map(fetch_highlight)
+    df['title'] = df['title'].apply(lambda x: ','.join(x))
+    df = df.dropna(subset=['title'])
     return df
 
 
@@ -150,3 +152,8 @@ def generate_weekly_qwen_repoert():
     qwen_df = df[['title','highlight']].rename(columns = {'title':'标题','highlight':'摘要'})
     qwen_df['千问读研报'] = qwen_df['摘要'].apply(make_query).progress_map(ask_qwen)
     qwen_df[['标题','千问读研报']].to_csv(data_dir + '/spot/Qwen_weekly_reports.csv', index =  True)
+
+
+
+if __name__ == '__main__':
+    generate_weekly_qwen_repoert()

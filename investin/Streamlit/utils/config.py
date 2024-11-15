@@ -26,9 +26,9 @@ data_dir = os.getenv('DATA_DIR') if os.getenv('DATA_DIR') != None else 'investin
 def page_config(
         max_width: int = 1100, max_width_100_percent: bool = True,
         padding_top: int = 0, padding_right: int = 1, padding_left: int = 1, padding_bottom: int = 1,
-        color: str = 'black', background_color: str = 'black',
+        color: str = 'black', background_color: str = 'black', layout= 'wide'
     ):
-    st.set_page_config(layout= 'wide')
+    st.set_page_config(layout= layout)
     if max_width_100_percent:
         max_width_str = f'max-width: 100%;'
     else:
