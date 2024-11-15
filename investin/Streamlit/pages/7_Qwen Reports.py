@@ -23,12 +23,13 @@ reports.columns = ['行业','研报名称','千问读研报']
 
 # reports['研报名称'] = reports['研报名称'].apply(lambda x: ','.join(x))
 reports = reports[reports['研报名称']!='[]'].dropna(subset=['研报名称'])
-reports['千问读研报'] = reports['千问读研报'].fillna('').str.replace('###','<br>').str.replace('#','')
+# reports['千问读研报'] = reports['千问读研报'].fillna('').str.replace('###','<br>').str.replace('#','')
 
 
 for index, report in reports.iterrows():
     st.html(f"<br><h3><font color='lightblue'>{report['行业']}</font></h3>") 
     report_name = report['研报名称'].replace(',','<br>').replace('[','').replace(']','').replace("'",'')
     st.html(f"<font color='lightblue'>{report_name}</font>") 
-    for i in report['千问读研报'].split('<br>'):
-        st.markdown(i)
+    # for i in report['千问读研报'].split('<br>'):
+    #     st.markdown(i)
+    st.markdown(report['千问读研报'])
