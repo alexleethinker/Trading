@@ -3,7 +3,10 @@ import pandas as pd
 from tqdm import tqdm
 from requests_html import HTMLSession
 from datetime import datetime, timedelta
-
+try:
+    from investin.Utils.config import data_dir
+except:
+    data_dir = 'investin/data'
 
 
 mappings = {
@@ -41,7 +44,7 @@ mappings = {
 
 
 today = datetime.today()
-lastweek_start = today - timedelta(days=today.weekday()+7)
+lastweek_start = today - timedelta(days=today.weekday()+1)
 
 
 def fetch_reports(page, beginTime, endTime):
@@ -63,56 +66,51 @@ def fetch_reports(page, beginTime, endTime):
     return r, total_page
 
 
-total_df = pd.DataFrame()
-_, total_page = fetch_reports(1, lastweek_start, today)
+def prepare_query_df():
+    total_df = pd.DataFrame()
+    _, total_page = fetch_reports(1, lastweek_start, today)
 
-for page in tqdm(range(1,total_page+1)):
-    r, _ = fetch_reports(page, lastweek_start, today)
-    df = pd.DataFrame(r.json()['data'])[['title','orgSName','publishDate','infoCode','industryCode','industryName','emRatingValue','researcher']]
-    df['publishDate'] = pd.to_datetime(df['publishDate']).dt.date.astype(str)
-    total_df = pd.concat([total_df,df])
-
-
-total_df.loc[total_df['title'].str.contains('能源周'), 'industryName'] = '石油行业'
-df = pd.DataFrame(mappings).T
-def format_title(x):
-    try:
-        if len(x.split('：')) > 1:
-            x = ':'.join(x.split('：')[1:])
-        else:
-            x = x.split('：')[-1]
-    except:
-        pass   
-    return x
-    
-df['title'] = '' 
-df['infoCode'] = ''
+    for page in tqdm(range(1,total_page+1)):
+        r, _ = fetch_reports(page, lastweek_start, today)
+        df = pd.DataFrame(r.json()['data'])[['title','orgSName','publishDate','infoCode','industryCode','industryName','emRatingValue','researcher']]
+        df['publishDate'] = pd.to_datetime(df['publishDate']).dt.date.astype(str)
+        total_df = pd.concat([total_df,df])
 
 
+    total_df.loc[total_df['title'].str.contains('能源周'), 'industryName'] = '石油行业'
+    df = pd.DataFrame(mappings).T
+    def format_title(x):
+        try:
+            if len(x.split('：')) > 1:
+                x = ':'.join(x.split('：')[1:])
+            else:
+                x = x.split('：')[-1]
+        except:
+            pass   
+        return x
+        
+    df['title'] = '' 
+    df['infoCode'] = ''
 
-
-
-
-
-def fetch_highlight(infocode_list):
-    highlight_list = []
-    for infocode in infocode_list:
-        url = f'https://data.eastmoney.com/report/zw_industry.jshtml?infocode={infocode}'
-        session = HTMLSession()  
-        r = session.get(url)  
-        highlight = r.html.find('div.ctx-content')[0].text.replace('\n','').split('风险提示')[0]
-        highlight_list.append(highlight)
-        # pdf_link = list(r.html.find('a.pdf-link')[0].links)[0]
-    return highlight_list
-#使用tqdm进度条
-tqdm.pandas() 
-df['highlight'] = df['infoCode'].progress_map(fetch_highlight)
-for i, row in df.iterrows():
-    tmp = total_df[total_df['orgSName'].isin(row[0]) & total_df['industryName'].isin(row[1])]
-    tmp['title'] = tmp['title'].apply(format_title)
-    df.at[i, 'title'] = (tmp['publishDate'] + ' || ' + tmp['title']).to_list()
-    df.at[i, 'infoCode'] = tmp['infoCode'].to_list()
-
+    def fetch_highlight(infocode_list):
+        highlight_list = []
+        for infocode in infocode_list:
+            url = f'https://data.eastmoney.com/report/zw_industry.jshtml?infocode={infocode}'
+            session = HTMLSession()  
+            r = session.get(url)  
+            highlight = r.html.find('div.ctx-content')[0].text.replace('\n','').split('风险提示')[0]
+            highlight_list.append(highlight)
+            # pdf_link = list(r.html.find('a.pdf-link')[0].links)[0]
+        return highlight_list
+    #使用tqdm进度条
+    tqdm.pandas() 
+    df['highlight'] = df['infoCode'].progress_map(fetch_highlight)
+    for i, row in df.iterrows():
+        tmp = total_df[total_df['orgSName'].isin(row[0]) & total_df['industryName'].isin(row[1])]
+        tmp['title'] = tmp['title'].apply(format_title)
+        df.at[i, 'title'] = (tmp['publishDate'] + ' || ' + tmp['title']).to_list()
+        df.at[i, 'infoCode'] = tmp['infoCode'].to_list()
+    return df
 
 
 
@@ -147,7 +145,8 @@ def ask_qwen(query):
     return answer
 
 
-
-
-qwen_df = df[['title','highlight']].rename(columns = {'title':'标题','highlight':'摘要'})
-qwen_df['千问读研报'] = qwen_df['摘要'].apply(make_query).progress_map(ask_qwen)
+def generate_weekly_qwen_repoert():
+    df = prepare_query_df()
+    qwen_df = df[['title','highlight']].rename(columns = {'title':'标题','highlight':'摘要'})
+    qwen_df['千问读研报'] = qwen_df['摘要'].apply(make_query).progress_map(ask_qwen)
+    qwen_df[['标题','千问读研报']].to_csv(data_dir + '/spot/Qwen_weekly_reports.csv', index =  True)
