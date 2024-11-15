@@ -119,7 +119,7 @@ def prepare_query_df():
 
 def make_query(highlight_list):
     num = len(highlight_list)
-    query = f'你是一名资深的投资顾问, 请分析以下{num}篇券商行业研报的摘要内容，然后总结行业的发展现状, 并详细地列出推荐标的及理由：'
+    query = f'你是一名资深的投资顾问, 请分析以下{num}篇券商行业研报的摘要内容，然后总结行业的发展现状，并简述投资机会：'#, 并详细地列出推荐标的及理由：'
     for i in highlight_list:
         query = query + f'摘要{highlight_list.index(i)+1}：{i}'
     return query
