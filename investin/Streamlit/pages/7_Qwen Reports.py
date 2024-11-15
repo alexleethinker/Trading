@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from utils.config import page_config, update_at, data_dir, get_args
-page_config()
-
+# page_config()
+st.set_page_config(layout='centered')
 import plotly.express as px
 
 
@@ -12,6 +12,8 @@ reports = pd.read_csv(f'{data_dir}/static/EM/Qwen_reports.csv')
 reports.columns = ['行业','研报名称','千问读研报']
 reports = reports.dropna(subset=['研报名称'])
 reports['千问读研报'] = reports['千问读研报'].fillna('').str.replace('###','<br>').str.replace('#','')
+
+# st.dataframe(reports[['行业','研报名称']],hide_index=True,use_container_width=True,) 
 
 for index, report in reports.iterrows():
     st.html(f"<br><h3><font color='lightblue'>{report['行业']}</font></h3>") 
