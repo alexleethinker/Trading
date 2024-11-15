@@ -23,7 +23,7 @@ reports.columns = ['行业','研报名称','千问读研报']
 
 # reports['研报名称'] = reports['研报名称'].apply(lambda x: ','.join(x))
 reports = reports[reports['研报名称']!='[]'].dropna(subset=['研报名称'])
-# reports['千问读研报'] = reports['千问读研报'].fillna('').str.replace('###','<br>').str.replace('#','')
+reports['千问读研报'] = reports['千问读研报'].fillna('').str.replace('###','####')#.str.replace('#','')
 
 
 for index, report in reports.iterrows():
