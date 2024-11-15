@@ -41,6 +41,26 @@ class StockSpotChinaA():
         df = df[~df['涨跌幅'].isnull()]     	 
         return df
     
+    def clean_concepts(self, df):
+
+        def clean_concepts(x):
+            x = str(x)
+            x = ','.join(set(x.split(',')).difference(exclude_concepts_list))
+            x = x.replace('概念','')
+            return x
+        def S_concepts(x):
+            x = str(x)
+            x = ','.join(set(x.split(',')).intersection(S_list))
+            x = x.replace('概念','')
+            return x
+        
+        concepts_list = pd.read_csv(data_dir + '/static/EM/China/concept_checklist.csv',encoding="utf-8")
+        exclude_concepts_list = concepts_list.loc[concepts_list['分类'].isin(['X','S','知名企业'])]['概念名称'].values.tolist()
+        S_list = concepts_list.loc[concepts_list['分类'].isin(['S','知名企业'])]['概念名称'].values.tolist()
+        df['S概念'] = df['东财概念'].apply(S_concepts)
+        df['东财概念'] = df['东财概念'].apply(clean_concepts)
+        return df
+
     def update(self, df):  
         # df['异动值'] = df['成交额'] * df['涨跌幅'].abs() * np.log10( (math.e - 1) * df['涨跌幅'].abs() + 1) / (np.log(df['流通市值'] + 1) + 1) 
         df['异动值'] = df['成交额'] * np.maximum(df['涨跌幅'].abs(), df['振幅']) * np.log10( (math.e - 1) * np.maximum(df['涨跌幅'].abs(), df['振幅']) + 1) / (np.log(df['流通市值'] + 1) + 1) 
@@ -54,7 +74,8 @@ class StockSpotChinaA():
                 temp_df = self.fetch()
                 print('Start cleaning data')
                 clean_df = self.clean(temp_df)
-                self.update(clean_df)
+                df = self.clean_concepts(clean_df)
+                self.update(df)
                 print('Data updated')
                 break
             except Exception as e:

@@ -24,6 +24,7 @@ em_fields = {
     'f112':'EPS',
     'f113':'每股净资产',
     'f133':'股息率',
+    'f103':'东财概念'
 }
 fields = [ i for i in em_fields]
 fields = ','.join(fields)
@@ -84,7 +85,7 @@ def fetch_spot_em(market):
     temp_df['总营收同比'] = pd.to_numeric(temp_df['总营收同比'], errors="coerce").round(2).fillna(0) 
     temp_df['地区板块'] = temp_df['地区板块'].str.replace('板块','')
 
-    temp_df = temp_df[['证券代码','证券名称','地区板块','流通市值','总市值','最新价', '涨跌幅','振幅','成交额','换手率','市盈率','市净率','EPS','每股净资产','ROE','毛利率','总营收同比','净利润同比','股息率','资产负债率']]
+    temp_df = temp_df[['证券代码','证券名称','地区板块','流通市值','总市值','最新价', '涨跌幅','振幅','成交额','换手率','市盈率','市净率','EPS','每股净资产','ROE','毛利率','总营收同比','净利润同比','股息率','资产负债率','东财概念']]
 
     temp_df = temp_df[temp_df['流通市值'] > 0]
     temp_df = temp_df[temp_df['总市值'] > 0]
