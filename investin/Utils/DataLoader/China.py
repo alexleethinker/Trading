@@ -19,28 +19,26 @@ def market_suffix(code):
 
 class StockSpotChinaA():
     def __init__(self) -> None:
-        self.read_dir = data_dir +'/static/EM/China/a_stocks.xlsx'
-        self.PE_values_dir = data_dir +'/static/Wencai/a_stock_PE_values.csv'
+        # self.read_dir = data_dir +'/static/EM/China/a_stocks.xlsx'  
+        self.read_dir = data_dir + '/static/EM/China/a_stock_details.csv'
+        self.PE_values_dir = data_dir +'/static/EM/China/a_stock_PE_values.csv'
         self.write_dir = data_dir + '/spot/stock_spot_china_a.csv'
 
     def fetch(self):
         temp_df = fetch_spot_em(market='China')
+        temp_df = temp_df.drop_duplicates(subset=['证券代码'])
         return temp_df
         
 
     def clean(self, temp_df):
-        stock_custom_industry = pd.read_excel(open(self.read_dir, 'rb'),sheet_name='a_stocks_info').drop(['股票简称'], axis=1)
+        stock_custom_industry = pd.read_csv(self.read_dir).drop(['股票简称'], axis=1)
         temp_df['证券代码'] = temp_df['证券代码'].apply(market_suffix)
         temp_df['证券名称'] = temp_df['证券名称'].str.replace(' ','').str.replace('Ａ','A')
         df = temp_df.merge(stock_custom_industry,how='left',on=['证券代码'])
         PE_values = pd.read_csv(self.PE_values_dir)[['证券代码','分红比例','商誉占比','扣非PEG','扣非市赚率']]
         df = df.merge(PE_values,how='left',on=['证券代码'])
         df = df[~df['一级行业'].isnull()]
-        df = df[~df['涨跌幅'].isnull()]
-        df['机构持股占流通股比例'] = pd.to_numeric(df['机构持股占流通股比例'], errors="coerce").round(2)
-        df['最终控制人持股比例'] = pd.to_numeric(df['最终控制人持股比例'], errors="coerce").round(2)
-        df['国家队持股比例'] = pd.to_numeric(df['国家队持股比例'], errors="coerce").round(2)
-        	 
+        df = df[~df['涨跌幅'].isnull()]     	 
         return df
     
     def update(self, df):  
