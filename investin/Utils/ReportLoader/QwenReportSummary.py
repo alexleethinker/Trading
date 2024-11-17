@@ -147,7 +147,7 @@ def ask_qwen(query):
     return answer
 
 
-def generate_weekly_qwen_repoert():
+def generate_weekly_qwen_report():
     df = prepare_query_df()
     qwen_df = df[['title','highlight']].rename(columns = {'title':'标题','highlight':'摘要'})
     qwen_df['千问读研报'] = qwen_df['摘要'].apply(make_query).progress_map(ask_qwen)
@@ -156,4 +156,4 @@ def generate_weekly_qwen_repoert():
 
 
 if __name__ == '__main__':
-    generate_weekly_qwen_repoert()
+    generate_weekly_qwen_report()
