@@ -55,4 +55,4 @@ def calculate_PEG():
     # PE 或 盈利增速 < 0
     df.to_csv(data_dir + '/static/EM/China/a_stock_PE_values.csv', index =False)
 
-calculate_PEG()
+# calculate_PEG()
