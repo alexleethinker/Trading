@@ -35,7 +35,7 @@ class StockSpotChinaA():
         temp_df['证券代码'] = temp_df['证券代码'].apply(market_suffix)
         temp_df['证券名称'] = temp_df['证券名称'].str.replace(' ','').str.replace('Ａ','A')
         df = temp_df.merge(stock_custom_industry,how='left',on=['证券代码'])
-        PE_values = pd.read_csv(self.PE_values_dir)[['证券代码','分红比例','商誉占比','扣非PEG','扣非市赚率']]
+        PE_values = pd.read_csv(self.PE_values_dir)[['证券代码','分红比例','商誉占比','扣非PEG','扣非市赚率','现金']]
         df = df.merge(PE_values,how='left',on=['证券代码'])
         df = df[~df['一级行业'].isnull()]
         df = df[~df['涨跌幅'].isnull()]     	 
