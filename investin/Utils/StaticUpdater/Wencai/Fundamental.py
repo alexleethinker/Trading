@@ -133,7 +133,7 @@ def get_basic_info():
     df.to_csv(data_dir + '/static/EM/China/a_stock_details.csv', index = False)
 
 
-
-get_basic_info()
+if __name__ == '__main__':
+    get_basic_info()
 
 
