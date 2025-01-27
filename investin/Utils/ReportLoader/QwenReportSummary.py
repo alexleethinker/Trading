@@ -3,6 +3,8 @@ import pandas as pd
 from tqdm import tqdm
 from requests_html import HTMLSession
 from datetime import datetime, timedelta
+from langchain.llms import Ollama
+
 try:
     from investin.Utils.config import data_dir
 except:
@@ -124,33 +126,68 @@ def make_query(highlight_list):
         query = query + f'摘要{highlight_list.index(i)+1}：{i}'
     return query
 
-def ask_qwen(query):
-    api_key = 'sk-7397a9299d73435cb10290493bddee4e'
-    url = 'https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation'
-    headers = {'Content-Type': 'application/json',
-               'Authorization':f'Bearer {api_key}'}
-    body = {
-        'model': 'qwen-long',
-        "input": {
-            "messages": [
-                {"role": "system","content": "You are an experienced investment manager."},
-                {"role": "user","content": query}
-            ]
-        },
-        "parameters": {"result_format": "message"}
-    }
-    response = requests.post(url, headers=headers, json=body)
-    try:
-        answer = response.json()['output']['choices'][0]['message']['content']
-    except:
-        answer = response.json()
+# def ask_qwen(query):
+#     api_key = 'sk-7397a9299d73435cb10290493bddee4e'
+#     url = 'https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation'
+#     headers = {'Content-Type': 'application/json',
+#                'Authorization':f'Bearer {api_key}'}
+#     body = {
+#         'model': 'qwen-long',
+#         "input": {
+#             "messages": [
+#                 {"role": "system","content": "You are an experienced investment manager."},
+#                 {"role": "user","content": query}
+#             ]
+#         },
+#         "parameters": {"result_format": "message"}
+#     }
+#     response = requests.post(url, headers=headers, json=body)
+#     try:
+#         answer = response.json()['output']['choices'][0]['message']['content']
+#     except:
+#         answer = response.json()
+#     return answer
+
+
+# from sparkai.llm.llm import ChatSparkLLM, ChunkPrintHandler
+# from sparkai.core.messages import ChatMessage
+
+# def ask_sparkai(query):
+#     #星火认知大模型Spark Max的URL值，其他版本大模型URL值请前往文档（https://www.xfyun.cn/doc/spark/Web.html）查看
+#     SPARKAI_URL = 'wss://spark-api.xf-yun.com/v1.1/chat'	
+#     #星火认知大模型调用秘钥信息，请前往讯飞开放平台控制台（https://console.xfyun.cn/services/bm35）查看
+#     SPARKAI_APP_ID = 'ac7278af'
+#     SPARKAI_API_SECRET = 'OWZiZDc4NzQyZDQ4YzY3MTcyYzIyMDhm'
+#     SPARKAI_API_KEY = 'c53eca48af4d20082ab4346499f00ae3'
+#     #星火认知大模型Spark Max的domain值，其他版本大模型domain值请前往文档（https://www.xfyun.cn/doc/spark/Web.html）查看
+#     SPARKAI_DOMAIN = 'lite'
+#     spark = ChatSparkLLM(
+#         spark_api_url=SPARKAI_URL,
+#         spark_app_id=SPARKAI_APP_ID,
+#         spark_api_key=SPARKAI_API_KEY,
+#         spark_api_secret=SPARKAI_API_SECRET,
+#         spark_llm_domain=SPARKAI_DOMAIN,
+#         streaming=False,
+#     )
+#     messages = [ChatMessage(
+#         role="user",
+#         content= query
+#     )]
+#     handler = ChunkPrintHandler()
+#     a = spark.generate([messages], callbacks=[handler])
+#     print(a)
+
+
+def ask_deepseek(query):
+    llm = Ollama(model="deepseek-r1:1.5b")
+    answer = llm.invoke(query)
     return answer
 
 
 def generate_weekly_qwen_report():
     df = prepare_query_df()
     qwen_df = df[['title','highlight']].rename(columns = {'title':'标题','highlight':'摘要'})
-    qwen_df['千问读研报'] = qwen_df['摘要'].apply(make_query).progress_map(ask_qwen)
+    qwen_df['千问读研报'] = qwen_df['摘要'].apply(make_query).progress_map(ask_deepseek)
     qwen_df[['标题','千问读研报']].to_csv(data_dir + '/spot/Qwen_weekly_reports.csv', index =  True)
 
 
