@@ -4,7 +4,8 @@ from tqdm import tqdm
 from requests_html import HTMLSession
 from datetime import datetime, timedelta
 from langchain.llms import Ollama
-
+import warnings
+warnings.filterwarnings("ignore")
 try:
     from investin.Utils.config import data_dir
 except:

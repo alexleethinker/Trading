@@ -68,7 +68,7 @@ def start_cronjob():
     # scheduler.add_job(indices_intraday_forex, 'cron', day_of_week='mon-fri',hour='0-23',minute='0/1')
     
     # scheduler.add_job(indices_intraday, 'cron', day_of_week='mon-fri',hour='22',minute='1')
-    scheduler.add_job(generate_weekly_qwen_report, 'cron', day_of_week='sun',hour='23',minute='0/1', timezone='Asia/Shanghai')
+    # scheduler.add_job(generate_weekly_qwen_report, 'cron', day_of_week='sun',hour='23',minute='0/1', timezone='Asia/Shanghai')
     # scheduler.add_job(calculate_PEG, 'cron', day_of_week='mon-fri',hour='4',minute='0/1')
     scheduler.start()
 

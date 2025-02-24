@@ -52,19 +52,19 @@ def fetch_spot_em(market):
         'pn': '1',
         'pz': pz,
         'po': '1',
-        'np': '1',
+        'np': '2',
         'ut': 'bd1d9ddb04089700cf9c27f6f7426281',
         'fltt': '2',
         'invt': '2',
         'fid': 'f3',
         'fs': fs,
         'fields': fields,
-        '_': '1631107510188',
+        '_': '1631271634231',
     }
 
     r = requests.get(url, params=params, timeout=10)
     data_json = r.json()
-    temp_df = pd.DataFrame(data_json['data']['diff'])
+    temp_df = pd.DataFrame(data_json['data']['diff']).T
     temp_df = temp_df.rename(columns = em_fields)
 
     temp_df['流通市值'] = (pd.to_numeric(temp_df['流通市值'], errors="coerce")/100000000).round(2).fillna(0) 
