@@ -28,6 +28,7 @@ class StockSpotUK():
         uk_df = global_df[global_df['market'] == 'uk']
         df = temp_df.merge(uk_df,how='left',on=['证券代码'])
         df['证券名称'] = df['证券名称'].apply(remove_suffix)
+        print('here')
         df = df[~df['涨跌幅'].isnull()]
         df = df[~df['三级行业'].isnull()]
         df = df[~df['总市值'].isnull()]
