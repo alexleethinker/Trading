@@ -1,6 +1,6 @@
 import pandas as pd
 from investin.Utils.config import data_dir
-from investin.Utils.DataLoader.common.EM import fetch_spot_em
+from investin.Utils.DataLoader.common.AsyncEM import fetch_spot_em
 import numpy as np
 import math
 
