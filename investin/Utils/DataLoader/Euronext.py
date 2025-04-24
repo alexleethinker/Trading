@@ -90,6 +90,7 @@ class StockSpotEuronext():
             try:
                 print('Start fetching Euronext data')
                 euronext_df = self.fetch_prices()
+                print('Price data Fetched')
                 print('Start cleaning data')
                 df = self.clean(euronext_df)
                 self.update(df)

@@ -51,7 +51,7 @@ class StockSpotXetra():
         headers = self._get_headers(url)
         r = requests.post(url, data = payload, headers = headers, timeout = 30).text
         df = pd.json_normalize(json.loads(r)['data']) 
-        df = df[['isin','slug','name.originalValue','name.translations.others','name.translations.en','overview.lastPrice','changeToPrevDay','turnover','marketCapitalisation','overview.dateTimeLastPrice']]
+        df = df[['isin','slug','name.originalValue','name.translations.de','name.translations.en','overview.lastPrice','overview.changeToPrevDay','overview.turnover','keyData.marketCapitalisation','overview.dateTimeLastPrice']]
         return df
     
     # 备用
@@ -66,9 +66,9 @@ class StockSpotXetra():
     def clean(self, df):
         degiro_df = pd.read_csv( self.read_dir) 
         df = degiro_df.merge(df, how = 'left', on = ['isin'])
-        df = df[df['marketCapitalisation'] > 0]
-        df = df.rename(columns={"name": "证券名称",'changeToPrevDay':'涨跌幅','turnover':'成交额',\
-                        'overview.lastPrice':'最新价','marketCapitalisation':'总市值','symbol':'证券代码'})
+        df = df[df['keyData.marketCapitalisation'] > 0]
+        df = df.rename(columns={"name": "证券名称",'overview.changeToPrevDay':'涨跌幅','overview.turnover':'成交额',\
+                        'overview.lastPrice':'最新价','keyData.marketCapitalisation':'总市值','symbol':'证券代码'})
         df['成交额'] = pd.to_numeric(df['成交额'], errors="coerce")/100000000
         df['总市值'] = pd.to_numeric(df['总市值'], errors="coerce")/100000000
         return df
@@ -92,7 +92,9 @@ class StockSpotXetra():
             try:
                 print('Start fetch Xetra stock prices')
                 df = self.fetch_xetra_prices()
+                print('Price data fetched')
                 df = self.clean(df)
+                print('Data Cleaned')
                 df = self.add_xetra_master(df)
                 self.update(df)
                 print('Data all updated')
