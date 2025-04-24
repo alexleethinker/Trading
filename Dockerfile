@@ -1,6 +1,6 @@
 FROM nikolaik/python-nodejs:python3.11-nodejs20
 
-RUN pip --no-cache-dir install --upgrade lib-pybroker mootdx pandas pywencai streamlit altair==4.0 plotly exchange_calendars apscheduler zhconv lxml openpyxl streamlit-autorefresh
+RUN pip --no-cache-dir install --upgrade lib-pybroker mootdx pandas pywencai streamlit==1.40 altair==4.0 plotly exchange_calendars apscheduler zhconv lxml openpyxl streamlit-autorefresh
 RUN pip --no-cache-dir install --upgrade tables st-pages==0.4.5
 RUN pip --no-cache-dir install --upgrade requests_html langchain
 RUN pip --no-cache-dir install --upgrade aiohttp
