@@ -56,8 +56,9 @@ with col[2]:
 industry_name = level_3 if industry_level == '三级行业' else level_2
 
 def calculate_change(df):
-    df = df[df[industry_level].isin([industry_name])].groupby([industry_level]).sum().T.drop(['一级行业', '三级行业'])/100000000
-    df.index = pd.to_datetime(df.index)
+    df = df[df[industry_level].isin([industry_name])].groupby([industry_level]).sum().T
+    df.index = pd.to_datetime(df.index, errors="coerce")
+    df = df.drop('NaT')/100000000
     df = df[(df.index > start_date)].sum(axis=1)
     df = ((df - df.shift(4)) / df.shift(4)).dropna(how='all')
     return df
