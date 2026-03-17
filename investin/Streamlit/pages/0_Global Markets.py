@@ -98,7 +98,7 @@ def plot_plate(plate = '欧洲'):
                 dfj = dfi[dfi[block] == market_list[i]]
                 dfj = dfj[dfj['成交额'] > dfj['成交额'].quantile(.75)]
 
-                if market_list[i] == 'china':
+                if market_list[i] == '中国':
                     data_china = '{data_dir}/static/EM/China/a_stock_details.csv'.format(data_dir=data_dir)
                     df_china = pd.read_csv(data_china,encoding = 'utf-8').dropna(subset=['三级行业'])
                     dfj = dfj.drop(columns = ['一级行业','二级行业','三级行业']).merge(df_china, how = 'left', on = ['证券代码','证券名称'])
