@@ -99,7 +99,7 @@ def plot_plate(plate = '欧洲'):
                 dfj = dfj[dfj['成交额'] > dfj['成交额'].quantile(.75)]
 
                 data_china = '{data_dir}/static/EM/China/a_stock_details.csv'.format(data_dir=data_dir)
-                df_china = pd.read_csv(data_china,encoding = 'utf-8')
+                df_china = pd.read_csv(data_china,encoding = 'utf-8').dropna(subset=['流通市值','三级行业'])
                 dfj = dfj.drop(columns = ['一级行业','二级行业','三级行业']).merge(df_china, how = 'left', on = ['证券代码','证券名称'])
 
                 fig = treemap(dfj, 
