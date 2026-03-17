@@ -18,10 +18,11 @@ def calculate_PEG(loop = True):
     # r = r.rename(columns= {"[1]/[2]":"现金"})
     r.columns = [x.split('[')[0] for x in r.columns.tolist()]
     # print(r.columns)
-    result = r[['股票代码','股票简称','市盈率(pe)','市盈率(pe,扣非ttm)','市净率(pb)','净资产收益率roe-扣除非经常损益','净资产收益率roe(加权,公布值)','总资产报酬率roa','股息率(股票获利率)','股利支付率','归属母公司股东的净利润-扣除非经常损益(同比增长率)','营业收入(同比增长率)平均','资产负债率','{(}货币资金']]
-    result.columns = ['股票代码','股票简称','PE','扣非PE','PB','扣非ROE','ROE','ROA','股息率','分红比例','扣非净利润增速','营收增速','资产负债率','现金']
+    result = r[['股票代码','股票简称','a股市值(不含限售股)','市盈率(pe)','市盈率(pe,扣非ttm)','市净率(pb)','净资产收益率roe-扣除非经常损益','净资产收益率roe(加权,公布值)','总资产报酬率roa','股息率(股票获利率)','股利支付率','归属母公司股东的净利润-扣除非经常损益(同比增长率)','营业收入(同比增长率)平均','资产负债率','{(}货币资金']]
+    result.columns = ['股票代码','股票简称','流通市值','PE','扣非PE','PB','扣非ROE','ROE','ROA','股息率','分红比例','扣非净利润增速','营收增速','资产负债率','现金']
+    # print(result)
     result = result.apply(pd.to_numeric, errors='ignore').rename(columns={"股票代码":"证券代码"})
-
+    result['流通市值'] = (result['流通市值']/100000000).round(2).fillna('') 
     result['扣非PEG']  = (result['扣非PE'] / result['营收增速'])
 
     def dividend_correct(x):

@@ -130,6 +130,7 @@ def get_basic_info():
     df['最终控制人持股比例'] = pd.to_numeric(df['最终控制人持股比例'], errors="coerce").round(2)
     df['国家队持股比例'] = pd.to_numeric(df['国家队持股比例'], errors="coerce").round(2).fillna('')
     df['国家队机构名称'] = df['国家队机构名称'].fillna('')
+    df = df.drop(columns = 'index')
     df.to_csv(data_dir + '/static/EM/China/a_stock_details.csv', index = False)
 
 
