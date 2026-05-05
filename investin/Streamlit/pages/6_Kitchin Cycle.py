@@ -19,7 +19,7 @@ def prepare_raw(source):
     df.columns = [x.replace('年一季','0331').replace('年二季/中报','0630').replace('年三季','0930').replace('年年报','1231') for x in df.columns.tolist()]
     df = a_stock.merge(df, on = '证券代码', how= 'left').drop(columns = ['证券代码','证券名称'])
     return df
-
+0
 capex = prepare_raw('资本支出')
 inventory = prepare_raw('存货')
 income = prepare_raw('营业收入')
