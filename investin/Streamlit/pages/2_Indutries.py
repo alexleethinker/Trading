@@ -34,8 +34,12 @@ def plot_plate(industry):
             path=[px.Constant(industry),'地区','市场']
             dfi = df[df['一级行业'].isin([industry]) & (~df['二级行业'].isin(['商业服务','经销商']))]
 
-        elif industry in ['汽车','制药','电子']:
+        elif industry in ['汽车','制药']:
             path=[px.Constant(industry),'三级行业','地区','市场','证券名称']
+            dfi = df[df['二级行业'].isin([industry])]
+        
+        elif industry in ['电子','IT技术','化工']:
+            path=[px.Constant(industry),'地区','市场','证券名称']
             dfi = df[df['二级行业'].isin([industry])]
 
         else:
@@ -50,7 +54,7 @@ def plot_plate(industry):
             path=[px.Constant('Industry'),'region','market']
             dfi = df[df['一级行业'].isin([industry]) & (~df['二级行业'].isin(['商业服务','经销商']))]
 
-        elif industry in ['汽车','制药','电子']:
+        elif industry in ['汽车','制药']:
             path=[px.Constant('Industry'),'industry','region','market','ticker_title']
             dfi = df[df['二级行业'].isin([industry])]
 
@@ -79,9 +83,9 @@ def plot_plate(industry):
 
 
 if language == '中文':
-    options=['金融','消费','电子','半导体','汽车','计算机设备','电力设备','机械加工设备','制药','石油','煤炭','钢']
+    options=['金融','消费','电子','半导体','IT技术','汽车','计算机设备','电力设备','机械加工设备','制药','石油','化工','煤炭','钢']
 else:
-    options=['Finance','Consumers','Electronic Technology','Semiconductors','Motor Vehicles','Computer','Electrical Equipment','Mechanical','Pharmaceutical','Oil and Gas','Coal','Steel']
+    options=['Finance','Consumers','Electronic Technology','Semiconductors','Technology Services','Motor Vehicles','Computer','Electrical Equipment','Mechanical','Pharmaceutical','Oil and Gas','Process Industries','Coal','Steel']
 
 st.radio(
     "",
