@@ -34,7 +34,7 @@ def plot_plate(industry):
             path=[px.Constant(industry),'地区','市场']
             dfi = df[df['一级行业'].isin([industry]) & (~df['二级行业'].isin(['商业服务','经销商']))]
 
-        elif industry in ['汽车','制药']:
+        elif industry in ['汽车','制药','电子']:
             path=[px.Constant(industry),'三级行业','地区','市场','证券名称']
             dfi = df[df['二级行业'].isin([industry])]
 
@@ -50,7 +50,7 @@ def plot_plate(industry):
             path=[px.Constant('Industry'),'region','market']
             dfi = df[df['一级行业'].isin([industry]) & (~df['二级行业'].isin(['商业服务','经销商']))]
 
-        elif industry in ['汽车','制药']:
+        elif industry in ['汽车','制药','电子']:
             path=[px.Constant('Industry'),'industry','region','market','ticker_title']
             dfi = df[df['二级行业'].isin([industry])]
 
