@@ -79,9 +79,9 @@ def plot_plate(industry):
 
 
 if language == '中文':
-    options=['金融','消费','半导体','汽车','计算机设备','电力设备','机械加工设备','制药','石油','煤炭','钢']
+    options=['金融','消费','电子','半导体','汽车','计算机设备','电力设备','机械加工设备','制药','石油','煤炭','钢']
 else:
-    options=['Finance','Consumers','Semiconductors','Motor Vehicles','Computer','Electrical Equipment','Mechanical','Pharmaceutical','Oil and Gas','Coal','Steel']
+    options=['Finance','Consumers','Electronic Technology','Semiconductors','Motor Vehicles','Computer','Electrical Equipment','Mechanical','Pharmaceutical','Oil and Gas','Coal','Steel']
 
 st.radio(
     "",
@@ -91,8 +91,8 @@ st.radio(
 )
 
 def translate_industry(industry):
-    l1 = ['金融','消费','半导体','汽车','计算机设备','电力设备','机械加工设备','制药','石油','煤炭','钢']
-    l2 = ['Finance','Consumers','Semiconductors','Motor Vehicles','Computer','Electrical Equipment','Mechanical','Pharmaceutical','Oil and Gas','Coal','Steel']
+    l1 = ['金融','消费','电子','半导体','汽车','计算机设备','电力设备','机械加工设备','制药','石油','煤炭','钢']
+    l2 = ['Finance','Consumers','Electronic Technology','Semiconductors','Motor Vehicles','Computer','Electrical Equipment','Mechanical','Pharmaceutical','Oil and Gas','Coal','Steel']
     for i in range(len(l1)):
         industry = industry.replace(l2[i],l1[i])
     return industry
